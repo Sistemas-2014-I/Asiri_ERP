@@ -1,0 +1,335 @@
+﻿@model Common.RHUt09_persona
+
+@{
+    ViewBag.Title = "PreCreate";
+}
+
+
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+
+    <div class="form-horizontal">
+        <hr />
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+
+
+        <div class="form-group" style="display:none;">
+            @Html.LabelFor(model => model.idUsuario, htmlAttributes: new { @class = "control-label col-md-3" })
+            <div class="col-md-6">
+                @Html.EditorFor(model => model.idUsuario, new { htmlAttributes = new { @class = "form-control", @Value = "1" } })
+                @Html.ValidationMessageFor(model => model.idUsuario, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group" style="display:none;">
+            @Html.LabelFor(model => model.tipoPersoneria, htmlAttributes: new { @class = "control-label col-md-3" })
+            <div class="col-md-6">
+                @Html.EditorFor(model => model.tipoPersoneria, new { htmlAttributes = new { @class = "form-control", @Value = "N" } })
+                @Html.ValidationMessageFor(model => model.tipoPersoneria, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <!--DOC-->
+        <div class="form-group">
+            @Html.LabelFor(model => model.idTipoDocIdentidad, htmlAttributes: new { @class = "control-label col-md-3" })
+            <div class="col-md-6">
+                @Html.DropDownListFor(model => model.idTipoDocIdentidad, new SelectList((System.Collections.IEnumerable)ViewData["idTipoDocIdentidad"], "Value", "Text"), "--Seleccionar--", htmlAttributes: new { @class = "form-control" })
+                @Html.ValidationMessageFor(model => model.idTipoDocIdentidad, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <!--NUMBERDOC-->
+        <div class="form-group">
+            @Html.LabelFor(model => model.numDocIdentidad, htmlAttributes: new { @class = "control-label col-md-3" })
+            <div class="col-md-6">
+                @Html.EditorFor(model => model.numDocIdentidad, new { htmlAttributes = new { @class = "form-control", required = "required", placeholder = "Ingrese N° de Documento" } })
+                @Html.ValidationMessageFor(model => model.numDocIdentidad, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        @*<div class="g-recaptcha" data-sitekey="6LcS4ikUAAAAALPl0SSfnjCj17j94cIisp2XQB1h"></div>*@
+
+        <div class="form-group" style="text-align:center ;margin:20px;border:1px solid #D3D3D3;">
+            <div>
+                <img src="@Url.Action("Captcha","RHUt07_paciente")" />
+            </div>
+        </div>
+
+        
+        <!--EDAD-ACTIVO-MENOR-->
+        <div class="form-group">
+            <label class="control-label col-md-3">Menor de edad? :</label>
+            <div class="col-md-8">
+                <div class="animated-checkbox">
+                    <div class="toggle-flip">
+                        <label>
+                            <input type="checkbox" id="idDateConfirmPersona"><span class="flip-indecator" data-toggle-on="SI" data-toggle-off="NO"></span>
+                        </label>
+                    </div>
+                </div>
+                <div class="checkbox" style="display:none;">
+                    @Html.EditorFor(model => model.difunto)
+                    @Html.ValidationMessageFor(model => model.difunto, "", new { @class = "text-danger" })
+                </div>
+            </div>
+        </div>
+        
+
+        
+
+        <!--NUMBERDOC-->
+        <div class="form-group">
+            <label class="control-label col-md-3"></label>
+            <div class="col-md-6">
+                <input required="required" name="captcha" id="captcha" style="text-align:center;" class="form-control" />
+            </div>
+        </div>
+
+        <div class="form-group" style="text-align:center">
+            <div>
+                <a class="btn btn-primary" id="PreCreate" >Create.</a>
+                <input type="submit" value="Create" id="btnSubmitPreCreate" class="btn btn-primary" />
+
+            </div>
+        </div>
+
+
+        
+
+    </div>
+}
+@if (ViewBag.Message!=null)
+{
+    <div class="form-group" style="text-align:center;margin:20px;border:1px solid #D3D3D3;">
+        <div>
+            <span style="display:inline-block; font-size:20px;margin:20px;padding:20px;border:1px solid #D3D3D3; color: red; font-weight: bold;">
+                @ViewBag.Message   
+                <input id="RUCValidar" value="" />            
+            </span>
+        </div>
+    </div>
+}
+
+@section Scripts {
+    <!--RECAPCHA GOOGLE-->
+    <script src='https://www.google.com/recaptcha/api.js' type="text/javascript"></script>
+    @Scripts.Render("~/bundles/jqueryval")
+    <script src="~/Scripts/jquery-2.1.4.min.js"></script>
+
+
+}
+
+
+<script src="~/Scripts/jquery-2.1.4.min.js"></script>
+<script src="~/Scripts/jquery.alphanum.js"></script>
+
+<script>
+    $(document).ready(function () {
+        $("#PreCreate").hide();
+        $("#RUCValidar").hide();
+        var Message = ('@ViewBag.Message').toString();
+        if (!Message != null && Message != "") {
+            $("#numDocIdentidad").val("");
+            //var idTip = 1;
+            //$('#idTipoDocIdentidad > option[value="' + idTip + '"]').attr('selected', 'selected');
+            $("#idTipoDocIdentidad option:contains('--Seleccionar--')").attr("selected", true);
+        }
+
+
+        //BOTON MENOR DE EDAD
+        var difunto = $('#difunto').prop("checked");
+        if (difunto == true || difunto == "true") {
+            $('#idDateConfirmPersona').click();
+        } else {
+            $('#idDateConfirmPersona').prop('checked', false)
+        }
+    });
+
+    $("#idDateConfirmPersona").on("click", function () {
+        var valorBool = $('#idDateConfirmPersona').is(':checked');
+        $('#difunto').prop("checked", valorBool);
+    })
+
+
+</script>
+
+
+<script>
+        $("#idTipoDocIdentidad").change(function () {
+            var ddl = document.getElementById("idTipoDocIdentidad");
+            var seleccionado = ddl.options[ddl.selectedIndex].value;
+            if (seleccionado == "") { //Nada
+                $("#numDocIdentidad").attr("disabled", true);
+                $("#numDocIdentidad").val("");
+                $("#btnSubmitPreCreate").show();
+                $("#PreCreate").hide();
+                $("#RUCValidar").hide();
+
+            }
+            else if (seleccionado == "1") { //DNI
+                $("#numDocIdentidad").attr("disabled", false);
+                $("#numDocIdentidad").val("");
+                $("#btnSubmitPreCreate").show();
+                $("#PreCreate").hide();
+                $("#RUCValidar").hide();
+
+                dni();
+            }
+            else if (seleccionado == "2") { //CNT EXTR
+                $("#numDocIdentidad").attr("disabled", false);
+                $("#numDocIdentidad").val("");
+                $("#btnSubmitPreCreate").show();
+                $("#PreCreate").hide();
+                $("#RUCValidar").hide();
+
+                cnt();
+            }
+            else if (seleccionado == "3") { //RUC
+                $("#numDocIdentidad").attr("disabled", false);
+                $("#numDocIdentidad").val("");
+                $("#btnSubmitPreCreate").hide();
+                $("#PreCreate").show();
+                $("#RUCValidar").hide();
+
+                ruc();
+            }
+            else if (seleccionado == "4") { //PASS
+                $("#numDocIdentidad").attr("disabled", false);
+                $("#numDocIdentidad").val("");
+                $("#btnSubmitPreCreate").show();
+                $("#PreCreate").hide();
+                $("#RUCValidar").hide();
+
+                pass();
+            }
+            else if (seleccionado == "5") { //Otros
+                $("#numDocIdentidad").attr("disabled", false);
+                $("#numDocIdentidad").val("");
+                $("#btnSubmitPreCreate").show();
+                $("#PreCreate").hide();
+                $("#RUCValidar").hide();
+
+                otros();
+            }
+            else { //No existe
+                $("#numDocIdentidad").attr("disabled", false);
+                $("#numDocIdentidad").val("");
+                $("#btnSubmitPreCreate").show();
+                $("#PreCreate").hide();
+                $("#RUCValidar").hide();
+
+            }
+        });
+
+        //Fin Persona
+
+        function dni() {
+            $("#numDocIdentidad").alphanum({
+                allowPlus: false,
+                disallow: ',',
+                allowMinus: false,
+                maxLength: 8 ,
+                maxPreDecimalPlaces: NaN,
+                maxDecimalPlaces: NaN,
+                allowDecSep: false,
+                allowUpper: false,
+                allowLower: false,
+                allowLatin: false,
+                min: 00000001,
+                
+            });
+        }
+        function cnt() {
+            $("#numDocIdentidad").alphanum({
+                allowSpace: false,
+                allowNewline: false,
+                allowNumeric: true,
+                allowUpper: true,
+                allowLower: true,
+                allowLatin: true,
+                maxLength: 12 
+            });
+        }
+        function ruc() {
+            $("#numDocIdentidad").alphanum({
+                allowPlus: false,
+                disallow: ',',
+                allowMinus: false,
+                maxLength: 11,
+                maxPreDecimalPlaces: NaN,
+                maxDecimalPlaces: NaN,
+                allowDecSep: false,
+                allowUpper: false,
+                allowLower: false,
+                allowLatin: false,
+                min: 00000001,
+            });
+        }
+        function pass() {
+            $("#numDocIdentidad").alphanum({
+                allowSpace: false,
+                allowNewline: false,
+                allowNumeric: true,
+                allowUpper: true,
+                allowLower: true,
+                allowLatin: true,
+                maxLength: 12
+            });
+        }
+        function otros() {
+            $("#numDocIdentidad").alphanum({
+                allowSpace: false,
+                allowNewline: false,
+                allowNumeric: true,
+                allowUpper: true,
+                allowLower: true,
+                allowLatin: true,
+                maxLength: 15
+            });
+        }
+
+        //RUC   
+        
+        //$("#cambiar1").click(function () {
+        //    $('.nav-tabs a[href="#tab2"]').tab('show')
+        //});
+        //$("#cambiar2").click(function () {
+        //    $('.nav-tabs a[href="#tab3"]').tab('show')
+        //});
+
+</script>
+
+
+@*VALIDANDO NRO RUC *@
+<script>
+    
+    $("#PreCreate").click(function () {
+        var ruc = $("#numDocIdentidad").val();
+        if ((ruc = Number(ruc)) && ruc % 1 === 0 && rucValido(ruc)) {
+            //true
+            $("#RUCValidar").hide();
+            $("#btnSubmitPreCreate").click();
+        } else {
+            //false
+            var a = "El RUC ingresado no es válido no es válido.";
+            $("#RUCValidar").show();
+            $("#RUCValidar").val(a);           
+        }
+    })
+
+        function rucValido(ruc) {
+            //11 dígitos y empieza en 10,15,16,17 o 20
+            if (!(ruc >= 1e10 && ruc < 11e9
+               || ruc >= 15e9 && ruc < 18e9
+               || ruc >= 2e10 && ruc < 21e9))
+                return false;
+
+            for (var suma = -(ruc % 10 < 2), i = 0; i < 11; i++, ruc = ruc / 10 | 0)
+                suma += (ruc % 10) * (i % 7 + (i / 7 | 0) + 1);
+            return suma % 11 === 0;
+
+        }
+
+</script>

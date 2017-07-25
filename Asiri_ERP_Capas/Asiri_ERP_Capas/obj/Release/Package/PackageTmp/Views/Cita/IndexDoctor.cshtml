@@ -1,0 +1,67 @@
+﻿@model IEnumerable<Mvc_Entity.CLlt05_cita>
+
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- CSS-->
+    
+    <title>Clinica MagicDent</title>
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries-->
+    <!--if lt IE 9
+    script(src='https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js')
+    script(src='https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js')
+    -->
+    <style>
+        .borde1 {
+            border: 1px #000 solid;
+            text-align: center;
+        }
+
+        .borde {
+            border: 1px #000fff solid;
+        }
+
+        .borde2 {
+            border: 1px #295ba7 solid;
+            text-align: center;
+        }
+
+        .action {
+            float: right;
+        }
+    </style>
+
+
+    <script type="text/javascript">
+
+      
+        
+        $(document).ready( function () {
+            $("#listar").load('IndexPartial');
+            
+
+    });
+
+        $(document).on("click", "#icono", function () {
+            clearTimeout(parar);
+        });
+
+
+    </script>
+
+</head>
+<body class="sidebar-mini fixed">
+    <div id="listar" >
+
+    </div>
+</body>
+</html>
+@Html.Raw(TempData["msg"])

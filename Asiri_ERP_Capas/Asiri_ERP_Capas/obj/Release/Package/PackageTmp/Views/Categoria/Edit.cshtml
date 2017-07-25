@@ -1,0 +1,89 @@
+﻿@model Common.PROt01_categoria
+
+@{
+    ViewBag.Title = "Editar Categoría";
+}
+<div class="page-title">
+    <div>
+        <h1><i class="fa fa-edit"></i>Edición de Categoría</h1>
+        <p>Editar categoría...!</p>
+    </div>
+    <ul class="breadcrumb">
+        <li><i class="fa fa-home fa-lg"></i></li>
+        <li>
+            <a href="@Url.Action("Index")">
+                Categorias
+            </a>
+        </li>
+        <li>
+            <a href="@Url.Action("Edit", new { id = Model.idCategoria})">
+                Editar
+            </a>
+        </li>
+    </ul>
+</div>
+
+@using (Html.BeginForm())
+{
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="card">
+                <h3 class="card-title"></h3>
+                <div class="card-body">
+                    @Html.AntiForgeryToken()
+                    @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+                    @Html.HiddenFor(model => model.idCategoria)
+                    @Html.HiddenFor(x => x.fecRegistro)
+                    @Html.HiddenFor(x => x.idUsuario)
+                    @Html.HiddenFor(x => x.fecEliminacion)
+                    @Html.HiddenFor(x => x.idUsuarioEliminar)
+                    <div class="cold-lg-12">
+                        <div class="form-group">
+                            @Html.LabelFor(model => model.nombreCategoria, new { @class = "control-label" })
+                            @Html.TextBoxFor(model => model.nombreCategoria, new { @class = "form-control" })
+                            @Html.ValidationMessageFor(model => model.nombreCategoria, "", new { @class = "text-danger" })
+                        </div>
+                        <div class="form-group">
+                            @Html.LabelFor(model => model.descCategoria, new { @class = "control-label" })
+                            @Html.TextAreaFor(model => model.descCategoria, new { @class = "form-control" })
+                            @Html.ValidationMessageFor(model => model.descCategoria, "", new { @class = "text-danger" })
+                        </div>
+                        <div class="form-group">
+                            @Html.LabelFor(model => model.activo, new { @class = "control-label" })
+                            <div class="checkbox">
+                            </div>
+                            <div class="toggle-flip">
+                                <label>
+                                    @{ string eval = Model.activo ? "checked" : null;}
+                                    <input checked="@eval" data-val="true" data-val-required="El estado es obligatorio" id="activo" name="activo" type="checkbox" value="true">
+                                    <span class="flip-indecator" data-toggle-on="ON" data-toggle-off="OFF"></span>
+                                    @Html.ValidationMessageFor(model => model.activo, "", new { @class = "text-danger" })
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-12" style="text-align: center;">
+            <div class="card">
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <button class="btn btn-success icon-btn" type="submit">
+                                <i class="fa fa-fw fa-lg fa-repeat">
+                                </i>Actualizar
+                            </button>&nbsp;&nbsp;&nbsp;
+                            <a class="btn btn-default icon-btn" href="@Url.Action("Index")">
+                                <i class="fa fa-fw fa-lg fa-times-circle"></i>Cancelar
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+}
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

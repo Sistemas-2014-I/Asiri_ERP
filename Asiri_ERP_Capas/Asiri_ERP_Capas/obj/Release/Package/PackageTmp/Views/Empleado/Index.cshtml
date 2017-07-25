@@ -1,0 +1,439 @@
+﻿@model IEnumerable<Common.RHUt01_empleado>
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- CSS-->
+    <link rel="stylesheet" type="text/css" href="~/Content/css/main.css">
+    <title>Clinica MagicDent</title>
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries-->
+    <!--if lt IE 9
+    script(src='https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js')
+    script(src='https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js')
+    -->
+    <style>
+        .borde1 {
+            border: 1px #000 solid;
+            text-align: center;
+        }
+
+        .borde {
+            border: 1px #000fff solid;
+        }
+
+        .borde2 {
+            border: 1px #295ba7 solid;
+            text-align: center;
+        }
+
+        .action {
+            float: right;
+        }
+    </style>
+</head>
+<body class="sidebar-mini fixed">
+    @Html.Raw(TempData["msg"])
+    <!--********************************TITULO*******************************-->
+    <div class="page-title">
+        <div>
+            <h1><i class="fa fa-edit"></i> Mantenimiento de Empleados</h1>
+            <p>Lista de Empleados ...!</p>
+        </div>
+        <div>
+            <ul class="breadcrumb">
+                <li><i class="fa fa-home fa-lg"></i></li>
+                <li>RR.HH</li>
+                <li><a href="#">Lista Empleados</a></li>
+            </ul>
+        </div>
+    </div>
+    <!--********************************FIN TITULO*******************************-->
+    <!--AQUÍ VA EL CODIGO-->
+    <div class="row">
+        <div class="col-md-12">
+            <!--CODIGO MODIFICAR-->
+            <div class="card">
+                <!--*********************************************AQUÍ MODIFICAR CARD***************************-->
+                <!--*********************************************CARD***************************-->
+                <!--CONTAINER TITLE-->
+                <div class="container" id="MantenimientoEmpleado">
+                    <!--NOMBRE DE MANTENIMIENTO-->
+                    <h3 style="display:inline-block;" class="header-title"><i class="glyphicon glyphicon-cog"></i></h3>
+                </div>
+                <!--ACTIONS-->
+                <div class="card-title-w-btn ">
+                    <!--NEW PATIENT-->
+                    <div class="bs-component">
+                        <div>
+                            <a class="btn btn-info icon-btn" href="@Url.Action("Create")">
+                                <i class="fa fa-fw fa-lg fa-user-plus"></i>Nuevo Empleado
+                            </a>
+                        </div>
+                    </div>
+                    <!--EXPORT-->
+                    <div class="btn-group">
+                        <a class="btn btn-primary dropdown-toggle" href="#" data-toggle="dropdown"><i class="fa fa-fw fa-lg fa-cloud-download"></i>Exportar <span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">PDF</a></li>
+                            <li><a href="#">Excel</a></li>
+                            <li><a href="#">Otro</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <hr>
+
+                <!--***************TABLE*************-->
+                <div class="card-body table-responsive">
+                    <table class="table table-hover table-bordered " id="sampleTable">
+                        <thead style="color:#ffffff;background:#0094ff;">
+                            <tr>
+
+                                <th>
+                                    @Html.Label("Consultorio")
+                                </th>
+                                <th>
+                                    @Html.Label("Tipo Personería")
+                                </th>
+                                <th>
+                                    @Html.Label("Persona")
+                                </th>
+                                <th>
+                                    @Html.Label("Tipo de Empleado")
+                                </th>
+                                <th>
+                                    @Html.Label("Código Empleado")
+                                </th>
+                                @*<th>
+                                        @Html.Label("Es Horario Turno")
+                                    </th>*@
+                                <th>
+                                    @Html.Label("Activo")
+                                </th>
+                                <th>
+                                    @Html.Label("Acciones")
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach (var item in Model)
+                            {
+                                <tr>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.CLlt07_consultorio.codConsultorio)
+                                    </td>
+                                    <td>
+                                        @if (item.RHUt09_persona.tipoPersoneria == "N")
+                                        {
+                                            @Html.Label("Natural");
+                                        }
+                                        else
+                                        {
+                                            @Html.Label("Jurídica");
+                                        }
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.RHUt09_persona.nombrePersona)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.RHUt11_tipoDeEmpleado.descTipoDeEmpleado)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.codEmpleado)
+                                    </td>
+                                    @*<td>
+                                            @Html.DisplayFor(modelItem => item.esHorarioTurno)
+                                        </td>*@
+                                    <td>
+                                        @if (item.activo == true)
+                                        {
+                                            <div class="col-md-12" style="text-align: center;">
+                                                <a class="btn btn-success btn-flat"><i class="fa fa-lg fa-thumbs-o-up"></i></a>
+                                            </div>
+                                        }
+                                        else
+                                        {
+                                            <div class="col-md-12" style="text-align: center;">
+                                                <a class="btn btn-danger btn-flat"><i class="fa fa-lg fa-thumbs-o-down"></i></a>
+                                            </div>
+                                        }
+                                    </td>
+                                    <td>
+                                        <div class="col-md-12" style="text-align: center;">
+                                            
+                                            <div class="col-md-3" style="text-align: center;">
+                                                <a class="btn btn-default btn-flat" href="@Url.Action("asignacionEmpleado",new { id=item.idEmpleado })"><i class="fa fa-lg fa-book"></i></a>
+                                            </div>
+                                            
+                                            <div class="col-md-3" style="text-align: center;">
+                                                <a class="btn btn-warning btn-flat" href="@Url.Action("Edit", new { id=item.idEmpleado })"><i class="fa fa-lg fa-edit"></i></a>
+                                            </div>
+                                            <div class="col-md-3" style="text-align: center;">
+                                                <a class="btn btn-danger btn-flat" href="@Url.Action("Delete", new { id = item.idEmpleado })"><i class="fa fa-lg fa-trash"></i></a>
+                                            </div>
+                                        </div>
+                                    </td>
+                                </tr>
+                            }
+                        </tbody>
+                    </table>
+
+                    <!-- Modal Detalle Modal-->
+                    <div class="modal fade" id="detalleModal" role="dialog">
+                        <div class="modal-dialog modal-lg">
+
+                            <!-- Modal content-->
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <button type="button" data-target="#detalleModal" class="close" data-dismiss="modal">&times;</button>
+                                    <h3 class="modal-title"></h3>
+                                </div>
+                                <div class="modal-body">
+                                    <div class="card col-md-12" style="justify-content:center">
+                                        <div class="card-content">
+                                            <div id="medioPago">
+                                                <div class="row col-md-12">
+                                                    <h4 class="col-md-6">Razón Social:</h4>
+                                                    <h4 class="col-md-6" id="rso"></h4>
+                                                </div>
+                                                <div class="row col-md-12">
+                                                    <h4 class="col-md-6">Nombre Representante:</h4>
+                                                    <h4 class="col-md-6" id="nre"></h4>
+                                                </div>
+                                                <div class="row col-md-12">
+                                                    <h4 class="col-md-6">Nombre Persona:</h4>
+                                                    <h4 class="col-md-6" id="nom"></h4>
+                                                </div>
+
+                                                <div class="row col-md-12">
+                                                    <h4 class="col-md-6">Fecha de Nacimiento:</h4>
+                                                    <h4 class="col-md-6" id="fna"></h4>
+                                                </div>
+                                                <div class="row col-md-12">
+                                                    <h4 class="col-md-6">Documento de Identidad:</h4>
+                                                    <h4 class="col-md-6" id="tdi"></h4>
+                                                </div>
+                                                <div class="row col-md-12">
+                                                    <h4 class="col-md-6">Número de Documento de Identidad:</h4>
+                                                    <h4 class="col-md-6" id="ndi"></h4>
+                                                </div>
+                                                <div class="row col-md-12">
+                                                    <h4 class="col-md-6">Observación:</h4>
+                                                    <h4 class="col-md-6" id="obs"></h4>
+                                                </div>
+                                                <div class="row col-md-12">
+                                                    <h4 class="col-md-6">Sexo:</h4>
+                                                    <h4 class="col-md-6" id="sex"></h4>
+                                                </div>
+                                                <div class="row col-md-12">
+                                                    <h4 class="col-md-6">Estado Civil:</h4>
+                                                    <h4 class="col-md-6" id="esc"></h4>
+                                                </div>
+                                                <div class="row col-md-12">
+                                                    <h4 class="col-md-6">Número de Teléfono:</h4>
+                                                    <h4 class="col-md-6" id="te1"></h4>
+                                                </div>
+                                                <div class="row col-md-12">
+                                                    <h4 class="col-md-6">Número de Teléfono Opcional:</h4>
+                                                    <h4 class="col-md-6" id="te2"></h4>
+                                                </div>
+                                                <div class="row col-md-12">
+                                                    <h4 class="col-md-6">Correo Electrónico:</h4>
+                                                    <h4 class="col-md-6" id="co1"></h4>
+                                                </div>
+                                                <div class="row col-md-12">
+                                                    <h4 class="col-md-6">Correo Electrónico Opcional:</h4>
+                                                    <h4 class="col-md-6" id="co2"></h4>
+                                                </div>
+                                                <div class="row col-md-12">
+                                                    <h4 class="col-md-6">Dirección:</h4>
+                                                    <h4 class="col-md-6" id="di1"></h4>
+                                                </div>
+                                                <div class="row col-md-12">
+                                                    <h4 class="col-md-6">Dirección Opcional:</h4>
+                                                    <h4 class="col-md-6" id="di2"></h4>
+                                                </div>
+                                                <div class="row col-md-12">
+                                                    <h4 class="col-md-6">Distrito:</h4>
+                                                    <h4 class="col-md-6" id="dis"></h4>
+                                                </div>
+                                                <div class="row col-md-12">
+                                                    <h4 class="col-md-6">Tipo de Personeria:</h4>
+                                                    <h4 class="col-md-6" id="tip"></h4>
+                                                </div>
+                                                <div class="row col-md-12">
+                                                    <h4 class="col-md-6">Vía:</h4>
+                                                    <h4 class="col-md-6" id="idv"></h4>
+                                                </div>
+                                                <div class="row col-md-12">
+                                                    <h4 class="col-md-6">Nombre Vía:</h4>
+                                                    <h4 class="col-md-6" id="nov"></h4>
+                                                </div>
+                                                <div class="row col-md-12">
+                                                    <h4 class="col-md-6">Zona:</h4>
+                                                    <h4 class="col-md-6" id="idz"></h4>
+                                                </div>
+                                                <div class="row col-md-12">
+                                                    <h4 class="col-md-6">Nombre Zona:</h4>
+                                                    <h4 class="col-md-6" id="noz"></h4>
+                                                </div>
+                                                <div class="row col-md-12">
+                                                    <h4 class="col-md-6">Código Empleados:</h4>
+                                                    <h4 class="col-md-6" id="cod"></h4>
+                                                </div>
+                                                <div class="row col-md-12">
+                                                    <h4 class="col-md-6">Horas Por Período:</h4>
+                                                    <h4 class="col-md-6" id="hpe"></h4>
+                                                </div>
+
+                                                <div class="row col-md-12">
+                                                    <h4 class="col-md-6">Período Remuneración:</h4>
+                                                    <h4 class="col-md-6" id="per"></h4>
+                                                </div>
+                                                <div class="row col-md-12">
+                                                    <h4 class="col-md-6">Monto Remuneración:</h4>
+                                                    <h4 class="col-md-6" id="mto"></h4>
+                                                </div>
+                                                <div class="row col-md-12">
+                                                    <h4 class="col-md-6">Entidad Financiera:</h4>
+                                                    <h4 class="col-md-6" id="enf"></h4>
+                                                </div>
+                                                <div class="row col-md-12">
+                                                    <h4 class="col-md-6">Tipo de Empleado:</h4>
+                                                    <h4 class="col-md-6" id="tie"></h4>
+                                                </div>
+                                                <div class="row col-md-12">
+                                                    <h4 class="col-md-6">Medio de Pago:</h4>
+                                                    <h4 class="col-md-6" id="mpa"></h4>
+                                                </div>
+                                                <div class="row col-md-12">
+                                                    <h4 class="col-md-6">Consultorio:</h4>
+                                                    <h4 class="col-md-6" id="con"></h4>
+                                                </div>
+                                                <div class="row col-md-12">
+                                                    <h4 class="col-md-6">Activo:</h4>
+                                                    <h4 class="col-md-6" id="activo"></h4>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="modal-footer">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!--******************TABLE***********-->
+                <!--*******************************************FIN***********************************-->
+            </div>
+        </div>
+        <!--FIN DE MODIFICAR-->
+    </div>
+
+
+
+    <!-- Javascripts-->
+
+    <script type="text/javascript">
+    //$('#sampleTable').DataTable();
+
+        $(document).ready(function () {
+            $('#sampleTable').dataTable({
+
+                language: {
+                    processing: "En curso...",
+                    search: "Buscar:",
+                    lengthMenu: "Visualizar _MENU_ registros",
+                    info: "_START_ de _END_ registros de un total de _TOTAL_ registros",
+                    infoEmpty: "0 registros encontrados",
+                    infoFiltered: "(_MAX_ registros filtrados en total)",
+                    infoPostFix: "",
+                    loadingRecords: "Cargando registros...",
+                    zeroRecords: "No hay registros",
+                    emptyTable: "Vacío",
+                    paginate: {
+                        first: "Primero",
+                        previous: "Previo  ",
+                        next: "  Siguiente",
+                        last: "Último"
+                    },
+                    aria: {
+                        sortAscending: ": Habilitado para ordenar la columna en orden ascendente",
+                        sortDescending: ": Habilitado para ordenar la columna en orden descendente"
+                    }
+                }
+            });
+
+            $(document).on("click",".detalleEmpleado", function () {
+                var id = $(this).attr("data-id");
+                var rso = $(this).attr("data-rso");
+                var nre = $(this).attr("data-nre");
+                var nom = $(this).attr("data-nom");
+                var fna = $(this).attr("data-fna");
+                var tdi = $(this).attr("data-tdi");
+                var ndi = $(this).attr("data-ndi");
+                var obs = $(this).attr("data-obs");
+                var sex = $(this).attr("data-sex");
+                var esc = $(this).attr("data-esc");
+                var te1 = $(this).attr("data-te1");
+                var te2 = $(this).attr("data-te2");
+                var co1 = $(this).attr("data-co1");
+                var co2 = $(this).attr("data-co2");
+                var di1 = $(this).attr("data-di1");
+                var di2 = $(this).attr("data-di2");
+                var dis = $(this).attr("data-dis");
+                var tip = $(this).attr("data-tip");
+                var idv = $(this).attr("data-idv");
+                var nov = $(this).attr("data-nov");
+                var idz = $(this).attr("data-idz");
+                var noz = $(this).attr("data-noz");
+                var cod = $(this).attr("data-cod");
+                var hpe = $(this).attr("data-hpe");
+                var per = $(this).attr("data-per");
+                var mto = $(this).attr("data-mto");
+                var enf = $(this).attr("data-enf");
+                var tie = $(this).attr("data-tie");
+                var mpa = $(this).attr("data-mpa");
+                var con = $(this).attr("data-con");
+                var estado = $(this).attr("data-activo");
+
+                $(".modal-title").text("Empleado");
+                $("#rso").text(rso);
+                $("#nre").text(nre);
+                $("#nom").text(nom);
+                $("#fna").text(fna);
+                $("#tdi").text(tdi);
+                $("#obs").text(obs);
+                $("#sex").text(sex);
+                $("#esc").text(esc);
+                $("#te1").text(te1);
+                $("#te2").text(te2);
+                $("#co1").text(co1);
+                $("#co2").text(co2);
+                $("#di1").text(di1);
+                $("#di2").text(di2);
+                $("#dis").text(dis);
+                $("#tip").text(tip);
+                $("#idv").text(idv);
+                $("#nov").text(nov);
+                $("#idz").text(idz);
+                $("#noz").text(noz);
+                $("#cod").text(cod);
+                $("#hpe").text(hpe);
+                $("#per").text(per);
+                $("#mto").text(mto);
+                $("#enf").text(enf);
+                $("#tie").text(tie);
+                $("#mpa").text(mpa);
+                $("#con").text(con);
+                $("#activoModal").text(estado);
+                $("#detalleModal").modal("show");
+            });
+        });
+    </script>
+</body>
+</html>
+

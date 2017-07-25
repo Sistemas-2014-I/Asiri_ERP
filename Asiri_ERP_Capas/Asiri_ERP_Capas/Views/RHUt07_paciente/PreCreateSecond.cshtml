@@ -1,0 +1,214 @@
+﻿@model Common.RHUt09_persona
+
+@{
+    ViewBag.Title = "PreCreate";
+}
+<div class="row">
+    <!--CODIGO MODIFICAR-->
+    <div class="col-lg-12">
+        
+        <div class="card">
+            <!--*********************************************AQUÍ MODIFICAR CARD***************************-->
+            <h3 class="card-title">REGISTRO DE PACIENTE</h3>
+            <!--INICIO-->
+
+            <div class="card-body" style="text-align:center;">                                     
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="col-md-6">
+                            <div class="widget-small primary coloured-icon">
+                                <i class="icon fa fa-users fa-3x"></i>
+                                <div class="info">
+                                    <h4>Pacientes</h4>
+                                    <hr />
+                                    <div class="form-group">
+                                        <label class="control-label col-md-3">Nuevos:</label>
+                                        <div class="col-md-8">
+                                            <input value="@ViewBag.NumPaciente" readonly="readonly" class="form-control" style="text-align:center;"/>
+                                        </div>
+                                    </div>
+                                    <br />
+                                    <div class="form-group" style="background-color: black;">
+                                        <div class="col-md-8">
+                                        </div>
+                                    </div>
+                                    <div class="row" style="padding-top:10px; height: 50px;">
+                                        <div class="col-md-12">
+                                            <a id="btnValidarPersona" value="" class="btn btn-primary icon-btn">
+                                                <i class="fa fa-fw fa-lg fa-check-circle">
+                                                </i>Nuevo Paciente
+                                            </a>&nbsp;&nbsp;&nbsp;
+                                        </div>
+                                    </div>                                 
+                                    <hr />
+                                </div>
+                            </div>
+                        </div>
+                        @*<div class="col-md-6">
+                            <div class="widget-small info coloured-icon">
+                                <i class="icon fa fa-thumbs-o-up fa-3x"></i>
+                                <div class="info">
+                                    <h4>Registros Onine</h4>
+                                    <p><b>25</b></p>
+                                </div>
+                            </div>
+                        </div>*@
+                    </div>
+                    
+                </div>
+            </div>
+                    
+            <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" style="margin-left: 40%;">
+                    <div class="modal-dialog" role="document" style="margin-left: -50px; ">
+                        <div class="modal-content">
+                            <div class="modal-header" style="background-color: #0ebcf5;">
+                                @*<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>*@
+                                <button type="button" class="close closeModal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                                @*<a href="@Url.Action("Index", "RHUt07_paciente")" class="close" aria-label="Close"><span aria-hidden="true">&times;</span></a>*@
+                                <h4 class="modal-title" id="myModalLabel" style="text-align:center;color: white; font-weight: bold;">... Verificar Datos ...</h4>
+                            </div>
+                            <div class="modal-body">
+                                <br />
+                                @Html.Partial("~/Views/RHUt07_paciente/PreCreate.cshtml")
+                                <br />
+                            </div>
+                            <div class="modal-footer">
+                                @*<a href="#" class="btn btn-danger" data-dismiss="modal" id="btnClose">Cancelar</a>*@
+                                <a href="#" class="btn btn-danger closeModal"  id="btnClose" >Cancelar</a>
+
+                                @*<a href="@Url.Action("Index", "RHUt07_paciente")" class="btn btn-primary">Cancelar</a>*@
+                                @*@Html.ActionLink("Salir", "Index", "RHUt07_paciente")*@
+                            </div>
+                        </div>
+                    </div>
+                </div>
+        
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+<link href="~/Content/bootstrap-datetimepicker.min.css" rel="stylesheet" />
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/jquery-confirm/3.2.3/jquery-confirm.min.css">
+
+<script src="https://code.jquery.com/jquery-1.9.1.min.js"></script>
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+    @*need to add our custom validation js here*@
+    <script src="~/Scripts/MyCustomvalidation.js"></script>
+
+    <script src="~/Scripts/jquery-2.1.4.min.js"></script>
+
+    <script src="~/Scripts/moment.min.js"></script>
+    <script src="~/Scripts/moment-with-locales.min.js"></script>
+
+    <script src="~/Scripts/bootstrap-datetimepicker.js"></script>
+
+    <script src="~/Scripts/Plugins/pace.min.js"></script>
+    <script src="~/Scripts/Plugins/select2.min.js"></script>
+
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery-confirm/3.2.3/jquery-confirm.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+    <script src="~/Scripts/Plugins/push.min.js"></script>
+
+    @*STYLE VALI*@
+    <script src="~/Scripts/Vali/bootstrap.min.js"></script>
+    <script src="~/Scripts/Vali/plugins/pace.min.js"></script>
+    <script src="~/Scripts/Vali/main.js"></script>
+    <script src="~/Scripts/Vali/plugins/bootstrap-notify.min.js"></script>
+    <script src="~/Scripts/Vali/plugins/sweetalert.min.js"></script>
+    @**VALIDAR DNI*@
+<script src="~/Scripts/jquery.alphanum.js"></script>
+
+}
+
+<button id="btnTest" class="btn btn-default" style="display:none;">Show Modal</button>
+
+<script type="text/javascript">
+
+    $('document').ready(function () {
+        var inicio =   @ViewBag.Inicio+"";
+        if(inicio=="1"){
+            //(1) MUESTRA EL MODAL
+            //BOTONES INICIAL MODAL
+            $("#PreCreate").hide();
+            $("#RUCValidar").hide();
+            $('#myModal').modal('show');
+        } else {
+            
+        }
+    });
+    $('#btnValidarPersona').click(function () {
+        //$("numDocIdentidad").val("");
+        //var idTip = 0;
+        //$('#idTipoDocIdentidad > option[value="' + idTip + '"]').attr('selected', 'selected');
+        var difunto = $('#difunto').prop("checked");
+        if (difunto == true || difunto == "true") {
+            $('#idDateConfirmPersona').click();
+        } else {
+            $('#idDateConfirmPersona').prop('checked', false)
+        }
+        //BOTONES INICIAL MODAL
+        $("#PreCreate").hide();
+        $("#RUCValidar").hide();
+
+        $('#btnValidarPersona').click();
+        $('#myModal').modal('show');
+    });
+</script>
+
+
+@*NOTYFICATION CREATE*@
+<script type="text/javascript">
+    $('#demoNotify').click(function () {
+        $.notify({
+            title: "Update Complete : ",
+            message: "Something cool is just updated!",
+            icon: 'fa fa-check'
+        }, {
+            type: "info"
+        });
+    });
+
+    //NOTYFICATION CREATE
+    $('.closeModal').click(function () {
+        swal({
+            title: "Está seguro?",
+            //text: "¡No podrás recuperar este archivo imaginario!",
+            type: "warning",
+            showCancelButton: true,
+            confirmButtonText: "Sí, cierralo!",
+            cancelButtonText: "No, continua!",
+            closeOnConfirm: false,
+            closeOnCancel: false
+        }, function (isConfirm) {
+            if (isConfirm) {
+                swal("Cancelado!", "Se cancelará el registro.", "error");
+                var Message = ('@ViewBag.Message').toString();
+                $("#numDocIdentidad").val("");
+
+                var difunto = $('#difunto').prop("checked");
+                if (difunto == true || difunto == "true") {
+                    $('#idDateConfirmPersona').click();
+                } else {
+                    $('#idDateConfirmPersona').prop('checked', false)
+                }
+                //BOTONES INICIAL MODAL
+                $("#PreCreate").hide();
+                $("#RUCValidar").hide();
+                
+                $("#idTipoDocIdentidad option:contains('--Seleccionar--')").attr("selected", true);
+                $('#myModal').modal('hide');
+            } else {
+                swal("Continuando", "Se continuará el registro.", "success");
+            }
+        });
+    });
+</script>
+
+

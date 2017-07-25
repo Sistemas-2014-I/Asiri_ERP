@@ -1,0 +1,196 @@
+﻿@model Common.RHUt07_paciente
+
+@{
+    ViewBag.Title = "Detalle";
+}
+<link href="~/Content/jq_confirm/jquery-confirm.min.css" rel="stylesheet" />
+
+<div class="row">
+    <!--CODIGO MODIFICAR-->
+    <div class="col-lg-12">
+        <div class="card">
+            <!--*********************************************AQUÍ MODIFICAR CARD***************************-->
+            <h3 class="card-title"></h3>
+
+            @using (Html.BeginForm())
+            {
+                @Html.AntiForgeryToken()
+
+                <div class="form-horizontal">
+
+                    @*DISPLAY:NONE*@
+                    <div style="display:none;">
+                        @*IDPRESONA*@
+                        <div class="form-group h4">
+                            @Html.LabelFor(model => model.idPaciente, htmlAttributes: new { @class = "control-label col-md-3" })
+                            <div class="col-md-8">
+                                @Html.EditorFor(model => model.idPaciente)
+                                @Html.ValidationMessageFor(model => model.idPaciente, "", new { @class = "text-danger" })
+                            </div>
+                        </div>
+                        @*FECHREGISTRO*@
+                        <div class="form-group h4">
+                            @Html.LabelFor(model => model.fecRegistro, htmlAttributes: new { @class = "control-label col-md-3" })
+                            <div class="col-md-8">
+                                @Html.EditorFor(model => model.fecRegistro)
+                                @Html.ValidationMessageFor(model => model.fecRegistro, "", new { @class = "text-danger" })
+                            </div>
+                        </div>
+                        @*FECHELIMINACION*@
+                        <div class="form-group h4">
+                            @Html.LabelFor(model => model.fecEliminacion, htmlAttributes: new { @class = "control-label col-md-3" })
+                            <div class="col-md-8">
+                                @Html.EditorFor(model => model.fecEliminacion)
+                                @Html.ValidationMessageFor(model => model.fecEliminacion, "", new { @class = "text-danger" })
+                            </div>
+                        </div>
+                        @*IDUSUARIO*@
+                        <div class="form-group h4">
+                            @Html.LabelFor(model => model.idUsuario, htmlAttributes: new { @class = "control-label col-md-3" })
+                            <div class="col-md-8">
+                                @Html.EditorFor(model => model.idUsuario)
+                                @Html.ValidationMessageFor(model => model.idUsuario, "", new { @class = "text-danger" })
+                            </div>
+                        </div>
+                        @*IDUSUARIOMODIFICAR*@
+                        <div class="form-group h4">
+                            @Html.LabelFor(model => model.idUsuarioModificar, htmlAttributes: new { @class = "control-label col-md-3" })
+                            <div class="col-md-8">
+                                @Html.EditorFor(model => model.idUsuarioModificar)
+                                @Html.ValidationMessageFor(model => model.idUsuarioModificar, "", new { @class = "text-danger" })
+                            </div>
+                        </div>
+                        @*IDUSUARIOELIMINAR*@
+                        <div class="form-group h4">
+                            @Html.LabelFor(model => model.idUsuarioEliminar, htmlAttributes: new { @class = "control-label col-md-3" })
+                            <div class="col-md-8">
+                                @Html.EditorFor(model => model.idUsuarioEliminar)
+                                @Html.ValidationMessageFor(model => model.idUsuarioEliminar, "", new { @class = "text-danger" })
+                            </div>
+                        </div>
+                    </div>
+                    @*FIN DISPLAY:NONE*@
+
+                 
+                    <div class="form-group h4 ">
+                        @Html.LabelFor(model => model.idPersona, "Persona*:", htmlAttributes: new { @class = "control-label col-md-3" })
+                        <div class="col-md-8">
+                            @if (Model.RHUt09_persona.tipoPersoneria == "N")
+                            {
+                                @Html.EditorFor(model => model.RHUt09_persona.nombrePersona , new { htmlAttributes = new { @class = "form-control", @readonly = "readonly" } })
+
+                            }
+                            else
+                            {
+                                @Html.EditorFor(model => model.RHUt09_persona.nombreRepresentante, new { htmlAttributes = new { @class = "form-control", @readonly = "readonly" } })
+                            }
+                        </div>
+                    </div>
+                    <hr />
+
+                    @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+                    <div class="col-md-6">
+                        <div class="card">
+                            <!---h3 class="card-title">Básica 2</h3-->
+                            <div class="card-body">
+                                <div style="display: none">
+                                    <input name="Paciente" id="Paciente" value="@ViewBag.Paciente" />
+                                </div>
+
+                                @*COD PACIENTE*@
+                                <div class="form-group">
+                                    @Html.LabelFor(model => model.codPaciente, htmlAttributes: new { @class = "control-label col-md-3" })
+                                    <div class="col-md-8">
+                                        @Html.EditorFor(model => model.codPaciente, new { htmlAttributes = new { @class = "form-control", @Value = ViewBag.codPaciente , @readonly = "readonly" } })
+                                        @Html.ValidationMessageFor(model => model.codPaciente, "", new { @class = "text-danger" })
+                                    </div>
+                                </div>
+                                @*GRUPO SANGUINEO*@
+                                <div class="form-group">
+                                    @Html.LabelFor(model => model.grupoSanguineo, htmlAttributes: new { @class = "control-label col-md-3" })
+                                    <div class="col-md-8">
+                                        @Html.DropDownList("grupoSanguineo", ViewData["grupoSanguineo"] as List<SelectListItem>, "-- Seleccionar --", htmlAttributes: new { @class = "form-control", @disabled = "true" })
+                                        @*@Html.EditorFor(model => model.grupoSanguineo, new { htmlAttributes = new { @class = "form-control" } })*@
+                                        @Html.ValidationMessageFor(model => model.grupoSanguineo, "", new { @class = "text-danger" })
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6">
+                        <div class="card">
+                            <!---h3 class="card-title">Básica 2</h3-->
+                            <div class="card-body">
+                                @*NUM HISTORIACLINICA*@
+                                <div class="form-group">
+                                    @Html.LabelFor(model => model.numHistoriaClinica, htmlAttributes: new { @class = "control-label col-md-3" })
+                                    <div class="col-md-8">
+                                        @Html.EditorFor(model => model.numHistoriaClinica, new { htmlAttributes = new { @class = "form-control", @Value = ViewBag.numHistoriaClinica , @readonly= "readonly" } })
+                                        @Html.ValidationMessageFor(model => model.numHistoriaClinica, "", new { @class = "text-danger" })
+                                    </div>
+                                </div>
+                            </div>
+
+                            @*ACTIVO?*@
+                            <div class="form-group">
+                                @Html.LabelFor(model => model.activo, htmlAttributes: new { @class = "control-label col-md-3" })
+                                <div class="col-md-8">
+                                    <div class="animated-checkbox">
+                                        <div class="toggle-flip">
+                                            <label>
+                                                <input type="checkbox" id="idcheckActivo"><span class="flip-indecator" data-toggle-on="SI" data-toggle-off="NO"></span>
+                                            </label>
+                                        </div>
+                                    </div>
+
+                                    <div class="checkbox" style="display:none;">
+                                        @Html.EditorFor(model => model.activo , new { htmlAttributes = new { @id = "activo" } })
+                                        @Html.ValidationMessageFor(model => model.activo, "", new { @class = "text-danger" })
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    @Html.Partial("~/Views/Shared/_ConfirmationCreate.cshtml")
+                </div>
+            }
+        </div>
+    </div>
+</div>
+<div>
+    @Html.Partial("~/Views/Shared/_ReturnIndex.cshtml")
+</div>
+<script src="~/Scripts/jquery-3.1.1.js"></script>
+<script src="~/Scripts/jq_confirm/bundled.js"></script>
+
+<script type="text/javascript" id="Inicial">
+    $(document).ready(function () {
+        //ACTIVO:
+        var activo = $('#activo').val();
+        if (activo == true || activo == "true") {
+            $('#idcheckActivo').click();
+        } else {
+            $('#idcheckActivo').prop('checked', false)
+        }
+        $('#idcheckActivo').attr("disabled",true);
+
+        $("#btn_submit").hide();
+        $("#btn_submitActualizar").hide();
+        $("#btn_submit").attr("disabled",true);
+        $("#btn_submitActualizar").attr("disabled",true);
+        //
+        $("#codPaciente").attr("readonly", true);
+        $("#numHistoriaClinica").attr("readonly", true);
+        var PacienteInicializar = $("#Paciente").val();
+        if (PacienteInicializar == "1") {
+            $("#idPersona").attr("readonly", true);
+        } else if(PacienteInicializar=="0") {
+            $("#idPersona").attr("readonly", false);
+            $("#btn_submitActualizar").addClass("disabled");           
+        }
+        $("#btn_submitEditar").attr('href'," @Url.Action("Edit","Persona",new {id= Model.RHUt09_persona.idPersona})");
+
+    });
+</script>

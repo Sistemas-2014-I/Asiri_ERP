@@ -1,0 +1,183 @@
+﻿@model Common.PROt04_servicio
+
+@{
+    ViewBag.Title = "Registrar Servicio";
+}
+<div class="col-lg-12">
+    <div class="page-title">
+        <div>
+            <h1><i class="fa fa-edit"></i>Registrar nuevo servicio</h1>
+            <p>Registrar servicio ..!</p>
+        </div>
+        <ul class="breadcrumb">
+            <li><i class="fa fa-home fa-lg"></i></li>
+            <li>
+                <a href="@Url.Action("Index")">
+                    Servicios
+                </a>
+            </li>
+            <li>
+                <a href="@Url.Action("Create")">
+                    Registrar
+                </a>
+            </li>
+        </ul>
+    </div>
+
+    <!--*****************REGISTRO PRODUCTO*******************-->
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="card">
+                <h3 class="card-title">Nuevo Servicio</h3>
+                <div class="card-body">
+                    @using (Html.BeginForm())
+                    {
+                        @Html.AntiForgeryToken()
+
+                        <div class="cold-lg-12">
+                            <hr />
+                            @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+                            @Html.HiddenFor(x => x.codServicio)
+                            <div class="form-group">
+                                <label class="control-label">Código de servicio</label>
+                                <input class="form-control text-box single-line" value="@Session["codserv"]" disabled>
+                            </div>
+                            <div class="form-group">
+                                @Html.LabelFor(model => model.nombreServicio, new { @class = "control-label" })
+                                @Html.EditorFor(model => model.nombreServicio, new { htmlAttributes = new { @class = "form-control", placeholder = "Ingresar nombre de servicio" } })
+                                @Html.ValidationMessageFor(model => model.nombreServicio, "", new { @class = "text-danger" })
+                            </div>
+                            <div class="form-group">
+                                @Html.LabelFor(model => model.descServicio, new { @class = "control-label  " })
+                                @Html.TextAreaFor(model => model.descServicio, new { @class = "form-control" })
+                                @Html.ValidationMessageFor(model => model.descServicio, "", new { @class = "text-danger" })
+                            </div>
+                            <div class="form-group">
+                                @Html.LabelFor(model => model.precio, new { @class = "control-label  " })
+                                @Html.EditorFor(model => model.precio, new { htmlAttributes = new { @class = "form-control", placeholder = "Ingresar precio del servicio" } })
+                                @Html.ValidationMessageFor(model => model.precio, "", new { @class = "text-danger" })
+                            </div>
+                            <div class="form-group">
+                                @Html.LabelFor(model => model.precioMinimo, new { @class = "control-label  " })
+                                @Html.EditorFor(model => model.precioMinimo, new { htmlAttributes = new { @class = "form-control", placeholder = "Ingresar precio mínimo" } })
+                                @Html.ValidationMessageFor(model => model.precioMinimo, "", new { @class = "text-danger" })
+                            </div>
+                            <div class="form-group">
+                                @Html.LabelFor(model => model.precioMaximo, new { @class = "control-label  " })
+                                @Html.EditorFor(model => model.precioMaximo, new { htmlAttributes = new { @class = "form-control", placeholder = "Ingresar precio máximo" } })
+                                @Html.ValidationMessageFor(model => model.precioMaximo, "", new { @class = "text-danger" })
+                            </div>
+                            <div class="form-group">
+                                @Html.LabelFor(model => model.esGratis, new { @class = "control-label" })
+                                <div class="checkbox">
+                                </div>
+                                <div class="toggle-flip">
+                                    <label>
+                                        <input data-val="true" data-val-required="El estado es obligatorio" id="activo" name="activo" type="checkbox" value="true">
+                                        <span class="flip-indecator" data-toggle-on="SI" data-toggle-off="NO"></span>
+                                        @Html.ValidationMessageFor(model => model.esGratis, "", new { @class = "text-danger" })
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="form-group" style="margin-bottom: 6rem">
+                                <div class="card-body">
+                                    @Html.LabelFor(model => model.idTipoDeServicio, "Tipo de servicio", new { @class = "control-label" })
+                                    <div class="clearfix"></div>
+                                    <div class="col-md-4">
+                                        @Html.DropDownList("idTipoDeServicio", null, "", new { @class = "form-control" })
+                                        @Html.ValidationMessageFor(model => model.idTipoDeServicio, "", new { @class = "text-danger" })
+                                    </div>
+                                    <button type="button" class="fa fa-lg fa-plus btn btn-success btn-lg" id="btnOpenCreate"></button>
+                                </div>
+                            </div>
+                            <div class="clearfix"></div>
+                            <div class="form-group">
+                                <div class="card-body">
+                                    @Html.LabelFor(model => model.idEspecialidad, "Tipo de especialidad", new { @class = "control-label" })
+                                    <div class="clearfix"></div>
+                                    <div class="col-md-4">
+                                        @Html.DropDownList("idEspecialidad", null, "", new { @class = "form-control" })
+                                        @Html.ValidationMessageFor(model => model.idEspecialidad, "", new { @class = "text-danger" })
+
+                                    </div>
+                                    @*<button type="button" class="fa fa-lg fa-plus btn btn-success btn-lg" id="btnOpenCreate"></button>*@
+                                </div>
+                                <div class="clearfix"></div>
+                            </div>
+                            @*<div class="form-group">
+                                <div class="card-body">
+                                    @Html.LabelFor(model => model.idEspecialidad, "Especialidad", new { @class = "control-label" })
+                                    <div class="clearfix"></div>
+                                    <div class="col-md-4">
+                                        <select class="form-control" id="idEspecialidad"></select>
+                                        @Html.ValidationMessageFor(model => model.idEspecialidad, "", new { @class = "text-danger" })
+                                    </div>
+                                    <button type="button" class="fa fa-lg fa-plus btn btn-success btn-lg" id="btnOpenCreate"></button>
+                                </div>
+                            </div>*@
+
+                            <div class="clearfix"></div>
+                            <!--Botones-->
+                            <div class="row">
+                                <div class="col-md-12 text-center">
+                                    <button class="btn btn-primary icon-btn" type="submit">
+                                        <i class="fa fa-fw fa-lg fa-check">
+                                        </i>Registrar
+                                    </button>
+                                    <a class="btn btn-default icon-btn" href="@Url.Action("Index")">
+                                        <i class="fa fa-fw fa-lg fa-times-circle"></i>Cancelar
+                                    </a>
+                                </div>
+                            </div>
+                            <div id="container"></div>
+                        </div>
+                    }
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+@section scripts{
+    @Scripts.Render("~/bundles/jqueryval")
+    <script src="~/Scripts/Plugins/select2.min.js"></script>
+    <script src="~/Scripts/jquery.alphanum.js"></script>
+    <script type="text/javascript">
+        $('#idTipoDeServicio').select2({
+            placeholder: "Seleccionar un tipo de servicio"
+        });
+        $('#idTipoDeEspeciliadad').select2({
+            placeholder: "Seleccionar una tipo de especialidad"
+        });
+        $('#idEspecialidad').select2({
+            placeholder: "Seleccionar una especialidad"
+        });
+    </script>
+    <script type="text/javascript">
+        $(function () {
+            $("#btnOpenCreate").click(function () {
+                $("#container").load('@Url.Action("CreateCategory")');
+            });
+            $("#idTipoDeEspeciliadad").change(function () {
+                $.ajax({
+                    url: '@Url.Action("GetServices")',
+                    type: 'POST',
+                    data: { id: $(this).val() },
+                    datatype: "json",
+                    success: function (services) {
+                        $("#idEspecialidad").prop("disabled", false);
+                        $("#idEspecialidad").empty();
+                        var options = "";
+                        $.each(services, function (index, value) {
+                            options += "<option value='" + value.idServicio + "'>" + value.nombreServicio + "</option>";
+                        });
+                        $("#idEspecialidad").html(options);
+                    },
+                    error: function (e) {
+                        alert('error' + e);
+                    }
+                });
+            });
+        });
+    </script>
+
+}

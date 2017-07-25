@@ -1,0 +1,45 @@
+﻿
+@{
+    ViewBag.Title = "ReportePacienteTop";
+}
+
+<script language="javascript" type="text/javascript">
+
+          function validarSiNumero(numero){
+              if (/^([0-9])*$/.test(numero));
+                  else
+              {
+                      alert("El valor " + numero + " no es un número");
+                      txtDato.value = "";}
+          }
+
+
+          function validar() {
+              //obteniendo el valor que se puso en el campo text del formulario
+              var miCampoTexto = document.getElementById("txtDato").value;
+              //la condición
+              if (miCampoTexto.length >8 || /^\s+$/.test(miCampoTexto) || miCampoTexto=="") {
+                  alert('Ingrese caracteres validos, maximo 8 caracteres');
+                  return false;
+              }
+              return true;
+          }
+
+</script>
+<h2>Top de Pacientes</h2>
+
+
+@using (Html.BeginForm("RepPacTopN", "Reportes"))
+{
+    <form name="form1" onsubmit="return validar()">
+        <label>Ingrese en numero de Top:</label>
+        <input type="text" id="txtDato" name="txtDato" class="dtp" onChange="validarSiNumero(this.value)" ; />
+        <br />
+        <input type="submit" value="Imprimir Reporte" class="btn btn-primary" onclick="return validar()" />
+    </form>
+    @*<input type="button" value="Reporte MVC - Otra Ventana" onclick="GenericInNewWin()" />*@
+}
+
+
+
+

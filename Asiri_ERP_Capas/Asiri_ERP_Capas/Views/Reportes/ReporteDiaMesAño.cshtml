@@ -1,0 +1,57 @@
+﻿
+@{
+    ViewBag.Title = "ReporteDiaMesAño";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<script type="text/javascript">
+
+    function validarSiNumero(numero) {
+        if (/^([0-9])*$/.test(numero));
+        else {
+            alert("El valor " + numero + " no es un número");
+            txtDato.value = "";
+        }
+    }
+
+    function validar2() {
+        //obteniendo el valor que se puso en el campo text del formulario
+        var miCampoTexto = document.getElementById("txtDia").value;
+        var miCampoTexto1 = document.getElementById("txtMes").value;
+        var miCampoTexto2 = document.getElementById("txtAño").value;
+        //la condición
+        if (miCampoTexto.length != 2 || /^\s+$/.test(miCampoTexto) || miCampoTexto == "" ||  miCampoTexto>31 || 00 == miCampoTexto||isNaN(miCampoTexto)) {
+            alert('El campo de Dia no es valido!!');
+            return false;
+        }
+        if (miCampoTexto1.length != 2 || /^\s+$/.test(miCampoTexto1) || miCampoTexto1 == "" || miCampoTexto1 > 12 ||miCampoTexto1 == 00 || isNaN(miCampoTexto1)) {
+            alert('El campo de Mes no es valido!');
+            return false;
+        }
+       
+       
+        if (miCampoTexto2.length != 4 || /^\s+$/.test(miCampoTexto2) || miCampoTexto2 == "" ||  2008>miCampoTexto2 || miCampoTexto2 < an || isNaN(miCampoTexto2)) {
+            alert('El campo de Año no es valido');
+            return false;
+        }
+        return true;
+    }
+</script>
+
+@using (Html.BeginForm("ShowGenerico", "Reportes"))
+{
+    <h2>Reporte Por Dia</h2>
+    <label>DIA</label>
+    <input type="text" id="txtDia" name="txtDia" class="dtp" onChange="validarSiNumero(this.value)" />
+    <label>MES</label>
+    <input type="text" id="txtMes" name="txtMes" class="dtp" onChange="validarSiNumero(this.value)" />
+    <label>AÑO</label>
+    <input type="text" id="txtAño" name="txtAño" class="dtp" onChange="validarSiNumero(this.value)" />
+    <br />
+
+    <input type="submit" value="Reporte DIA" onclick="return validar2();" />
+}
+
+
+
+

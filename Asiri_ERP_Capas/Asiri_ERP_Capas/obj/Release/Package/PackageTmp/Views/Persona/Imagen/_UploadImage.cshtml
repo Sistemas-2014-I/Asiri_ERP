@@ -1,0 +1,122 @@
+﻿@model Common.RHUt09_persona
+<style>
+    .circulo {
+        width: 100px;
+        height: 150px;
+        border-radius: 10%;
+        border: 2px;
+        border-color: aquamarine;
+        color: #808080;
+    }
+
+    #imgSalida {
+        border: 2px;
+        border-color: #808080;
+        cursor: pointer;
+        width: 55%;
+        height: 95%;
+    }
+</style>
+
+@using (Html.BeginForm("UploadImage", "Persona", FormMethod.Post, new { enctype = "multipart/form-data"}))
+{
+    @Html.AntiForgeryToken()
+    <div class="row" style="text-align:center;">
+        <div class="col-md-12">
+            @*Html.LabelFor(model => model.pathFoto, htmlAttributes: new { @class = "control-label col-md-2" })*@
+            Cargar Foto
+        </div>
+        <div class="col-md-12">
+            <div class="col-md-10">
+                <input type="file" id="file-input" name="ImagenPersona" style="display: none;" />
+            </div>
+        </div>
+    </div>
+    <br />
+    <div class="row">
+        <div class="col-md-12" style="text-align: center;">
+            <div class="imgSalida">
+                <img id="imgSalida" onclick="clickFile()" class="circulo" src="~/Content/img/user-icon.png" />
+                @*<img id="imgSalida" onclick="clickFile()" class="circulo" src="@Url.Action("convertToImage", "RHUt09_persona", new { idPersona = Model.idPersona})" />*@
+            </div>
+        </div>
+    </div>
+}
+
+<script src="~/Scripts/jq/jquery-3.1.1.min.js"></script>
+<script>
+    //NEW  src="~/RHUt09_persona/Imagen/user-icon.jpg"
+    function clickFile() {
+        $('#file-input').click();
+    }
+    $('#file-input').change(function (e) {
+                  addImage(e);
+        });
+    //$('#imgSalida').click(function () {
+    //       $('#file-input').click();
+     //   });
+
+    //$(window).load(function () {
+    //    $(function () {
+    //        $('#file-input').change(function (e) {
+    //            addImage(e);
+    //        });
+
+            //CARGA LA IMAGEN
+            function addImage(e) {
+                var file = e.target.files[0],
+                imageType = /image.*/;
+
+                if (!file.type.match(imageType))
+                    return;
+
+                var reader = new FileReader();
+                reader.onload = fileOnload;
+                reader.readAsDataURL(file);
+            }
+
+            // MUESTRA LA IMAGEN
+            function fileOnload(e) {
+                var result = e.target.result;
+                $('#imgSalida').attr("src", result);
+            }
+</script>
+
+
+
+
+
+@*
+
+        @using (Html.BeginForm("UploadImage", "RHUt09_personaController", FormMethod.Post, new { enctype = "multipart/form-data" }))
+                    {
+                        @Html.AntiForgeryToken()
+                        <div class="row" style="text-align:center;">
+                            <div class="col-md-6">
+                                @Html.LabelFor(model => model.pathFoto, htmlAttributes: new { @class = "control-label col-md-2" })
+                                @*<div class="col-md-8">
+                                    @Html.EditorFor(model => model.pathFoto, new { htmlAttributes = new { @class = "form-control" } })
+                                    @Html.ValidationMessageFor(model => model.pathFoto, "", new { @class = "text-danger" })
+                                 </div>*
+                        </div>
+    <div class="col-md-6">
+        <div class="col-md-10">
+            <input type="file" id="file-input" name="ImagenPersona" />
+        </div>
+    </div>
+    <!--div class="col-md-5">
+        <div class="col-md-offset-2 col-md-10">
+            <input type="submit" value="Cargar" class="btn btn-default" />
+        </div>
+    </div-->
+                    </div>
+    <br />
+    <div class="row">
+        <div class="col-md-12" style="text-align: center;">
+            <div>
+                <img id="imgSalida" width="50%" height="50%" src="" />
+            </div>
+        </div>
+    </div>
+                }
+*@

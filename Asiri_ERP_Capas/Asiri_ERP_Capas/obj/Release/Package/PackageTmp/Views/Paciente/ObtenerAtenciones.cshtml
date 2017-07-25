@@ -1,0 +1,58 @@
+﻿@model IEnumerable<Common.CLlt03_atencion>
+@{
+    Layout = null;
+}
+
+<script type="text/javascript" src="~/Scripts/plugins/jquery.dataTables.min.js"></script>
+<script type="text/javascript" src="~/Scripts/plugins/dataTables.bootstrap.min.js"></script>
+<script>
+    $('#tableAtenciones').dataTable({
+        order: [[0,"desc"]],
+        language: {
+            processing: "En curso...",
+            search: "Buscar:",
+            lengthMenu: "Visualizar _MENU_ registros",
+            info: "_START_ de _END_ registros de un total de _TOTAL_ registros",
+            infoEmpty: "0 registros encontrados",
+            infoFiltered: "(_MAX_ registros filtrados en total)",
+            infoPostFix: "",
+            loadingRecords: "Cargando registros...",
+            zeroRecords: "No hay registros",
+            emptyTable: "Vacío",
+            paginate: {
+                first: "Primero",
+                previous: "Previo  ",
+                next: "  Siguiente",
+                last: "Último"
+            },
+            aria: {
+                sortAscending: ": Habilitado para ordenar la columna en orden ascendente",
+                sortDescending: ": Habilitado para ordenar la columna en orden descendente"
+            }
+        }
+    });
+</script>
+<table id="tableAtenciones" style="width:100%" class="table">
+    <thead>
+        <tr>
+            <th>
+                Fecha
+            </th>
+            <th>Acciones</th>
+        </tr>
+    </thead>
+    <tbody>
+
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.fecRegistro)
+                </td>
+                <td>
+                    @Html.ActionLink("Ver Historial", "Historial", new { id = item.idAtencion })
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

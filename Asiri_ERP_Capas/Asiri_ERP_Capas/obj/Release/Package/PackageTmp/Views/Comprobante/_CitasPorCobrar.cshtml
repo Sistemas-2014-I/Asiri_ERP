@@ -1,0 +1,88 @@
+﻿@model IEnumerable<Common.View.ViewModel.CitasPorCobrarVM>
+@using Common.Helper
+
+<br />
+<div class="table-responsive">
+    <table id="tbl-citas-por-cobrar" class="table table-striped table-condensed table-hover table-bordered">
+        <thead>
+        <tr>
+            <th class="text-nowrap bg-primary">
+                Cód. Cita
+            </th>
+            <th class="bg-primary">
+                Paciente
+            </th>
+            <th class="text-nowrap bg-primary">
+                Tipo Doc
+            </th>
+            <th class="text-nowrap bg-primary">
+                N° Doc
+            </th>
+            <th class="text-nowrap bg-primary">
+                Servicios
+            </th>
+            <th class="text-nowrap bg-primary">
+                Inicio
+            </th>
+            @*<th class="text-nowrap bg-primary">
+                Estado Cita
+            </th>*@
+            <th class="text-center text-nowrap bg-primary">
+                Acciones
+            </th>
+        </tr>
+            </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td class="text-nowrap">
+                        @item.codCita
+                    </td>
+                    <td>
+                        @item.GetNombrePaciente()
+
+                    </td>
+                    <td class="text-nowrap">
+                        @item.tipoDoc
+                    </td>
+                    <td class="text-nowrap">
+                        @item.numDoc
+                    </td>
+                    <td>
+                        <ul>
+                            @foreach (var servicio in item.servicios)
+                            {
+
+                                <li class="text-nowrap"> @(servicio.cantidad.RoundOut(2) + " " + servicio.nombreServicio)</li>
+                            }
+                        </ul>
+                    </td>
+                    <td>
+                        @item.GetFechaYHoraInicio()
+                    </td>
+                    @*<td class="text-nowrap">
+                        <b>@item.estadoCita</b>
+                    </td>*@
+                    <td class="text-nowrap">
+                        
+                        <a href="@Url.Action("Create", "Comprobante", new { idCita = item.idCita })" class="btn btn-danger btn-sm">
+                            <i class="fa fa-lg fa-sign-out"></i> Cobrar
+                        </a>
+                    </td>
+                </tr>
+            }
+
+        </tbody>
+    </table>
+</div>
+<script src="~/Scripts/common.js"></script>
+<script>
+    $(document).ready(function () {
+        $("#modal-citas").on("hidden.bs.modal", function () {
+            $("#modal-body-citas-por-cobrar").text("");
+        });
+
+        setDataTable("#tbl-citas-por-cobrar");
+    });
+</script>

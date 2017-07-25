@@ -1,0 +1,431 @@
+﻿@model Mvc_Entity.CLlt05_cita
+
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Create</title>
+
+    <script src="~/Scripts/jquery.js"></script>
+    <script src="~/Scripts/jquery.maskedinput.js"></script>
+
+    <script type="text/javascript">
+            $(document).ready(function () {
+                $('#tableDetalle').dataTable({
+
+                    language: {
+                        processing: "En curso...",
+                        search: "Buscar:",
+                        lengthMenu: "Visualizar _MENU_ registros",
+                        info: "_START_ de _END_ registros de un total de _TOTAL_ registros",
+                        infoEmpty: "0 registros encontrados",
+                        infoFiltered: "(_MAX_ registros filtrados en total)",
+                        infoPostFix: "",
+                        loadingRecords: "Cargando registros...",
+                        zeroRecords: "No hay registros",
+                        emptyTable: "Vacío",
+                        paginate: {
+                            first: "Primero",
+                            previous: "Previo  ",
+                            next: "  Siguiente",
+                            last: "Último"
+                        },
+                        aria: {
+                            sortAscending: ": Habilitado para ordenar la columna en orden ascendente",
+                            sortDescending: ": Habilitado para ordenar la columna en orden descendente"
+                        }
+                    }
+                });
+
+            });
+
+
+
+            var mtoTotal = 0;
+
+            //Agregar Tabla Detalle
+            function AgregarDetalle() {
+                var comboServicio = document.getElementById("idServicio");
+                var indice = comboServicio.selectedIndex;
+                var nombreServicio = comboServicio.options[comboServicio.selectedIndex].text;
+                var subtotal = parseFloat($("#cantidad").val()) * parseFloat($("#precio").val());
+                mtoTotal = mtoTotal + subtotal;
+                $("#mtoTotal").val(mtoTotal);
+                $("#tableDetalle").dataTable().fnAddData([$("#idServicio").val(),
+                                                          nombreServicio,
+                                                          $("#cantidad").val(),
+                                                          parseFloat($("#precio").val()).toFixed(2),
+                                                          parseFloat(subtotal).toFixed(2)]);
+                comboServicio.selectedIndex = 0;
+                $("#cantidad").val("0");
+                $("#precio").val($("#precioEscondido").val());
+
+            }
+
+            function soloNumeros(e) {
+                key = e.keyCode || e.which;
+                teclado = String.fromCharCode(key);
+                numeros = "0123456789";
+                especiales = "8-37-38-46";
+                teclado_especial = false;
+
+                for (var i in especiales) {
+                    if (key == especiales[i]) {
+                        teclado_especial = true;
+                    }
+                }
+                if (numeros.indexOf(teclado) == -1 && !teclado_especial) {
+                    return false;
+                }
+            }
+
+            jQuery(function ($) {
+                $.mask.definitions['H'] = '[012]';
+                $.mask.definitions['N'] = '[012345]';
+                $.mask.definitions['n'] = '[0123456789]';
+                $(".clockpicker").mask("Hn:Nn");
+            });
+
+            function valida_hora(valor) {
+                //que no existan elementos sin escribir
+                if (valor.indexOf(":") != -1) {
+                    var hora = valor.split(":")[0];
+                    if (parseInt(hora) > 23) {
+                        $(".clockpicker").val("");
+                    }
+                }
+            }
+
+
+
+            //function calcLong(txt, dst, formul, maximo) {
+
+            //    var largo
+
+            //    largo = formul[txt].value.length
+
+            //    if (largo > maximo)
+
+            //        formul[txt].value = formul[txt].value.substring(0, maximo)
+
+            //    formul[dst].value = formul[txt].value.length
+
+            //}
+
+            //Obtiene el idServicio seleccionado y manda el precio
+            var getServicioUrl = '@Url.Action("ObtenerServicio")';
+            $(function () {
+
+                $('#idServicio').change(
+                    function () {
+
+                        var idServicioSeleccionado = $('#idServicio').val();
+                        if (idServicioSeleccionado != null) {
+                            $.getJSON(getServicioUrl, { idServicio: idServicioSeleccionado },
+                                function (subs) {
+                                    var subSelect = $('#precio').val();
+                                    $('#precio').empty();
+                                    $('#precio').val(parseFloat(subs.toString()).toFixed(2));
+                                });
+                        }
+                    });
+
+
+
+            });
+
+
+            //Enviar Cita al Controller
+
+            $(document).on("click", "#Enviar", function () {
+                var Cita = { "codCita": "", "fecCita": "", "horaInicio": "", "duracionEstimada": "", "esOnline": "", "obsvCita": "", "mtoTotal": "", "idPaciente": "", "idEmpleado": "", "olistCitaDtl": [] };
+
+
+                Cita.codCita = "1";
+                Cita.fecCita = $("#fecCita").val();
+                Cita.horaInicio = $("#horaInicio").val();
+                Cita.duracionEstimada = $("#duracionEstimada").val();
+                Cita.esOnline = "1";
+                Cita.obsvCita = "1";
+                Cita.mtoTotal = "1";
+                Cita.idPaciente = "1";
+                Cita.idEmpleado = "1";
+
+
+
+
+                $.ajax(
+                {
+                    url: '/Cita/generarCita',
+                    data: JSON.stringify({ 'oCita': Cita }),
+                    type: 'POST'
+
+
+                });
+
+            });
+    </script>
+
+
+</head>
+<body id="vista" class="sidebar-mini fixed">
+    <div class="page-title">
+        <div>
+            <h1><i class="fa fa-edit"></i> Mantenimiento de Citas</h1>
+            <p>Registrar Nueva citas ...!</p>
+        </div>
+        <div>
+            <ul class="breadcrumb">
+                <li><i class="fa fa-home fa-lg"></i></li>
+                <li>Citas</li>
+                <li><a href="#">Nueva Cita</a></li>
+            </ul>
+        </div>
+    </div>
+    <!--********************************FIN TITULO*******************************-->
+
+    @Html.Raw(TempData["msg"])
+
+    @using (Html.BeginForm())
+            {
+        <div class="row">
+            @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+
+
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="card col-md-12">
+                        <div class="card-content">
+                            <form id="InfFuncionVital">
+
+
+                                <div class="form-group col-md-4">
+                                    @Html.LabelFor(model => model.idTipoDeEspecialidad, "Tipo de Especialidad", htmlAttributes: new { @class = "control-label col-md-6" })
+                                    <div class="control-label">
+                                        @Html.DropDownList("idTipoDeEspeciliadad", null, "Seleccionar", htmlAttributes: new { @class = "form-control" })
+                                    </div>
+                                </div>
+
+                                <div class="form-group col-md-4">
+                                    @Html.LabelFor(model => model.idEspecialidad, "Especialidad", htmlAttributes: new { @class = "control-label col-md-2" })
+                                    <div class="control-label">
+                                        @Html.DropDownList("idEspecialidad", null, "Seleccionar", htmlAttributes: new { @class = "form-control" })
+                                    </div>
+                                </div>
+
+                                <div class="form-group col-md-4">
+                                    @Html.LabelFor(model => model.idEmpleado, "Doctor", htmlAttributes: new { @class = "control-label col-md-2" })
+                                    <div class="control-label">
+                                        @Html.DropDownList("idEmpleado", null, "Seleccionar", htmlAttributes: new { @class = "form-control" })
+                                    </div>
+                                    <input type="button" class="btn btn-primary icon-btn" data-toggle="modal" data-target="#exampleModalLong" id="btnOpenHorario" value="...Ver Horario" />
+                                </div>
+
+                                <div class="form-group col-md-4">
+                                    @Html.Label("Fecha de Cita", htmlAttributes: new { @class = "control-label col-md-6" })
+                                    <div class="control-label">
+                                        <div id="sandbox-container">
+                                            @Html.EditorFor(model => model.fecCita, new { htmlAttributes = new { @class = "form-control", @readonly = "readonly" } })
+                                            @Html.ValidationMessageFor(model => model.fecCita, "", new { @class = "text-danger" })
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="form-group col-md-4">
+                                    @Html.Label("Hora de Inicio", htmlAttributes: new { @class = "control-label col-md-6" })
+                                    <div class="control-label">
+                                        <div class="clockpicker" onkeypress="return soloNumeros(event), valida_hora(valor)" onpaste="return false">
+                                            @Html.EditorFor(model => model.horaInicio, new { htmlAttributes = new { @class = "form-control", @readonly = "readonly" } })
+                                            @Html.ValidationMessageFor(model => model.horaInicio, "", new { @class = "text-danger" })
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="form-group col-md-4">
+                                    @Html.Label("Duracion (En minutos)", htmlAttributes: new { @class = "control-label col-md-8" })
+                                    <div class="control-label" id="duracionEstimada" onkeypress="return soloNumeros(event)" onpaste="return false">
+
+                                        @Html.Editor("duracionEstimada", new { htmlAttributes = new { @class = "form-control", @min = "00", @max = "59" } })
+                                        @Html.ValidationMessageFor(model => model.duracionEstimada, "", new { @class = "text-danger" })
+
+                                    </div>
+                                </div>
+
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="card" style="text-align: center;">
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col-lg-10">
+                            <div class="form-group">
+                                <div class="col-md-offset-2 col-md-10">
+                                    <button type="submit" value="Validar" class="btn btn-primary icon-btn">
+                                        <i class="fa fa-fw fa-lg fa-edit">
+                                        </i>Separar Cita
+                                    </button>&nbsp;&nbsp;&nbsp;
+                                    <a class="btn btn-default icon-btn" href="/Index">
+                                        <i class="fa fa-fw fa-lg fa-times-circle"></i>Cancelar
+                                    </a>
+                                </div>
+                            </div>
+
+                            <div class="modal fade " tabindex="-1" role="dialog" id="Quick" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+                                <div style="width:95%;" class="modal-dialog modal-lg" role="document">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <input type="button" class="close" value="Cerrar" data-dismiss="modal" aria-label="Close" @*onclick="document.location.reload();"*@ />
+                                            <h4 class="modal-title" id="exampleModalLongTitle">Horario Doctor</h4>
+                                            <p>Por favor, si demora en cargar haga click en cualquiera de las dos flechas para visualizar el horario</p>
+
+
+
+                                        </div>
+                                        <div class="modal-body">
+                                            <div id="verHorario">
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    }
+
+    <!--********************************TITULO*******************************-->
+
+
+    <div>
+        @Html.ActionLink("Regresar a la lista", "Index") |
+        @Html.ActionLink("Calendario de Citas", "Horario")
+    </div>
+    <script type="text/javascript" src="~/Scripts/plugins/bootstrap-datepicker.min.js"></script>
+    <script src="~/Scripts/jquery-clockpicker.js" charset="UTF-8"></script>
+    <script src="~/Scripts/jquery-clockpicker.min.js" charset="UTF-8"></script>
+    <script src="~/Scripts/bootstrap-datepicker.min.js" charset="UTF-8"></script>
+    <script src="~/Scripts/locale/bootstrap-datepicker.es.min.js" charset="UTF-8"></script>
+    <script src="~/Scripts/fullcalendar.js" charset="utf-8"></script>
+    <script type="text/javascript">
+                var input = $('.clockpicker input').clockpicker({
+                                    placement: 'right',
+                                    aling: 'right',
+                                    autoclose: true,
+                                    default: 'now',
+
+                                });
+    </script>
+
+    @*<script>
+                            $('.datepicker').datepicker({
+                                language: 'es',
+                                placement: 'right',
+                                aling:'right'
+                            });
+        </script>*@
+    <script>
+        $('#sandbox-container input').datepicker({
+            placement: 'right',
+            aling: 'right',
+                                    format: "yyyy-mm-dd",
+                                    startDate: "@DateTime.Now.Date",
+                                    language: "es",
+                                    daysOfWeekHighlighted: "0",
+                                    autoclose: true
+                                });
+    </script>
+
+    <script type="text/javascript">
+
+    $(document).ready(function () {
+            $("#idTipoDeEspeciliadad").change(function () {
+                $("#idEspecialidad").empty();
+                $.ajax({
+                    type: 'POST',
+                    url: '@Url.Action("getEspecialidad")',
+                    dataType: 'json',
+                    data: { id: $("#idTipoDeEspeciliadad").val() },
+                    success: function (Especialidad) {
+                        $("#idEspecialidad").append('<option value="' + '">Seleccionar</option>');
+                        $.each(Especialidad, function (i, Especialidad) {
+                            $("#idEspecialidad").append('<option value="' + Especialidad.Value + '">' +
+                            Especialidad.Text + '</option>');
+                        });
+                    }
+                });
+
+
+                $("#idEmpleado").empty();
+                $("#idEmpleado").append('<option value="' + "" + '">Seleccionar</option>');
+            });
+
+            $("#idEspecialidad").change(function () {
+                $("#idEmpleado").empty();
+                $.ajax({
+                    type: 'POST',
+                    url: '@Url.Action("getEmpleado")',
+                    dataType: 'json',
+                    data: { id: $("#idEspecialidad").val() },
+                    success: function (Empleado) {
+                        $("#idEmpleado").append('<option value="' + "" + '">Seleccionar</option>');
+                        $.each(Empleado, function (i, Empleado) {
+                            $("#idEmpleado").append('<option value="' + Empleado.Value + '">' +
+                            Empleado.Text + '</option>');
+                        });
+                    }
+                });
+            });
+
+
+        $("#idEspecialidad").change(function () {
+            $("#idServicio").empty();
+            
+            $.ajax({
+                type: 'POST',
+                url: '@Url.Action("getServicio")',
+                dataType: 'json',
+                data: { id: $("#idEspecialidad").val() },
+                success: function (Servicio) {
+                    $("#idServicio").append('<option value="' + "" + '">Seleccionar</option>');
+                    $.each(Servicio, function (i, Servicio) {
+                        $("#idServicio").append('<option value="' + Servicio.Value + '">' +
+                        Servicio.Text + '</option>');
+                        
+                    });
+                    
+                }
+            });
+        });
+    });
+
+        var idDoc = $("#idEmpleado").attr("id");
+        $(document).on("click", "#btnOpenHorario", function () {
+            var combo = document.getElementById("idEmpleado");
+
+            var id = combo.options[combo.selectedIndex].value;
+
+            $("#verHorario").load("/Cita/VerHorario/" + id);
+
+            $("#Quick").modal("show");
+            $('#Quick').data('bs.modal').handleUpdate()
+
+        });
+    </script>
+
+</body>
+</html>
+

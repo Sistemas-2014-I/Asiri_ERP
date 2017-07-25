@@ -1,0 +1,103 @@
+﻿@model Common.Model.TNSt06_medioDePagoDtl
+
+<span id="valMedioDePagoDtl" class="error text-danger hidden"></span>
+<div class="row container-fluid">
+    <div class="form-group col-md-3">
+        <label for="idMedioDePago">Medio de pago</label>
+        @Html.DropDownList("idMedioDePago", null, htmlAttributes: new { @class = "form-control" })
+        <span id="valIdMedioDePago" class="error text-danger hidden"></span>
+    </div>
+    <div class="form-group col-md-2">
+        <label for="mtoMedioDePago">Monto</label>
+        @Html.EditorFor(model => model.mtoMedioDePago, new { htmlAttributes = new { @class = "form-control" } })
+        <span id="valMtoMedioDePago" class="error text-danger hidden"></span>
+    </div>
+
+    <div class="form-group col-md-3">
+        <label for="idMoneda">Moneda</label>
+        @Html.DropDownList("idMoneda", null, htmlAttributes: new { @class = "form-control" })
+        <span id="valIdMoneda" class="error text-danger hidden"></span>
+    </div>
+
+    <div id="div-tipo-de-cambio" class="form-group hidden col-md-2">
+        <label for="tipoDeCambio">Cambio (<span class="simbolo-moneda"></span>)</label>
+        @Html.EditorFor(model => model.tipoDeCambio, new { htmlAttributes = new { @class = "form-control" } })
+        <span id="valTipoDeCambio" class="error text-danger hidden"></span>
+    </div>
+    <div class="form-group col-md-2">
+        <br />
+        <button id="btn-add-medioDePagoDtl" type="button" class="btn btn-success"><span class="glyphicon glyphicon-plus"></span> Agregar</button>
+    </div>
+</div>
+<div class="row container-fluid">
+    <div class="col-md-9">
+        <div class="table-responsive">
+            <table class="table table-condensed table-bordered table-hover">
+                <thead>
+                    <tr>
+                        <th class="text-nowrap bg-primary">
+                            Medio de Pago
+                        </th>
+                        <th class="text-nowrap bg-primary">
+                            Monto
+                        </th>
+                        <th class="text-nowrap bg-primary">
+                            Cambio x U.M
+                        </th>
+                        <th class="text-nowrap bg-primary">
+                            Conversión a <span class="simbolo-moneda"></span>
+                        </th>
+                        <th class="text-nowrap bg-primary text-center">
+                            Acciones
+                        </th>
+                    </tr>
+                </thead>
+                <tbody id="body-details-medioDePagoDtl"></tbody>
+            </table>
+        </div>
+    </div>
+    <div class="col-md-3">
+
+
+        <ul class="list-group">
+
+            <li class="list-group-item bg-primary text-center"><b>Montos</b></li>
+            <li class="list-group-item">
+                A pagar
+                <span class="badge">
+                    <span class="simbolo-moneda"></span>
+                    <span id="mto-a-pagar"></span>
+                </span>
+            </li>
+            <li class="list-group-item">
+                Acumulado
+                <span class="badge">
+                    <span class="simbolo-moneda"></span>
+                    <span id="mto-acumulado"></span>
+                </span>
+            </li>
+            <li class="list-group-item">
+                Restante
+                <span class="badge">
+                    <span class="simbolo-moneda"></span>
+                    <span id="mto-restante"></span>
+                </span>
+            </li>
+        </ul>
+    </div>
+</div>
+
+
+@*@section Scripts {*@
+<script src="~/Scripts/comprobantejs/comprobante.medioDePagoDtl.js"></script>
+<script>
+    $(document).ready(function () {
+        iniMedioDePagoDtl(@Common.Helper.ValuesSystem.MaxIntAmount,
+        "@Url.Action("Create")",
+        "@Url.Action("Index")"
+);
+    });
+</script>
+@*}*@
+
+

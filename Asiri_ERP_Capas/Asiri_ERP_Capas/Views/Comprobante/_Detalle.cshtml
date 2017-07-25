@@ -1,0 +1,222 @@
+﻿@model Common.View.ViewModel.ComprobanteVM
+@using Common.Helper
+
+<div class="row" style="margin-top:10px;">
+    <div class="col-md-8">
+        <h3 style="margin-top:0px;font-weight:bold;">
+            <span class="text-success">@Model.nombreTipoComp</span>
+            @("N° " + Model.serie + " - " + Model.numComprobanteEmitido)
+            <span class="label label-danger">@(Model.esAnulado ? $"(ANULADO) {(Model.fecAnulacion.OnlyDate())}" : "")</span>
+        </h3>
+
+        @if (Model.tipoPersoneria == ValuesSystem.PersonaNatural)
+            {
+            <div class="col-sm-6">
+                <p>
+                    <b>Paciente:</b>
+                    <span>@Model.GetNombrePaciente()</span>
+                </p>
+            </div>
+        }
+        else if (Model.tipoPersoneria == ValuesSystem.PersonaJuridica)
+        {
+            <div class="col-sm-6">
+                <p>
+                    <b>Paciente:</b>
+                    <span>@Model.nombreRepresentante</span>
+                </p>
+            </div>
+            <div class="col-sm-6">
+                <p>
+                    <b>Razón social:</b>
+                    <span>@Model.razonSocial</span>
+                </p>
+            </div>
+        }
+
+        <div class="col-sm-6">
+            <p>
+                <b>@Model.tipoDoc:</b>
+                <span>@Model.numDoc</span>
+            </p>
+        </div>
+
+        <div class="col-sm-6">
+            <p>
+                <b>Fecha emisión:</b>
+                <span>@(Model.fecEmision.OnlyDate()) </span>
+            </p>
+        </div>
+        <div class="col-sm-6">
+            <p>
+                <b>Fecha vencimiento:</b>
+                <span>@(Model.fecVencimiento.OnlyDate()) </span>
+            </p>
+        </div>
+        <div class="col-sm-6">
+            <p>
+
+                <b>Fecha cancelación:</b>
+                <span>@(Model.fecCancelacion.OnlyDate()) </span>
+            </p>
+        </div>
+
+
+    </div>
+    <div class="col-md-4">
+        <img class="img-circle img-responsive" src="~/Image/logo-magicDent-pequeno.png" />
+    </div>
+</div>
+
+<div class="table-responsive">
+    <table class="table table-bordered table-condensed">
+        <tr>
+            <th class="bg-primary text-nowrap">Cantidad</th>
+            <th class="bg-primary text-nowrap">Servicio</th>
+            <th class="bg-primary text-nowrap">Precio</th>
+            <th class="bg-primary text-nowrap">Importe</th>
+        </tr>
+        @foreach (var item in Model.ComprobanteDtl)
+        {
+            <tr>
+                <td class="text-right text-nowrap">@item.cantidad.RoundOut(2)</td>
+                <td class="text-nowrap">@item.nombreServicio</td>
+                <td class="text-right text-nowrap">@Model.simboloMoneda @item.precio.RoundOut(2)</td>
+                <td class="text-right text-nowrap">@Model.simboloMoneda @((Math.Round(item.cantidad, 2) * Math.Round(item.precio, 2)).RoundOut(2))</td>
+            </tr>
+        }
+    </table>
+</div>
+
+
+<div class="row">
+    <div class="col-md-4">
+        <div class="table-responsive">
+            <table class="table table-condensed table-bordered">
+                <tr>
+                    <th colspan="2" class="text-center bg-primary">
+                        Montos
+                    </th>
+                </tr>
+                <tr>
+                    <td class="text-nowrap">
+                        <b>Subtotal:</b>
+                    </td>
+                    <td class="text-right text-nowrap">
+                        @Model.simboloMoneda @Model.mtoSubTotal.RoundOut(2)
+                    </td>
+                </tr>
+                <tr>
+                    <td class="text-nowrap">
+                        <b>@Model.abrvImpto (@Model.porcentajeImpto.RoundOut(2) %):</b>
+
+                    </td>
+                    <td class="text-right text-nowrap">
+                        @Model.simboloMoneda @Model.mtoImpto.RoundOut(2)
+                    </td>
+                </tr>
+                <tr>
+                    <td class="text-nowrap"><b>Descuento (@Model.porcentajeDescuento.RoundOut(2) %):</b></td>
+                    <td class="text-right text-nowrap">@Model.simboloMoneda @Model.mtoDescuento.RoundOut(2)</td>
+                </tr>
+                <tr class="bg-success">
+                    <td class="text-nowrap"><b>Total:</b></td>
+                    <td class="text-right text-nowrap"><b>@Model.simboloMoneda @Model.mtoTotal.RoundOut(2)</b></td>
+                </tr>
+            </table>
+        </div>
+    </div>
+
+    <div class="col-md-8">
+        <div class="table-responsive">
+            <table class="table table-bordered table-condensed">
+                <tr>
+                    <th class="bg-primary">
+                        Medio de Pago
+                    </th>
+                    <th class="bg-primary text-nowrap">
+                        Monto
+                    </th>
+                    <th class="bg-primary text-nowrap">
+                        Cambio x U.M
+                    </th>
+                    <th class="bg-primary text-nowrap">
+                        Conversión a <span>@Model.nombreMoneda</span>
+                    </th>
+                </tr>
+                @foreach (var item in Model.MedioDePagoDtl)
+                {
+                    <tr>
+                        <td>@item.nombreMedioDePago</td>
+                        <td class="text-right text-nowrap">@item.mtoMedioDePago.RoundOut(2) @item.nombreMoneda</td>
+                        <td class="text-right text-nowrap">@Model.simboloMoneda @item.tipoDeCambio.RoundOut(2)</td>
+                        <td class="text-right text-nowrap">@Model.simboloMoneda @((Math.Round(item.mtoMedioDePago, 2) * Math.Round(item.tipoDeCambio, 2)).RoundOut(2))</td>
+                    </tr>
+                }
+            </table>
+        </div>
+
+    </div>
+</div>
+
+
+<div class="row container-fluid">
+    <div class="panel panel-info">
+        <div class="panel-heading">
+            <b>Información extra</b>
+        </div>
+        <div class="panel-body">
+            <div class="col-md-4">
+                <b>Info. 01:</b> @Model.info01
+            </div>
+
+            <div class="col-md-4">
+                <b>Info. 02:</b> @Model.info02
+            </div>
+
+            <div class="col-md-4">
+                <b>Info. 03:</b> @Model.info03
+            </div>
+
+            <div class="col-md-4">
+                <b>Fecha 01:</b>
+                <span>@(Model.fecha01.OnlyDate()) </span>
+            </div>
+
+            <div class="col-md-4">
+                <b>Fecha 02:</b>
+                <span>@(Model.fecha02.OnlyDate()) </span>
+            </div>
+
+            <div class="col-md-4">
+                <b>Fecha 03:</b>
+                <span>@(Model.fecha03.OnlyDate()) </span>
+            </div>
+            @if (Model.esAnulado)
+            {
+                <div class="col-md-12 text-danger">
+                    <b>Razón de anulación:</b> @Model.razonAnulacion
+                </div>
+            }
+            <div class="col-md-12">
+                <b>Observación:</b> @Model.obsvComprobanteEmitido
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="text-right">
+    <button class="btn-reporte btn btn-primary btn-sm"
+            data-tooltip="tooltip" title="Reporte"
+            data-id="@Model.idComprobanteEmitido">
+        <i class="fa fa-lg fa-print"></i>
+    </button>
+</div>
+
+<script>
+    $(document).ready(function () {
+        $("#modal-detalle-comp").on("hidden.bs.modal", function () {
+            $("#modal-body-detalle-comp").text("");
+        });
+    });
+</script>

@@ -1,0 +1,15 @@
+E:\Ciclo VII\Calidad de Software\mas pagos 2\mas pagos\Asiri_ERP_Capas\Model\bin\Release\Model.dll.config
+E:\Ciclo VII\Calidad de Software\mas pagos 2\mas pagos\Asiri_ERP_Capas\Model\bin\Release\Model.dll
+E:\Ciclo VII\Calidad de Software\mas pagos 2\mas pagos\Asiri_ERP_Capas\Model\bin\Release\Model.pdb
+E:\Ciclo VII\Calidad de Software\mas pagos 2\mas pagos\Asiri_ERP_Capas\Model\bin\Release\EntityFramework.dll
+E:\Ciclo VII\Calidad de Software\mas pagos 2\mas pagos\Asiri_ERP_Capas\Model\bin\Release\EntityFramework.SqlServer.dll
+E:\Ciclo VII\Calidad de Software\mas pagos 2\mas pagos\Asiri_ERP_Capas\Model\bin\Release\Microsoft.AspNet.Identity.Core.dll
+E:\Ciclo VII\Calidad de Software\mas pagos 2\mas pagos\Asiri_ERP_Capas\Model\bin\Release\Microsoft.AspNet.Identity.EntityFramework.dll
+E:\Ciclo VII\Calidad de Software\mas pagos 2\mas pagos\Asiri_ERP_Capas\Model\bin\Release\EntityFramework.xml
+E:\Ciclo VII\Calidad de Software\mas pagos 2\mas pagos\Asiri_ERP_Capas\Model\bin\Release\EntityFramework.SqlServer.xml
+E:\Ciclo VII\Calidad de Software\mas pagos 2\mas pagos\Asiri_ERP_Capas\Model\bin\Release\Microsoft.AspNet.Identity.Core.xml
+E:\Ciclo VII\Calidad de Software\mas pagos 2\mas pagos\Asiri_ERP_Capas\Model\bin\Release\Microsoft.AspNet.Identity.EntityFramework.xml
+E:\Ciclo VII\Calidad de Software\mas pagos 2\mas pagos\Asiri_ERP_Capas\Model\bin\Release\es\Microsoft.AspNet.Identity.Core.resources.dll
+E:\Ciclo VII\Calidad de Software\mas pagos 2\mas pagos\Asiri_ERP_Capas\Model\bin\Release\es\Microsoft.AspNet.Identity.EntityFramework.resources.dll
+E:\Ciclo VII\Calidad de Software\mas pagos 2\mas pagos\Asiri_ERP_Capas\Model\obj\Release\Model.dll
+E:\Ciclo VII\Calidad de Software\mas pagos 2\mas pagos\Asiri_ERP_Capas\Model\obj\Release\Model.pdb

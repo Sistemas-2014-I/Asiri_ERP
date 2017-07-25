@@ -1,0 +1,69 @@
+﻿@model Asiri_ERP_Capas.ViewModels.UserViewModel
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<div class="card">
+<h2>Detalles</h2>
+    <div class="row">
+
+<div class="card-body">
+    <div class="col-md-12">
+    <hr />
+    <div class="col-md-6">
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.RHUt01_empleado.RHUt09_persona.nombrePersona)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.RHUt01_empleado.RHUt09_persona.nombrePersona)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.UserName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.UserName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Email)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Email)
+        </dd>
+
+    </dl>
+        </div>
+    <div class="form-group form-md-line-input has-info">
+        <div class="col-md-6">
+        <label class="col-md-2 control-label">
+            Permisos
+        </label>
+
+        <div>
+            @foreach (var item in Model.RolesList)
+            {
+                <input type="radio" value="@item.Value" checked="@item.Selected" disabled="disabled" name="roles" />
+                @Html.DisplayFor(modelItem => item.Text)
+            }
+        </div>
+    </div>
+   </div>
+        <div class="col-md-12" style="text-align:center;">
+            <a class="btn btn-warning icon-btn" href="@Url.Action("Edit", "Users", new { id = Model.Id})">
+                <i class="fa fa-fw fa-lg fa-edit"></i>Editar
+            </a>
+            <a class="btn btn-default icon-btn" href="@Url.Action("Index","Users")">
+                <i class="fa fa-fw fa-lg fa-times-circle"></i>Cancelar
+            </a>
+        </div>
+</div>
+
+    </div>
+</div>
+</div>

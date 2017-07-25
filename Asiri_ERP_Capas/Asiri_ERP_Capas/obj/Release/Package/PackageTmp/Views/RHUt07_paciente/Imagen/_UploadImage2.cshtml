@@ -1,0 +1,92 @@
+﻿@model Asiri_ERP_Paciente.Models.ViewModel.PacienteBE
+<style>
+    .circulo {
+        width: 100px;
+        height: 150px;
+        border-radius: 10%;
+        border: 2px;
+        border-color: aquamarine;
+        color: #808080;
+    }
+
+    #imgSalida {
+        border: 2px;
+        border-color: #808080;
+        cursor: pointer;
+        width: 55%;
+        height: 95%;
+    }
+</style>
+
+@using (Html.BeginForm(null, null, FormMethod.Post, new { enctype = "multipart/form-data"}))
+{
+    @Html.AntiForgeryToken()
+    <div class="row" style="text-align:center;">
+        <div class="col-md-12">
+            @*Html.LabelFor(model => model.pathFoto, htmlAttributes: new { @class = "control-label col-md-2" })*@
+            Cargar Foto
+        </div>
+        <div class="col-md-12">
+            <div class="col-md-10">
+                <input type="file" id="file-input" name="ImagenPersona" style="display: none;" />
+            </div>
+        </div>
+    </div>
+    <br />
+    <div class="row">
+        <div class="col-md-12" style="text-align: center;">
+            <div class="imgSalida">
+                <img id="imgSalida" onclick="clickFile()" class="circulo" src="~/Content/img/user-icon.png" />
+                @*<img id="imgSalida" onclick="clickFile()" class="circulo" src="@Url.Action("convertToImage", "RHUt09_persona", new { idPersona = Model.idPersona})" />*@
+            </div>
+        </div>
+    </div>
+}
+
+<script src="~/Scripts/jquery-3.1.1.min.js"></script>
+
+<script>
+    //NEW  src="~/RHUt09_persona/Imagen/user-icon.jpg"
+    function clickFile() {
+        $('#file-input').click();
+    }
+    $('#file-input').change(function (e) {
+                  addImage(e);
+        });
+    //$('#imgSalida').click(function () {
+    //       $('#file-input').click();
+     //   });
+
+    //$(window).load(function () {
+    //    $(function () {
+    //        $('#file-input').change(function (e) {
+    //            addImage(e);
+    //        });
+
+            //CARGA LA IMAGEN
+    function addImage(e) {
+        var file = e.target.files[0];
+        imageType = /image.*/;
+        if (!file.type.match(imageType))
+            return;
+        var reader = new FileReader();
+        reader.onload = fileOnload;
+        reader.fileName = e.target.files[0].name;
+        $('#imgSalida').attr("alt", reader.fileName);
+        reader.readAsDataURL(file);
+    }
+               
+    // MUESTRA LA IMAGEN
+    function fileOnload(e) {
+        var result = e.target.result;
+        $('#imgSalida').attr("src", result);
+    }
+
+
+
+</script>
+
+@**SCRIPT FOTO*@
+<script>
+    
+</script>

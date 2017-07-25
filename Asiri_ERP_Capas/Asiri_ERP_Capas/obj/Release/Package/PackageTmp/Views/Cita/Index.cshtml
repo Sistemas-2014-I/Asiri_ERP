@@ -1,0 +1,419 @@
+﻿@model IEnumerable<Mvc_Entity.CLlt05_cita>
+
+
+
+<!DOCTYPE html>
+
+
+@*<link href="~/Content/DatePicker/bootstrap-datepicker3.standalone.min.css" rel="stylesheet" />
+    <link href="~/Content/DatePicker/bootstrap-datepicker.min.css" rel="stylesheet" />
+    <link href="~/Content/DatePicker/bootstrap-datepicker.standalone.min.css" rel="stylesheet" />
+    <link href="~/Content/DatePicker/bootstrap-datepicker3.min.css" rel="stylesheet" />*@
+
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- CSS-->
+    <link rel="stylesheet" type="text/css" href="~/Content/css/main.css">
+    <title>Clinica MagicDent</title>
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries-->
+    <!--if lt IE 9
+    script(src='https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js')
+    script(src='https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js')
+    -->
+    <style>
+        .borde1 {
+            border: 1px #000 solid;
+            text-align: center;
+        }
+
+        .borde {
+            border: 1px #000fff solid;
+        }
+
+        .borde2 {
+            border: 1px #295ba7 solid;
+            text-align: center;
+        }
+
+        .action {
+            float: right;
+        }
+    </style>
+
+    <script>
+        //$(document).ready(function () {
+
+        //    // page is now ready, initialize the calendar...
+
+        //    $('#calendar').fullCalendar({
+        //        locale: 'es',
+        //        firstDay: 1,
+        //        columnFormat: 'dddd, D  MMMM YYYY',
+        //        header: {
+        //            left: '',
+        //            center: 'prev    next',
+        //            right: ''
+        //        },
+        //        slotEventOverlap: false,
+        //        slotLabelFormat: 'h(:mm)a',
+        //        minTime: '08:00:00',
+        //        maxTime: '20:00:00',
+        //        customButtons: {
+        //            buttonFecha: {
+        //                text: '8 AM - 10 PM',
+        //                click: function () {
+        //                    alert('clicked the custom button!');
+        //                }
+        //            }
+        //        },
+        //        allDaySlot: false,
+        //        slotDuration: '00:30:00',
+        //        height: 'auto',
+        //        defaultView: 'AgendaFiveDay',
+        //        views: {
+        //            AgendaFiveDay: {
+        //                type: 'agenda',
+        //                duration: { days: 5 },
+        //                buttonText: '5 days'
+        //            }
+        //        },
+        //        events: [
+        //                {
+        //                    title: 'hola',
+        //                    start: '2017-05-30T11:30:00',
+        //                    end: '2017-05-30T12:30:00'
+
+        //                }
+        //        ]
+        //    });
+
+
+        //});
+    </script>
+</head>
+<body class="sidebar-mini fixed">
+    <!--********************************TITULO*******************************-->
+
+    @Html.Raw(TempData["msg"])
+    <div class="page-title">
+        <div>
+            <h1><i class="fa fa-edit"></i> Mantenimiento de Citas</h1>
+            <p>Lista de citas ...!</p>
+        </div>
+        <div>
+            <ul class="breadcrumb">
+                <li><i class="fa fa-home fa-lg"></i></li>
+                <li>Citas</li>
+                <li><a href="#">Lista Citas</a></li>
+            </ul>
+        </div>
+    </div>
+    <!--********************************FIN TITULO*******************************-->
+    <!--AQUÍ VA EL CODIGO-->
+    <div class="row">
+        <div class="col-md-12">
+            <!--CODIGO MODIFICAR-->
+            <div class="card">
+                <!--*********************************************AQUÍ MODIFICAR CARD***************************-->
+                <!--*********************************************CARD***************************-->
+                <!--CONTAINER TITLE-->
+                <div class="container" id="MantenimientoEmpleado">
+                    <!--NOMBRE DE MANTENIMIENTO-->
+                    <h3 style="display:inline-block;" class="header-title"><i class="glyphicon glyphicon-cog"></i></h3>
+                </div>
+                <!--ACTIONS-->
+                <div class="card-title-w-btn ">
+                    <!--NEW PATIENT-->
+                    <div class="bs-component">
+                        <div>
+                            <a class="btn btn-info icon-btn" href="/Cita/Create">
+                                <i class="fa fa-fw fa-lg fa-user-plus"></i>Nueva Cita
+                            </a>
+                        </div>
+                    </div>
+
+                    @*<div class="bs-component">
+                            <div>
+                                <a class="btn btn-info icon-btn" href="/CLlt05_cita/IndexDoctor">
+                                    <i class="fa fa-fw fa-lg fa-user-plus"></i> Doctor
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="bs-component">
+                            <div>
+                                <a class="btn btn-info icon-btn" href="/CLlt05_cita/Calendario">
+                                    <i class="fa fa-fw fa-lg fa-user-plus"></i>Calendario
+                                </a>
+                            </div>
+                        </div>*@
+
+
+                </div>
+                <hr>
+
+                <!--***************TABLE*************-->
+
+                <div class="card-body table-responsive">
+                    <table class="table table-hover table-bordered col-md-12" id="sampleTable">
+                        <thead style="color:#ffffff;background:#0094ff;">
+                            <tr>
+                                <th>Código</th>
+                                <th>Paciente</th>
+                                <th>Fecha</th>
+                                <th>Hora de Inicio</th>
+                                <th>Duración Estimada</th>
+                                <th>Doctor</th>
+                                <th>Estado</th>
+                                <th>Acciones</th>
+
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach (var item in Model)
+                            {
+
+
+
+                                <tr>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.codCita)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.RHUt07_paciente.RHUt09_persona.apellidoPaterno) @Html.DisplayFor(modelItem => item.RHUt07_paciente.RHUt09_persona.apellidoMaterno), @Html.DisplayFor(modelItem => item.RHUt07_paciente.RHUt09_persona.nombrePersona)
+                                    </td>
+                                    <td>
+                                        @item.fecCita.ToLongDateString()
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.horaInicio)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.duracionEstimada)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.RHUt01_empleado.RHUt09_persona.apellidoPaterno) @Html.DisplayFor(modelItem => item.RHUt01_empleado.RHUt09_persona.apellidoMaterno), @Html.DisplayFor(modelItem => item.RHUt01_empleado.RHUt09_persona.nombrePersona)
+                                    </td>
+
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.CLlt09_estadoCita.descEstadoCita)
+                                    </td>
+                                    <td>
+                                        <div class="col-md-12" style="display:flex; justify-content:space-around">
+                                            <div class="col-md-3" style="text-align: center;">
+                                                <a id="dtl" data-id="@item.idCita" data-cod="@item.codCita" data-paciente="@item.RHUt07_paciente.RHUt09_persona.apellidoPaterno @item.RHUt07_paciente.RHUt09_persona.apellidoMaterno, @item.RHUt07_paciente.RHUt09_persona.nombrePersona" data-doctor="@item.RHUt01_empleado.RHUt09_persona.apellidoPaterno @item.RHUt01_empleado.RHUt09_persona.apellidoMaterno, @item.RHUt01_empleado.RHUt09_persona.nombrePersona" data-fecha="@item.fecCita.ToShortDateString()" data-hora="@item.horaInicio - @item.duracionEstimada" data-estado="@item.CLlt09_estadoCita.descEstadoCita" class="detalleCita btn btn-success btn-flat"><i class="fa fa-search-plus"></i></a>
+                                            </div>
+                                            @if (item.CLlt09_estadoCita.codEstadoCita == "01")
+                                            {
+                                                <div class="col-md-3" style="text-align: center;">
+                                                    <a data-id="@item.idCita" data-cod="@item.codCita" class="repogramarCita btn btn-warning btn-xs"><i class="fa fa-lg fa-edit"></i></a>
+                                                </div>
+
+                                            }
+                                            @if (item.CLlt09_estadoCita.codEstadoCita == "02")
+                                            {
+                                                <div class="col-md-3" style="text-align: center;">
+                                                    <a data-id="@item.idCita" data-cod="@item.codCita" href="/Cita/ConfirmarCita/@item.idCita" class="confirmarCita btn btn-primary btn-xs"><i class="fa fa-lg fa-check-square-o"></i></a>
+                                                </div>
+
+                                            }
+                                            @if (item.CLlt09_estadoCita.codEstadoCita == "01" || item.CLlt09_estadoCita.codEstadoCita == "02")
+                                            {
+                                                <div class="col-md-3" style="text-align: center;">
+                                                    <a data-id="@item.idCita" data-cod="@item.codCita" href="/Cita/AnularCita/@item.idCita" class="btn btn-danger btn-xs"><i class="fa fa-lg fa-trash"></i></a>
+                                                </div>
+                                            }
+
+
+                                        </div>
+
+
+                                    </td>
+                                </tr>
+
+                            }
+                        </tbody>
+                    </table>
+
+                    <!-- Modal Detalle Modal-->
+                    <div class="modal fade" id="detalleModal" role="dialog">
+                        <div class="modal-dialog modal-lg">
+
+                            <!-- Modal content-->
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <button type="button" data-target="#detalleModal" class="close" data-dismiss="modal">&times;</button>
+                                    <h3 class="modal-title"></h3>
+                                </div>
+                                <div class="modal-body">
+                                    <div class="card col-md-12" style="justify-content:center">
+                                        <div class="card-content">
+                                            <div id="cita">
+                                                <div class="row col-md-12">
+                                                    <h4 class="col-md-6">Paciente:</h4>
+                                                    <h4 class="col-md-6" id="pacienteModal"></h4>
+                                                </div>
+                                                <div class="row col-md-12">
+                                                    <h4 class="col-md-6">Fecha de la cita:</h4>
+                                                    <h4 class="col-md-6" id="fechaModal"></h4>
+                                                </div>
+                                                <div class="row col-md-12">
+                                                    <h4 class="col-md-6">Hora inicio - final:</h4>
+                                                    <h4 class="col-md-6" id="horaModal"></h4>
+                                                </div>
+                                                <div class="row col-md-12">
+                                                    <h4 class="col-md-6">Doctor:</h4>
+                                                    <h4 class="col-md-6" id="doctorModal"></h4>
+                                                </div>
+                                                <div class="row col-md-12">
+                                                    <h4 class="col-md-6">Estado</h4>
+                                                    <h4 class="col-md-6" id="estadoModal"></h4>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div id="citadtl">
+
+                                        </div>
+
+                                    </div>
+                                </div>
+                                <div class="modal-footer">
+
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+
+                    <!-- Modal Reporgramacion Modal-->
+                    <div class="modal fade" id="reprogramacionModal" role="dialog">
+                        <div class="modal-dialog modal-lg">
+
+                            <!-- Modal content-->
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <button type="button" data-target="#reprogramacionModal" class="close" data-dismiss="modal">&times;</button>
+                                    <h4 class="modal-title">Reprogramacion</h4>
+                                </div>
+                                <div class="modal-body">
+                                    <div class="card col-md-12">
+                                        <div class="card-content">
+                                            <div id="reprogramar">
+
+                                            </div>
+
+
+                                        </div>
+
+                                    </div>
+                                </div>
+                                <div class="modal-footer">
+
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+
+                <!--******************TABLE***********-->
+                <!--*******************************************FIN***********************************-->
+            </div>
+        </div>
+        <!--FIN DE MODIFICAR-->
+    </div>
+
+
+
+
+    <!-- Javascripts-->
+    
+
+    @*<script src="~/Scripts/bootstrap-datepicker.min.js" charset="UTF-8"></script>
+        <script src="~/Scripts/locale/bootstrap-datepicker.es.min.js" charset="UTF-8"></script>*@
+    <!--TABLESCRIPT-->
+
+    <script type="text/javascript">
+    //$('#sampleTable').DataTable();
+
+                $(document).ready(function ()
+            {
+                $('#sampleTable').dataTable({
+                    ordering:false,
+                    language: {
+                        processing: "En curso...",
+                        search: "Buscar:",
+                        lengthMenu: "Visualizar _MENU_ registros",
+                        info: "_START_ de _END_ registros de un total de _TOTAL_ registros",
+                        infoEmpty: "0 registros encontrados",
+                        infoFiltered: "(_MAX_ registros filtrados en total)",
+                        infoPostFix: "",
+                        loadingRecords: "Cargando registros...",
+                        zeroRecords: "No hay registros",
+                        emptyTable: "Vacío",
+                        paginate: {
+                            first: "Primero",
+                            previous: "Previo  ",
+                            next: "  Siguiente",
+                            last: "Último"
+                        },
+                        aria: {
+                            sortAscending: ": Habilitado para ordenar la columna en orden ascendente",
+                            sortDescending: ": Habilitado para ordenar la columna en orden descendente"                }
+                    }
+                });
+
+                $(document).on("click","#dtl", function () {
+                    var id = $(this).attr("data-id");
+                    var cod = $(this).attr("data-cod");
+                    var paciente = $(this).attr("data-paciente");
+                    var doctor = $(this).attr("data-doctor");
+                    var fecha = $(this).attr("data-fecha");
+                    var hora = $(this).attr("data-hora");
+                    var estado = $(this).attr("data-estado");
+
+                    $("#citadtl").load("/Cita/ObtenerCitaDtl/" + id);
+                    $(".modal-title").text("Código de la cita " + cod);
+                    $("#pacienteModal").text(paciente);
+                    $("#doctorModal").text(doctor);
+                    $("#fechaModal").text(fecha);
+                    $("#horaModal").text(hora);
+                    $("#estadoModal").text(estado);
+                    $("#detalleModal").modal("show");
+                });
+
+               
+
+                $(document).on("click", ".repogramarCita", function () {
+                    var id = $(this).attr("data-id");
+                    var cod = $(this).attr("data-cod");
+                    $("#reprogramar").load("/Cita/Reprogramar/" + id);
+                    $(".modal-title").text("Código de la cita " + cod);
+                    $("#reprogramacionModal").modal("show");
+                });
+
+                });
+
+
+    </script>
+
+
+
+
+    @*<script>
+                                    $('#sandbox-container input').datepicker({
+                                        format: "yyyy-mm-dd",
+                                        startDate: "@DateTime.Now.Date",
+                                        language: 'es',
+                                        daysOfWeekHighlighted: "0",
+                                        autoclose: true
+                                    });
+        </script>*@
+</body>
+</html>
+

@@ -1,0 +1,222 @@
+D:\Universidad-JFSC\Ciclo VII\Calidad de Software\Proyecto_Clinica\Visual_Projects\Asiri_ERP_Capas\Common\bin\Debug\Common.dll.config
+D:\Universidad-JFSC\Ciclo VII\Calidad de Software\Proyecto_Clinica\Visual_Projects\Asiri_ERP_Capas\Common\bin\Debug\Common.dll
+D:\Universidad-JFSC\Ciclo VII\Calidad de Software\Proyecto_Clinica\Visual_Projects\Asiri_ERP_Capas\Common\bin\Debug\Common.pdb
+D:\Universidad-JFSC\Ciclo VII\Calidad de Software\Proyecto_Clinica\Visual_Projects\Asiri_ERP_Capas\Common\bin\Debug\EntityFramework.dll
+D:\Universidad-JFSC\Ciclo VII\Calidad de Software\Proyecto_Clinica\Visual_Projects\Asiri_ERP_Capas\Common\bin\Debug\EntityFramework.SqlServer.dll
+D:\Universidad-JFSC\Ciclo VII\Calidad de Software\Proyecto_Clinica\Visual_Projects\Asiri_ERP_Capas\Common\bin\Debug\EntityFramework.xml
+D:\Universidad-JFSC\Ciclo VII\Calidad de Software\Proyecto_Clinica\Visual_Projects\Asiri_ERP_Capas\Common\bin\Debug\EntityFramework.SqlServer.xml
+D:\Universidad-JFSC\Ciclo VII\Calidad de Software\Proyecto_Clinica\Visual_Projects\Asiri_ERP_Capas\Common\bin\Debug\es\EntityFramework.resources.dll
+D:\Universidad-JFSC\Ciclo VII\Calidad de Software\Proyecto_Clinica\Visual_Projects\Asiri_ERP_Capas\Common\bin\Debug\es\EntityFramework.SqlServer.resources.dll
+D:\Universidad-JFSC\Ciclo VII\Calidad de Software\Proyecto_Clinica\Visual_Projects\Asiri_ERP_Capas\Common\obj\Debug\Common.csprojResolveAssemblyReference.cache
+D:\Universidad-JFSC\Ciclo VII\Calidad de Software\Proyecto_Clinica\Visual_Projects\Asiri_ERP_Capas\Common\obj\Debug\Common.dll
+D:\Universidad-JFSC\Ciclo VII\Calidad de Software\Proyecto_Clinica\Visual_Projects\Asiri_ERP_Capas\Common\obj\Debug\Common.pdb
+E:\Ciclo VII\Calidad de Software\Prueba_Integrar\Asiri_ERP_Capas\Common\bin\Debug\Common.dll.config
+E:\Ciclo VII\Calidad de Software\Prueba_Integrar\Asiri_ERP_Capas\Common\bin\Debug\Common.dll
+E:\Ciclo VII\Calidad de Software\Prueba_Integrar\Asiri_ERP_Capas\Common\bin\Debug\Common.pdb
+E:\Ciclo VII\Calidad de Software\Prueba_Integrar\Asiri_ERP_Capas\Common\bin\Debug\EntityFramework.dll
+E:\Ciclo VII\Calidad de Software\Prueba_Integrar\Asiri_ERP_Capas\Common\bin\Debug\EntityFramework.SqlServer.dll
+E:\Ciclo VII\Calidad de Software\Prueba_Integrar\Asiri_ERP_Capas\Common\bin\Debug\EntityFramework.xml
+E:\Ciclo VII\Calidad de Software\Prueba_Integrar\Asiri_ERP_Capas\Common\bin\Debug\EntityFramework.SqlServer.xml
+E:\Ciclo VII\Calidad de Software\Prueba_Integrar\Asiri_ERP_Capas\Common\bin\Debug\es\EntityFramework.resources.dll
+E:\Ciclo VII\Calidad de Software\Prueba_Integrar\Asiri_ERP_Capas\Common\bin\Debug\es\EntityFramework.SqlServer.resources.dll
+E:\Ciclo VII\Calidad de Software\Prueba_Integrar\Asiri_ERP_Capas\Common\obj\Debug\Common.dll
+E:\Ciclo VII\Calidad de Software\Prueba_Integrar\Asiri_ERP_Capas\Common\obj\Debug\Common.pdb
+D:\Universidad-JFSC\Ciclo VII\Calidad de Software\Proyecto_Clinica\Visual_Projects\2\Asiri_ERP_Capas\Common\obj\Debug\Common.dll
+D:\Universidad-JFSC\Ciclo VII\Calidad de Software\Proyecto_Clinica\Visual_Projects\2\Asiri_ERP_Capas\Common\obj\Debug\Common.pdb
+D:\Universidad-JFSC\Ciclo VII\Calidad de Software\Proyecto_Clinica\Visual_Projects\2\Asiri_ERP_Capas\Common\bin\Debug\Common.dll.config
+D:\Universidad-JFSC\Ciclo VII\Calidad de Software\Proyecto_Clinica\Visual_Projects\2\Asiri_ERP_Capas\Common\bin\Debug\Common.dll
+D:\Universidad-JFSC\Ciclo VII\Calidad de Software\Proyecto_Clinica\Visual_Projects\2\Asiri_ERP_Capas\Common\bin\Debug\Common.pdb
+D:\Universidad-JFSC\Ciclo VII\Calidad de Software\Proyecto_Clinica\Visual_Projects\2\Asiri_ERP_Capas\Common\bin\Debug\EntityFramework.dll
+D:\Universidad-JFSC\Ciclo VII\Calidad de Software\Proyecto_Clinica\Visual_Projects\2\Asiri_ERP_Capas\Common\bin\Debug\EntityFramework.SqlServer.dll
+D:\Universidad-JFSC\Ciclo VII\Calidad de Software\Proyecto_Clinica\Visual_Projects\2\Asiri_ERP_Capas\Common\bin\Debug\EntityFramework.xml
+D:\Universidad-JFSC\Ciclo VII\Calidad de Software\Proyecto_Clinica\Visual_Projects\2\Asiri_ERP_Capas\Common\bin\Debug\EntityFramework.SqlServer.xml
+D:\Universidad-JFSC\Ciclo VII\Calidad de Software\Proyecto_Clinica\Visual_Projects\2\Asiri_ERP_Capas\Common\bin\Debug\es\EntityFramework.resources.dll
+D:\Universidad-JFSC\Ciclo VII\Calidad de Software\Proyecto_Clinica\Visual_Projects\2\Asiri_ERP_Capas\Common\bin\Debug\es\EntityFramework.SqlServer.resources.dll
+E:\Ciclo VII\Calidad de Software\ultimo_backup_manuel\Asiri_ERP_Capas\Common\bin\Debug\Common.dll.config
+E:\Ciclo VII\Calidad de Software\ultimo_backup_manuel\Asiri_ERP_Capas\Common\bin\Debug\Common.dll
+E:\Ciclo VII\Calidad de Software\ultimo_backup_manuel\Asiri_ERP_Capas\Common\bin\Debug\Common.pdb
+E:\Ciclo VII\Calidad de Software\ultimo_backup_manuel\Asiri_ERP_Capas\Common\bin\Debug\EntityFramework.dll
+E:\Ciclo VII\Calidad de Software\ultimo_backup_manuel\Asiri_ERP_Capas\Common\bin\Debug\EntityFramework.SqlServer.dll
+E:\Ciclo VII\Calidad de Software\ultimo_backup_manuel\Asiri_ERP_Capas\Common\bin\Debug\EntityFramework.xml
+E:\Ciclo VII\Calidad de Software\ultimo_backup_manuel\Asiri_ERP_Capas\Common\bin\Debug\EntityFramework.SqlServer.xml
+E:\Ciclo VII\Calidad de Software\ultimo_backup_manuel\Asiri_ERP_Capas\Common\bin\Debug\es\EntityFramework.resources.dll
+E:\Ciclo VII\Calidad de Software\ultimo_backup_manuel\Asiri_ERP_Capas\Common\bin\Debug\es\EntityFramework.SqlServer.resources.dll
+E:\Ciclo VII\Calidad de Software\ultimo_backup_manuel\Asiri_ERP_Capas\Common\obj\Debug\Common.dll
+E:\Ciclo VII\Calidad de Software\ultimo_backup_manuel\Asiri_ERP_Capas\Common\obj\Debug\Common.pdb
+E:\Ciclo VII\Calidad de Software\ultimo_backup_manuel\Asiri_ERP_Capas\Common\obj\Debug\Common.csprojResolveAssemblyReference.cache
+C:\Users\Jeyson Soto\Desktop\Asiri_ERP_Capas\Common\bin\Debug\Common.dll.config
+C:\Users\Jeyson Soto\Desktop\Asiri_ERP_Capas\Common\bin\Debug\Common.dll
+C:\Users\Jeyson Soto\Desktop\Asiri_ERP_Capas\Common\bin\Debug\Common.pdb
+C:\Users\Jeyson Soto\Desktop\Asiri_ERP_Capas\Common\bin\Debug\CrystalDecisions.CrystalReports.Engine.dll
+C:\Users\Jeyson Soto\Desktop\Asiri_ERP_Capas\Common\bin\Debug\CrystalDecisions.ReportSource.dll
+C:\Users\Jeyson Soto\Desktop\Asiri_ERP_Capas\Common\bin\Debug\CrystalDecisions.Shared.dll
+C:\Users\Jeyson Soto\Desktop\Asiri_ERP_Capas\Common\bin\Debug\EntityFramework.dll
+C:\Users\Jeyson Soto\Desktop\Asiri_ERP_Capas\Common\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Jeyson Soto\Desktop\Asiri_ERP_Capas\Common\bin\Debug\NLog.dll
+C:\Users\Jeyson Soto\Desktop\Asiri_ERP_Capas\Common\bin\Debug\System.Web.Mvc.dll
+C:\Users\Jeyson Soto\Desktop\Asiri_ERP_Capas\Common\bin\Debug\CrystalDecisions.ReportAppServer.DataDefModel.dll
+C:\Users\Jeyson Soto\Desktop\Asiri_ERP_Capas\Common\bin\Debug\CrystalDecisions.ReportAppServer.ClientDoc.dll
+C:\Users\Jeyson Soto\Desktop\Asiri_ERP_Capas\Common\bin\Debug\CrystalDecisions.ReportAppServer.ReportDefModel.dll
+C:\Users\Jeyson Soto\Desktop\Asiri_ERP_Capas\Common\bin\Debug\CrystalDecisions.ReportAppServer.Controllers.dll
+C:\Users\Jeyson Soto\Desktop\Asiri_ERP_Capas\Common\bin\Debug\CrystalDecisions.ReportAppServer.CommLayer.dll
+C:\Users\Jeyson Soto\Desktop\Asiri_ERP_Capas\Common\bin\Debug\CrystalDecisions.ReportAppServer.DataSetConversion.dll
+C:\Users\Jeyson Soto\Desktop\Asiri_ERP_Capas\Common\bin\Debug\CrystalDecisions.ReportAppServer.Prompting.dll
+C:\Users\Jeyson Soto\Desktop\Asiri_ERP_Capas\Common\bin\Debug\CrystalDecisions.ReportAppServer.XmlSerialize.dll
+C:\Users\Jeyson Soto\Desktop\Asiri_ERP_Capas\Common\bin\Debug\CrystalDecisions.ReportAppServer.CubeDefModel.dll
+C:\Users\Jeyson Soto\Desktop\Asiri_ERP_Capas\Common\bin\Debug\CrystalDecisions.ReportAppServer.CommonObjectModel.dll
+C:\Users\Jeyson Soto\Desktop\Asiri_ERP_Capas\Common\bin\Debug\CrystalDecisions.ReportAppServer.ObjectFactory.dll
+C:\Users\Jeyson Soto\Desktop\Asiri_ERP_Capas\Common\bin\Debug\CrystalDecisions.ReportAppServer.CommonControls.dll
+C:\Users\Jeyson Soto\Desktop\Asiri_ERP_Capas\Common\bin\Debug\stdole.dll
+C:\Users\Jeyson Soto\Desktop\Asiri_ERP_Capas\Common\bin\Debug\EntityFramework.xml
+C:\Users\Jeyson Soto\Desktop\Asiri_ERP_Capas\Common\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Jeyson Soto\Desktop\Asiri_ERP_Capas\Common\bin\Debug\NLog.xml
+C:\Users\Jeyson Soto\Desktop\Asiri_ERP_Capas\Common\bin\Debug\System.Web.Mvc.xml
+C:\Users\Jeyson Soto\Desktop\Asiri_ERP_Capas\Common\bin\Debug\es\EntityFramework.resources.dll
+C:\Users\Jeyson Soto\Desktop\Asiri_ERP_Capas\Common\bin\Debug\es\EntityFramework.SqlServer.resources.dll
+C:\Users\Jeyson Soto\Desktop\Asiri_ERP_Capas\Common\bin\Debug\es\System.Web.Mvc.resources.dll
+C:\Users\Jeyson Soto\Desktop\Asiri_ERP_Capas\Common\obj\Debug\Common.csprojResolveAssemblyReference.cache
+C:\Users\Jeyson Soto\Desktop\Asiri_ERP_Capas\Common\obj\Debug\Common.dll
+C:\Users\Jeyson Soto\Desktop\Asiri_ERP_Capas\Common\obj\Debug\Common.pdb
+E:\Ciclo VII\Calidad de Software\mas pagos\Asiri_ERP_Capas\Common\bin\Debug\Common.dll.config
+E:\Ciclo VII\Calidad de Software\mas pagos\Asiri_ERP_Capas\Common\bin\Debug\Common.dll
+E:\Ciclo VII\Calidad de Software\mas pagos\Asiri_ERP_Capas\Common\bin\Debug\Common.pdb
+E:\Ciclo VII\Calidad de Software\mas pagos\Asiri_ERP_Capas\Common\bin\Debug\CrystalDecisions.CrystalReports.Engine.dll
+E:\Ciclo VII\Calidad de Software\mas pagos\Asiri_ERP_Capas\Common\bin\Debug\CrystalDecisions.ReportSource.dll
+E:\Ciclo VII\Calidad de Software\mas pagos\Asiri_ERP_Capas\Common\bin\Debug\CrystalDecisions.Shared.dll
+E:\Ciclo VII\Calidad de Software\mas pagos\Asiri_ERP_Capas\Common\bin\Debug\EntityFramework.dll
+E:\Ciclo VII\Calidad de Software\mas pagos\Asiri_ERP_Capas\Common\bin\Debug\EntityFramework.SqlServer.dll
+E:\Ciclo VII\Calidad de Software\mas pagos\Asiri_ERP_Capas\Common\bin\Debug\NLog.dll
+E:\Ciclo VII\Calidad de Software\mas pagos\Asiri_ERP_Capas\Common\bin\Debug\System.Web.Mvc.dll
+E:\Ciclo VII\Calidad de Software\mas pagos\Asiri_ERP_Capas\Common\bin\Debug\CrystalDecisions.ReportAppServer.DataDefModel.dll
+E:\Ciclo VII\Calidad de Software\mas pagos\Asiri_ERP_Capas\Common\bin\Debug\CrystalDecisions.ReportAppServer.ClientDoc.dll
+E:\Ciclo VII\Calidad de Software\mas pagos\Asiri_ERP_Capas\Common\bin\Debug\CrystalDecisions.ReportAppServer.ReportDefModel.dll
+E:\Ciclo VII\Calidad de Software\mas pagos\Asiri_ERP_Capas\Common\bin\Debug\CrystalDecisions.ReportAppServer.Controllers.dll
+E:\Ciclo VII\Calidad de Software\mas pagos\Asiri_ERP_Capas\Common\bin\Debug\CrystalDecisions.ReportAppServer.CommLayer.dll
+E:\Ciclo VII\Calidad de Software\mas pagos\Asiri_ERP_Capas\Common\bin\Debug\CrystalDecisions.ReportAppServer.DataSetConversion.dll
+E:\Ciclo VII\Calidad de Software\mas pagos\Asiri_ERP_Capas\Common\bin\Debug\CrystalDecisions.ReportAppServer.Prompting.dll
+E:\Ciclo VII\Calidad de Software\mas pagos\Asiri_ERP_Capas\Common\bin\Debug\CrystalDecisions.ReportAppServer.XmlSerialize.dll
+E:\Ciclo VII\Calidad de Software\mas pagos\Asiri_ERP_Capas\Common\bin\Debug\CrystalDecisions.ReportAppServer.CubeDefModel.dll
+E:\Ciclo VII\Calidad de Software\mas pagos\Asiri_ERP_Capas\Common\bin\Debug\CrystalDecisions.ReportAppServer.CommonObjectModel.dll
+E:\Ciclo VII\Calidad de Software\mas pagos\Asiri_ERP_Capas\Common\bin\Debug\CrystalDecisions.ReportAppServer.ObjectFactory.dll
+E:\Ciclo VII\Calidad de Software\mas pagos\Asiri_ERP_Capas\Common\bin\Debug\Microsoft.Web.Infrastructure.dll
+E:\Ciclo VII\Calidad de Software\mas pagos\Asiri_ERP_Capas\Common\bin\Debug\CrystalDecisions.ReportAppServer.CommonControls.dll
+E:\Ciclo VII\Calidad de Software\mas pagos\Asiri_ERP_Capas\Common\bin\Debug\stdole.dll
+E:\Ciclo VII\Calidad de Software\mas pagos\Asiri_ERP_Capas\Common\bin\Debug\EntityFramework.xml
+E:\Ciclo VII\Calidad de Software\mas pagos\Asiri_ERP_Capas\Common\bin\Debug\EntityFramework.SqlServer.xml
+E:\Ciclo VII\Calidad de Software\mas pagos\Asiri_ERP_Capas\Common\bin\Debug\System.Web.Mvc.xml
+E:\Ciclo VII\Calidad de Software\mas pagos\Asiri_ERP_Capas\Common\bin\Debug\Microsoft.Web.Infrastructure.xml
+E:\Ciclo VII\Calidad de Software\mas pagos\Asiri_ERP_Capas\Common\bin\Debug\es\EntityFramework.resources.dll
+E:\Ciclo VII\Calidad de Software\mas pagos\Asiri_ERP_Capas\Common\bin\Debug\es\EntityFramework.SqlServer.resources.dll
+E:\Ciclo VII\Calidad de Software\mas pagos\Asiri_ERP_Capas\Common\bin\Debug\es\System.Web.Mvc.resources.dll
+E:\Ciclo VII\Calidad de Software\mas pagos\Asiri_ERP_Capas\Common\obj\Debug\Common.dll
+E:\Ciclo VII\Calidad de Software\mas pagos\Asiri_ERP_Capas\Common\obj\Debug\Common.pdb
+E:\Ciclo VII\Calidad de Software\mas pagos\Asiri_ERP_Capas\Common\obj\Debug\Common.csprojResolveAssemblyReference.cache
+E:\Ciclo VII\Calidad de Software\mas pagos 2\mas pagos\Asiri_ERP_Capas\Common\bin\Debug\Common.dll.config
+E:\Ciclo VII\Calidad de Software\mas pagos 2\mas pagos\Asiri_ERP_Capas\Common\bin\Debug\Common.dll
+E:\Ciclo VII\Calidad de Software\mas pagos 2\mas pagos\Asiri_ERP_Capas\Common\bin\Debug\Common.pdb
+E:\Ciclo VII\Calidad de Software\mas pagos 2\mas pagos\Asiri_ERP_Capas\Common\bin\Debug\CrystalDecisions.CrystalReports.Engine.dll
+E:\Ciclo VII\Calidad de Software\mas pagos 2\mas pagos\Asiri_ERP_Capas\Common\bin\Debug\CrystalDecisions.ReportSource.dll
+E:\Ciclo VII\Calidad de Software\mas pagos 2\mas pagos\Asiri_ERP_Capas\Common\bin\Debug\CrystalDecisions.Shared.dll
+E:\Ciclo VII\Calidad de Software\mas pagos 2\mas pagos\Asiri_ERP_Capas\Common\bin\Debug\EntityFramework.dll
+E:\Ciclo VII\Calidad de Software\mas pagos 2\mas pagos\Asiri_ERP_Capas\Common\bin\Debug\EntityFramework.SqlServer.dll
+E:\Ciclo VII\Calidad de Software\mas pagos 2\mas pagos\Asiri_ERP_Capas\Common\bin\Debug\NLog.dll
+E:\Ciclo VII\Calidad de Software\mas pagos 2\mas pagos\Asiri_ERP_Capas\Common\bin\Debug\System.Web.Mvc.dll
+E:\Ciclo VII\Calidad de Software\mas pagos 2\mas pagos\Asiri_ERP_Capas\Common\bin\Debug\CrystalDecisions.ReportAppServer.DataDefModel.dll
+E:\Ciclo VII\Calidad de Software\mas pagos 2\mas pagos\Asiri_ERP_Capas\Common\bin\Debug\CrystalDecisions.ReportAppServer.ClientDoc.dll
+E:\Ciclo VII\Calidad de Software\mas pagos 2\mas pagos\Asiri_ERP_Capas\Common\bin\Debug\CrystalDecisions.ReportAppServer.ReportDefModel.dll
+E:\Ciclo VII\Calidad de Software\mas pagos 2\mas pagos\Asiri_ERP_Capas\Common\bin\Debug\CrystalDecisions.ReportAppServer.Controllers.dll
+E:\Ciclo VII\Calidad de Software\mas pagos 2\mas pagos\Asiri_ERP_Capas\Common\bin\Debug\CrystalDecisions.ReportAppServer.CommLayer.dll
+E:\Ciclo VII\Calidad de Software\mas pagos 2\mas pagos\Asiri_ERP_Capas\Common\bin\Debug\CrystalDecisions.ReportAppServer.DataSetConversion.dll
+E:\Ciclo VII\Calidad de Software\mas pagos 2\mas pagos\Asiri_ERP_Capas\Common\bin\Debug\CrystalDecisions.ReportAppServer.Prompting.dll
+E:\Ciclo VII\Calidad de Software\mas pagos 2\mas pagos\Asiri_ERP_Capas\Common\bin\Debug\CrystalDecisions.ReportAppServer.XmlSerialize.dll
+E:\Ciclo VII\Calidad de Software\mas pagos 2\mas pagos\Asiri_ERP_Capas\Common\bin\Debug\CrystalDecisions.ReportAppServer.CubeDefModel.dll
+E:\Ciclo VII\Calidad de Software\mas pagos 2\mas pagos\Asiri_ERP_Capas\Common\bin\Debug\CrystalDecisions.ReportAppServer.CommonObjectModel.dll
+E:\Ciclo VII\Calidad de Software\mas pagos 2\mas pagos\Asiri_ERP_Capas\Common\bin\Debug\CrystalDecisions.ReportAppServer.ObjectFactory.dll
+E:\Ciclo VII\Calidad de Software\mas pagos 2\mas pagos\Asiri_ERP_Capas\Common\bin\Debug\Microsoft.Web.Infrastructure.dll
+E:\Ciclo VII\Calidad de Software\mas pagos 2\mas pagos\Asiri_ERP_Capas\Common\bin\Debug\CrystalDecisions.ReportAppServer.CommonControls.dll
+E:\Ciclo VII\Calidad de Software\mas pagos 2\mas pagos\Asiri_ERP_Capas\Common\bin\Debug\stdole.dll
+E:\Ciclo VII\Calidad de Software\mas pagos 2\mas pagos\Asiri_ERP_Capas\Common\bin\Debug\EntityFramework.xml
+E:\Ciclo VII\Calidad de Software\mas pagos 2\mas pagos\Asiri_ERP_Capas\Common\bin\Debug\EntityFramework.SqlServer.xml
+E:\Ciclo VII\Calidad de Software\mas pagos 2\mas pagos\Asiri_ERP_Capas\Common\bin\Debug\NLog.xml
+E:\Ciclo VII\Calidad de Software\mas pagos 2\mas pagos\Asiri_ERP_Capas\Common\bin\Debug\System.Web.Mvc.xml
+E:\Ciclo VII\Calidad de Software\mas pagos 2\mas pagos\Asiri_ERP_Capas\Common\bin\Debug\Microsoft.Web.Infrastructure.xml
+E:\Ciclo VII\Calidad de Software\mas pagos 2\mas pagos\Asiri_ERP_Capas\Common\bin\Debug\es\EntityFramework.resources.dll
+E:\Ciclo VII\Calidad de Software\mas pagos 2\mas pagos\Asiri_ERP_Capas\Common\bin\Debug\es\EntityFramework.SqlServer.resources.dll
+E:\Ciclo VII\Calidad de Software\mas pagos 2\mas pagos\Asiri_ERP_Capas\Common\bin\Debug\es\System.Web.Mvc.resources.dll
+E:\Ciclo VII\Calidad de Software\mas pagos 2\mas pagos\Asiri_ERP_Capas\Common\obj\Debug\Common.csprojResolveAssemblyReference.cache
+E:\Ciclo VII\Calidad de Software\mas pagos 2\mas pagos\Asiri_ERP_Capas\Common\obj\Debug\Common.dll
+E:\Ciclo VII\Calidad de Software\mas pagos 2\mas pagos\Asiri_ERP_Capas\Common\obj\Debug\Common.pdb
+C:\Users\Jeyson Soto\Desktop\mas pagos\Asiri_ERP_Capas\Common\obj\Debug\Common.csprojResolveAssemblyReference.cache
+C:\Users\Jeyson Soto\Desktop\mas pagos\Asiri_ERP_Capas\Common\obj\Debug\Common.dll
+C:\Users\Jeyson Soto\Desktop\mas pagos\Asiri_ERP_Capas\Common\obj\Debug\Common.pdb
+C:\Users\Jeyson Soto\Desktop\mas pagos\Asiri_ERP_Capas\Common\bin\Debug\Common.dll.config
+C:\Users\Jeyson Soto\Desktop\mas pagos\Asiri_ERP_Capas\Common\bin\Debug\Common.dll
+C:\Users\Jeyson Soto\Desktop\mas pagos\Asiri_ERP_Capas\Common\bin\Debug\Common.pdb
+C:\Users\Jeyson Soto\Desktop\mas pagos\Asiri_ERP_Capas\Common\bin\Debug\CrystalDecisions.CrystalReports.Engine.dll
+C:\Users\Jeyson Soto\Desktop\mas pagos\Asiri_ERP_Capas\Common\bin\Debug\CrystalDecisions.ReportSource.dll
+C:\Users\Jeyson Soto\Desktop\mas pagos\Asiri_ERP_Capas\Common\bin\Debug\CrystalDecisions.Shared.dll
+C:\Users\Jeyson Soto\Desktop\mas pagos\Asiri_ERP_Capas\Common\bin\Debug\EntityFramework.dll
+C:\Users\Jeyson Soto\Desktop\mas pagos\Asiri_ERP_Capas\Common\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Jeyson Soto\Desktop\mas pagos\Asiri_ERP_Capas\Common\bin\Debug\Newtonsoft.Json.dll
+C:\Users\Jeyson Soto\Desktop\mas pagos\Asiri_ERP_Capas\Common\bin\Debug\NLog.dll
+C:\Users\Jeyson Soto\Desktop\mas pagos\Asiri_ERP_Capas\Common\bin\Debug\System.Web.Mvc.dll
+C:\Users\Jeyson Soto\Desktop\mas pagos\Asiri_ERP_Capas\Common\bin\Debug\CrystalDecisions.ReportAppServer.DataDefModel.dll
+C:\Users\Jeyson Soto\Desktop\mas pagos\Asiri_ERP_Capas\Common\bin\Debug\CrystalDecisions.ReportAppServer.ClientDoc.dll
+C:\Users\Jeyson Soto\Desktop\mas pagos\Asiri_ERP_Capas\Common\bin\Debug\CrystalDecisions.ReportAppServer.ReportDefModel.dll
+C:\Users\Jeyson Soto\Desktop\mas pagos\Asiri_ERP_Capas\Common\bin\Debug\CrystalDecisions.ReportAppServer.Controllers.dll
+C:\Users\Jeyson Soto\Desktop\mas pagos\Asiri_ERP_Capas\Common\bin\Debug\CrystalDecisions.ReportAppServer.CommLayer.dll
+C:\Users\Jeyson Soto\Desktop\mas pagos\Asiri_ERP_Capas\Common\bin\Debug\CrystalDecisions.ReportAppServer.DataSetConversion.dll
+C:\Users\Jeyson Soto\Desktop\mas pagos\Asiri_ERP_Capas\Common\bin\Debug\CrystalDecisions.ReportAppServer.Prompting.dll
+C:\Users\Jeyson Soto\Desktop\mas pagos\Asiri_ERP_Capas\Common\bin\Debug\CrystalDecisions.ReportAppServer.XmlSerialize.dll
+C:\Users\Jeyson Soto\Desktop\mas pagos\Asiri_ERP_Capas\Common\bin\Debug\CrystalDecisions.ReportAppServer.CubeDefModel.dll
+C:\Users\Jeyson Soto\Desktop\mas pagos\Asiri_ERP_Capas\Common\bin\Debug\CrystalDecisions.ReportAppServer.CommonObjectModel.dll
+C:\Users\Jeyson Soto\Desktop\mas pagos\Asiri_ERP_Capas\Common\bin\Debug\CrystalDecisions.ReportAppServer.ObjectFactory.dll
+C:\Users\Jeyson Soto\Desktop\mas pagos\Asiri_ERP_Capas\Common\bin\Debug\Microsoft.Web.Infrastructure.dll
+C:\Users\Jeyson Soto\Desktop\mas pagos\Asiri_ERP_Capas\Common\bin\Debug\CrystalDecisions.ReportAppServer.CommonControls.dll
+C:\Users\Jeyson Soto\Desktop\mas pagos\Asiri_ERP_Capas\Common\bin\Debug\stdole.dll
+C:\Users\Jeyson Soto\Desktop\mas pagos\Asiri_ERP_Capas\Common\bin\Debug\EntityFramework.xml
+C:\Users\Jeyson Soto\Desktop\mas pagos\Asiri_ERP_Capas\Common\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Jeyson Soto\Desktop\mas pagos\Asiri_ERP_Capas\Common\bin\Debug\Newtonsoft.Json.xml
+C:\Users\Jeyson Soto\Desktop\mas pagos\Asiri_ERP_Capas\Common\bin\Debug\NLog.xml
+C:\Users\Jeyson Soto\Desktop\mas pagos\Asiri_ERP_Capas\Common\bin\Debug\System.Web.Mvc.xml
+C:\Users\Jeyson Soto\Desktop\mas pagos\Asiri_ERP_Capas\Common\bin\Debug\Microsoft.Web.Infrastructure.xml
+C:\Users\Jeyson Soto\Desktop\mas pagos\Asiri_ERP_Capas\Common\bin\Debug\es\EntityFramework.resources.dll
+C:\Users\Jeyson Soto\Desktop\mas pagos\Asiri_ERP_Capas\Common\bin\Debug\es\EntityFramework.SqlServer.resources.dll
+C:\Users\Jeyson Soto\Desktop\mas pagos\Asiri_ERP_Capas\Common\bin\Debug\es\System.Web.Mvc.resources.dll
+C:\Users\Jeyson Soto\Desktop\mas pagos\multiples medio de pago\Asiri_ERP_Capas\Common\bin\Debug\Common.dll.config
+C:\Users\Jeyson Soto\Desktop\mas pagos\multiples medio de pago\Asiri_ERP_Capas\Common\bin\Debug\Common.dll
+C:\Users\Jeyson Soto\Desktop\mas pagos\multiples medio de pago\Asiri_ERP_Capas\Common\bin\Debug\Common.pdb
+C:\Users\Jeyson Soto\Desktop\mas pagos\multiples medio de pago\Asiri_ERP_Capas\Common\bin\Debug\CrystalDecisions.CrystalReports.Engine.dll
+C:\Users\Jeyson Soto\Desktop\mas pagos\multiples medio de pago\Asiri_ERP_Capas\Common\bin\Debug\CrystalDecisions.ReportSource.dll
+C:\Users\Jeyson Soto\Desktop\mas pagos\multiples medio de pago\Asiri_ERP_Capas\Common\bin\Debug\CrystalDecisions.Shared.dll
+C:\Users\Jeyson Soto\Desktop\mas pagos\multiples medio de pago\Asiri_ERP_Capas\Common\bin\Debug\EntityFramework.dll
+C:\Users\Jeyson Soto\Desktop\mas pagos\multiples medio de pago\Asiri_ERP_Capas\Common\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Jeyson Soto\Desktop\mas pagos\multiples medio de pago\Asiri_ERP_Capas\Common\bin\Debug\Newtonsoft.Json.dll
+C:\Users\Jeyson Soto\Desktop\mas pagos\multiples medio de pago\Asiri_ERP_Capas\Common\bin\Debug\NLog.dll
+C:\Users\Jeyson Soto\Desktop\mas pagos\multiples medio de pago\Asiri_ERP_Capas\Common\bin\Debug\System.Web.Mvc.dll
+C:\Users\Jeyson Soto\Desktop\mas pagos\multiples medio de pago\Asiri_ERP_Capas\Common\bin\Debug\CrystalDecisions.ReportAppServer.DataDefModel.dll
+C:\Users\Jeyson Soto\Desktop\mas pagos\multiples medio de pago\Asiri_ERP_Capas\Common\bin\Debug\CrystalDecisions.ReportAppServer.ClientDoc.dll
+C:\Users\Jeyson Soto\Desktop\mas pagos\multiples medio de pago\Asiri_ERP_Capas\Common\bin\Debug\CrystalDecisions.ReportAppServer.ReportDefModel.dll
+C:\Users\Jeyson Soto\Desktop\mas pagos\multiples medio de pago\Asiri_ERP_Capas\Common\bin\Debug\CrystalDecisions.ReportAppServer.Controllers.dll
+C:\Users\Jeyson Soto\Desktop\mas pagos\multiples medio de pago\Asiri_ERP_Capas\Common\bin\Debug\CrystalDecisions.ReportAppServer.CommLayer.dll
+C:\Users\Jeyson Soto\Desktop\mas pagos\multiples medio de pago\Asiri_ERP_Capas\Common\bin\Debug\CrystalDecisions.ReportAppServer.DataSetConversion.dll
+C:\Users\Jeyson Soto\Desktop\mas pagos\multiples medio de pago\Asiri_ERP_Capas\Common\bin\Debug\CrystalDecisions.ReportAppServer.Prompting.dll
+C:\Users\Jeyson Soto\Desktop\mas pagos\multiples medio de pago\Asiri_ERP_Capas\Common\bin\Debug\CrystalDecisions.ReportAppServer.XmlSerialize.dll
+C:\Users\Jeyson Soto\Desktop\mas pagos\multiples medio de pago\Asiri_ERP_Capas\Common\bin\Debug\CrystalDecisions.ReportAppServer.CubeDefModel.dll
+C:\Users\Jeyson Soto\Desktop\mas pagos\multiples medio de pago\Asiri_ERP_Capas\Common\bin\Debug\CrystalDecisions.ReportAppServer.CommonObjectModel.dll
+C:\Users\Jeyson Soto\Desktop\mas pagos\multiples medio de pago\Asiri_ERP_Capas\Common\bin\Debug\CrystalDecisions.ReportAppServer.ObjectFactory.dll
+C:\Users\Jeyson Soto\Desktop\mas pagos\multiples medio de pago\Asiri_ERP_Capas\Common\bin\Debug\Microsoft.Web.Infrastructure.dll
+C:\Users\Jeyson Soto\Desktop\mas pagos\multiples medio de pago\Asiri_ERP_Capas\Common\bin\Debug\CrystalDecisions.ReportAppServer.CommonControls.dll
+C:\Users\Jeyson Soto\Desktop\mas pagos\multiples medio de pago\Asiri_ERP_Capas\Common\bin\Debug\stdole.dll
+C:\Users\Jeyson Soto\Desktop\mas pagos\multiples medio de pago\Asiri_ERP_Capas\Common\bin\Debug\EntityFramework.xml
+C:\Users\Jeyson Soto\Desktop\mas pagos\multiples medio de pago\Asiri_ERP_Capas\Common\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Jeyson Soto\Desktop\mas pagos\multiples medio de pago\Asiri_ERP_Capas\Common\bin\Debug\Newtonsoft.Json.xml
+C:\Users\Jeyson Soto\Desktop\mas pagos\multiples medio de pago\Asiri_ERP_Capas\Common\bin\Debug\NLog.xml
+C:\Users\Jeyson Soto\Desktop\mas pagos\multiples medio de pago\Asiri_ERP_Capas\Common\bin\Debug\System.Web.Mvc.xml
+C:\Users\Jeyson Soto\Desktop\mas pagos\multiples medio de pago\Asiri_ERP_Capas\Common\bin\Debug\Microsoft.Web.Infrastructure.xml
+C:\Users\Jeyson Soto\Desktop\mas pagos\multiples medio de pago\Asiri_ERP_Capas\Common\bin\Debug\es\EntityFramework.resources.dll
+C:\Users\Jeyson Soto\Desktop\mas pagos\multiples medio de pago\Asiri_ERP_Capas\Common\bin\Debug\es\EntityFramework.SqlServer.resources.dll
+C:\Users\Jeyson Soto\Desktop\mas pagos\multiples medio de pago\Asiri_ERP_Capas\Common\bin\Debug\es\System.Web.Mvc.resources.dll
+C:\Users\Jeyson Soto\Desktop\mas pagos\multiples medio de pago\Asiri_ERP_Capas\Common\obj\Debug\Common.csprojResolveAssemblyReference.cache
+C:\Users\Jeyson Soto\Desktop\mas pagos\multiples medio de pago\Asiri_ERP_Capas\Common\obj\Debug\Common.dll
+C:\Users\Jeyson Soto\Desktop\mas pagos\multiples medio de pago\Asiri_ERP_Capas\Common\obj\Debug\Common.pdb

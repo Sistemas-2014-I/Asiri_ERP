@@ -1,0 +1,155 @@
+﻿@model Common.SNTt02_impuesto
+
+@{
+    ViewBag.Title = "Editar Impuesto";
+}
+<div class="page-title">
+    <div>
+        <h1><i class="fa fa-edit"></i>Edición de Impuesto</h1>
+        <p>Editar impuesto...!</p>
+    </div>
+    <ul class="breadcrumb">
+        <li><i class="fa fa-home fa-lg"></i></li>
+        <li>
+            <a href="@Url.Action("Index")">
+                Impuestos
+            </a>
+        </li>
+        <li>
+            <a href="@Url.Action("Edit",new { id = Model.idImpto})">
+                Editar
+            </a>
+        </li>
+    </ul>
+</div>
+
+@using (Html.BeginForm())
+{
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="card">
+                <h3 class="card-title"></h3>
+                <div class="card-body">
+                    @Html.AntiForgeryToken()
+                    @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+                    @Html.HiddenFor(model => model.idImpto)
+                    @Html.HiddenFor(x => x.fecRegistro)
+                    @Html.HiddenFor(x => x.idUsuario)
+                    @Html.HiddenFor(x => x.fecEliminacion)
+                    @Html.HiddenFor(x => x.idUsuarioEliminar)
+                    <div class="cold-lg-12">
+                        <div class="form-group">
+                            @Html.LabelFor(model => model.codImpto, htmlAttributes: new { @class = "control-label" })
+                            @Html.EditorFor(model => model.codImpto, new { htmlAttributes = new { @class = "form-control" } })
+                            @Html.ValidationMessageFor(model => model.codImpto, "", new { @class = "text-danger" })
+                        </div>
+                        <div class="form-group">
+                            @Html.LabelFor(model => model.abrvImpto, htmlAttributes: new { @class = "control-label" })
+                            @Html.EditorFor(model => model.abrvImpto, new { htmlAttributes = new { @class = "form-control" } })
+                            @Html.ValidationMessageFor(model => model.abrvImpto, "", new { @class = "text-danger" })
+                        </div>
+                        <div class="form-group">
+                            @Html.LabelFor(model => model.porcentajeImpto, htmlAttributes: new { @class = "control-label" })
+                            @Html.EditorFor(model => model.porcentajeImpto, new { htmlAttributes = new { @class = "form-control" } })
+                            @Html.ValidationMessageFor(model => model.porcentajeImpto, "", new { @class = "text-danger" })
+                        </div>
+                        <div class="form-group">
+                            @Html.LabelFor(model => model.descImpto, new { @class = "control-label" })
+                            @Html.TextAreaFor(model => model.descImpto, new { @class = "form-control" })
+                            @Html.ValidationMessageFor(model => model.descImpto, "", new { @class = "text-danger" })
+                        </div>
+                        <div class="form-group">
+                            @Html.LabelFor(model => model.activo, new { @class = "control-label" })
+                            <div class="checkbox">
+                            </div>
+                            <div class="toggle-flip">
+                                <label>
+                                    @{ string eval = Model.activo ? "checked" : null;}
+                                    <input checked="@eval" data-val="true" data-val-required="El estado es obligatorio" id="activo" name="activo" type="checkbox" value="true">
+                                    <span class="flip-indecator" data-toggle-on="ON" data-toggle-off="OFF"></span>
+                                    @Html.ValidationMessageFor(model => model.activo, "", new { @class = "text-danger" })
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-12" style="text-align: center;">
+            <div class="card">
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <button class="btn btn-success icon-btn" type="submit">
+                                <i class="fa fa-fw fa-lg fa-repeat">
+                                </i>Actualizar
+                            </button>&nbsp;&nbsp;&nbsp;
+                            <a class="btn btn-default icon-btn" href="@Url.Action("Index")">
+                                <i class="fa fa-fw fa-lg fa-times-circle"></i>Cancelar
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+                                        }
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+    <script type="text/javascript">
+            $("#porcentajeImpto").keypress(val);
+            $("#btnCreateImpuesto").click(val);
+
+
+            function val() {
+                if (!$("form").valid()) {
+                    $(".error").addClass("text-danger");
+                }
+            }
+            jQuery.validator.addMethod("lettersonly", function (value, element) {
+                return this.optional(element) || /^[a-z]+$/i.test(value);
+            }, "Letters only please");
+            $("form").validate({
+                rules: {
+                    porcentajeImpto: {
+                        required: true,
+                        number: true,
+                        range: [0, 100]
+                    },
+                    codImpto: {
+                        required: true,
+                        maxlength: 10,
+                    },
+                    descImpto: {
+                        required: true,
+                        maxlength: 100
+                    },
+                    abrvImpto: {
+                        required: true,
+                        lettersonly: true,
+                        maxlength: 10
+                    }
+                },
+                messages: {
+                    porcentajeImpto: {
+                        required: "El porcentaje es obligatorio",
+                        number: "El porcentaje solo puede ser númerico",
+                        range: "El porcentaje debe estar entre 0 y 100"
+                    },
+                    codImpto: {
+                        required: "El código es obligatorio",
+                        maxlength: "La longitud máxima para este campo es {0}"
+                    },
+                    descImpto: {
+                        required: "La descripción es obligatoria",
+                        maxlength: "La longitud máxima para este campo es {0}"
+                    },
+                    abrvImpto: {
+                        required: "La abreviatura es obligatoria",
+                        lettersonly: "Solo se admiten letras",
+                        maxlength: "La longitud máxima para este campo es {0}"
+                    }
+                }
+            });
+    </script>
+}

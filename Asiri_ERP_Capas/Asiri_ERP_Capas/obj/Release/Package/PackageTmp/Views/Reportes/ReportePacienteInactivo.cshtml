@@ -1,0 +1,39 @@
+﻿
+@{
+    ViewBag.Title = "ReportePacienteInactivo";
+}
+
+
+<script language="javascript" type="text/javascript">
+    function validarSiNumero(numero) {
+        if (/^([0-9])*$/.test(numero));
+        else {
+            alert("El valor " + numero + " no es un número");
+            txtDato.value = "";
+        }
+    }
+
+    function validar() {
+
+        //Validando el combo select
+        var miCombo = document.getElementById("txtDato").value;
+        if (miCombo == "") {
+            alert('Debe Elegir una opcion en el combo!');
+            return false;
+        }
+    }
+</script>
+
+<h2>Reporte de Paciente Inactivo</h2>
+
+@using (Html.BeginForm("RepPacInac", "Reportes"))
+{
+    <label>Seleccione Estado de Paciente</label>
+    <select type="text" id="txtDato" name="txtDato" class="dtp" @*onblur="return validaNumericos()"*@ onChange="validarSiNumero(this.value)">
+        <option value="0">Inactivo</option>
+        <option value="1">Activo</option>
+    </select>
+    <br />
+    <input type="submit" value="Reporte" class="btn btn-primary" onclick="return validar()" />
+    @*<input type="button" value="Reporte MVC - Otra Ventana" onclick="GenericInNewWin()" />*@
+}}

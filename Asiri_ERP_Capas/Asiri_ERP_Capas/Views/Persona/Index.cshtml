@@ -1,0 +1,107 @@
+﻿@model IEnumerable<Common.RHUt09_persona>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+
+<div class="row">
+    <div class="col-md-12">
+        <div class="card">
+
+            <div class="card-title">
+                @Html.Partial("~/Views/Shared/_HeadpartialIndex.cshtml")
+            </div>
+            <hr />
+            <div class="card-body table-responsive">
+                <table class="table table-hover table-bordered " id="tablegeneral" style="text-align:center;">
+                    <thead style="color:#ffffff;background:#0094ff;">
+                        <tr>
+                            <th>
+                                Nombre
+                            </th>
+                            <th>
+                                Ape. Paterno
+                            </th>
+                            <th>
+                                Ape. Materno
+                            </th>
+                            <th>
+                                N° Documento
+                            </th>
+                            <th>
+                                Estado
+                            </th>
+                            <th>
+                                Fec. Registro
+                            </th>
+                            <th>
+                                Estado Civil
+                            </th>
+                            <th>
+                                Detalle
+                            </th>
+                            <th>
+                                Editar
+                            </th>
+                            <th>
+                                Eliminar
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var item in Model)
+                        {
+                            <tr>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.nombrePersona)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.apellidoPaterno)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.apellidoMaterno)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.numDocIdentidad)
+                                </td>
+                                <td>
+                                    <div class="text-center">
+                                        @Helpers.CustomHelper.Estado(item.activo)
+                                    </div>
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.fecRegistro)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.RHUt05_estadoCivil.descEstadoCivil)
+                                </td>
+                                <td>
+                                    <div class="col-md-12 text-center">
+                                        <a class="btn btn-default btn-flat" href="@Url.Action("Details", "Persona", new { id = item.idPersona})"><i class="fa fa-lg fa-plus"></i></a>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="col-md-12 text-center">
+                                        <a class="btn btn-warning btn-flat" href="@Url.Action("Edit","Persona",new { id = item.idPersona})"><i class="fa fa-lg fa-edit"></i></a>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="text-center">
+                                        @Helpers.CustomHelper.Eliminar(item.activo, Url.Action("Estado", "Persona") + "", item.idPersona)
+                                    </div>
+                                </td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="~/Scripts/jq/jquery-3.1.1.min.js"></script>
+<script src="~/Scripts/DataTables/tableGeneral.js"></script>
+
+
+
+

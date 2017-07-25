@@ -1,0 +1,74 @@
+﻿
+@{
+    ViewBag.Title = "ReporteBuscarDoctor";
+}
+
+
+<script type="text/javascript">
+
+
+    function validarSiNumero(numero) {
+        if (/^([0-9])*$/.test(numero));
+        else {
+            alert("El valor " + numero + " no es un número");
+            txtDato.value = "";
+        }
+    }
+
+
+    function validar() {
+        //obteniendo el valor que se puso en el campo text del formulario
+        var miCampoTexto = document.getElementById("txtDato").value;
+        //la condición
+        if (miCampoTexto.length != 8 || /^\s+$/.test(miCampoTexto) || miCampoTexto =="") {
+            alert('Formato no valido!!!');
+            return false;
+        }
+        return true;
+    }
+    function validar1() {
+        //obteniendo el valor que se puso en el campo text del formulario
+        var miCampoTexto = document.getElementById("txtDatos").value;
+        //la condición
+        if (miCampoTexto.length == 0 || /^\s+$/.test(miCampoTexto)) {
+            alert('El campo de texto esta vacio!');
+            return false;
+        }
+        return true;
+    }
+
+
+    function validar5() {
+        //obteniendo el valor que se puso en el campo text del formulario
+        var miCampoTexto2 = document.getElementById("txtDias").value;
+        //la condición
+        if (miCampoTexto2.length == 0 || /^\s+$/.test(miCampoTexto2)) {
+            alert('El campo de Año esta vacio!');
+            return false;
+        }
+        return true;
+    }
+
+    function validar6() {
+        //obteniendo el valor que se puso en el campo text del formulario
+        var miCampoTexto2 = document.getElementById("txtCodigo").value;
+        //la condición
+        if (miCampoTexto2.length == 0 || /^\s+$/.test(miCampoTexto2)) {
+            alert('El campo de Año esta vacio!');
+            return false;
+        }
+        return true;
+    }
+</script>
+
+
+
+@using (Html.BeginForm("RepBusqueDoct", "Reportes"))
+{
+    @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+    <h2>Reporte Buscar Doctor</h2>
+    <label>N° Documento: </label>
+    <input type="text" id="txtDato" name="txtDato" class="dtp" onChange="validarSiNumero(this.value)" />
+    <br />
+    <input type="submit" value="Reporte" onclick="return validar();" />
+}

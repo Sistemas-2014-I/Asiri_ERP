@@ -1,0 +1,29 @@
+﻿
+@{
+    ViewBag.Title = "ReporteAño";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<script>
+    function validar10() {
+        //obteniendo el valor que se puso en el campo text del formulario
+        var miCampoTexto2 = document.getElementById("txtAño").value;
+        //la condición
+        if (miCampoTexto2.length != 4 || /^\s+$/.test(miCampoTexto2) || miCampoTexto2 == "" || 2008 > miCampoTexto2 || miCampoTexto2 < an || isNaN(miCampoTexto2)) {
+            alert('El campo de Año no es valido');
+            return false;
+        }
+        return true
+    }
+</script>
+@using (Html.BeginForm("ShowGenerico41", "Reportes"))
+{
+    <h2>Reporte por Año</h2>
+    <label>AÑO</label>
+    <input type="text" id="txtAño" name="txtAño" class="dtp" onChange="validarSiNumero(this.value)" />
+    <br />
+    <input type="submit" value="Reporte AÑO" onclick="return validar10();" />
+}
+
+
+

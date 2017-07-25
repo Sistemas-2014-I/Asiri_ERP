@@ -1,0 +1,166 @@
+﻿@model IEnumerable<Common.AspNetUsers>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<head>
+    <style>
+        .abcd {
+            display: flex;
+            justify-content: space-around;
+        }
+    </style>
+</head>
+<body>
+<div class="page-title">
+    <div>
+        <h1><i class="fa fa-edit"></i> Mantenimiento de Usuario</h1>
+        <p>Lista de Usuarios ...!</p>
+    </div>
+    <div>
+        <ul class="breadcrumb">
+            <li><i class="fa fa-home fa-lg"></i></li>
+            <li>Usuarios</li>
+            <li><a href="#">Lista Usuarios</a></li>
+        </ul>
+    </div>
+</div>
+    <div class="row">
+        <div class="col-md-12">
+            <div class="card">
+                <div class="container" id="MantenimientoUsuario">
+                    <h3 style="display:inline-block;" class="header-title"><i class="glyphicon glyphicon-cog"></i>Usuario</h3>
+
+                </div>
+                <div class="card-title-w-btn">
+                    <div class="bs-component">
+                        <div>
+                            <a class="btn btn-info icon-btn" href="/Users/Create">
+                                <i class="fa fa-fw fa-lg fa-user-plus"></i>Nuevo Usuario
+                            </a>
+                        </div>
+                    </div>
+
+
+                </div>
+                <!--<p>
+            @Html.ActionLink("Crear nuevo Usuario", "Create")
+        </p>-->
+                <div class="card-body table-responsive">
+                    <table class="table table-hover table-responsive table-bordered col-md-12" id="sampleTable">
+                        <thead style="color:#ffffff;background:#0094ff;">
+                            <tr>
+                                <th>
+                                    @Html.DisplayNameFor(model => model.RHUt01_empleado.RHUt09_persona.nombrePersona)
+                                </th>
+                                <th>
+                                    @Html.DisplayNameFor(model => model.Email)
+                                </th>
+
+                                <th>Acciones</th>
+                            </tr>
+                        </thead>
+
+                        @foreach (var item in Model)
+                    {
+                            <tr>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.RHUt01_empleado.RHUt09_persona.nombrePersona)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.Email)
+                                </td>
+
+                                <td>
+                                    <div class="col-md-12 abcd">
+                                        <div class="col-md-4" style="text-align: center;">
+                                            <a data-id="@item.Id" href="/Users/Edit/@item.Id" class="btn btn-warning btn-flat" ><i class="fa fa-lg fa-edit"></i></a>
+
+                                        </div>
+                                        <div class="col-md-4" style="text-align: center;">
+                                            <a data-id="@item.Id" href="/Users/Details/@item.Id" class="btn btn-primary btn-flat"><i class="fa fa-lg fa-plus"></i></a>
+
+                                        </div>
+                                        <div class="col-md-4" style="text-align: center;">
+                                            <a data-id="@item.Id" href="/Users/Delete/@item.Id" class="btn btn-danger btn-flat"><i class="fa fa-lg fa-trash"></i></a>
+
+                                        </div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        }
+
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript">
+    //$('#sampleTable').DataTable();
+
+                $(document).ready(function ()
+            {
+                $('#sampleTable').dataTable({
+                    ordering:false,
+                    language: {
+                        processing: "En curso...",
+                        search: "Buscar:",
+                        lengthMenu: "Visualizar _MENU_ registros",
+                        info: "_START_ de _END_ registros de un total de _TOTAL_ registros",
+                        infoEmpty: "0 registros encontrados",
+                        infoFiltered: "(_MAX_ registros filtrados en total)",
+                        infoPostFix: "",
+                        loadingRecords: "Cargando registros...",
+                        zeroRecords: "No hay registros",
+                        emptyTable: "Vacío",
+                        paginate: {
+                            first: "Primero",
+                            previous: "Previo  ",
+                            next: "  Siguiente",
+                            last: "Último"
+                        },
+                        aria: {
+                            sortAscending: ": Habilitado para ordenar la columna en orden ascendente",
+                            sortDescending: ": Habilitado para ordenar la columna en orden descendente"                }
+                    }
+                });
+
+
+
+                $(".detalleCita").on("click", function () {
+                    var id = $(this).attr("data-id");
+                    var cod = $(this).attr("data-cod");
+                    var paciente = $(this).attr("data-paciente");
+                    var doctor = $(this).attr("data-doctor");
+                    var fecha = $(this).attr("data-fecha");
+                    var hora = $(this).attr("data-hora");
+                    var estado = $(this).attr("data-estado");
+
+                    $("#citadtl").load("/Cita/ObtenerCitaDtl/" + id);
+                    $(".modal-title").text("Código de la cita " + cod);
+                    $("#pacienteModal").text(paciente);
+                    $("#doctorModal").text(doctor);
+                    $("#fechaModal").text(fecha);
+                    $("#horaModal").text(hora);
+                    $("#estadoModal").text(estado);
+                    $("#detalleModal").modal("show");
+                });
+
+                $(".repogramarCita").on("click", function () {
+                    var id = $(this).attr("data-id");
+                    var cod = $(this).attr("data-cod");
+                    $("#reprogramar").load("/Cita/Reprogramar/" + id);
+                    $(".modal-title").text("Código de la cita " + cod);
+                    $("#reprogramacionModal").modal("show");
+                });
+
+                });
+
+
+    </script>
+
+</body>

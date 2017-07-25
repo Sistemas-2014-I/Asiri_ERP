@@ -1,0 +1,333 @@
+﻿@model Mvc_Entity.CLlt03_atencion
+
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>obtenerAtencion</h2>
+
+<div class="row">
+    <!--CODIGO MODIFICAR-->
+    <div class="col-lg-12">
+        <div class="card col-lg-12">
+
+            <div class="" id="tabs">
+                <div class="wrapper">
+                    <div class="container">
+                        <div class="bs-example bs-example-tabs" role="tabpanel" data-example-id="togglable-tabs">
+                            <ul id="myTab" class="nav nav-tabs nav-tabs-responsive" role="tablist">
+                                <li role="presentation" class="active">
+                                    <a href="#tab1" id="home-tab" role="tab" data-toggle="tab" aria-controls="home" aria-expanded="true">
+                                        <span class="text">Inf. Atención</span>
+                                    </a>
+                                </li>
+                                <li role="presentation">
+                                    <a href="#tab2" role="tab" id="samsa-tab" data-toggle="tab" aria-controls="samsa">
+                                        <span class="text">Inf. Función Vital</span>
+                                    </a>
+                                </li>
+                                <li role="presentation">
+                                    <a href="#tab3" role="tab" id="samsa-tab" data-toggle="tab" aria-controls="samsa">
+                                        <span class="text">Inf. Evolución</span>
+                                    </a>
+                                </li>
+                                <li role="presentation">
+                                    <a href="#tab4" role="tab" id="samsa-tab" data-toggle="tab" aria-controls="samsa">
+                                        <span class="text">Inf. Examen Físico</span>
+                                    </a>
+                                </li>
+                                <li role="presentation">
+                                    <a href="#tab5" role="tab" id="samsa-tab" data-toggle="tab" aria-controls="samsa">
+                                        <span class="text">Inf. Estudio Complementario</span>
+                                    </a>
+                                </li>
+                            </ul>
+
+                            <form id="form-atencion" name="atencion" method="post" action="/Atencion/CreateAtencion">
+                                <div id="myTabContent" class="tab-content">
+                                    <div role="tabpanel" class="tab-pane fade in active" id="tab1" aria-labelledby="home-tab">
+                                        <div class="row">
+                                            <div class="col-lg-10">
+                                                <div class="card-body">
+                                                    <div>
+                                                        <div class="form-group col-md-10">
+                                                            <div class="col-md-3">
+                                                                descAnamnesis
+                                                            </div>
+                                                            <div class="col-md-9">
+                                                                @Html.DisplayFor(model => model.oAnamnesis.descAnamnesis)
+                                                            </div>
+                                                        </div>
+                                                            <div>
+                                                                @foreach (var item in Model.oListDiagnostico)
+                                                                {
+                                                                    <div class="card-body">
+                                                                        <div class="form-group col-md-6">
+                                                                            <div>
+                                                                                Diagnostico
+                                                                            </div>
+
+                                                                            <div>
+                                                                                @Html.DisplayFor(modelItem => item.descDiagnostico)
+                                                                            </div>
+                                                                        </div>
+
+                                                                        <div class="form-group col-md-6" >
+                                                                            <div>
+                                                                                Tratamiento
+                                                                            </div>
+
+                                                                            <div>
+                                                                                @Html.DisplayFor(modelItem => item.oListTratamiento[0].descTratamiento)
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+
+                                                                    foreach (var dtl in item.oListTratamiento[0].oListTratamientoDtl)
+                                                                    { <div class="card-body">
+                                                                    <div class="card col-md-10">
+                                                                        <div class="col-md-12">
+                                                                            <table class="table table-responsive table-striped table-bordered" style="text-align:center">
+                                                                                <thead style="color:#ffffff;background:#0094ff;">
+                                                                                    <tr>
+                                                                                        <th>Indicacion Servicio</th>
+                                                                                    </tr>
+                                                                                </thead>
+                                                                                <tbody>
+                                                                                    <tr><td>@Html.DisplayFor(modelItem => dtl.indicacionServicio)</td></tr>
+                                                                                </tbody>
+                                                                            </table>
+                                                                        </div>
+                                                                    </div>
+
+                                                                </div>}
+                                                                }
+                                                            </div>
+                                                        </div>
+                                                        </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                <!--INFATENCIONL-->
+                                <div role="tabpanel" class="tab-pane fade" id="tab2" aria-labelledby="profile-tab">
+                                    <div class="row">
+                                        <div class="col-lg-10">
+                                            <div class="card-body">
+                                                <div class="form-group col-md-3">
+                                                    <div>Sistole</div>
+                                                    <div>
+                                                        @Html.DisplayFor(model => model.oFuncionVital.sistole)
+                                                    </div>
+                                                </div>
+                                                <div class="form-group col-md-3">
+                                                    <div>
+                                                        diastole
+                                                    </div>
+
+                                                    <div>
+                                                        @Html.DisplayFor(model => model.oFuncionVital.diastole)
+                                                    </div>
+                                                 </div>
+                                                <div class="form-group col-md-3">
+                                                    <div>
+                                                        pulsacion
+                                                    </div>
+
+                                                    <div>
+                                                        @Html.DisplayFor(model => model.oFuncionVital.pulsacion)
+                                                    </div>
+                                                </div>
+                                                <div class="form-group col-md-3">
+                                                    <div>
+                                                        ritmoRespiratorio
+                                                    </div>
+
+                                                    <div>
+                                                        @Html.DisplayFor(model => model.oFuncionVital.ritmoRespiratorio)
+                                                    </div>
+                                                </div>
+                                                <div class="form-group col-md-3">
+                                                    <div>
+                                                        temperatura
+                                                    </div>
+
+                                                    <div>
+                                                        @Html.DisplayFor(model => model.oFuncionVital.temperatura)
+                                                    </div>
+                                                </div>
+                                                <div class="form-group col-md-3">
+                                                    <div>
+                                                        altura
+                                                    </div>
+
+                                                    <div>
+                                                        @Html.DisplayFor(model => model.oFuncionVital.altura)
+                                                    </div>
+                                                </div>
+                                                <div class="form-group col-md-3">
+                                                    <div>
+                                                        peso
+                                                    </div>
+
+                                                    <div>
+                                                        @Html.DisplayFor(model => model.oFuncionVital.peso)
+                                                    </div>
+                                                </div>
+                                                <div class="form-group col-md-3">
+                                                    <div>
+                                                        IMC
+                                                    </div>
+
+                                                    <div>
+                                                        @Html.DisplayFor(model => model.oFuncionVital.imc)
+                                                    </div>
+                                                </div>
+
+                                                </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!--INFUNCIONVITAL-->
+                                <div role="tabpanel" class="tab-pane fade" id="tab3" aria-labelledby="dropdown1-tab">
+                                    <div class="row">
+                                        <div class="col-lg-10">
+                                            <div class="card-body">
+
+                                                <div class="form-group" style="text-align:center">
+                                                    @foreach (var item in Model.oListEvolucion)
+                                                    {
+                                                        <div class="form-group col-md-10">
+                                                            <div class="col-md-3">
+                                                                Inf. Evolucion
+                                                            </div>
+
+                                                            <div class="col-md-8">
+                                                                @Html.DisplayFor(modelItem => item.descEvolucion)
+                                                            </div>
+                                                         </div>
+                                                            }
+                                                        </div>
+                                                </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+
+
+                                <!--EVOLUCION-->
+                                <div role="tabpanel" class="tab-pane fade" id="tab4" aria-labelledby="dropdown1-tab">
+                                    <div class="row">
+                                        <div class="col-lg-10">
+                                            <div class="card-body">
+                                                <div class="form-group" style="text-align:center">
+
+                                                    @foreach (var item in Model.oListExamenFisico)
+                                                    {
+                                                        <div class="form-group col-md-10">
+                                                            <div class="col-md-3">
+                                                                Inf. Examen Fisico
+                                                            </div>
+
+                                                            <div class="col-md-8">
+                                                                @Html.DisplayFor(modelItem => item.descExamenFisico)
+                                                            </div>
+                                                         </div>
+                                                            }
+
+                                                        </div>
+                                                </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!--Estudio Complementario-->
+                                <div role="tabpanel" class="tab-pane fade" id="tab5" aria-labelledby="dropdown1-tab">
+    <div class="row">
+        <div class="col-lg-10">
+            <div class="card-body">
+                <div class="form-group" style="text-align:center">
+                    @foreach (var item in Model.oListEstudioCompl)
+                    {
+                        <div class="form-group col-md-10">
+                            <div class="col-md-3">
+                                Inf. Estudio Complememtario
+                            </div>
+
+                            <div class="col-md-8">
+                                @Html.DisplayFor(modelItem => item.descEstudioCompl)
+                            </div>
+                            <div class="card-body">
+                                <div class="card col-md-10">
+                                    <div class="col-md-12">
+                                        <table class="table table-responsive table-striped table-bordered" style="text-align:center">
+                                            <thead style="color:#ffffff;background:#0094ff;">
+                                                <tr>
+                                                    <th>Estudios Complementarios (Imagen)</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr><td>@*@Html.DisplayFor(modelItem => item.oListArchivoEstudioCompl[0].pathArchivo)*@</td></tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    }
+                                          
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+            <script type="text/javascript">
+                (function ($) {
+
+                    'use strict';
+
+                    $(document).on('show.bs.tab', '.nav-tabs-responsive [data-toggle="tab"]', function (e) {
+                        var $target = $(e.target);
+                        var $tabs = $target.closest('.nav-tabs-responsive');
+                        var $current = $target.closest('li');
+                        var $parent = $current.closest('li.dropdown');
+                        $current = $parent.length > 0 ? $parent : $current;
+                        var $next = $current.next();
+                        var $prev = $current.prev();
+                        var updateDropdownMenu = function ($el, position) {
+                            $el
+                              .find('.dropdown-menu')
+                              .removeClass('pull-xs-left pull-xs-center pull-xs-right')
+                              .addClass('pull-xs-' + position);
+                        };
+
+                        $tabs.find('>li').removeClass('next prev');
+                        $prev.addClass('prev');
+                        $next.addClass('next');
+
+                        updateDropdownMenu($prev, 'left');
+                        updateDropdownMenu($current, 'center');
+                        updateDropdownMenu($next, 'right');
+                    });
+
+                })(jQuery);
+            </script>
+            <script src="~/Scripts/plugins/select2.min.js"></script>
+
+
+
+
+
+
+

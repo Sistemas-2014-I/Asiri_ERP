@@ -1,0 +1,37 @@
+﻿
+@{
+    ViewBag.Title = "ReporteRangoCitas";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+<script type="text/javascript">
+ function validarFec() {
+ //obteniendo el valor que se puso en el campo text del formulario
+        var miCampoTexto = document.getElementById("txtFromDate").value;
+        var miCampoTexto1 = document.getElementById("txtToDate").value;
+ //la condición
+        if (!isNaN(miCampoTexto)) {
+     alert('El campo Desde esta vacio!');
+     return false;
+ }
+        if (!isNaN(miCampoTexto1)) {
+     alert('El campo Hasta esta vacio!');
+     return false;
+ }
+ return true;
+ }
+</script>
+
+
+@using (Html.BeginForm("ShowGeneric", "Reportes"))
+{
+    @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+    <h2>Reporte de Rango de Fechas de citas</h2>
+    <label>DESDE:</label>
+    <input type="date" id="txtFromDate" name="txtFromDate" value="@DateTime.Now.ToShortDateString()" class="dtp" />
+    <label>HASTA:</label>
+    <input type="date" id="txtToDate" name="txtToDate" value="@DateTime.Now.ToShortDateString()" class="dtp" />
+    <br />
+    <input type="submit" value="Reporte " onclick="return validarFec();" />
+}

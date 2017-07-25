@@ -1,0 +1,34 @@
+﻿
+@{
+    ViewBag.Title = "ReporteEstadoCuentaParticular";
+}
+<script language="javascript" type="text/javascript">
+    function validarSiNumero(numero) {
+        if (/^([0-9])*$/.test(numero));
+        else {
+            alert("El valor " + numero + " no es un número");
+            txtDato.value = "";
+        }
+    }
+
+    function validar() {
+        //obteniendo el valor que se puso en el campo text del formulario
+        var miCampoTexto = document.getElementById("txtDato").value;
+        //la condición
+        if (miCampoTexto.length == 0 || /^\s+$/.test(miCampoTexto)) {
+            alert('El campo de texto esta vacio!');
+            return false;
+        }
+        return true;
+    }
+</script>
+<h2>Reporte Estado De Cuenta Particular</h2>
+
+@using (Html.BeginForm("RepEstCuePar", "Reportes"))
+{
+    @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+    <label>Inserte el numero de estado de cuenta:</label>
+    <input type="text" id="txtDato" name="txtDato" class="dtp" onChange="validarSiNumero(this.value)" />
+    <br />
+    <input type="submit" value="Reporte" class="btn btn-primary" onclick="return validar()" />
+}

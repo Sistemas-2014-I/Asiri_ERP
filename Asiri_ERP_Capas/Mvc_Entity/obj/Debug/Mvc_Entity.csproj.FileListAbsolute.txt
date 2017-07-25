@@ -1,0 +1,71 @@
+D:\Universidad-JFSC\Ciclo VII\Calidad de Software\Proyecto_Clinica\Visual_Projects\Asiri_ERP_Capas\Mvc_Entity\bin\Debug\Mvc_Entity.dll.config
+D:\Universidad-JFSC\Ciclo VII\Calidad de Software\Proyecto_Clinica\Visual_Projects\Asiri_ERP_Capas\Mvc_Entity\bin\Debug\Mvc_Entity.dll
+D:\Universidad-JFSC\Ciclo VII\Calidad de Software\Proyecto_Clinica\Visual_Projects\Asiri_ERP_Capas\Mvc_Entity\bin\Debug\Mvc_Entity.pdb
+D:\Universidad-JFSC\Ciclo VII\Calidad de Software\Proyecto_Clinica\Visual_Projects\Asiri_ERP_Capas\Mvc_Entity\bin\Debug\EntityFramework.dll
+D:\Universidad-JFSC\Ciclo VII\Calidad de Software\Proyecto_Clinica\Visual_Projects\Asiri_ERP_Capas\Mvc_Entity\bin\Debug\EntityFramework.SqlServer.dll
+D:\Universidad-JFSC\Ciclo VII\Calidad de Software\Proyecto_Clinica\Visual_Projects\Asiri_ERP_Capas\Mvc_Entity\bin\Debug\EntityFramework.xml
+D:\Universidad-JFSC\Ciclo VII\Calidad de Software\Proyecto_Clinica\Visual_Projects\Asiri_ERP_Capas\Mvc_Entity\bin\Debug\EntityFramework.SqlServer.xml
+D:\Universidad-JFSC\Ciclo VII\Calidad de Software\Proyecto_Clinica\Visual_Projects\Asiri_ERP_Capas\Mvc_Entity\bin\Debug\es\EntityFramework.resources.dll
+D:\Universidad-JFSC\Ciclo VII\Calidad de Software\Proyecto_Clinica\Visual_Projects\Asiri_ERP_Capas\Mvc_Entity\bin\Debug\es\EntityFramework.SqlServer.resources.dll
+D:\Universidad-JFSC\Ciclo VII\Calidad de Software\Proyecto_Clinica\Visual_Projects\Asiri_ERP_Capas\Mvc_Entity\obj\Debug\Mvc_Entity.csprojResolveAssemblyReference.cache
+D:\Universidad-JFSC\Ciclo VII\Calidad de Software\Proyecto_Clinica\Visual_Projects\Asiri_ERP_Capas\Mvc_Entity\obj\Debug\Mvc_Entity.dll
+D:\Universidad-JFSC\Ciclo VII\Calidad de Software\Proyecto_Clinica\Visual_Projects\Asiri_ERP_Capas\Mvc_Entity\obj\Debug\Mvc_Entity.pdb
+E:\Ciclo VII\Calidad de Software\Prueba_Integrar\Asiri_ERP_Capas\Mvc_Entity\bin\Debug\Mvc_Entity.dll.config
+E:\Ciclo VII\Calidad de Software\Prueba_Integrar\Asiri_ERP_Capas\Mvc_Entity\bin\Debug\Mvc_Entity.dll
+E:\Ciclo VII\Calidad de Software\Prueba_Integrar\Asiri_ERP_Capas\Mvc_Entity\bin\Debug\Mvc_Entity.pdb
+E:\Ciclo VII\Calidad de Software\Prueba_Integrar\Asiri_ERP_Capas\Mvc_Entity\bin\Debug\EntityFramework.dll
+E:\Ciclo VII\Calidad de Software\Prueba_Integrar\Asiri_ERP_Capas\Mvc_Entity\bin\Debug\EntityFramework.SqlServer.dll
+E:\Ciclo VII\Calidad de Software\Prueba_Integrar\Asiri_ERP_Capas\Mvc_Entity\bin\Debug\EntityFramework.xml
+E:\Ciclo VII\Calidad de Software\Prueba_Integrar\Asiri_ERP_Capas\Mvc_Entity\bin\Debug\EntityFramework.SqlServer.xml
+E:\Ciclo VII\Calidad de Software\Prueba_Integrar\Asiri_ERP_Capas\Mvc_Entity\bin\Debug\es\EntityFramework.resources.dll
+E:\Ciclo VII\Calidad de Software\Prueba_Integrar\Asiri_ERP_Capas\Mvc_Entity\bin\Debug\es\EntityFramework.SqlServer.resources.dll
+E:\Ciclo VII\Calidad de Software\Prueba_Integrar\Asiri_ERP_Capas\Mvc_Entity\obj\Debug\Mvc_Entity.dll
+E:\Ciclo VII\Calidad de Software\Prueba_Integrar\Asiri_ERP_Capas\Mvc_Entity\obj\Debug\Mvc_Entity.pdb
+E:\Ciclo VII\Calidad de Software\Prueba_Integrar\Asiri_ERP_Capas\Mvc_Entity\obj\Debug\Mvc_Entity.csprojResolveAssemblyReference.cache
+D:\Universidad-JFSC\Ciclo VII\Calidad de Software\Proyecto_Clinica\Visual_Projects\2\Asiri_ERP_Capas\Mvc_Entity\bin\Debug\Mvc_Entity.dll.config
+D:\Universidad-JFSC\Ciclo VII\Calidad de Software\Proyecto_Clinica\Visual_Projects\2\Asiri_ERP_Capas\Mvc_Entity\bin\Debug\Mvc_Entity.dll
+D:\Universidad-JFSC\Ciclo VII\Calidad de Software\Proyecto_Clinica\Visual_Projects\2\Asiri_ERP_Capas\Mvc_Entity\bin\Debug\Mvc_Entity.pdb
+D:\Universidad-JFSC\Ciclo VII\Calidad de Software\Proyecto_Clinica\Visual_Projects\2\Asiri_ERP_Capas\Mvc_Entity\bin\Debug\EntityFramework.dll
+D:\Universidad-JFSC\Ciclo VII\Calidad de Software\Proyecto_Clinica\Visual_Projects\2\Asiri_ERP_Capas\Mvc_Entity\bin\Debug\EntityFramework.SqlServer.dll
+D:\Universidad-JFSC\Ciclo VII\Calidad de Software\Proyecto_Clinica\Visual_Projects\2\Asiri_ERP_Capas\Mvc_Entity\bin\Debug\EntityFramework.xml
+D:\Universidad-JFSC\Ciclo VII\Calidad de Software\Proyecto_Clinica\Visual_Projects\2\Asiri_ERP_Capas\Mvc_Entity\bin\Debug\EntityFramework.SqlServer.xml
+D:\Universidad-JFSC\Ciclo VII\Calidad de Software\Proyecto_Clinica\Visual_Projects\2\Asiri_ERP_Capas\Mvc_Entity\bin\Debug\es\EntityFramework.resources.dll
+D:\Universidad-JFSC\Ciclo VII\Calidad de Software\Proyecto_Clinica\Visual_Projects\2\Asiri_ERP_Capas\Mvc_Entity\bin\Debug\es\EntityFramework.SqlServer.resources.dll
+D:\Universidad-JFSC\Ciclo VII\Calidad de Software\Proyecto_Clinica\Visual_Projects\2\Asiri_ERP_Capas\Mvc_Entity\obj\Debug\Mvc_Entity.dll
+D:\Universidad-JFSC\Ciclo VII\Calidad de Software\Proyecto_Clinica\Visual_Projects\2\Asiri_ERP_Capas\Mvc_Entity\obj\Debug\Mvc_Entity.pdb
+E:\Ciclo VII\Calidad de Software\ultimo_backup_manuel\Asiri_ERP_Capas\Mvc_Entity\bin\Debug\Mvc_Entity.dll.config
+E:\Ciclo VII\Calidad de Software\ultimo_backup_manuel\Asiri_ERP_Capas\Mvc_Entity\bin\Debug\Mvc_Entity.dll
+E:\Ciclo VII\Calidad de Software\ultimo_backup_manuel\Asiri_ERP_Capas\Mvc_Entity\bin\Debug\Mvc_Entity.pdb
+E:\Ciclo VII\Calidad de Software\ultimo_backup_manuel\Asiri_ERP_Capas\Mvc_Entity\bin\Debug\EntityFramework.dll
+E:\Ciclo VII\Calidad de Software\ultimo_backup_manuel\Asiri_ERP_Capas\Mvc_Entity\bin\Debug\EntityFramework.SqlServer.dll
+E:\Ciclo VII\Calidad de Software\ultimo_backup_manuel\Asiri_ERP_Capas\Mvc_Entity\bin\Debug\EntityFramework.xml
+E:\Ciclo VII\Calidad de Software\ultimo_backup_manuel\Asiri_ERP_Capas\Mvc_Entity\bin\Debug\EntityFramework.SqlServer.xml
+E:\Ciclo VII\Calidad de Software\ultimo_backup_manuel\Asiri_ERP_Capas\Mvc_Entity\bin\Debug\es\EntityFramework.resources.dll
+E:\Ciclo VII\Calidad de Software\ultimo_backup_manuel\Asiri_ERP_Capas\Mvc_Entity\bin\Debug\es\EntityFramework.SqlServer.resources.dll
+E:\Ciclo VII\Calidad de Software\ultimo_backup_manuel\Asiri_ERP_Capas\Mvc_Entity\obj\Debug\Mvc_Entity.csprojResolveAssemblyReference.cache
+E:\Ciclo VII\Calidad de Software\ultimo_backup_manuel\Asiri_ERP_Capas\Mvc_Entity\obj\Debug\Mvc_Entity.dll
+E:\Ciclo VII\Calidad de Software\ultimo_backup_manuel\Asiri_ERP_Capas\Mvc_Entity\obj\Debug\Mvc_Entity.pdb
+E:\Ciclo VII\Calidad de Software\mas pagos\Asiri_ERP_Capas\Mvc_Entity\bin\Debug\Mvc_Entity.dll.config
+E:\Ciclo VII\Calidad de Software\mas pagos\Asiri_ERP_Capas\Mvc_Entity\bin\Debug\Mvc_Entity.dll
+E:\Ciclo VII\Calidad de Software\mas pagos\Asiri_ERP_Capas\Mvc_Entity\bin\Debug\Mvc_Entity.pdb
+E:\Ciclo VII\Calidad de Software\mas pagos\Asiri_ERP_Capas\Mvc_Entity\bin\Debug\EntityFramework.dll
+E:\Ciclo VII\Calidad de Software\mas pagos\Asiri_ERP_Capas\Mvc_Entity\bin\Debug\EntityFramework.SqlServer.dll
+E:\Ciclo VII\Calidad de Software\mas pagos\Asiri_ERP_Capas\Mvc_Entity\bin\Debug\EntityFramework.xml
+E:\Ciclo VII\Calidad de Software\mas pagos\Asiri_ERP_Capas\Mvc_Entity\bin\Debug\EntityFramework.SqlServer.xml
+E:\Ciclo VII\Calidad de Software\mas pagos\Asiri_ERP_Capas\Mvc_Entity\bin\Debug\es\EntityFramework.resources.dll
+E:\Ciclo VII\Calidad de Software\mas pagos\Asiri_ERP_Capas\Mvc_Entity\bin\Debug\es\EntityFramework.SqlServer.resources.dll
+E:\Ciclo VII\Calidad de Software\mas pagos\Asiri_ERP_Capas\Mvc_Entity\obj\Debug\Mvc_Entity.csprojResolveAssemblyReference.cache
+E:\Ciclo VII\Calidad de Software\mas pagos\Asiri_ERP_Capas\Mvc_Entity\obj\Debug\Mvc_Entity.dll
+E:\Ciclo VII\Calidad de Software\mas pagos\Asiri_ERP_Capas\Mvc_Entity\obj\Debug\Mvc_Entity.pdb
+E:\Ciclo VII\Calidad de Software\mas pagos 2\mas pagos\Asiri_ERP_Capas\Mvc_Entity\bin\Debug\Mvc_Entity.dll.config
+E:\Ciclo VII\Calidad de Software\mas pagos 2\mas pagos\Asiri_ERP_Capas\Mvc_Entity\bin\Debug\Mvc_Entity.dll
+E:\Ciclo VII\Calidad de Software\mas pagos 2\mas pagos\Asiri_ERP_Capas\Mvc_Entity\bin\Debug\Mvc_Entity.pdb
+E:\Ciclo VII\Calidad de Software\mas pagos 2\mas pagos\Asiri_ERP_Capas\Mvc_Entity\bin\Debug\EntityFramework.dll
+E:\Ciclo VII\Calidad de Software\mas pagos 2\mas pagos\Asiri_ERP_Capas\Mvc_Entity\bin\Debug\EntityFramework.SqlServer.dll
+E:\Ciclo VII\Calidad de Software\mas pagos 2\mas pagos\Asiri_ERP_Capas\Mvc_Entity\bin\Debug\EntityFramework.xml
+E:\Ciclo VII\Calidad de Software\mas pagos 2\mas pagos\Asiri_ERP_Capas\Mvc_Entity\bin\Debug\EntityFramework.SqlServer.xml
+E:\Ciclo VII\Calidad de Software\mas pagos 2\mas pagos\Asiri_ERP_Capas\Mvc_Entity\bin\Debug\es\EntityFramework.resources.dll
+E:\Ciclo VII\Calidad de Software\mas pagos 2\mas pagos\Asiri_ERP_Capas\Mvc_Entity\bin\Debug\es\EntityFramework.SqlServer.resources.dll
+E:\Ciclo VII\Calidad de Software\mas pagos 2\mas pagos\Asiri_ERP_Capas\Mvc_Entity\obj\Debug\Mvc_Entity.csprojResolveAssemblyReference.cache
+E:\Ciclo VII\Calidad de Software\mas pagos 2\mas pagos\Asiri_ERP_Capas\Mvc_Entity\obj\Debug\Mvc_Entity.dll
+E:\Ciclo VII\Calidad de Software\mas pagos 2\mas pagos\Asiri_ERP_Capas\Mvc_Entity\obj\Debug\Mvc_Entity.pdb

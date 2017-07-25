@@ -1,0 +1,107 @@
+﻿@model IEnumerable<Common.RHUt12_tipoDocIdentidad>
+@{
+    ViewBag.Title = "ReportePacienteParticular";
+}
+
+<script language="javascript" type="text/javascript">
+    function validarSiNumero(numero) {
+        if (/^([0-9])*$/.test(numero));
+        else {
+            alert("El valor " + numero + " no es un número");
+            txtDato.value = "";
+        }
+    }
+    function validar() {
+
+        //Validando el combo select
+        var miCombo = document.getElementById("idEstadoCita").value;
+        if (miCombo == "") {
+            alert('Debe Elegir una opcion en el combo!');
+            return false;
+        }
+    }
+    function validar1() {
+        //obteniendo el valor que se puso en el campo text del formulario
+        var miCampoTexto = document.getElementById("txtDato1").value;
+        var x = document.getElementById("txtDato").value;
+
+        //la condición
+        if (x == 1) {
+            if (miCampoTexto.length !=8 || /^\s+$/.test(miCampoTexto) || miCampoTexto == "" || isNaN(miCampoTexto)) {
+                alert('Fomato no valido para el Nro. Documento!');
+
+                return false;
+            }
+
+        }
+        // if (x == 1) {
+        //    if (miCampoTexto.charAt(8) != letras[(miCampoTexto.substring(0, 8))]) {
+        //        alert('Formato no valido!');
+        //    return false;
+        //    }
+        //}
+        else if (x == 2) {
+            if (miCampoTexto.length > 12 || /^\s+$/.test(miCampoTexto) || miCampoTexto == "" ) {
+                alert('El campo de texto esta vacio! y maximo 11 carac');
+                return false;
+            }
+        }
+
+        else if (x == 3) {
+            if (miCampoTexto.length != 11 || /^\s+$/.test(miCampoTexto) || miCampoTexto == "" || isNaN(miCampoTexto)) {
+                alert('Fomato no valido para el Nro. Documento!');
+                return false;
+            }
+        }
+        else if (x == 4) {
+            if (miCampoTexto.length > 12 || /^\s+$/.test(miCampoTexto) || miCampoTexto == "") {
+                alert('Ingrese formato valido para el PASAPORTE!!, máximo 12 caracteres!');
+                return false;
+            }
+        }
+        else if (x == 5) {
+            if (miCampoTexto.length > 15 || /^\s+$/.test(miCampoTexto) || miCampoTexto == "") {
+                alert('Ingrese formato valido para la P. NAC.!!, máximo 15 caracteres!');
+                return false;
+            }
+        }
+        else if (x == 6) {
+            if (miCampoTexto.length > 15 || /^\s+$/.test(miCampoTexto) || miCampoTexto == "") {
+                alert('Ingrese formato valido!!, máximo 15 caracteres!');
+                return false;
+            }
+        }
+            return true;
+    }
+</script>
+
+<h2>Reporte Paciente Particular</h2>
+
+
+<div class="row">
+    <div class="col-md-12">
+
+        @using (Html.BeginForm("Rep", "Reportes"))
+        {
+            @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+            <label>Seleccione el tipo de documento: </label>
+            <select type="text" id="txtDato" name="txtDato" class="dtp">
+
+
+                @foreach (var item in Model)
+                {
+                    <option value="@item.idTipoDocIdentidad">@item.descTipoDocIdentidad</option>
+                }
+
+            </select>
+            <br />
+            <label>Ingrese es número de documento</label>
+            <input type="text" id="txtDato1" name="txtDato1" @*onblur="return validaNumericos()"*@ />
+
+            <input type="submit" value="Imprimir reporte" class="btn btn-primary" onclick="return validar1();return validar()" />
+            @*<input type="button" value="Reporte MVC - Otra Ventana" onclick="GenericInNewWin()" />*@
+        }
+
+
+    </div>
+</div>

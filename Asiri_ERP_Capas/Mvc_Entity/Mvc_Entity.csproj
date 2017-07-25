@@ -1,0 +1,315 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{01DDC386-EACB-4688-BEC6-83145BA51EB6}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Mvc_Entity</RootNamespace>
+    <AssemblyName>Mvc_Entity</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AspNetPermisos.cs">
+      <DependentUpon>dbAsiri.tt</DependentUpon>
+    </Compile>
+    <Compile Include="AspNetRoles.cs">
+      <DependentUpon>dbAsiri.tt</DependentUpon>
+    </Compile>
+    <Compile Include="AspNetUserClaims.cs">
+      <DependentUpon>dbAsiri.tt</DependentUpon>
+    </Compile>
+    <Compile Include="AspNetUserLogins.cs">
+      <DependentUpon>dbAsiri.tt</DependentUpon>
+    </Compile>
+    <Compile Include="AspNetUsers.cs">
+      <DependentUpon>dbAsiri.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CLIt01_anamnesis.cs">
+      <DependentUpon>dbAsiri.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CLIt02_archivoEstudioCompl.cs">
+      <DependentUpon>dbAsiri.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CLlt03_atencion.cs">
+      <DependentUpon>dbAsiri.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CLlt04_cie10.cs">
+      <DependentUpon>dbAsiri.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CLlt05_cita.cs">
+      <DependentUpon>dbAsiri.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CLlt06_citaDtl.cs">
+      <DependentUpon>dbAsiri.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CLlt07_consultorio.cs">
+      <DependentUpon>dbAsiri.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CLlt08_diagnostico.cs">
+      <DependentUpon>dbAsiri.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CLlt09_estadoCita.cs">
+      <DependentUpon>dbAsiri.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CLlt10_estudioCompl.cs">
+      <DependentUpon>dbAsiri.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CLlt11_evolucion.cs">
+      <DependentUpon>dbAsiri.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CLlt12_examenFisico.cs">
+      <DependentUpon>dbAsiri.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CLlt13_funcionVital.cs">
+      <DependentUpon>dbAsiri.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CLlt14_seguro.cs">
+      <DependentUpon>dbAsiri.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CLlt15_seguroPaciente.cs">
+      <DependentUpon>dbAsiri.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CLlt16_tratamiento.cs">
+      <DependentUpon>dbAsiri.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CLlt17_tratamientoDtl.cs">
+      <DependentUpon>dbAsiri.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CustomPermiso.cs">
+      <DependentUpon>dbAsiri.tt</DependentUpon>
+    </Compile>
+    <Compile Include="C__MigrationHistory.cs">
+      <DependentUpon>dbAsiri.tt</DependentUpon>
+    </Compile>
+    <Compile Include="dbAsiri.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dbAsiri.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="dbAsiri.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dbAsiri.tt</DependentUpon>
+    </Compile>
+    <Compile Include="dbAsiri.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dbAsiri.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Menu.cs">
+      <DependentUpon>dbAsiri.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MenuTemp.cs">
+      <DependentUpon>dbAsiri.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MSTt01_medioDePago.cs">
+      <DependentUpon>dbAsiri.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MSTt02_piso.cs">
+      <DependentUpon>dbAsiri.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MSTt03_redSocial.cs">
+      <DependentUpon>dbAsiri.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MSTt04_sucursal.cs">
+      <DependentUpon>dbAsiri.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MSTt05_tipoSucursal.cs">
+      <DependentUpon>dbAsiri.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Permiso.cs">
+      <DependentUpon>dbAsiri.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="PROt01_categoria.cs">
+      <DependentUpon>dbAsiri.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PROt02_producto.cs">
+      <DependentUpon>dbAsiri.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PROt03_productoUnidadDeMedida.cs">
+      <DependentUpon>dbAsiri.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PROt04_servicio.cs">
+      <DependentUpon>dbAsiri.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PROt05_tipoDeServicio.cs">
+      <DependentUpon>dbAsiri.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PROt06_unidadDeMedida.cs">
+      <DependentUpon>dbAsiri.tt</DependentUpon>
+    </Compile>
+    <Compile Include="RHUt01_empleado.cs">
+      <DependentUpon>dbAsiri.tt</DependentUpon>
+    </Compile>
+    <Compile Include="RHUt02_empleadoEspecialidad.cs">
+      <DependentUpon>dbAsiri.tt</DependentUpon>
+    </Compile>
+    <Compile Include="RHUt03_empleadoTurno.cs">
+      <DependentUpon>dbAsiri.tt</DependentUpon>
+    </Compile>
+    <Compile Include="RHUt04_especialidad.cs">
+      <DependentUpon>dbAsiri.tt</DependentUpon>
+    </Compile>
+    <Compile Include="RHUt05_estadoCivil.cs">
+      <DependentUpon>dbAsiri.tt</DependentUpon>
+    </Compile>
+    <Compile Include="RHUt06_horario.cs">
+      <DependentUpon>dbAsiri.tt</DependentUpon>
+    </Compile>
+    <Compile Include="RHUt07_paciente.cs">
+      <DependentUpon>dbAsiri.tt</DependentUpon>
+    </Compile>
+    <Compile Include="RHUt08_periodoRemuneracion.cs">
+      <DependentUpon>dbAsiri.tt</DependentUpon>
+    </Compile>
+    <Compile Include="RHUt09_persona.cs">
+      <DependentUpon>dbAsiri.tt</DependentUpon>
+    </Compile>
+    <Compile Include="RHUt10_personaRedSocial.cs">
+      <DependentUpon>dbAsiri.tt</DependentUpon>
+    </Compile>
+    <Compile Include="RHUt11_tipoDeEmpleado.cs">
+      <DependentUpon>dbAsiri.tt</DependentUpon>
+    </Compile>
+    <Compile Include="RHUt12_tipoDocIdentidad.cs">
+      <DependentUpon>dbAsiri.tt</DependentUpon>
+    </Compile>
+    <Compile Include="RHUt13_tipoEspecialidad.cs">
+      <DependentUpon>dbAsiri.tt</DependentUpon>
+    </Compile>
+    <Compile Include="RHUt14_turno.cs">
+      <DependentUpon>dbAsiri.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SISt01_parametro.cs">
+      <DependentUpon>dbAsiri.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SNTt01_entidadFinanciera.cs">
+      <DependentUpon>dbAsiri.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SNTt02_impuesto.cs">
+      <DependentUpon>dbAsiri.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SNTt03_moneda.cs">
+      <DependentUpon>dbAsiri.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SNTt04_tipoComprobante.cs">
+      <DependentUpon>dbAsiri.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SNTt05_tipoMedioDePago.cs">
+      <DependentUpon>dbAsiri.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TNSt01_comprobanteEmitido.cs">
+      <DependentUpon>dbAsiri.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TNSt02_comprobanteEmitidoDtl.cs">
+      <DependentUpon>dbAsiri.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TNSt03_cuota.cs">
+      <DependentUpon>dbAsiri.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TNSt04_estadoComprobante.cs">
+      <DependentUpon>dbAsiri.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TNSt05_estadoDeCuenta.cs">
+      <DependentUpon>dbAsiri.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TNSt06_medioDePagoDtl.cs">
+      <DependentUpon>dbAsiri.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TNSt07_numeracion.cs">
+      <DependentUpon>dbAsiri.tt</DependentUpon>
+    </Compile>
+    <Compile Include="UBIt01_distrito.cs">
+      <DependentUpon>dbAsiri.tt</DependentUpon>
+    </Compile>
+    <Compile Include="UBIt02_provincia.cs">
+      <DependentUpon>dbAsiri.tt</DependentUpon>
+    </Compile>
+    <Compile Include="UBIt03_region.cs">
+      <DependentUpon>dbAsiri.tt</DependentUpon>
+    </Compile>
+    <Compile Include="UBIt04_via.cs">
+      <DependentUpon>dbAsiri.tt</DependentUpon>
+    </Compile>
+    <Compile Include="UBIt05_zona.cs">
+      <DependentUpon>dbAsiri.tt</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.Config" />
+    <EntityDeploy Include="dbAsiri.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>dbAsiri.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="dbAsiri.edmx.diagram">
+      <DependentUpon>dbAsiri.edmx</DependentUpon>
+    </None>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="dbAsiri.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>dbAsiri.edmx</DependentUpon>
+      <LastGenOutput>dbAsiri.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="dbAsiri.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>dbAsiri.edmx</DependentUpon>
+      <LastGenOutput>dbAsiri.cs</LastGenOutput>
+    </Content>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

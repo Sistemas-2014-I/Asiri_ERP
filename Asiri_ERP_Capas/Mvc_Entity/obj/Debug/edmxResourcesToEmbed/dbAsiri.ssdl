@@ -1,0 +1,2411 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="AsiriModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="__MigrationHistory">
+    <Key>
+      <PropertyRef Name="MigrationId" />
+      <PropertyRef Name="ContextKey" />
+    </Key>
+    <Property Name="MigrationId" Type="nvarchar" MaxLength="150" Nullable="false" />
+    <Property Name="ContextKey" Type="nvarchar" MaxLength="300" Nullable="false" />
+    <Property Name="Model" Type="varbinary(max)" Nullable="false" />
+    <Property Name="ProductVersion" Type="nvarchar" MaxLength="32" Nullable="false" />
+  </EntityType>
+  <EntityType Name="AspNetPermisos">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" />
+    <Property Name="Descripcion" Type="varchar" MaxLength="100" Nullable="false" />
+  </EntityType>
+  <EntityType Name="AspNetRoles">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="nvarchar" MaxLength="128" Nullable="false" />
+    <Property Name="Name" Type="nvarchar" MaxLength="256" Nullable="false" />
+    <Property Name="Description" Type="nvarchar(max)" />
+    <Property Name="Discriminator" Type="nvarchar" MaxLength="128" Nullable="false" />
+  </EntityType>
+  <EntityType Name="AspNetRolesPermisos">
+    <Key>
+      <PropertyRef Name="RoleId" />
+      <PropertyRef Name="PermisoId" />
+    </Key>
+    <Property Name="RoleId" Type="nvarchar" MaxLength="128" Nullable="false" />
+    <Property Name="PermisoId" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="AspNetUserClaims">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="UserId" Type="nvarchar" MaxLength="128" Nullable="false" />
+    <Property Name="ClaimType" Type="nvarchar(max)" />
+    <Property Name="ClaimValue" Type="nvarchar(max)" />
+  </EntityType>
+  <EntityType Name="AspNetUserLogins">
+    <Key>
+      <PropertyRef Name="LoginProvider" />
+      <PropertyRef Name="ProviderKey" />
+      <PropertyRef Name="UserId" />
+    </Key>
+    <Property Name="LoginProvider" Type="nvarchar" MaxLength="128" Nullable="false" />
+    <Property Name="ProviderKey" Type="nvarchar" MaxLength="128" Nullable="false" />
+    <Property Name="UserId" Type="nvarchar" MaxLength="128" Nullable="false" />
+  </EntityType>
+  <EntityType Name="AspNetUserRoles">
+    <Key>
+      <PropertyRef Name="UserId" />
+      <PropertyRef Name="RoleId" />
+    </Key>
+    <Property Name="UserId" Type="nvarchar" MaxLength="128" Nullable="false" />
+    <Property Name="RoleId" Type="nvarchar" MaxLength="128" Nullable="false" />
+  </EntityType>
+  <EntityType Name="AspNetUsers">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="nvarchar" MaxLength="128" Nullable="false" />
+    <Property Name="Email" Type="nvarchar" MaxLength="256" />
+    <Property Name="EmailConfirmed" Type="bit" Nullable="false" />
+    <Property Name="PasswordHash" Type="nvarchar(max)" />
+    <Property Name="SecurityStamp" Type="nvarchar(max)" />
+    <Property Name="PhoneNumber" Type="nvarchar(max)" />
+    <Property Name="PhoneNumberConfirmed" Type="bit" Nullable="false" />
+    <Property Name="TwoFactorEnabled" Type="bit" Nullable="false" />
+    <Property Name="LockoutEndDateUtc" Type="datetime" />
+    <Property Name="LockoutEnabled" Type="bit" Nullable="false" />
+    <Property Name="AccessFailedCount" Type="int" Nullable="false" />
+    <Property Name="UserName" Type="nvarchar" MaxLength="256" Nullable="false" />
+    <Property Name="idEmpleado" Type="bigint" Nullable="false" />
+    <Property Name="Discriminator" Type="nvarchar" MaxLength="128" Nullable="false" />
+  </EntityType>
+  <EntityType Name="CLIt01_anamnesis">
+    <Key>
+      <PropertyRef Name="idAnamnesis" />
+    </Key>
+    <Property Name="idAnamnesis" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="descAnamnesis" Type="varchar" MaxLength="2500" Nullable="false" />
+    <Property Name="idAtencion" Type="bigint" Nullable="false" />
+  </EntityType>
+  <EntityType Name="CLIt02_archivoEstudioCompl">
+    <Key>
+      <PropertyRef Name="idArchivoEstudioCompl" />
+    </Key>
+    <Property Name="idArchivoEstudioCompl" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="pathArchivo" Type="varbinary(max)" Nullable="false" />
+    <Property Name="idEstudioCompl" Type="bigint" Nullable="false" />
+  </EntityType>
+  <EntityType Name="CLlt03_atencion">
+    <Key>
+      <PropertyRef Name="idAtencion" />
+    </Key>
+    <Property Name="idAtencion" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="codAtencion" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="fecRegistro" Type="datetime" Nullable="false" />
+    <Property Name="idUsuario" Type="nvarchar" MaxLength="128" Nullable="false" />
+    <Property Name="idCita" Type="bigint" />
+  </EntityType>
+  <EntityType Name="CLlt04_cie10">
+    <Key>
+      <PropertyRef Name="idCie10" />
+    </Key>
+    <Property Name="idCie10" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="codCie10" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="descCie10" Type="varchar" MaxLength="500" Nullable="false" />
+    <Property Name="activo" Type="bit" Nullable="false" />
+    <Property Name="fecRegistro" Type="datetime" Nullable="false" />
+    <Property Name="fecModificacion" Type="datetime" />
+    <Property Name="fecEliminacion" Type="datetime" />
+    <Property Name="idUsuario" Type="nvarchar" MaxLength="128" Nullable="false" />
+    <Property Name="idUsuarioModificar" Type="nvarchar" MaxLength="128" />
+    <Property Name="idUsuarioEliminar" Type="nvarchar" MaxLength="128" />
+  </EntityType>
+  <EntityType Name="CLlt05_cita">
+    <Key>
+      <PropertyRef Name="idCita" />
+    </Key>
+    <Property Name="idCita" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="codCita" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="fecCita" Type="date" Nullable="false" />
+    <Property Name="fecRegistro" Type="datetime" Nullable="false" />
+    <Property Name="fecModificacion" Type="datetime" />
+    <Property Name="horaInicio" Type="varchar" MaxLength="12" Nullable="false" />
+    <Property Name="duracionEstimada" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="esReprogramado" Type="bit" Nullable="false" />
+    <Property Name="numReprogramacion" Type="tinyint" Nullable="false" />
+    <Property Name="esOnline" Type="bit" Nullable="false" />
+    <Property Name="esCerrado" Type="bit" Nullable="false" />
+    <Property Name="idCitaPadre" Type="bigint" />
+    <Property Name="obsvCita" Type="varchar" MaxLength="250" />
+    <Property Name="mtoTotal" Type="decimal" Precision="18" Scale="6" Nullable="false" />
+    <Property Name="idEstadoCita" Type="smallint" Nullable="false" />
+    <Property Name="idPaciente" Type="bigint" Nullable="false" />
+    <Property Name="idEmpleado" Type="bigint" Nullable="false" />
+    <Property Name="idUsuario" Type="nvarchar" MaxLength="128" Nullable="false" />
+    <Property Name="idUsuarioModificar" Type="nvarchar" MaxLength="128" />
+  </EntityType>
+  <EntityType Name="CLlt06_citaDtl">
+    <Key>
+      <PropertyRef Name="idCitaDtl" />
+    </Key>
+    <Property Name="idCitaDtl" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="precio" Type="decimal" Precision="18" Scale="6" Nullable="false" />
+    <Property Name="cantidad" Type="decimal" Precision="18" Scale="6" Nullable="false" />
+    <Property Name="esGratis" Type="bit" Nullable="false" />
+    <Property Name="activo" Type="bit" Nullable="false" />
+    <Property Name="idCita" Type="bigint" Nullable="false" />
+    <Property Name="idServicio" Type="bigint" Nullable="false" />
+  </EntityType>
+  <EntityType Name="CLlt07_consultorio">
+    <Key>
+      <PropertyRef Name="idConsultorio" />
+    </Key>
+    <Property Name="idConsultorio" Type="smallint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="codConsultorio" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="fecRegistro" Type="datetime" Nullable="false" />
+    <Property Name="fecModificacion" Type="datetime" />
+    <Property Name="fecEliminacion" Type="datetime" />
+    <Property Name="obsvPiso" Type="varchar" MaxLength="250" />
+    <Property Name="activo" Type="bit" Nullable="false" />
+    <Property Name="idPiso" Type="smallint" Nullable="false" />
+    <Property Name="idUsuario" Type="nvarchar" MaxLength="128" Nullable="false" />
+    <Property Name="idUsuarioModificar" Type="nvarchar" MaxLength="128" />
+    <Property Name="idUsuarioEliminar" Type="nvarchar" MaxLength="128" />
+  </EntityType>
+  <EntityType Name="CLlt08_diagnostico">
+    <Key>
+      <PropertyRef Name="idDiagnostico" />
+    </Key>
+    <Property Name="idDiagnostico" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="descDiagnostico" Type="varchar" MaxLength="2500" Nullable="false" />
+    <Property Name="idAtencion" Type="bigint" Nullable="false" />
+    <Property Name="idCie10" Type="int" />
+  </EntityType>
+  <EntityType Name="CLlt09_estadoCita">
+    <Key>
+      <PropertyRef Name="idEstadoCita" />
+    </Key>
+    <Property Name="idEstadoCita" Type="smallint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="codEstadoCita" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="descEstadoCita" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="activo" Type="bit" Nullable="false" />
+    <Property Name="fecRegistro" Type="datetime" Nullable="false" />
+    <Property Name="fecModificacion" Type="datetime" />
+    <Property Name="fecEliminacion" Type="datetime" />
+    <Property Name="idUsuario" Type="nvarchar" MaxLength="128" Nullable="false" />
+    <Property Name="idUsuarioModificar" Type="nvarchar" MaxLength="128" />
+    <Property Name="idUsuarioEliminar" Type="nvarchar" MaxLength="128" />
+  </EntityType>
+  <EntityType Name="CLlt10_estudioCompl">
+    <Key>
+      <PropertyRef Name="idEstudioCompl" />
+    </Key>
+    <Property Name="idEstudioCompl" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="descEstudioCompl" Type="varchar" MaxLength="2500" Nullable="false" />
+    <Property Name="idAtencion" Type="bigint" Nullable="false" />
+  </EntityType>
+  <EntityType Name="CLlt11_evolucion">
+    <Key>
+      <PropertyRef Name="idEvolucion" />
+    </Key>
+    <Property Name="idEvolucion" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="descEvolucion" Type="varchar" MaxLength="2500" Nullable="false" />
+    <Property Name="pesimo" Type="bit" />
+    <Property Name="malo" Type="bit" />
+    <Property Name="regular" Type="bit" />
+    <Property Name="bueno" Type="bit" />
+    <Property Name="excelente" Type="bit" />
+    <Property Name="idAtencion" Type="bigint" Nullable="false" />
+  </EntityType>
+  <EntityType Name="CLlt12_examenFisico">
+    <Key>
+      <PropertyRef Name="idExamenFisico" />
+    </Key>
+    <Property Name="idExamenFisico" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="descExamenFisico" Type="varchar" MaxLength="2500" Nullable="false" />
+    <Property Name="idAtencion" Type="bigint" Nullable="false" />
+  </EntityType>
+  <EntityType Name="CLlt13_funcionVital">
+    <Key>
+      <PropertyRef Name="idFuncionVital" />
+    </Key>
+    <Property Name="idFuncionVital" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="sistole" Type="varchar" MaxLength="50" />
+    <Property Name="diastole" Type="varchar" MaxLength="50" />
+    <Property Name="pulsacion" Type="varchar" MaxLength="50" />
+    <Property Name="ritmoRespiratorio" Type="varchar" MaxLength="50" />
+    <Property Name="temperatura" Type="varchar" MaxLength="50" />
+    <Property Name="altura" Type="varchar" MaxLength="50" />
+    <Property Name="peso" Type="varchar" MaxLength="50" />
+    <Property Name="imc" Type="varchar" MaxLength="50" />
+    <Property Name="idAtencion" Type="bigint" Nullable="false" />
+  </EntityType>
+  <EntityType Name="CLlt14_seguro">
+    <Key>
+      <PropertyRef Name="idSeguro" />
+    </Key>
+    <Property Name="idSeguro" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="nombreSeguro" Type="varchar" MaxLength="200" Nullable="false" />
+    <Property Name="abrvSeguro" Type="varchar" MaxLength="40" />
+    <Property Name="esPrivado" Type="bit" Nullable="false" />
+    <Property Name="activo" Type="bit" Nullable="false" />
+    <Property Name="fecRegistro" Type="datetime" Nullable="false" />
+    <Property Name="fecModificacion" Type="datetime" />
+    <Property Name="fecEliminacion" Type="datetime" />
+    <Property Name="idUsuario" Type="nvarchar" MaxLength="128" Nullable="false" />
+    <Property Name="idUsuarioModificar" Type="nvarchar" MaxLength="128" />
+    <Property Name="idUsuarioEliminar" Type="nvarchar" MaxLength="128" />
+  </EntityType>
+  <EntityType Name="CLlt15_seguroPaciente">
+    <Key>
+      <PropertyRef Name="idSeguro" />
+      <PropertyRef Name="idPaciente" />
+    </Key>
+    <Property Name="idSeguro" Type="int" Nullable="false" />
+    <Property Name="idPaciente" Type="bigint" Nullable="false" />
+    <Property Name="fecVencimiento" Type="date" />
+    <Property Name="activo" Type="bit" Nullable="false" />
+    <Property Name="fecRegistro" Type="datetime" Nullable="false" />
+    <Property Name="fecModificacion" Type="datetime" />
+    <Property Name="fecEliminacion" Type="datetime" />
+    <Property Name="idUsuario" Type="nvarchar" MaxLength="128" Nullable="false" />
+    <Property Name="idUsuarioModificar" Type="nvarchar" MaxLength="128" />
+    <Property Name="idUsuarioEliminar" Type="nvarchar" MaxLength="128" />
+  </EntityType>
+  <EntityType Name="CLlt16_tratamiento">
+    <Key>
+      <PropertyRef Name="idTratamiento" />
+    </Key>
+    <Property Name="idTratamiento" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="descTratamiento" Type="varchar" MaxLength="2500" Nullable="false" />
+    <Property Name="idDiagnostico" Type="bigint" />
+  </EntityType>
+  <EntityType Name="CLlt17_tratamientoDtl">
+    <Key>
+      <PropertyRef Name="idTratamientoDtl" />
+    </Key>
+    <Property Name="idTratamientoDtl" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="esServicio" Type="bit" Nullable="false" />
+    <Property Name="indicacionServicio" Type="varchar" MaxLength="300" />
+    <Property Name="idTratamiento" Type="bigint" Nullable="false" />
+    <Property Name="idProducto" Type="bigint" />
+    <Property Name="idServicio" Type="bigint" />
+  </EntityType>
+  <EntityType Name="CustomPermiso">
+    <Key>
+      <PropertyRef Name="CustomPermisoID" />
+    </Key>
+    <Property Name="CustomPermisoID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="UserID" Type="nvarchar" MaxLength="128" Nullable="false" />
+    <Property Name="MenuID" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Menu">
+    <Key>
+      <PropertyRef Name="MenuID" />
+    </Key>
+    <Property Name="MenuID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="DisplayName" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="ParentMenuID" Type="int" Nullable="false" />
+    <Property Name="OrderNumber" Type="int" Nullable="false" />
+    <Property Name="MenuURL" Type="nvarchar" MaxLength="100" />
+    <Property Name="MenuIcon" Type="nvarchar" MaxLength="25" />
+  </EntityType>
+  <!--Errores durante la generación:
+advertencia 6002: La tabla o vista 'Asiri.dbo.MenuTemp' no tiene definida ninguna clave principal. Se ha inferido la clave y la definición se creado como una vista o tabla de solo lectura.-->
+  <EntityType Name="MenuTemp">
+    <Key>
+      <PropertyRef Name="MenuID" />
+      <PropertyRef Name="DisplayName" />
+      <PropertyRef Name="ParentMenuID" />
+      <PropertyRef Name="OrderNumber" />
+    </Key>
+    <Property Name="MenuID" Type="int" Nullable="false" />
+    <Property Name="DisplayName" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="ParentMenuID" Type="int" Nullable="false" />
+    <Property Name="OrderNumber" Type="int" Nullable="false" />
+    <Property Name="MenuURL" Type="nvarchar" MaxLength="100" />
+    <Property Name="MenuIcon" Type="nvarchar" MaxLength="25" />
+  </EntityType>
+  <EntityType Name="MSTt01_medioDePago">
+    <Key>
+      <PropertyRef Name="idMedioDePago" />
+    </Key>
+    <Property Name="idMedioDePago" Type="smallint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="descMedioDePago" Type="varchar" MaxLength="300" Nullable="false" />
+    <Property Name="abrvMedioDePago" Type="varchar" MaxLength="20" />
+    <Property Name="activo" Type="bit" Nullable="false" />
+    <Property Name="fecRegistro" Type="datetime" Nullable="false" />
+    <Property Name="fecModificacion" Type="datetime" />
+    <Property Name="fecEliminacion" Type="datetime" />
+    <Property Name="idUsuario" Type="nvarchar" MaxLength="128" Nullable="false" />
+    <Property Name="idUsuarioModificar" Type="nvarchar" MaxLength="128" />
+    <Property Name="idUsuarioEliminar" Type="nvarchar" MaxLength="128" />
+    <Property Name="idTipoMedioDePago" Type="smallint" Nullable="false" />
+    <Property Name="medioDePagoRapido" Type="bit" Nullable="false" />
+    <Property Name="photoPath" Type="varchar" MaxLength="260" />
+  </EntityType>
+  <EntityType Name="MSTt02_piso">
+    <Key>
+      <PropertyRef Name="idPiso" />
+    </Key>
+    <Property Name="idPiso" Type="smallint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="numPiso" Type="smallint" Nullable="false" />
+    <Property Name="obsvPiso" Type="varchar" MaxLength="250" />
+    <Property Name="activo" Type="bit" Nullable="false" />
+    <Property Name="fecRegistro" Type="datetime" Nullable="false" />
+    <Property Name="fecModificacion" Type="datetime" />
+    <Property Name="fecEliminacion" Type="datetime" />
+    <Property Name="idUsuario" Type="nvarchar" MaxLength="128" Nullable="false" />
+    <Property Name="idUsuarioModificar" Type="nvarchar" MaxLength="128" />
+    <Property Name="idUsuarioEliminar" Type="nvarchar" MaxLength="128" />
+  </EntityType>
+  <EntityType Name="MSTt03_redSocial">
+    <Key>
+      <PropertyRef Name="idRedSocial" />
+    </Key>
+    <Property Name="idRedSocial" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="nombreRedSocial" Type="varchar" MaxLength="30" Nullable="false" />
+    <Property Name="abrvRedSocial" Type="varchar" MaxLength="10" />
+    <Property Name="activo" Type="bit" Nullable="false" />
+    <Property Name="fecRegistro" Type="datetime" Nullable="false" />
+    <Property Name="fecModificacion" Type="datetime" />
+    <Property Name="fecEliminacion" Type="datetime" />
+    <Property Name="idUsuario" Type="nvarchar" MaxLength="128" Nullable="false" />
+    <Property Name="idUsuarioModificar" Type="nvarchar" MaxLength="128" />
+    <Property Name="idUsuarioEliminar" Type="nvarchar" MaxLength="128" />
+  </EntityType>
+  <EntityType Name="MSTt04_sucursal">
+    <Key>
+      <PropertyRef Name="idSucursal" />
+    </Key>
+    <Property Name="idSucursal" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="descSucursal" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="direccion" Type="varchar" MaxLength="200" Nullable="false" />
+    <Property Name="numTelefonico01" Type="varchar" MaxLength="15" Nullable="false" />
+    <Property Name="numTelefonico02" Type="varchar" MaxLength="15" />
+    <Property Name="obsvSucursal" Type="varchar" MaxLength="250" />
+    <Property Name="activo" Type="bit" Nullable="false" />
+    <Property Name="fecRegistro" Type="datetime" Nullable="false" />
+    <Property Name="fecModificacion" Type="datetime" />
+    <Property Name="fecEliminacion" Type="datetime" />
+    <Property Name="idUsuario" Type="nvarchar" MaxLength="128" Nullable="false" />
+    <Property Name="idUsuarioModificar" Type="nvarchar" MaxLength="128" />
+    <Property Name="idUsuarioEliminar" Type="nvarchar" MaxLength="128" />
+    <Property Name="idTipoSucursal" Type="smallint" Nullable="false" />
+  </EntityType>
+  <EntityType Name="MSTt05_tipoSucursal">
+    <Key>
+      <PropertyRef Name="idTipoSucursal" />
+    </Key>
+    <Property Name="idTipoSucursal" Type="smallint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="descTipoSucursal" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="abrvSurcursal" Type="varchar" MaxLength="20" />
+    <Property Name="activo" Type="bit" Nullable="false" />
+    <Property Name="fecRegistro" Type="datetime" Nullable="false" />
+    <Property Name="fecModificacion" Type="datetime" />
+    <Property Name="fecEliminacion" Type="datetime" />
+    <Property Name="idUsuario" Type="nvarchar" MaxLength="128" Nullable="false" />
+    <Property Name="IdUsuarioModificar" Type="nvarchar" MaxLength="128" />
+    <Property Name="idUsuarioEliminar" Type="nvarchar" MaxLength="128" />
+  </EntityType>
+  <EntityType Name="Permiso">
+    <Key>
+      <PropertyRef Name="PermisoID" />
+    </Key>
+    <Property Name="PermisoID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="RoleID" Type="nvarchar" MaxLength="128" Nullable="false" />
+    <Property Name="MenuID" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="PROt01_categoria">
+    <Key>
+      <PropertyRef Name="idCategoria" />
+    </Key>
+    <Property Name="idCategoria" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="fecRegistro" Type="datetime" Nullable="false" />
+    <Property Name="fecModificacion" Type="datetime" />
+    <Property Name="fecEliminacion" Type="datetime" />
+    <Property Name="idUsuario" Type="nvarchar" MaxLength="128" Nullable="false" />
+    <Property Name="idUsuarioModificar" Type="nvarchar" MaxLength="128" />
+    <Property Name="idUsuarioEliminar" Type="nvarchar" MaxLength="128" />
+    <Property Name="nombreCategoria" Type="varchar" MaxLength="70" Nullable="false" />
+    <Property Name="descCategoria" Type="varchar" MaxLength="500" />
+    <Property Name="activo" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="PROt02_producto">
+    <Key>
+      <PropertyRef Name="idProducto" />
+    </Key>
+    <Property Name="idProducto" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="codProducto" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="codBarra" Type="varchar" MaxLength="30" />
+    <Property Name="nombreProductoGenerico" Type="varchar" MaxLength="200" />
+    <Property Name="nombreProductoComercial" Type="varchar" MaxLength="200" Nullable="false" />
+    <Property Name="descProducto" Type="varchar" MaxLength="300" />
+    <Property Name="obsvProducto" Type="varchar" MaxLength="1000" />
+    <Property Name="activo" Type="bit" Nullable="false" />
+    <Property Name="fecRegistro" Type="datetime" Nullable="false" />
+    <Property Name="fecModificacion" Type="datetime" />
+    <Property Name="fecEliminacion" Type="datetime" />
+    <Property Name="idUsuario" Type="nvarchar" MaxLength="128" Nullable="false" />
+    <Property Name="idUsuarioModificar" Type="nvarchar" MaxLength="128" />
+    <Property Name="idUsuarioEliminar" Type="nvarchar" MaxLength="128" />
+    <Property Name="idCategoria" Type="int" Nullable="false" />
+    <Property Name="idMoneda" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="PROt03_productoUnidadDeMedida">
+    <Key>
+      <PropertyRef Name="idUnidadDeMedida" />
+      <PropertyRef Name="idProducto" />
+    </Key>
+    <Property Name="idUnidadDeMedida" Type="int" Nullable="false" />
+    <Property Name="idProducto" Type="bigint" Nullable="false" />
+    <Property Name="precio" Type="decimal" Precision="18" Scale="6" Nullable="false" />
+    <Property Name="precioMinimo" Type="decimal" Precision="18" Scale="6" />
+    <Property Name="precioMaximo" Type="decimal" Precision="18" Scale="6" />
+    <Property Name="activo" Type="bit" Nullable="false" />
+    <Property Name="fecRegistro" Type="datetime" Nullable="false" />
+    <Property Name="fecModificacion" Type="datetime" />
+    <Property Name="fecEliminacion" Type="datetime" />
+    <Property Name="idUsuario" Type="nvarchar" MaxLength="128" Nullable="false" />
+    <Property Name="idUsuarioModificar" Type="nvarchar" MaxLength="128" />
+    <Property Name="idUsuarioEliminar" Type="nvarchar" MaxLength="128" />
+  </EntityType>
+  <EntityType Name="PROt04_servicio">
+    <Key>
+      <PropertyRef Name="idServicio" />
+    </Key>
+    <Property Name="idServicio" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="codServicio" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="nombreServicio" Type="varchar" MaxLength="200" Nullable="false" />
+    <Property Name="descServicio" Type="varchar" MaxLength="200" />
+    <Property Name="precio" Type="decimal" Precision="18" Scale="6" Nullable="false" />
+    <Property Name="precioMinimo" Type="decimal" Precision="18" Scale="6" />
+    <Property Name="precioMaximo" Type="decimal" Precision="18" Scale="6" />
+    <Property Name="esGratis" Type="bit" Nullable="false" />
+    <Property Name="activo" Type="bit" Nullable="false" />
+    <Property Name="fecRegistro" Type="datetime" Nullable="false" />
+    <Property Name="fecModificacion" Type="datetime" />
+    <Property Name="fecEliminacion" Type="datetime" />
+    <Property Name="idUsuario" Type="nvarchar" MaxLength="128" Nullable="false" />
+    <Property Name="idUsuarioModificar" Type="nvarchar" MaxLength="128" />
+    <Property Name="idUsuarioEliminar" Type="nvarchar" MaxLength="128" />
+    <Property Name="idTipoDeServicio" Type="int" Nullable="false" />
+    <Property Name="idEspecialidad" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="PROt05_tipoDeServicio">
+    <Key>
+      <PropertyRef Name="idTipoDeServicio" />
+    </Key>
+    <Property Name="idTipoDeServicio" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="descTipoDeServicio" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="activo" Type="bit" Nullable="false" />
+    <Property Name="fecRegistro" Type="datetime" Nullable="false" />
+    <Property Name="fecModificacion" Type="datetime" />
+    <Property Name="fecEliminacion" Type="datetime" />
+    <Property Name="idUsuario" Type="nvarchar" MaxLength="128" Nullable="false" />
+    <Property Name="idUsuarioModificar" Type="nvarchar" MaxLength="128" />
+    <Property Name="idUsuarioEliminar" Type="nvarchar" MaxLength="128" />
+  </EntityType>
+  <EntityType Name="PROt06_unidadDeMedida">
+    <Key>
+      <PropertyRef Name="idUnidadDeMedida" />
+    </Key>
+    <Property Name="idUnidadDeMedida" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="codUnidadDeMedida" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="descUnidadDeMedida" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="activo" Type="bit" Nullable="false" />
+    <Property Name="fecRegistro" Type="datetime" />
+    <Property Name="fecModificacion" Type="datetime" />
+    <Property Name="fecEliminacion" Type="datetime" />
+    <Property Name="idUsuario" Type="nvarchar" MaxLength="128" Nullable="false" />
+    <Property Name="idUsuarioModificar" Type="nvarchar" MaxLength="128" />
+    <Property Name="idUsuarioEliminar" Type="nvarchar" MaxLength="128" />
+  </EntityType>
+  <EntityType Name="RHUt01_empleado">
+    <Key>
+      <PropertyRef Name="idEmpleado" />
+    </Key>
+    <Property Name="idEmpleado" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="codEmpleado" Type="varchar" MaxLength="20" />
+    <Property Name="fecRegistro" Type="datetime" Nullable="false" />
+    <Property Name="fecModificacion" Type="datetime" />
+    <Property Name="fecEliminacion" Type="datetime" />
+    <Property Name="fecIngreso" Type="date" />
+    <Property Name="fecCese" Type="date" />
+    <Property Name="horasPorPeriodo" Type="char" MaxLength="10" />
+    <Property Name="mtoRemuneracion" Type="decimal" Precision="12" Scale="6" />
+    <Property Name="esHorarioTurno" Type="bit" Nullable="false" />
+    <Property Name="activo" Type="bit" Nullable="false" />
+    <Property Name="idUsuario" Type="nvarchar" MaxLength="128" Nullable="false" />
+    <Property Name="idUsuarioModificar" Type="nvarchar" MaxLength="128" />
+    <Property Name="idUsuarioEliminar" Type="nvarchar" MaxLength="128" />
+    <Property Name="idEntidadFinanciera" Type="int" Nullable="false" />
+    <Property Name="idTipoDeEmpleado" Type="int" Nullable="false" />
+    <Property Name="idPersona" Type="bigint" />
+    <Property Name="idPeriodoRemuneracion" Type="bigint" Nullable="false" />
+    <Property Name="idMedioDePago" Type="smallint" Nullable="false" />
+    <Property Name="idConsultorio" Type="smallint" Nullable="false" />
+  </EntityType>
+  <EntityType Name="RHUt02_empleadoEspecialidad">
+    <Key>
+      <PropertyRef Name="idEmpleado" />
+      <PropertyRef Name="idEspecialidad" />
+    </Key>
+    <Property Name="idEmpleado" Type="bigint" Nullable="false" />
+    <Property Name="idEspecialidad" Type="int" Nullable="false" />
+    <Property Name="fecRegistro" Type="datetime" Nullable="false" />
+    <Property Name="fecModificacion" Type="datetime" />
+    <Property Name="fecEliminacion" Type="datetime" />
+    <Property Name="activo" Type="bit" Nullable="false" />
+    <Property Name="idUsuario" Type="nvarchar" MaxLength="128" Nullable="false" />
+    <Property Name="idUsuarioModificar" Type="nvarchar" MaxLength="128" />
+    <Property Name="IdUsuarioEliminar" Type="nvarchar" MaxLength="128" />
+  </EntityType>
+  <EntityType Name="RHUt03_empleadoTurno">
+    <Key>
+      <PropertyRef Name="idEmpleado" />
+      <PropertyRef Name="idTurno" />
+    </Key>
+    <Property Name="idEmpleado" Type="bigint" Nullable="false" />
+    <Property Name="idTurno" Type="smallint" Nullable="false" />
+    <Property Name="fecRegistro" Type="datetime" Nullable="false" />
+    <Property Name="fecModificacion" Type="datetime" />
+    <Property Name="fecEliminacion" Type="datetime" />
+    <Property Name="activo" Type="bit" Nullable="false" />
+    <Property Name="idUsuario" Type="nvarchar" MaxLength="128" Nullable="false" />
+    <Property Name="idUsuarioModificar" Type="nvarchar" MaxLength="128" />
+    <Property Name="idUsuarioEliminar" Type="nvarchar" MaxLength="128" />
+  </EntityType>
+  <EntityType Name="RHUt04_especialidad">
+    <Key>
+      <PropertyRef Name="idEspecialidad" />
+    </Key>
+    <Property Name="idEspecialidad" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="nombreEspecialidad" Type="varchar" MaxLength="70" Nullable="false" />
+    <Property Name="abrvEspecialidad" Type="varchar" MaxLength="40" />
+    <Property Name="activo" Type="bit" Nullable="false" />
+    <Property Name="fecRegistro" Type="datetime" Nullable="false" />
+    <Property Name="fecModificacion" Type="datetime" />
+    <Property Name="fecEliminacion" Type="datetime" />
+    <Property Name="idUsuario" Type="nvarchar" MaxLength="128" Nullable="false" />
+    <Property Name="idUsuarioModificar" Type="nvarchar" MaxLength="128" />
+    <Property Name="idUsuarioEliminar" Type="nvarchar" MaxLength="128" />
+    <Property Name="idTipoDeEspeciliadad" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="RHUt05_estadoCivil">
+    <Key>
+      <PropertyRef Name="idEstadoCivil" />
+    </Key>
+    <Property Name="idEstadoCivil" Type="smallint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="descEstadoCivil" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="abrvEstadoCivil" Type="varchar" MaxLength="20" />
+    <Property Name="activo" Type="bit" Nullable="false" />
+    <Property Name="fecRegistro" Type="datetime" Nullable="false" />
+    <Property Name="fecModificacion" Type="datetime" />
+    <Property Name="idUsuario" Type="nvarchar" MaxLength="128" Nullable="false" />
+    <Property Name="idUsuarioModificar" Type="nvarchar" MaxLength="128" />
+  </EntityType>
+  <EntityType Name="RHUt06_horario">
+    <Key>
+      <PropertyRef Name="idHorario" />
+    </Key>
+    <Property Name="idHorario" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="laboraLunes" Type="bit" Nullable="false" />
+    <Property Name="laboraMartes" Type="bit" Nullable="false" />
+    <Property Name="laboraMiercoles" Type="bit" Nullable="false" />
+    <Property Name="laboraJueves" Type="bit" Nullable="false" />
+    <Property Name="laboraViernes" Type="bit" Nullable="false" />
+    <Property Name="laboraSabado" Type="bit" Nullable="false" />
+    <Property Name="laboraDomingo" Type="bit" Nullable="false" />
+    <Property Name="horaInicioLunes" Type="varchar" MaxLength="12" />
+    <Property Name="horaFinLunes" Type="varchar" MaxLength="12" />
+    <Property Name="horaInicioMartes" Type="varchar" MaxLength="12" />
+    <Property Name="horaFinMartes" Type="varchar" MaxLength="12" />
+    <Property Name="horaInicioMiercoles" Type="varchar" MaxLength="12" />
+    <Property Name="horaFinMiercoles" Type="varchar" MaxLength="12" />
+    <Property Name="horaInicioJueves" Type="varchar" MaxLength="12" />
+    <Property Name="horaFinJueves" Type="varchar" MaxLength="12" />
+    <Property Name="horaInicioViernes" Type="varchar" MaxLength="12" />
+    <Property Name="horaFinViernes" Type="varchar" MaxLength="12" />
+    <Property Name="horaInicioSabado" Type="varchar" MaxLength="12" />
+    <Property Name="horaFinSabado" Type="varchar" MaxLength="12" />
+    <Property Name="horaInicioDomingo" Type="varchar" MaxLength="12" />
+    <Property Name="horaFinDomingo" Type="varchar" MaxLength="12" />
+    <Property Name="fecRegistro" Type="datetime" Nullable="false" />
+    <Property Name="fecModificacion" Type="datetime" />
+    <Property Name="idUsuario" Type="nvarchar" MaxLength="128" Nullable="false" />
+    <Property Name="idUsuarioModificar" Type="nvarchar" MaxLength="128" />
+    <Property Name="idEmpleado" Type="bigint" Nullable="false" />
+  </EntityType>
+  <EntityType Name="RHUt07_paciente">
+    <Key>
+      <PropertyRef Name="idPaciente" />
+    </Key>
+    <Property Name="idPaciente" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="codPaciente" Type="varchar" MaxLength="20" />
+    <Property Name="numHistoriaClinica" Type="varchar" MaxLength="15" Nullable="false" />
+    <Property Name="grupoSanguineo" Type="varchar" MaxLength="10" />
+    <Property Name="activo" Type="bit" Nullable="false" />
+    <Property Name="fecRegistro" Type="datetime" Nullable="false" />
+    <Property Name="fecModificacion" Type="datetime" />
+    <Property Name="fecEliminacion" Type="datetime" />
+    <Property Name="idUsuario" Type="nvarchar" MaxLength="128" Nullable="false" />
+    <Property Name="idUsuarioModificar" Type="nvarchar" MaxLength="128" />
+    <Property Name="idUsuarioEliminar" Type="nvarchar" MaxLength="128" />
+    <Property Name="idPersona" Type="bigint" />
+  </EntityType>
+  <EntityType Name="RHUt08_periodoRemuneracion">
+    <Key>
+      <PropertyRef Name="idPeriodoRemuneracion" />
+    </Key>
+    <Property Name="idPeriodoRemuneracion" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="codPeriodoRemuneracion" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="descPeriodoRemuneracion" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="abrvPeriodoRemuneracion" Type="varchar" MaxLength="20" />
+    <Property Name="activo" Type="bit" Nullable="false" />
+    <Property Name="fecRegistro" Type="datetime" Nullable="false" />
+    <Property Name="fecModificacion" Type="datetime" />
+    <Property Name="fecEliminacion" Type="datetime" />
+    <Property Name="idUsuario" Type="nvarchar" MaxLength="128" Nullable="false" />
+    <Property Name="idUsuarioModificar" Type="nvarchar" MaxLength="128" />
+    <Property Name="idUsuarioEliminar" Type="nvarchar" MaxLength="128" />
+  </EntityType>
+  <EntityType Name="RHUt09_persona">
+    <Key>
+      <PropertyRef Name="idPersona" />
+    </Key>
+    <Property Name="idPersona" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="tipoPersoneria" Type="char" MaxLength="1" Nullable="false" />
+    <Property Name="nombreRepresentante" Type="varchar" MaxLength="300" />
+    <Property Name="nombrePersona" Type="varchar" MaxLength="100" />
+    <Property Name="apellidoPaterno" Type="varchar" MaxLength="70" />
+    <Property Name="apellidoMaterno" Type="varchar" MaxLength="70" />
+    <Property Name="numDocIdentidad" Type="varchar" MaxLength="30" Nullable="false" />
+    <Property Name="razonSocial" Type="varchar" MaxLength="200" />
+    <Property Name="fecNacimiento" Type="date" />
+    <Property Name="nombreVia" Type="varchar" MaxLength="100" />
+    <Property Name="numVia" Type="varchar" MaxLength="10" />
+    <Property Name="nombreZona" Type="varchar" MaxLength="100" />
+    <Property Name="direccion01" Type="varchar" MaxLength="120" />
+    <Property Name="direccion02" Type="varchar" MaxLength="120" />
+    <Property Name="numTelefonico01" Type="varchar" MaxLength="15" />
+    <Property Name="numTelefonico02" Type="varchar" MaxLength="15" />
+    <Property Name="email01" Type="varchar" MaxLength="120" />
+    <Property Name="email02" Type="varchar" MaxLength="120" />
+    <Property Name="sexo" Type="char" MaxLength="1" />
+    <Property Name="difunto" Type="bit" Nullable="false" />
+    <Property Name="fecDefuncion" Type="date" />
+    <Property Name="pathFoto" Type="varbinary(max)" />
+    <Property Name="activo" Type="bit" Nullable="false" />
+    <Property Name="fecRegistro" Type="datetime" Nullable="false" />
+    <Property Name="fecModificacion" Type="datetime" />
+    <Property Name="fecEliminacion" Type="datetime" />
+    <Property Name="idUsuario" Type="nvarchar" MaxLength="128" Nullable="false" />
+    <Property Name="idUsuarioModificar" Type="nvarchar" MaxLength="128" />
+    <Property Name="idUsuarioEliminar" Type="nvarchar" MaxLength="128" />
+    <Property Name="idVia" Type="int" />
+    <Property Name="idZona" Type="int" />
+    <Property Name="idTipoDocIdentidad" Type="int" Nullable="false" />
+    <Property Name="idDistrito" Type="int" />
+    <Property Name="idEstadoCivil" Type="smallint" />
+    <Property Name="obsvPersona" Type="varchar" MaxLength="250" />
+    <Property Name="esOnline" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="RHUt10_personaRedSocial">
+    <Key>
+      <PropertyRef Name="idRedSocial" />
+      <PropertyRef Name="idPersona" />
+    </Key>
+    <Property Name="idRedSocial" Type="int" Nullable="false" />
+    <Property Name="idPersona" Type="bigint" Nullable="false" />
+    <Property Name="nombrePerfil" Type="varchar" MaxLength="240" Nullable="false" />
+    <Property Name="obsvPerfil" Type="varchar" MaxLength="250" />
+    <Property Name="activo" Type="bit" Nullable="false" />
+    <Property Name="fecRegistro" Type="datetime" Nullable="false" />
+    <Property Name="fecModificacion" Type="datetime" />
+    <Property Name="fecEliminacion" Type="datetime" />
+    <Property Name="idUsuario" Type="nvarchar" MaxLength="128" Nullable="false" />
+    <Property Name="idUsuarioModificar" Type="nvarchar" MaxLength="128" />
+    <Property Name="idUsuarioEliminar" Type="nvarchar" MaxLength="128" />
+  </EntityType>
+  <EntityType Name="RHUt11_tipoDeEmpleado">
+    <Key>
+      <PropertyRef Name="idTipoDeEmpleado" />
+    </Key>
+    <Property Name="idTipoDeEmpleado" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="descTipoDeEmpleado" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="activo" Type="bit" Nullable="false" />
+    <Property Name="fecRegistro" Type="datetime" Nullable="false" />
+    <Property Name="fecModificacion" Type="datetime" />
+    <Property Name="fecEliminacion" Type="datetime" />
+    <Property Name="idUsuario" Type="nvarchar" MaxLength="128" Nullable="false" />
+    <Property Name="idUsuarioModificar" Type="nvarchar" MaxLength="128" />
+    <Property Name="idUsuarioEliminar" Type="nvarchar" MaxLength="128" />
+  </EntityType>
+  <EntityType Name="RHUt12_tipoDocIdentidad">
+    <Key>
+      <PropertyRef Name="idTipoDocIdentidad" />
+    </Key>
+    <Property Name="idTipoDocIdentidad" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="codTipoDocIdentidad" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="descTipoDocIdentidad" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="abrvTipoDocIdentidad" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="activo" Type="bit" Nullable="false" />
+    <Property Name="fecRegistro" Type="datetime" Nullable="false" />
+    <Property Name="fecModificacion" Type="datetime" />
+    <Property Name="fecEliminacion" Type="datetime" />
+    <Property Name="idUsuario" Type="nvarchar" MaxLength="128" Nullable="false" />
+    <Property Name="idUsuarioModificar" Type="nvarchar" MaxLength="128" />
+    <Property Name="idUsuarioEliminar" Type="nvarchar" MaxLength="128" />
+  </EntityType>
+  <EntityType Name="RHUt13_tipoEspecialidad">
+    <Key>
+      <PropertyRef Name="idTipoDeEspeciliadad" />
+    </Key>
+    <Property Name="idTipoDeEspeciliadad" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="nombreEspecialidad" Type="varchar" MaxLength="200" Nullable="false" />
+    <Property Name="descEspecialidad" Type="varchar" MaxLength="300" />
+    <Property Name="abrvTipoEspecialidad" Type="varchar" MaxLength="40" />
+    <Property Name="activo" Type="bit" Nullable="false" />
+    <Property Name="fecRegistro" Type="datetime" Nullable="false" />
+    <Property Name="fecModificacion" Type="datetime" />
+    <Property Name="fecEliminacion" Type="datetime" />
+    <Property Name="idUsuario" Type="nvarchar" MaxLength="128" Nullable="false" />
+    <Property Name="idUsuarioModificar" Type="nvarchar" MaxLength="128" />
+    <Property Name="idUsuarioEliminar" Type="nvarchar" MaxLength="128" />
+  </EntityType>
+  <EntityType Name="RHUt14_turno">
+    <Key>
+      <PropertyRef Name="idTurno" />
+    </Key>
+    <Property Name="idTurno" Type="smallint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="descTurno" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="abrvTurno" Type="varchar" MaxLength="10" />
+    <Property Name="horaInicio" Type="date" Nullable="false" />
+    <Property Name="horaFin" Type="date" Nullable="false" />
+    <Property Name="activo" Type="bit" Nullable="false" />
+    <Property Name="fecRegistro" Type="datetime" Nullable="false" />
+    <Property Name="fecModficiacion" Type="datetime" />
+    <Property Name="fecEliminacion" Type="datetime" />
+    <Property Name="idUsuario" Type="nvarchar" MaxLength="128" Nullable="false" />
+    <Property Name="idUsuarioModificar" Type="nvarchar" MaxLength="128" />
+    <Property Name="idUsuarioEliminar" Type="nvarchar" MaxLength="128" />
+  </EntityType>
+  <EntityType Name="SISt01_parametro">
+    <Key>
+      <PropertyRef Name="idParametro" />
+    </Key>
+    <Property Name="idParametro" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="codParametro" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="nombreParametro" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="descParametro" Type="varchar" MaxLength="250" />
+    <Property Name="valorDeTexto" Type="varchar" MaxLength="250" />
+    <Property Name="valorNumerico" Type="decimal" Precision="18" Scale="6" />
+    <Property Name="valorTextoDefault" Type="varchar" MaxLength="250" />
+    <Property Name="valorNumericoDefault" Type="decimal" Precision="18" Scale="6" />
+    <Property Name="fecModificacion" Type="datetime" />
+    <Property Name="idUsuarioModificar" Type="nvarchar" MaxLength="128" />
+  </EntityType>
+  <EntityType Name="SNTt01_entidadFinanciera">
+    <Key>
+      <PropertyRef Name="idEntidadFinanciera" />
+    </Key>
+    <Property Name="idEntidadFinanciera" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="nombreEntidadFinanciera" Type="varchar" MaxLength="70" Nullable="false" />
+    <Property Name="abrvEntidadFinanciera" Type="varchar" MaxLength="20" />
+    <Property Name="activo" Type="bit" Nullable="false" />
+    <Property Name="fecRegistro" Type="datetime" Nullable="false" />
+    <Property Name="feModificacion" Type="datetime" />
+    <Property Name="fecEliminacion" Type="datetime" />
+    <Property Name="idUsuario" Type="nvarchar" MaxLength="128" Nullable="false" />
+    <Property Name="idUsuarioModificar" Type="nvarchar" MaxLength="128" />
+    <Property Name="idUsuarioEliminar" Type="nvarchar" MaxLength="128" />
+  </EntityType>
+  <EntityType Name="SNTt02_impuesto">
+    <Key>
+      <PropertyRef Name="idImpto" />
+    </Key>
+    <Property Name="idImpto" Type="smallint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="codImpto" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="descImpto" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="abrvImpto" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="porcentajeImpto" Type="decimal" Precision="10" Scale="6" Nullable="false" />
+    <Property Name="activo" Type="bit" Nullable="false" />
+    <Property Name="fecRegistro" Type="datetime" Nullable="false" />
+    <Property Name="fecModificacion" Type="datetime" />
+    <Property Name="fecEliminacion" Type="datetime" />
+    <Property Name="idUsuario" Type="nvarchar" MaxLength="128" Nullable="false" />
+    <Property Name="idUsuarioModificar" Type="nvarchar" MaxLength="128" />
+    <Property Name="idUsuarioEliminar" Type="nvarchar" MaxLength="128" />
+  </EntityType>
+  <EntityType Name="SNTt03_moneda">
+    <Key>
+      <PropertyRef Name="idMoneda" />
+    </Key>
+    <Property Name="idMoneda" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="codMoneda" Type="varchar" MaxLength="10" />
+    <Property Name="codIsoMoneda" Type="varchar" MaxLength="5" />
+    <Property Name="codIsoNumMoneda" Type="varchar" MaxLength="5" />
+    <Property Name="descMoneda" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="abrvMoneda" Type="varchar" MaxLength="10" />
+    <Property Name="simbolo" Type="varchar" MaxLength="5" Nullable="false" />
+    <Property Name="decimalCambio" Type="tinyint" Nullable="false" />
+    <Property Name="fraccion" Type="varchar" MaxLength="50" />
+    <Property Name="activo" Type="bit" Nullable="false" />
+    <Property Name="fecRegistro" Type="datetime" Nullable="false" />
+    <Property Name="fecModificacion" Type="datetime" />
+    <Property Name="fecEliminacion" Type="datetime" />
+    <Property Name="idUsuario" Type="nvarchar" MaxLength="128" Nullable="false" />
+    <Property Name="idUsuarioModificar" Type="nvarchar" MaxLength="128" />
+    <Property Name="idUsuarioEliminar" Type="nvarchar" MaxLength="128" />
+  </EntityType>
+  <EntityType Name="SNTt04_tipoComprobante">
+    <Key>
+      <PropertyRef Name="idTipoComprobante" />
+    </Key>
+    <Property Name="idTipoComprobante" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="codTipoComprobante" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="descTipoComprobante" Type="varchar" MaxLength="500" Nullable="false" />
+    <Property Name="activo" Type="bit" Nullable="false" />
+    <Property Name="fecRegistro" Type="datetime" Nullable="false" />
+    <Property Name="fecModificacion" Type="datetime" />
+    <Property Name="fecEliminacion" Type="datetime" />
+    <Property Name="idUsuario" Type="nvarchar" MaxLength="128" Nullable="false" />
+    <Property Name="idUsuarioModificar" Type="nvarchar" MaxLength="128" />
+    <Property Name="idUsuarioEliminar" Type="nvarchar" MaxLength="128" />
+  </EntityType>
+  <EntityType Name="SNTt05_tipoMedioDePago">
+    <Key>
+      <PropertyRef Name="idTipoMedioDePago" />
+    </Key>
+    <Property Name="idTipoMedioDePago" Type="smallint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="codTipoMedioDePago" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="descTipoMedioDePago" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="activo" Type="bit" Nullable="false" />
+    <Property Name="fecRegistro" Type="datetime" Nullable="false" />
+    <Property Name="fecModificacion" Type="datetime" />
+    <Property Name="fecEliminacion" Type="datetime" />
+    <Property Name="idUsuario" Type="nvarchar" MaxLength="128" Nullable="false" />
+    <Property Name="idUsuarioModificar" Type="nvarchar" MaxLength="128" />
+    <Property Name="idUsuarioEliminar" Type="nvarchar" MaxLength="128" />
+  </EntityType>
+  <EntityType Name="TNSt01_comprobanteEmitido">
+    <Key>
+      <PropertyRef Name="idComprobanteEmitido" />
+    </Key>
+    <Property Name="idComprobanteEmitido" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="serie" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="numComprobanteEmitido" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="fecRegistro" Type="datetime" Nullable="false" />
+    <Property Name="fecModificacion" Type="datetime" />
+    <Property Name="fecAnulacion" Type="datetime" />
+    <Property Name="razonAnulacion" Type="varchar" MaxLength="300" />
+    <Property Name="esAnulado" Type="bit" Nullable="false" />
+    <Property Name="fecEmision" Type="datetime" Nullable="false" />
+    <Property Name="fecVencimiento" Type="date" />
+    <Property Name="fecCancelacion" Type="datetime" />
+    <Property Name="mtoTotal" Type="decimal" Precision="18" Scale="6" Nullable="false" />
+    <Property Name="mtoSubTotal" Type="decimal" Precision="18" Scale="6" Nullable="false" />
+    <Property Name="mtoImpto" Type="decimal" Precision="18" Scale="6" Nullable="false" />
+    <Property Name="mtoDescuento" Type="decimal" Precision="18" Scale="6" Nullable="false" />
+    <Property Name="porcentajeImpto" Type="decimal" Precision="10" Scale="6" Nullable="false" />
+    <Property Name="porcentajeDescuento" Type="decimal" Precision="18" Scale="6" Nullable="false" />
+    <Property Name="obsvComprobanteEmitido" Type="varchar" MaxLength="250" />
+    <Property Name="info01" Type="varchar" MaxLength="250" />
+    <Property Name="info02" Type="varchar" MaxLength="250" />
+    <Property Name="info03" Type="varchar" MaxLength="250" />
+    <Property Name="fecha01" Type="datetime" />
+    <Property Name="fecha02" Type="datetime" />
+    <Property Name="fecha03" Type="datetime" />
+    <Property Name="idCita" Type="bigint" Nullable="false" />
+    <Property Name="idEstadoComprobante" Type="smallint" />
+    <Property Name="idSucursal" Type="int" Nullable="false" />
+    <Property Name="idTipoComprobante" Type="int" Nullable="false" />
+    <Property Name="idMoneda" Type="int" Nullable="false" />
+    <Property Name="idImpto" Type="smallint" Nullable="false" />
+    <Property Name="idUsuario" Type="nvarchar" MaxLength="128" Nullable="false" />
+    <Property Name="idUsuarioModificar" Type="nvarchar" MaxLength="128" />
+    <Property Name="idUsuarioAnular" Type="nvarchar" MaxLength="128" />
+    <Property Name="idCuota" Type="bigint" />
+  </EntityType>
+  <EntityType Name="TNSt02_comprobanteEmitidoDtl">
+    <Key>
+      <PropertyRef Name="idComprobanteEmitidoDtl" />
+    </Key>
+    <Property Name="idComprobanteEmitidoDtl" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="precio" Type="decimal" Precision="18" Scale="6" Nullable="false" />
+    <Property Name="cantidad" Type="decimal" Precision="18" Scale="6" Nullable="false" />
+    <Property Name="idComprobanteEmitido" Type="bigint" Nullable="false" />
+    <Property Name="idCitaDtl" Type="bigint" Nullable="false" />
+  </EntityType>
+  <EntityType Name="TNSt03_cuota">
+    <Key>
+      <PropertyRef Name="idCuota" />
+    </Key>
+    <Property Name="idCuota" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="mtoPago" Type="decimal" Precision="18" Scale="6" Nullable="false" />
+    <Property Name="mtoInteres" Type="decimal" Precision="18" Scale="6" Nullable="false" />
+    <Property Name="fecDesembolso" Type="date" />
+    <Property Name="fecPago" Type="date" Nullable="false" />
+    <Property Name="esCancelado" Type="bit" Nullable="false" />
+    <Property Name="activo" Type="bit" Nullable="false" />
+    <Property Name="fecRegistro" Type="datetime" Nullable="false" />
+    <Property Name="fecModificacion" Type="datetime" />
+    <Property Name="fecEliminacion" Type="datetime" />
+    <Property Name="idEstadoDeCuenta" Type="bigint" Nullable="false" />
+    <Property Name="idUsuario" Type="nvarchar" MaxLength="128" Nullable="false" />
+    <Property Name="idUsuarioModificar" Type="nvarchar" MaxLength="128" />
+    <Property Name="idUsuarioEliminar" Type="nvarchar" MaxLength="128" />
+  </EntityType>
+  <EntityType Name="TNSt04_estadoComprobante">
+    <Key>
+      <PropertyRef Name="idEstadoComprobante" />
+    </Key>
+    <Property Name="idEstadoComprobante" Type="smallint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="fecRegistro" Type="datetime" Nullable="false" />
+    <Property Name="fecModificacion" Type="datetime" />
+    <Property Name="fecEliminacion" Type="datetime" />
+    <Property Name="nombreEstadoComprobante" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="descEstadoComprobante" Type="varchar" MaxLength="300" />
+    <Property Name="activo" Type="bit" Nullable="false" />
+    <Property Name="idUsuario" Type="nvarchar" MaxLength="128" Nullable="false" />
+    <Property Name="idUsuarioModificar" Type="nvarchar" MaxLength="128" />
+    <Property Name="idUsuarioEliminar" Type="nvarchar" MaxLength="128" />
+  </EntityType>
+  <EntityType Name="TNSt05_estadoDeCuenta">
+    <Key>
+      <PropertyRef Name="idEstadoDeCuenta" />
+    </Key>
+    <Property Name="idEstadoDeCuenta" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="porcentajeDescuento" Type="decimal" Precision="18" Scale="6" Nullable="false" />
+    <Property Name="mtoDescuento" Type="decimal" Precision="18" Scale="6" Nullable="false" />
+    <Property Name="mtoSubtotal" Type="decimal" Precision="18" Scale="6" Nullable="false" />
+    <Property Name="debe" Type="decimal" Precision="18" Scale="6" Nullable="false" />
+    <Property Name="haber" Type="decimal" Precision="18" Scale="6" Nullable="false" />
+    <Property Name="saldo" Type="decimal" Precision="18" Scale="6" Nullable="false" />
+    <Property Name="inicial" Type="decimal" Precision="18" Scale="6" Nullable="false" />
+    <Property Name="porcentajeInteres" Type="decimal" Precision="18" Scale="6" Nullable="false" />
+    <Property Name="mtoInteres" Type="decimal" Precision="18" Scale="6" Nullable="false" />
+    <Property Name="fecRegistro" Type="datetime" Nullable="false" />
+    <Property Name="fecModificacion" Type="datetime" />
+    <Property Name="idUsuario" Type="nvarchar" MaxLength="128" Nullable="false" />
+    <Property Name="idUsuarioModificar" Type="nvarchar" MaxLength="128" />
+    <Property Name="idCita" Type="bigint" Nullable="false" />
+  </EntityType>
+  <EntityType Name="TNSt06_medioDePagoDtl">
+    <Key>
+      <PropertyRef Name="idMedioDePagoDtl" />
+    </Key>
+    <Property Name="idMedioDePagoDtl" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="fecRegistro" Type="datetime" Nullable="false" />
+    <Property Name="fecModificacion" Type="datetime" />
+    <Property Name="fecEliminacion" Type="datetime" />
+    <Property Name="mtoMedioDePago" Type="decimal" Precision="18" Scale="6" Nullable="false" />
+    <Property Name="tipoDeCambio" Type="decimal" Precision="18" Scale="6" Nullable="false" />
+    <Property Name="activo" Type="bit" Nullable="false" />
+    <Property Name="idUsuario" Type="nvarchar" MaxLength="128" Nullable="false" />
+    <Property Name="idUsuarioModificar" Type="nvarchar" MaxLength="128" />
+    <Property Name="idUsuarioEliminar" Type="nvarchar" MaxLength="128" />
+    <Property Name="idComprobanteEmitido" Type="bigint" Nullable="false" />
+    <Property Name="idMedioDePago" Type="smallint" Nullable="false" />
+    <Property Name="idMoneda" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="TNSt07_numeracion">
+    <Key>
+      <PropertyRef Name="idNumeracion" />
+    </Key>
+    <Property Name="idNumeracion" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="serie" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="num_corr_inicial" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="num_corr_final" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="num_corr_actual" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="idTipoComprobante" Type="int" Nullable="false" />
+    <Property Name="idSucursal" Type="int" Nullable="false" />
+    <Property Name="fecRegistro" Type="datetime" Nullable="false" />
+    <Property Name="idUsuario" Type="nvarchar" MaxLength="128" Nullable="false" />
+    <Property Name="fecModificacion" Type="datetime" />
+    <Property Name="idUsuarioModificar" Type="nvarchar" MaxLength="128" />
+  </EntityType>
+  <EntityType Name="UBIt01_distrito">
+    <Key>
+      <PropertyRef Name="idDistrito" />
+    </Key>
+    <Property Name="idDistrito" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="nombreDistrito" Type="varchar" MaxLength="70" Nullable="false" />
+    <Property Name="activo" Type="bit" Nullable="false" />
+    <Property Name="fecRegistro" Type="datetime" Nullable="false" />
+    <Property Name="fecModificacion" Type="datetime" />
+    <Property Name="FecEliminacion" Type="datetime" />
+    <Property Name="idUsuario" Type="nvarchar" MaxLength="128" Nullable="false" />
+    <Property Name="idUsuarioModificar" Type="nvarchar" MaxLength="128" />
+    <Property Name="idUsuarioEliminar" Type="nvarchar" MaxLength="128" />
+    <Property Name="idProvincia" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="UBIt02_provincia">
+    <Key>
+      <PropertyRef Name="idProvincia" />
+    </Key>
+    <Property Name="idProvincia" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="nombreProvincia" Type="varchar" MaxLength="70" Nullable="false" />
+    <Property Name="activo" Type="bit" Nullable="false" />
+    <Property Name="fecRegistro" Type="datetime" Nullable="false" />
+    <Property Name="fecModificacion" Type="datetime" />
+    <Property Name="fecEliminacion" Type="datetime" />
+    <Property Name="idUsuario" Type="nvarchar" MaxLength="128" Nullable="false" />
+    <Property Name="idUsuarioModificar" Type="nvarchar" MaxLength="128" />
+    <Property Name="idUsuarioEliminar" Type="nvarchar" MaxLength="128" />
+    <Property Name="idRegion" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="UBIt03_region">
+    <Key>
+      <PropertyRef Name="idRegion" />
+    </Key>
+    <Property Name="idRegion" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="nombreRegion" Type="varchar" MaxLength="70" Nullable="false" />
+    <Property Name="activo" Type="bit" Nullable="false" />
+    <Property Name="fecRegistro" Type="datetime" Nullable="false" />
+    <Property Name="fecModificacion" Type="datetime" />
+    <Property Name="fecEliminacion" Type="datetime" />
+    <Property Name="idUsuario" Type="nvarchar" MaxLength="128" Nullable="false" />
+    <Property Name="idUsuarioModificar" Type="nvarchar" MaxLength="128" />
+    <Property Name="idUsuarioEliminar" Type="nvarchar" MaxLength="128" />
+  </EntityType>
+  <EntityType Name="UBIt04_via">
+    <Key>
+      <PropertyRef Name="idVia" />
+    </Key>
+    <Property Name="idVia" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="descVia" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="abrvVia" Type="varchar" MaxLength="20" />
+    <Property Name="estado" Type="bit" Nullable="false" />
+    <Property Name="fecRegistro" Type="datetime" Nullable="false" />
+    <Property Name="fecModificacion" Type="datetime" />
+    <Property Name="fecEliminacion" Type="datetime" />
+    <Property Name="idUsuario" Type="nvarchar" MaxLength="128" Nullable="false" />
+    <Property Name="idUsuarioModificar" Type="nvarchar" MaxLength="128" />
+    <Property Name="idUsuarioEliminar" Type="nvarchar" MaxLength="128" />
+  </EntityType>
+  <EntityType Name="UBIt05_zona">
+    <Key>
+      <PropertyRef Name="idZona" />
+    </Key>
+    <Property Name="idZona" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="descZona" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="abrvZona" Type="varchar" MaxLength="20" />
+    <Property Name="activo" Type="bit" Nullable="false" />
+    <Property Name="fecRegistro" Type="datetime" Nullable="false" />
+    <Property Name="fecModificacion" Type="datetime" />
+    <Property Name="fecEliminacion" Type="datetime" />
+    <Property Name="idUsuario" Type="nvarchar" MaxLength="128" Nullable="false" />
+    <Property Name="idUsuarioModificar" Type="nvarchar" MaxLength="128" />
+    <Property Name="idUsuarioEliminar" Type="nvarchar" MaxLength="128" />
+  </EntityType>
+  <Association Name="FK_AspNetRolesPermisos_AspNetPermisos">
+    <End Role="AspNetPermisos" Type="Self.AspNetPermisos" Multiplicity="1" />
+    <End Role="AspNetRolesPermisos" Type="Self.AspNetRolesPermisos" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="AspNetPermisos">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="AspNetRolesPermisos">
+        <PropertyRef Name="PermisoId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_AspNetRolesPermisos_AspNetRoles">
+    <End Role="AspNetRoles" Type="Self.AspNetRoles" Multiplicity="1" />
+    <End Role="AspNetRolesPermisos" Type="Self.AspNetRolesPermisos" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="AspNetRoles">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="AspNetRolesPermisos">
+        <PropertyRef Name="RoleId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_AspNetUsers_RHUt01_empleado">
+    <End Role="RHUt01_empleado" Type="Self.RHUt01_empleado" Multiplicity="1" />
+    <End Role="AspNetUsers" Type="Self.AspNetUsers" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="RHUt01_empleado">
+        <PropertyRef Name="idEmpleado" />
+      </Principal>
+      <Dependent Role="AspNetUsers">
+        <PropertyRef Name="idEmpleado" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_CustomPermiso_MenuID">
+    <End Role="Menu" Type="Self.Menu" Multiplicity="1" />
+    <End Role="CustomPermiso" Type="Self.CustomPermiso" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Menu">
+        <PropertyRef Name="MenuID" />
+      </Principal>
+      <Dependent Role="CustomPermiso">
+        <PropertyRef Name="MenuID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_CustomPermiso_RoleID">
+    <End Role="AspNetUsers" Type="Self.AspNetUsers" Multiplicity="1" />
+    <End Role="CustomPermiso" Type="Self.CustomPermiso" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="AspNetUsers">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="CustomPermiso">
+        <PropertyRef Name="UserID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_dbo_AspNetUserClaims_dbo_AspNetUsers_UserId">
+    <End Role="AspNetUsers" Type="Self.AspNetUsers" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="AspNetUserClaims" Type="Self.AspNetUserClaims" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="AspNetUsers">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="AspNetUserClaims">
+        <PropertyRef Name="UserId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_dbo_AspNetUserLogins_dbo_AspNetUsers_UserId">
+    <End Role="AspNetUsers" Type="Self.AspNetUsers" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="AspNetUserLogins" Type="Self.AspNetUserLogins" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="AspNetUsers">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="AspNetUserLogins">
+        <PropertyRef Name="UserId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_dbo_AspNetUserRoles_dbo_AspNetRoles_RoleId">
+    <End Role="AspNetRoles" Type="Self.AspNetRoles" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="AspNetUserRoles" Type="Self.AspNetUserRoles" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="AspNetRoles">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="AspNetUserRoles">
+        <PropertyRef Name="RoleId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_dbo_AspNetUserRoles_dbo_AspNetUsers_UserId">
+    <End Role="AspNetUsers" Type="Self.AspNetUsers" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="AspNetUserRoles" Type="Self.AspNetUserRoles" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="AspNetUsers">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="AspNetUserRoles">
+        <PropertyRef Name="UserId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Permiso_MenuID">
+    <End Role="Menu" Type="Self.Menu" Multiplicity="1" />
+    <End Role="Permiso" Type="Self.Permiso" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Menu">
+        <PropertyRef Name="MenuID" />
+      </Principal>
+      <Dependent Role="Permiso">
+        <PropertyRef Name="MenuID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Permiso_RoleID">
+    <End Role="AspNetRoles" Type="Self.AspNetRoles" Multiplicity="1" />
+    <End Role="Permiso" Type="Self.Permiso" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="AspNetRoles">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Permiso">
+        <PropertyRef Name="RoleID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="RefCLlt03_atencion11">
+    <End Role="CLlt03_atencion" Type="Self.CLlt03_atencion" Multiplicity="1" />
+    <End Role="CLlt12_examenFisico" Type="Self.CLlt12_examenFisico" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CLlt03_atencion">
+        <PropertyRef Name="idAtencion" />
+      </Principal>
+      <Dependent Role="CLlt12_examenFisico">
+        <PropertyRef Name="idAtencion" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="RefCLlt03_atencion12">
+    <End Role="CLlt03_atencion" Type="Self.CLlt03_atencion" Multiplicity="1" />
+    <End Role="CLlt13_funcionVital" Type="Self.CLlt13_funcionVital" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CLlt03_atencion">
+        <PropertyRef Name="idAtencion" />
+      </Principal>
+      <Dependent Role="CLlt13_funcionVital">
+        <PropertyRef Name="idAtencion" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="RefCLlt03_atencion13">
+    <End Role="CLlt03_atencion" Type="Self.CLlt03_atencion" Multiplicity="1" />
+    <End Role="CLlt10_estudioCompl" Type="Self.CLlt10_estudioCompl" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CLlt03_atencion">
+        <PropertyRef Name="idAtencion" />
+      </Principal>
+      <Dependent Role="CLlt10_estudioCompl">
+        <PropertyRef Name="idAtencion" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="RefCLlt03_atencion16">
+    <End Role="CLlt03_atencion" Type="Self.CLlt03_atencion" Multiplicity="1" />
+    <End Role="CLIt01_anamnesis" Type="Self.CLIt01_anamnesis" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CLlt03_atencion">
+        <PropertyRef Name="idAtencion" />
+      </Principal>
+      <Dependent Role="CLIt01_anamnesis">
+        <PropertyRef Name="idAtencion" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="RefCLlt03_atencion18">
+    <End Role="CLlt03_atencion" Type="Self.CLlt03_atencion" Multiplicity="1" />
+    <End Role="CLlt08_diagnostico" Type="Self.CLlt08_diagnostico" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CLlt03_atencion">
+        <PropertyRef Name="idAtencion" />
+      </Principal>
+      <Dependent Role="CLlt08_diagnostico">
+        <PropertyRef Name="idAtencion" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="RefCLlt03_atencion31">
+    <End Role="CLlt03_atencion" Type="Self.CLlt03_atencion" Multiplicity="1" />
+    <End Role="CLlt11_evolucion" Type="Self.CLlt11_evolucion" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CLlt03_atencion">
+        <PropertyRef Name="idAtencion" />
+      </Principal>
+      <Dependent Role="CLlt11_evolucion">
+        <PropertyRef Name="idAtencion" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="RefCLlt04_cie1020">
+    <End Role="CLlt04_cie10" Type="Self.CLlt04_cie10" Multiplicity="0..1" />
+    <End Role="CLlt08_diagnostico" Type="Self.CLlt08_diagnostico" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CLlt04_cie10">
+        <PropertyRef Name="idCie10" />
+      </Principal>
+      <Dependent Role="CLlt08_diagnostico">
+        <PropertyRef Name="idCie10" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="RefCLlt05_cita101">
+    <End Role="CLlt05_cita" Type="Self.CLlt05_cita" Multiplicity="1" />
+    <End Role="CLlt06_citaDtl" Type="Self.CLlt06_citaDtl" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CLlt05_cita">
+        <PropertyRef Name="idCita" />
+      </Principal>
+      <Dependent Role="CLlt06_citaDtl">
+        <PropertyRef Name="idCita" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="RefCLlt05_cita113">
+    <End Role="CLlt05_cita" Type="Self.CLlt05_cita" Multiplicity="1" />
+    <End Role="TNSt05_estadoDeCuenta" Type="Self.TNSt05_estadoDeCuenta" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CLlt05_cita">
+        <PropertyRef Name="idCita" />
+      </Principal>
+      <Dependent Role="TNSt05_estadoDeCuenta">
+        <PropertyRef Name="idCita" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="RefCLlt05_cita36">
+    <End Role="CLlt05_cita" Type="Self.CLlt05_cita" Multiplicity="1" />
+    <End Role="TNSt01_comprobanteEmitido" Type="Self.TNSt01_comprobanteEmitido" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CLlt05_cita">
+        <PropertyRef Name="idCita" />
+      </Principal>
+      <Dependent Role="TNSt01_comprobanteEmitido">
+        <PropertyRef Name="idCita" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="RefCLlt05_cita9">
+    <End Role="CLlt05_cita" Type="Self.CLlt05_cita" Multiplicity="0..1" />
+    <End Role="CLlt03_atencion" Type="Self.CLlt03_atencion" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CLlt05_cita">
+        <PropertyRef Name="idCita" />
+      </Principal>
+      <Dependent Role="CLlt03_atencion">
+        <PropertyRef Name="idCita" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="RefCLlt06_citaDtl112">
+    <End Role="CLlt06_citaDtl" Type="Self.CLlt06_citaDtl" Multiplicity="1" />
+    <End Role="TNSt02_comprobanteEmitidoDtl" Type="Self.TNSt02_comprobanteEmitidoDtl" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CLlt06_citaDtl">
+        <PropertyRef Name="idCitaDtl" />
+      </Principal>
+      <Dependent Role="TNSt02_comprobanteEmitidoDtl">
+        <PropertyRef Name="idCitaDtl" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="RefCLlt07_consultorio100">
+    <End Role="CLlt07_consultorio" Type="Self.CLlt07_consultorio" Multiplicity="1" />
+    <End Role="RHUt01_empleado" Type="Self.RHUt01_empleado" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CLlt07_consultorio">
+        <PropertyRef Name="idConsultorio" />
+      </Principal>
+      <Dependent Role="RHUt01_empleado">
+        <PropertyRef Name="idConsultorio" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="RefCLlt08_diagnostico22">
+    <End Role="CLlt08_diagnostico" Type="Self.CLlt08_diagnostico" Multiplicity="0..1" />
+    <End Role="CLlt16_tratamiento" Type="Self.CLlt16_tratamiento" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CLlt08_diagnostico">
+        <PropertyRef Name="idDiagnostico" />
+      </Principal>
+      <Dependent Role="CLlt16_tratamiento">
+        <PropertyRef Name="idDiagnostico" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="RefCLlt09_estadoCita75">
+    <End Role="CLlt09_estadoCita" Type="Self.CLlt09_estadoCita" Multiplicity="1" />
+    <End Role="CLlt05_cita" Type="Self.CLlt05_cita" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CLlt09_estadoCita">
+        <PropertyRef Name="idEstadoCita" />
+      </Principal>
+      <Dependent Role="CLlt05_cita">
+        <PropertyRef Name="idEstadoCita" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="RefCLlt10_estudioCompl14">
+    <End Role="CLlt10_estudioCompl" Type="Self.CLlt10_estudioCompl" Multiplicity="1" />
+    <End Role="CLIt02_archivoEstudioCompl" Type="Self.CLIt02_archivoEstudioCompl" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CLlt10_estudioCompl">
+        <PropertyRef Name="idEstudioCompl" />
+      </Principal>
+      <Dependent Role="CLIt02_archivoEstudioCompl">
+        <PropertyRef Name="idEstudioCompl" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="RefCLlt14_seguro59">
+    <End Role="CLlt14_seguro" Type="Self.CLlt14_seguro" Multiplicity="1" />
+    <End Role="CLlt15_seguroPaciente" Type="Self.CLlt15_seguroPaciente" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CLlt14_seguro">
+        <PropertyRef Name="idSeguro" />
+      </Principal>
+      <Dependent Role="CLlt15_seguroPaciente">
+        <PropertyRef Name="idSeguro" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="RefCLlt16_tratamiento24">
+    <End Role="CLlt16_tratamiento" Type="Self.CLlt16_tratamiento" Multiplicity="1" />
+    <End Role="CLlt17_tratamientoDtl" Type="Self.CLlt17_tratamientoDtl" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CLlt16_tratamiento">
+        <PropertyRef Name="idTratamiento" />
+      </Principal>
+      <Dependent Role="CLlt17_tratamientoDtl">
+        <PropertyRef Name="idTratamiento" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="RefMSTt01_medioDePago44">
+    <End Role="MSTt01_medioDePago" Type="Self.MSTt01_medioDePago" Multiplicity="1" />
+    <End Role="TNSt06_medioDePagoDtl" Type="Self.TNSt06_medioDePagoDtl" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="MSTt01_medioDePago">
+        <PropertyRef Name="idMedioDePago" />
+      </Principal>
+      <Dependent Role="TNSt06_medioDePagoDtl">
+        <PropertyRef Name="idMedioDePago" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="RefMSTt01_medioDePago89">
+    <End Role="MSTt01_medioDePago" Type="Self.MSTt01_medioDePago" Multiplicity="1" />
+    <End Role="RHUt01_empleado" Type="Self.RHUt01_empleado" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="MSTt01_medioDePago">
+        <PropertyRef Name="idMedioDePago" />
+      </Principal>
+      <Dependent Role="RHUt01_empleado">
+        <PropertyRef Name="idMedioDePago" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="RefMSTt02_piso82">
+    <End Role="MSTt02_piso" Type="Self.MSTt02_piso" Multiplicity="1" />
+    <End Role="CLlt07_consultorio" Type="Self.CLlt07_consultorio" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="MSTt02_piso">
+        <PropertyRef Name="idPiso" />
+      </Principal>
+      <Dependent Role="CLlt07_consultorio">
+        <PropertyRef Name="idPiso" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="RefMSTt03_redSocial86">
+    <End Role="MSTt03_redSocial" Type="Self.MSTt03_redSocial" Multiplicity="1" />
+    <End Role="RHUt10_personaRedSocial" Type="Self.RHUt10_personaRedSocial" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="MSTt03_redSocial">
+        <PropertyRef Name="idRedSocial" />
+      </Principal>
+      <Dependent Role="RHUt10_personaRedSocial">
+        <PropertyRef Name="idRedSocial" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="RefMSTt04_sucursal73">
+    <End Role="MSTt04_sucursal" Type="Self.MSTt04_sucursal" Multiplicity="1" />
+    <End Role="TNSt01_comprobanteEmitido" Type="Self.TNSt01_comprobanteEmitido" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="MSTt04_sucursal">
+        <PropertyRef Name="idSucursal" />
+      </Principal>
+      <Dependent Role="TNSt01_comprobanteEmitido">
+        <PropertyRef Name="idSucursal" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="RefMSTt05_tipoSucursal72">
+    <End Role="MSTt05_tipoSucursal" Type="Self.MSTt05_tipoSucursal" Multiplicity="1" />
+    <End Role="MSTt04_sucursal" Type="Self.MSTt04_sucursal" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="MSTt05_tipoSucursal">
+        <PropertyRef Name="idTipoSucursal" />
+      </Principal>
+      <Dependent Role="MSTt04_sucursal">
+        <PropertyRef Name="idTipoSucursal" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="RefPROt01_categoria23">
+    <End Role="PROt01_categoria" Type="Self.PROt01_categoria" Multiplicity="1" />
+    <End Role="PROt02_producto" Type="Self.PROt02_producto" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="PROt01_categoria">
+        <PropertyRef Name="idCategoria" />
+      </Principal>
+      <Dependent Role="PROt02_producto">
+        <PropertyRef Name="idCategoria" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="RefPROt02_producto25">
+    <End Role="PROt02_producto" Type="Self.PROt02_producto" Multiplicity="0..1" />
+    <End Role="CLlt17_tratamientoDtl" Type="Self.CLlt17_tratamientoDtl" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="PROt02_producto">
+        <PropertyRef Name="idProducto" />
+      </Principal>
+      <Dependent Role="CLlt17_tratamientoDtl">
+        <PropertyRef Name="idProducto" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="RefPROt02_producto78">
+    <End Role="PROt02_producto" Type="Self.PROt02_producto" Multiplicity="1" />
+    <End Role="PROt03_productoUnidadDeMedida" Type="Self.PROt03_productoUnidadDeMedida" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="PROt02_producto">
+        <PropertyRef Name="idProducto" />
+      </Principal>
+      <Dependent Role="PROt03_productoUnidadDeMedida">
+        <PropertyRef Name="idProducto" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="RefPROt04_servicio102">
+    <End Role="PROt04_servicio" Type="Self.PROt04_servicio" Multiplicity="1" />
+    <End Role="CLlt06_citaDtl" Type="Self.CLlt06_citaDtl" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="PROt04_servicio">
+        <PropertyRef Name="idServicio" />
+      </Principal>
+      <Dependent Role="CLlt06_citaDtl">
+        <PropertyRef Name="idServicio" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="RefPROt04_servicio27">
+    <End Role="PROt04_servicio" Type="Self.PROt04_servicio" Multiplicity="0..1" />
+    <End Role="CLlt17_tratamientoDtl" Type="Self.CLlt17_tratamientoDtl" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="PROt04_servicio">
+        <PropertyRef Name="idServicio" />
+      </Principal>
+      <Dependent Role="CLlt17_tratamientoDtl">
+        <PropertyRef Name="idServicio" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="RefPROt05_tipoDeServicio84">
+    <End Role="PROt05_tipoDeServicio" Type="Self.PROt05_tipoDeServicio" Multiplicity="1" />
+    <End Role="PROt04_servicio" Type="Self.PROt04_servicio" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="PROt05_tipoDeServicio">
+        <PropertyRef Name="idTipoDeServicio" />
+      </Principal>
+      <Dependent Role="PROt04_servicio">
+        <PropertyRef Name="idTipoDeServicio" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="RefPROt06_unidadDeMedida77">
+    <End Role="PROt06_unidadDeMedida" Type="Self.PROt06_unidadDeMedida" Multiplicity="1" />
+    <End Role="PROt03_productoUnidadDeMedida" Type="Self.PROt03_productoUnidadDeMedida" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="PROt06_unidadDeMedida">
+        <PropertyRef Name="idUnidadDeMedida" />
+      </Principal>
+      <Dependent Role="PROt03_productoUnidadDeMedida">
+        <PropertyRef Name="idUnidadDeMedida" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="RefRHUt01_empleado3">
+    <End Role="RHUt01_empleado" Type="Self.RHUt01_empleado" Multiplicity="1" />
+    <End Role="RHUt02_empleadoEspecialidad" Type="Self.RHUt02_empleadoEspecialidad" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="RHUt01_empleado">
+        <PropertyRef Name="idEmpleado" />
+      </Principal>
+      <Dependent Role="RHUt02_empleadoEspecialidad">
+        <PropertyRef Name="idEmpleado" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="RefRHUt01_empleado80">
+    <End Role="RHUt01_empleado" Type="Self.RHUt01_empleado" Multiplicity="1" />
+    <End Role="RHUt03_empleadoTurno" Type="Self.RHUt03_empleadoTurno" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="RHUt01_empleado">
+        <PropertyRef Name="idEmpleado" />
+      </Principal>
+      <Dependent Role="RHUt03_empleadoTurno">
+        <PropertyRef Name="idEmpleado" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="RefRHUt01_empleado90">
+    <End Role="RHUt01_empleado" Type="Self.RHUt01_empleado" Multiplicity="1" />
+    <End Role="CLlt05_cita" Type="Self.CLlt05_cita" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="RHUt01_empleado">
+        <PropertyRef Name="idEmpleado" />
+      </Principal>
+      <Dependent Role="CLlt05_cita">
+        <PropertyRef Name="idEmpleado" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="RefRHUt01_empleado95">
+    <End Role="RHUt01_empleado" Type="Self.RHUt01_empleado" Multiplicity="1" />
+    <End Role="RHUt06_horario" Type="Self.RHUt06_horario" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="RHUt01_empleado">
+        <PropertyRef Name="idEmpleado" />
+      </Principal>
+      <Dependent Role="RHUt06_horario">
+        <PropertyRef Name="idEmpleado" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="RefRHUt04_especialidad111">
+    <End Role="RHUt04_especialidad" Type="Self.RHUt04_especialidad" Multiplicity="1" />
+    <End Role="PROt04_servicio" Type="Self.PROt04_servicio" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="RHUt04_especialidad">
+        <PropertyRef Name="idEspecialidad" />
+      </Principal>
+      <Dependent Role="PROt04_servicio">
+        <PropertyRef Name="idEspecialidad" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="RefRHUt04_especialidad4">
+    <End Role="RHUt04_especialidad" Type="Self.RHUt04_especialidad" Multiplicity="1" />
+    <End Role="RHUt02_empleadoEspecialidad" Type="Self.RHUt02_empleadoEspecialidad" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="RHUt04_especialidad">
+        <PropertyRef Name="idEspecialidad" />
+      </Principal>
+      <Dependent Role="RHUt02_empleadoEspecialidad">
+        <PropertyRef Name="idEspecialidad" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="RefRHUt05_estadoCivil65">
+    <End Role="RHUt05_estadoCivil" Type="Self.RHUt05_estadoCivil" Multiplicity="0..1" />
+    <End Role="RHUt09_persona" Type="Self.RHUt09_persona" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="RHUt05_estadoCivil">
+        <PropertyRef Name="idEstadoCivil" />
+      </Principal>
+      <Dependent Role="RHUt09_persona">
+        <PropertyRef Name="idEstadoCivil" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="RefRHUt07_paciente33">
+    <End Role="RHUt07_paciente" Type="Self.RHUt07_paciente" Multiplicity="1" />
+    <End Role="CLlt05_cita" Type="Self.CLlt05_cita" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="RHUt07_paciente">
+        <PropertyRef Name="idPaciente" />
+      </Principal>
+      <Dependent Role="CLlt05_cita">
+        <PropertyRef Name="idPaciente" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="RefRHUt07_paciente60">
+    <End Role="RHUt07_paciente" Type="Self.RHUt07_paciente" Multiplicity="1" />
+    <End Role="CLlt15_seguroPaciente" Type="Self.CLlt15_seguroPaciente" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="RHUt07_paciente">
+        <PropertyRef Name="idPaciente" />
+      </Principal>
+      <Dependent Role="CLlt15_seguroPaciente">
+        <PropertyRef Name="idPaciente" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="RefRHUt08_periodoRemuneracion88">
+    <End Role="RHUt08_periodoRemuneracion" Type="Self.RHUt08_periodoRemuneracion" Multiplicity="1" />
+    <End Role="RHUt01_empleado" Type="Self.RHUt01_empleado" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="RHUt08_periodoRemuneracion">
+        <PropertyRef Name="idPeriodoRemuneracion" />
+      </Principal>
+      <Dependent Role="RHUt01_empleado">
+        <PropertyRef Name="idPeriodoRemuneracion" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="RefRHUt09_persona68">
+    <End Role="RHUt09_persona" Type="Self.RHUt09_persona" Multiplicity="0..1" />
+    <End Role="RHUt07_paciente" Type="Self.RHUt07_paciente" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="RHUt09_persona">
+        <PropertyRef Name="idPersona" />
+      </Principal>
+      <Dependent Role="RHUt07_paciente">
+        <PropertyRef Name="idPersona" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="RefRHUt09_persona69">
+    <End Role="RHUt09_persona" Type="Self.RHUt09_persona" Multiplicity="0..1" />
+    <End Role="RHUt01_empleado" Type="Self.RHUt01_empleado" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="RHUt09_persona">
+        <PropertyRef Name="idPersona" />
+      </Principal>
+      <Dependent Role="RHUt01_empleado">
+        <PropertyRef Name="idPersona" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="RefRHUt09_persona87">
+    <End Role="RHUt09_persona" Type="Self.RHUt09_persona" Multiplicity="1" />
+    <End Role="RHUt10_personaRedSocial" Type="Self.RHUt10_personaRedSocial" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="RHUt09_persona">
+        <PropertyRef Name="idPersona" />
+      </Principal>
+      <Dependent Role="RHUt10_personaRedSocial">
+        <PropertyRef Name="idPersona" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="RefRHUt11_tipoDeEmpleado85">
+    <End Role="RHUt11_tipoDeEmpleado" Type="Self.RHUt11_tipoDeEmpleado" Multiplicity="1" />
+    <End Role="RHUt01_empleado" Type="Self.RHUt01_empleado" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="RHUt11_tipoDeEmpleado">
+        <PropertyRef Name="idTipoDeEmpleado" />
+      </Principal>
+      <Dependent Role="RHUt01_empleado">
+        <PropertyRef Name="idTipoDeEmpleado" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="RefRHUt12_tipoDocIdentidad66">
+    <End Role="RHUt12_tipoDocIdentidad" Type="Self.RHUt12_tipoDocIdentidad" Multiplicity="1" />
+    <End Role="RHUt09_persona" Type="Self.RHUt09_persona" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="RHUt12_tipoDocIdentidad">
+        <PropertyRef Name="idTipoDocIdentidad" />
+      </Principal>
+      <Dependent Role="RHUt09_persona">
+        <PropertyRef Name="idTipoDocIdentidad" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="RefRHUt13_tipoEspecialidad83">
+    <End Role="RHUt13_tipoEspecialidad" Type="Self.RHUt13_tipoEspecialidad" Multiplicity="1" />
+    <End Role="RHUt04_especialidad" Type="Self.RHUt04_especialidad" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="RHUt13_tipoEspecialidad">
+        <PropertyRef Name="idTipoDeEspeciliadad" />
+      </Principal>
+      <Dependent Role="RHUt04_especialidad">
+        <PropertyRef Name="idTipoDeEspeciliadad" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="RefRHUt14_turno81">
+    <End Role="RHUt14_turno" Type="Self.RHUt14_turno" Multiplicity="1" />
+    <End Role="RHUt03_empleadoTurno" Type="Self.RHUt03_empleadoTurno" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="RHUt14_turno">
+        <PropertyRef Name="idTurno" />
+      </Principal>
+      <Dependent Role="RHUt03_empleadoTurno">
+        <PropertyRef Name="idTurno" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="RefSNTt01_entidadFinanciera61">
+    <End Role="SNTt01_entidadFinanciera" Type="Self.SNTt01_entidadFinanciera" Multiplicity="1" />
+    <End Role="RHUt01_empleado" Type="Self.RHUt01_empleado" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SNTt01_entidadFinanciera">
+        <PropertyRef Name="idEntidadFinanciera" />
+      </Principal>
+      <Dependent Role="RHUt01_empleado">
+        <PropertyRef Name="idEntidadFinanciera" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="RefSNTt02_impuesto94">
+    <End Role="SNTt02_impuesto" Type="Self.SNTt02_impuesto" Multiplicity="1" />
+    <End Role="TNSt01_comprobanteEmitido" Type="Self.TNSt01_comprobanteEmitido" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SNTt02_impuesto">
+        <PropertyRef Name="idImpto" />
+      </Principal>
+      <Dependent Role="TNSt01_comprobanteEmitido">
+        <PropertyRef Name="idImpto" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="RefSNTt03_moneda114">
+    <End Role="SNTt03_moneda" Type="Self.SNTt03_moneda" Multiplicity="1" />
+    <End Role="TNSt06_medioDePagoDtl" Type="Self.TNSt06_medioDePagoDtl" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SNTt03_moneda">
+        <PropertyRef Name="idMoneda" />
+      </Principal>
+      <Dependent Role="TNSt06_medioDePagoDtl">
+        <PropertyRef Name="idMoneda" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="RefSNTt03_moneda70">
+    <End Role="SNTt03_moneda" Type="Self.SNTt03_moneda" Multiplicity="1" />
+    <End Role="PROt02_producto" Type="Self.PROt02_producto" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SNTt03_moneda">
+        <PropertyRef Name="idMoneda" />
+      </Principal>
+      <Dependent Role="PROt02_producto">
+        <PropertyRef Name="idMoneda" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="RefSNTt03_moneda71">
+    <End Role="SNTt03_moneda" Type="Self.SNTt03_moneda" Multiplicity="1" />
+    <End Role="TNSt01_comprobanteEmitido" Type="Self.TNSt01_comprobanteEmitido" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SNTt03_moneda">
+        <PropertyRef Name="idMoneda" />
+      </Principal>
+      <Dependent Role="TNSt01_comprobanteEmitido">
+        <PropertyRef Name="idMoneda" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="RefSNTt04_tipoComprobante48">
+    <End Role="SNTt04_tipoComprobante" Type="Self.SNTt04_tipoComprobante" Multiplicity="1" />
+    <End Role="TNSt01_comprobanteEmitido" Type="Self.TNSt01_comprobanteEmitido" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SNTt04_tipoComprobante">
+        <PropertyRef Name="idTipoComprobante" />
+      </Principal>
+      <Dependent Role="TNSt01_comprobanteEmitido">
+        <PropertyRef Name="idTipoComprobante" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="RefSNTt05_tipoMedioDePago43">
+    <End Role="SNTt05_tipoMedioDePago" Type="Self.SNTt05_tipoMedioDePago" Multiplicity="1" />
+    <End Role="MSTt01_medioDePago" Type="Self.MSTt01_medioDePago" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SNTt05_tipoMedioDePago">
+        <PropertyRef Name="idTipoMedioDePago" />
+      </Principal>
+      <Dependent Role="MSTt01_medioDePago">
+        <PropertyRef Name="idTipoMedioDePago" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="RefTNSt01_comprobanteEmitido35">
+    <End Role="TNSt01_comprobanteEmitido" Type="Self.TNSt01_comprobanteEmitido" Multiplicity="1" />
+    <End Role="TNSt02_comprobanteEmitidoDtl" Type="Self.TNSt02_comprobanteEmitidoDtl" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TNSt01_comprobanteEmitido">
+        <PropertyRef Name="idComprobanteEmitido" />
+      </Principal>
+      <Dependent Role="TNSt02_comprobanteEmitidoDtl">
+        <PropertyRef Name="idComprobanteEmitido" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="RefTNSt01_comprobanteEmitido47">
+    <End Role="TNSt01_comprobanteEmitido" Type="Self.TNSt01_comprobanteEmitido" Multiplicity="1" />
+    <End Role="TNSt06_medioDePagoDtl" Type="Self.TNSt06_medioDePagoDtl" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TNSt01_comprobanteEmitido">
+        <PropertyRef Name="idComprobanteEmitido" />
+      </Principal>
+      <Dependent Role="TNSt06_medioDePagoDtl">
+        <PropertyRef Name="idComprobanteEmitido" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="RefTNSt03_cuota115">
+    <End Role="TNSt03_cuota" Type="Self.TNSt03_cuota" Multiplicity="0..1" />
+    <End Role="TNSt01_comprobanteEmitido" Type="Self.TNSt01_comprobanteEmitido" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TNSt03_cuota">
+        <PropertyRef Name="idCuota" />
+      </Principal>
+      <Dependent Role="TNSt01_comprobanteEmitido">
+        <PropertyRef Name="idCuota" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="RefTNSt04_estadoComprobante74">
+    <End Role="TNSt04_estadoComprobante" Type="Self.TNSt04_estadoComprobante" Multiplicity="0..1" />
+    <End Role="TNSt01_comprobanteEmitido" Type="Self.TNSt01_comprobanteEmitido" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TNSt04_estadoComprobante">
+        <PropertyRef Name="idEstadoComprobante" />
+      </Principal>
+      <Dependent Role="TNSt01_comprobanteEmitido">
+        <PropertyRef Name="idEstadoComprobante" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="RefTNSt05_estadoDeCuenta50">
+    <End Role="TNSt05_estadoDeCuenta" Type="Self.TNSt05_estadoDeCuenta" Multiplicity="1" />
+    <End Role="TNSt03_cuota" Type="Self.TNSt03_cuota" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TNSt05_estadoDeCuenta">
+        <PropertyRef Name="idEstadoDeCuenta" />
+      </Principal>
+      <Dependent Role="TNSt03_cuota">
+        <PropertyRef Name="idEstadoDeCuenta" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="RefUBIt01_distrito67">
+    <End Role="UBIt01_distrito" Type="Self.UBIt01_distrito" Multiplicity="0..1" />
+    <End Role="RHUt09_persona" Type="Self.RHUt09_persona" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="UBIt01_distrito">
+        <PropertyRef Name="idDistrito" />
+      </Principal>
+      <Dependent Role="RHUt09_persona">
+        <PropertyRef Name="idDistrito" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="RefUBIt02_provincia42">
+    <End Role="UBIt02_provincia" Type="Self.UBIt02_provincia" Multiplicity="1" />
+    <End Role="UBIt01_distrito" Type="Self.UBIt01_distrito" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="UBIt02_provincia">
+        <PropertyRef Name="idProvincia" />
+      </Principal>
+      <Dependent Role="UBIt01_distrito">
+        <PropertyRef Name="idProvincia" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="RefUBIt03_region41">
+    <End Role="UBIt03_region" Type="Self.UBIt03_region" Multiplicity="1" />
+    <End Role="UBIt02_provincia" Type="Self.UBIt02_provincia" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="UBIt03_region">
+        <PropertyRef Name="idRegion" />
+      </Principal>
+      <Dependent Role="UBIt02_provincia">
+        <PropertyRef Name="idRegion" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="RefUBIt04_via64">
+    <End Role="UBIt04_via" Type="Self.UBIt04_via" Multiplicity="0..1" />
+    <End Role="RHUt09_persona" Type="Self.RHUt09_persona" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="UBIt04_via">
+        <PropertyRef Name="idVia" />
+      </Principal>
+      <Dependent Role="RHUt09_persona">
+        <PropertyRef Name="idVia" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="RefUBIt05_zona63">
+    <End Role="UBIt05_zona" Type="Self.UBIt05_zona" Multiplicity="0..1" />
+    <End Role="RHUt09_persona" Type="Self.RHUt09_persona" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="UBIt05_zona">
+        <PropertyRef Name="idZona" />
+      </Principal>
+      <Dependent Role="RHUt09_persona">
+        <PropertyRef Name="idZona" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="AsiriModelStoreContainer">
+    <EntitySet Name="__MigrationHistory" EntityType="Self.__MigrationHistory" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="AspNetPermisos" EntityType="Self.AspNetPermisos" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="AspNetRoles" EntityType="Self.AspNetRoles" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="AspNetRolesPermisos" EntityType="Self.AspNetRolesPermisos" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="AspNetUserClaims" EntityType="Self.AspNetUserClaims" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="AspNetUserLogins" EntityType="Self.AspNetUserLogins" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="AspNetUserRoles" EntityType="Self.AspNetUserRoles" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="AspNetUsers" EntityType="Self.AspNetUsers" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="CLIt01_anamnesis" EntityType="Self.CLIt01_anamnesis" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="CLIt02_archivoEstudioCompl" EntityType="Self.CLIt02_archivoEstudioCompl" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="CLlt03_atencion" EntityType="Self.CLlt03_atencion" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="CLlt04_cie10" EntityType="Self.CLlt04_cie10" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="CLlt05_cita" EntityType="Self.CLlt05_cita" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="CLlt06_citaDtl" EntityType="Self.CLlt06_citaDtl" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="CLlt07_consultorio" EntityType="Self.CLlt07_consultorio" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="CLlt08_diagnostico" EntityType="Self.CLlt08_diagnostico" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="CLlt09_estadoCita" EntityType="Self.CLlt09_estadoCita" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="CLlt10_estudioCompl" EntityType="Self.CLlt10_estudioCompl" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="CLlt11_evolucion" EntityType="Self.CLlt11_evolucion" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="CLlt12_examenFisico" EntityType="Self.CLlt12_examenFisico" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="CLlt13_funcionVital" EntityType="Self.CLlt13_funcionVital" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="CLlt14_seguro" EntityType="Self.CLlt14_seguro" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="CLlt15_seguroPaciente" EntityType="Self.CLlt15_seguroPaciente" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="CLlt16_tratamiento" EntityType="Self.CLlt16_tratamiento" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="CLlt17_tratamientoDtl" EntityType="Self.CLlt17_tratamientoDtl" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="CustomPermiso" EntityType="Self.CustomPermiso" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Menu" EntityType="Self.Menu" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="MSTt01_medioDePago" EntityType="Self.MSTt01_medioDePago" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="MSTt02_piso" EntityType="Self.MSTt02_piso" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="MSTt03_redSocial" EntityType="Self.MSTt03_redSocial" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="MSTt04_sucursal" EntityType="Self.MSTt04_sucursal" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="MSTt05_tipoSucursal" EntityType="Self.MSTt05_tipoSucursal" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Permiso" EntityType="Self.Permiso" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="PROt01_categoria" EntityType="Self.PROt01_categoria" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="PROt02_producto" EntityType="Self.PROt02_producto" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="PROt03_productoUnidadDeMedida" EntityType="Self.PROt03_productoUnidadDeMedida" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="PROt04_servicio" EntityType="Self.PROt04_servicio" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="PROt05_tipoDeServicio" EntityType="Self.PROt05_tipoDeServicio" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="PROt06_unidadDeMedida" EntityType="Self.PROt06_unidadDeMedida" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="RHUt01_empleado" EntityType="Self.RHUt01_empleado" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="RHUt02_empleadoEspecialidad" EntityType="Self.RHUt02_empleadoEspecialidad" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="RHUt03_empleadoTurno" EntityType="Self.RHUt03_empleadoTurno" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="RHUt04_especialidad" EntityType="Self.RHUt04_especialidad" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="RHUt05_estadoCivil" EntityType="Self.RHUt05_estadoCivil" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="RHUt06_horario" EntityType="Self.RHUt06_horario" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="RHUt07_paciente" EntityType="Self.RHUt07_paciente" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="RHUt08_periodoRemuneracion" EntityType="Self.RHUt08_periodoRemuneracion" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="RHUt09_persona" EntityType="Self.RHUt09_persona" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="RHUt10_personaRedSocial" EntityType="Self.RHUt10_personaRedSocial" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="RHUt11_tipoDeEmpleado" EntityType="Self.RHUt11_tipoDeEmpleado" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="RHUt12_tipoDocIdentidad" EntityType="Self.RHUt12_tipoDocIdentidad" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="RHUt13_tipoEspecialidad" EntityType="Self.RHUt13_tipoEspecialidad" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="RHUt14_turno" EntityType="Self.RHUt14_turno" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="SISt01_parametro" EntityType="Self.SISt01_parametro" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="SNTt01_entidadFinanciera" EntityType="Self.SNTt01_entidadFinanciera" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="SNTt02_impuesto" EntityType="Self.SNTt02_impuesto" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="SNTt03_moneda" EntityType="Self.SNTt03_moneda" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="SNTt04_tipoComprobante" EntityType="Self.SNTt04_tipoComprobante" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="SNTt05_tipoMedioDePago" EntityType="Self.SNTt05_tipoMedioDePago" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TNSt01_comprobanteEmitido" EntityType="Self.TNSt01_comprobanteEmitido" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TNSt02_comprobanteEmitidoDtl" EntityType="Self.TNSt02_comprobanteEmitidoDtl" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TNSt03_cuota" EntityType="Self.TNSt03_cuota" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TNSt04_estadoComprobante" EntityType="Self.TNSt04_estadoComprobante" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TNSt05_estadoDeCuenta" EntityType="Self.TNSt05_estadoDeCuenta" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TNSt06_medioDePagoDtl" EntityType="Self.TNSt06_medioDePagoDtl" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TNSt07_numeracion" EntityType="Self.TNSt07_numeracion" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="UBIt01_distrito" EntityType="Self.UBIt01_distrito" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="UBIt02_provincia" EntityType="Self.UBIt02_provincia" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="UBIt03_region" EntityType="Self.UBIt03_region" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="UBIt04_via" EntityType="Self.UBIt04_via" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="UBIt05_zona" EntityType="Self.UBIt05_zona" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="MenuTemp" EntityType="Self.MenuTemp" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [MenuTemp].[MenuID] AS [MenuID], 
+    [MenuTemp].[DisplayName] AS [DisplayName], 
+    [MenuTemp].[ParentMenuID] AS [ParentMenuID], 
+    [MenuTemp].[OrderNumber] AS [OrderNumber], 
+    [MenuTemp].[MenuURL] AS [MenuURL], 
+    [MenuTemp].[MenuIcon] AS [MenuIcon]
+    FROM [dbo].[MenuTemp] AS [MenuTemp]</DefiningQuery>
+    </EntitySet>
+    <AssociationSet Name="FK_AspNetRolesPermisos_AspNetPermisos" Association="Self.FK_AspNetRolesPermisos_AspNetPermisos">
+      <End Role="AspNetPermisos" EntitySet="AspNetPermisos" />
+      <End Role="AspNetRolesPermisos" EntitySet="AspNetRolesPermisos" />
+    </AssociationSet>
+    <AssociationSet Name="FK_AspNetRolesPermisos_AspNetRoles" Association="Self.FK_AspNetRolesPermisos_AspNetRoles">
+      <End Role="AspNetRoles" EntitySet="AspNetRoles" />
+      <End Role="AspNetRolesPermisos" EntitySet="AspNetRolesPermisos" />
+    </AssociationSet>
+    <AssociationSet Name="FK_AspNetUsers_RHUt01_empleado" Association="Self.FK_AspNetUsers_RHUt01_empleado">
+      <End Role="RHUt01_empleado" EntitySet="RHUt01_empleado" />
+      <End Role="AspNetUsers" EntitySet="AspNetUsers" />
+    </AssociationSet>
+    <AssociationSet Name="FK_CustomPermiso_MenuID" Association="Self.FK_CustomPermiso_MenuID">
+      <End Role="Menu" EntitySet="Menu" />
+      <End Role="CustomPermiso" EntitySet="CustomPermiso" />
+    </AssociationSet>
+    <AssociationSet Name="FK_CustomPermiso_RoleID" Association="Self.FK_CustomPermiso_RoleID">
+      <End Role="AspNetUsers" EntitySet="AspNetUsers" />
+      <End Role="CustomPermiso" EntitySet="CustomPermiso" />
+    </AssociationSet>
+    <AssociationSet Name="FK_dbo_AspNetUserClaims_dbo_AspNetUsers_UserId" Association="Self.FK_dbo_AspNetUserClaims_dbo_AspNetUsers_UserId">
+      <End Role="AspNetUsers" EntitySet="AspNetUsers" />
+      <End Role="AspNetUserClaims" EntitySet="AspNetUserClaims" />
+    </AssociationSet>
+    <AssociationSet Name="FK_dbo_AspNetUserLogins_dbo_AspNetUsers_UserId" Association="Self.FK_dbo_AspNetUserLogins_dbo_AspNetUsers_UserId">
+      <End Role="AspNetUsers" EntitySet="AspNetUsers" />
+      <End Role="AspNetUserLogins" EntitySet="AspNetUserLogins" />
+    </AssociationSet>
+    <AssociationSet Name="FK_dbo_AspNetUserRoles_dbo_AspNetRoles_RoleId" Association="Self.FK_dbo_AspNetUserRoles_dbo_AspNetRoles_RoleId">
+      <End Role="AspNetRoles" EntitySet="AspNetRoles" />
+      <End Role="AspNetUserRoles" EntitySet="AspNetUserRoles" />
+    </AssociationSet>
+    <AssociationSet Name="FK_dbo_AspNetUserRoles_dbo_AspNetUsers_UserId" Association="Self.FK_dbo_AspNetUserRoles_dbo_AspNetUsers_UserId">
+      <End Role="AspNetUsers" EntitySet="AspNetUsers" />
+      <End Role="AspNetUserRoles" EntitySet="AspNetUserRoles" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Permiso_MenuID" Association="Self.FK_Permiso_MenuID">
+      <End Role="Menu" EntitySet="Menu" />
+      <End Role="Permiso" EntitySet="Permiso" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Permiso_RoleID" Association="Self.FK_Permiso_RoleID">
+      <End Role="AspNetRoles" EntitySet="AspNetRoles" />
+      <End Role="Permiso" EntitySet="Permiso" />
+    </AssociationSet>
+    <AssociationSet Name="RefCLlt03_atencion11" Association="Self.RefCLlt03_atencion11">
+      <End Role="CLlt03_atencion" EntitySet="CLlt03_atencion" />
+      <End Role="CLlt12_examenFisico" EntitySet="CLlt12_examenFisico" />
+    </AssociationSet>
+    <AssociationSet Name="RefCLlt03_atencion12" Association="Self.RefCLlt03_atencion12">
+      <End Role="CLlt03_atencion" EntitySet="CLlt03_atencion" />
+      <End Role="CLlt13_funcionVital" EntitySet="CLlt13_funcionVital" />
+    </AssociationSet>
+    <AssociationSet Name="RefCLlt03_atencion13" Association="Self.RefCLlt03_atencion13">
+      <End Role="CLlt03_atencion" EntitySet="CLlt03_atencion" />
+      <End Role="CLlt10_estudioCompl" EntitySet="CLlt10_estudioCompl" />
+    </AssociationSet>
+    <AssociationSet Name="RefCLlt03_atencion16" Association="Self.RefCLlt03_atencion16">
+      <End Role="CLlt03_atencion" EntitySet="CLlt03_atencion" />
+      <End Role="CLIt01_anamnesis" EntitySet="CLIt01_anamnesis" />
+    </AssociationSet>
+    <AssociationSet Name="RefCLlt03_atencion18" Association="Self.RefCLlt03_atencion18">
+      <End Role="CLlt03_atencion" EntitySet="CLlt03_atencion" />
+      <End Role="CLlt08_diagnostico" EntitySet="CLlt08_diagnostico" />
+    </AssociationSet>
+    <AssociationSet Name="RefCLlt03_atencion31" Association="Self.RefCLlt03_atencion31">
+      <End Role="CLlt03_atencion" EntitySet="CLlt03_atencion" />
+      <End Role="CLlt11_evolucion" EntitySet="CLlt11_evolucion" />
+    </AssociationSet>
+    <AssociationSet Name="RefCLlt04_cie1020" Association="Self.RefCLlt04_cie1020">
+      <End Role="CLlt04_cie10" EntitySet="CLlt04_cie10" />
+      <End Role="CLlt08_diagnostico" EntitySet="CLlt08_diagnostico" />
+    </AssociationSet>
+    <AssociationSet Name="RefCLlt05_cita101" Association="Self.RefCLlt05_cita101">
+      <End Role="CLlt05_cita" EntitySet="CLlt05_cita" />
+      <End Role="CLlt06_citaDtl" EntitySet="CLlt06_citaDtl" />
+    </AssociationSet>
+    <AssociationSet Name="RefCLlt05_cita113" Association="Self.RefCLlt05_cita113">
+      <End Role="CLlt05_cita" EntitySet="CLlt05_cita" />
+      <End Role="TNSt05_estadoDeCuenta" EntitySet="TNSt05_estadoDeCuenta" />
+    </AssociationSet>
+    <AssociationSet Name="RefCLlt05_cita36" Association="Self.RefCLlt05_cita36">
+      <End Role="CLlt05_cita" EntitySet="CLlt05_cita" />
+      <End Role="TNSt01_comprobanteEmitido" EntitySet="TNSt01_comprobanteEmitido" />
+    </AssociationSet>
+    <AssociationSet Name="RefCLlt05_cita9" Association="Self.RefCLlt05_cita9">
+      <End Role="CLlt05_cita" EntitySet="CLlt05_cita" />
+      <End Role="CLlt03_atencion" EntitySet="CLlt03_atencion" />
+    </AssociationSet>
+    <AssociationSet Name="RefCLlt06_citaDtl112" Association="Self.RefCLlt06_citaDtl112">
+      <End Role="CLlt06_citaDtl" EntitySet="CLlt06_citaDtl" />
+      <End Role="TNSt02_comprobanteEmitidoDtl" EntitySet="TNSt02_comprobanteEmitidoDtl" />
+    </AssociationSet>
+    <AssociationSet Name="RefCLlt07_consultorio100" Association="Self.RefCLlt07_consultorio100">
+      <End Role="CLlt07_consultorio" EntitySet="CLlt07_consultorio" />
+      <End Role="RHUt01_empleado" EntitySet="RHUt01_empleado" />
+    </AssociationSet>
+    <AssociationSet Name="RefCLlt08_diagnostico22" Association="Self.RefCLlt08_diagnostico22">
+      <End Role="CLlt08_diagnostico" EntitySet="CLlt08_diagnostico" />
+      <End Role="CLlt16_tratamiento" EntitySet="CLlt16_tratamiento" />
+    </AssociationSet>
+    <AssociationSet Name="RefCLlt09_estadoCita75" Association="Self.RefCLlt09_estadoCita75">
+      <End Role="CLlt09_estadoCita" EntitySet="CLlt09_estadoCita" />
+      <End Role="CLlt05_cita" EntitySet="CLlt05_cita" />
+    </AssociationSet>
+    <AssociationSet Name="RefCLlt10_estudioCompl14" Association="Self.RefCLlt10_estudioCompl14">
+      <End Role="CLlt10_estudioCompl" EntitySet="CLlt10_estudioCompl" />
+      <End Role="CLIt02_archivoEstudioCompl" EntitySet="CLIt02_archivoEstudioCompl" />
+    </AssociationSet>
+    <AssociationSet Name="RefCLlt14_seguro59" Association="Self.RefCLlt14_seguro59">
+      <End Role="CLlt14_seguro" EntitySet="CLlt14_seguro" />
+      <End Role="CLlt15_seguroPaciente" EntitySet="CLlt15_seguroPaciente" />
+    </AssociationSet>
+    <AssociationSet Name="RefCLlt16_tratamiento24" Association="Self.RefCLlt16_tratamiento24">
+      <End Role="CLlt16_tratamiento" EntitySet="CLlt16_tratamiento" />
+      <End Role="CLlt17_tratamientoDtl" EntitySet="CLlt17_tratamientoDtl" />
+    </AssociationSet>
+    <AssociationSet Name="RefMSTt01_medioDePago44" Association="Self.RefMSTt01_medioDePago44">
+      <End Role="MSTt01_medioDePago" EntitySet="MSTt01_medioDePago" />
+      <End Role="TNSt06_medioDePagoDtl" EntitySet="TNSt06_medioDePagoDtl" />
+    </AssociationSet>
+    <AssociationSet Name="RefMSTt01_medioDePago89" Association="Self.RefMSTt01_medioDePago89">
+      <End Role="MSTt01_medioDePago" EntitySet="MSTt01_medioDePago" />
+      <End Role="RHUt01_empleado" EntitySet="RHUt01_empleado" />
+    </AssociationSet>
+    <AssociationSet Name="RefMSTt02_piso82" Association="Self.RefMSTt02_piso82">
+      <End Role="MSTt02_piso" EntitySet="MSTt02_piso" />
+      <End Role="CLlt07_consultorio" EntitySet="CLlt07_consultorio" />
+    </AssociationSet>
+    <AssociationSet Name="RefMSTt03_redSocial86" Association="Self.RefMSTt03_redSocial86">
+      <End Role="MSTt03_redSocial" EntitySet="MSTt03_redSocial" />
+      <End Role="RHUt10_personaRedSocial" EntitySet="RHUt10_personaRedSocial" />
+    </AssociationSet>
+    <AssociationSet Name="RefMSTt04_sucursal73" Association="Self.RefMSTt04_sucursal73">
+      <End Role="MSTt04_sucursal" EntitySet="MSTt04_sucursal" />
+      <End Role="TNSt01_comprobanteEmitido" EntitySet="TNSt01_comprobanteEmitido" />
+    </AssociationSet>
+    <AssociationSet Name="RefMSTt05_tipoSucursal72" Association="Self.RefMSTt05_tipoSucursal72">
+      <End Role="MSTt05_tipoSucursal" EntitySet="MSTt05_tipoSucursal" />
+      <End Role="MSTt04_sucursal" EntitySet="MSTt04_sucursal" />
+    </AssociationSet>
+    <AssociationSet Name="RefPROt01_categoria23" Association="Self.RefPROt01_categoria23">
+      <End Role="PROt01_categoria" EntitySet="PROt01_categoria" />
+      <End Role="PROt02_producto" EntitySet="PROt02_producto" />
+    </AssociationSet>
+    <AssociationSet Name="RefPROt02_producto25" Association="Self.RefPROt02_producto25">
+      <End Role="PROt02_producto" EntitySet="PROt02_producto" />
+      <End Role="CLlt17_tratamientoDtl" EntitySet="CLlt17_tratamientoDtl" />
+    </AssociationSet>
+    <AssociationSet Name="RefPROt02_producto78" Association="Self.RefPROt02_producto78">
+      <End Role="PROt02_producto" EntitySet="PROt02_producto" />
+      <End Role="PROt03_productoUnidadDeMedida" EntitySet="PROt03_productoUnidadDeMedida" />
+    </AssociationSet>
+    <AssociationSet Name="RefPROt04_servicio102" Association="Self.RefPROt04_servicio102">
+      <End Role="PROt04_servicio" EntitySet="PROt04_servicio" />
+      <End Role="CLlt06_citaDtl" EntitySet="CLlt06_citaDtl" />
+    </AssociationSet>
+    <AssociationSet Name="RefPROt04_servicio27" Association="Self.RefPROt04_servicio27">
+      <End Role="PROt04_servicio" EntitySet="PROt04_servicio" />
+      <End Role="CLlt17_tratamientoDtl" EntitySet="CLlt17_tratamientoDtl" />
+    </AssociationSet>
+    <AssociationSet Name="RefPROt05_tipoDeServicio84" Association="Self.RefPROt05_tipoDeServicio84">
+      <End Role="PROt05_tipoDeServicio" EntitySet="PROt05_tipoDeServicio" />
+      <End Role="PROt04_servicio" EntitySet="PROt04_servicio" />
+    </AssociationSet>
+    <AssociationSet Name="RefPROt06_unidadDeMedida77" Association="Self.RefPROt06_unidadDeMedida77">
+      <End Role="PROt06_unidadDeMedida" EntitySet="PROt06_unidadDeMedida" />
+      <End Role="PROt03_productoUnidadDeMedida" EntitySet="PROt03_productoUnidadDeMedida" />
+    </AssociationSet>
+    <AssociationSet Name="RefRHUt01_empleado3" Association="Self.RefRHUt01_empleado3">
+      <End Role="RHUt01_empleado" EntitySet="RHUt01_empleado" />
+      <End Role="RHUt02_empleadoEspecialidad" EntitySet="RHUt02_empleadoEspecialidad" />
+    </AssociationSet>
+    <AssociationSet Name="RefRHUt01_empleado80" Association="Self.RefRHUt01_empleado80">
+      <End Role="RHUt01_empleado" EntitySet="RHUt01_empleado" />
+      <End Role="RHUt03_empleadoTurno" EntitySet="RHUt03_empleadoTurno" />
+    </AssociationSet>
+    <AssociationSet Name="RefRHUt01_empleado90" Association="Self.RefRHUt01_empleado90">
+      <End Role="RHUt01_empleado" EntitySet="RHUt01_empleado" />
+      <End Role="CLlt05_cita" EntitySet="CLlt05_cita" />
+    </AssociationSet>
+    <AssociationSet Name="RefRHUt01_empleado95" Association="Self.RefRHUt01_empleado95">
+      <End Role="RHUt01_empleado" EntitySet="RHUt01_empleado" />
+      <End Role="RHUt06_horario" EntitySet="RHUt06_horario" />
+    </AssociationSet>
+    <AssociationSet Name="RefRHUt04_especialidad111" Association="Self.RefRHUt04_especialidad111">
+      <End Role="RHUt04_especialidad" EntitySet="RHUt04_especialidad" />
+      <End Role="PROt04_servicio" EntitySet="PROt04_servicio" />
+    </AssociationSet>
+    <AssociationSet Name="RefRHUt04_especialidad4" Association="Self.RefRHUt04_especialidad4">
+      <End Role="RHUt04_especialidad" EntitySet="RHUt04_especialidad" />
+      <End Role="RHUt02_empleadoEspecialidad" EntitySet="RHUt02_empleadoEspecialidad" />
+    </AssociationSet>
+    <AssociationSet Name="RefRHUt05_estadoCivil65" Association="Self.RefRHUt05_estadoCivil65">
+      <End Role="RHUt05_estadoCivil" EntitySet="RHUt05_estadoCivil" />
+      <End Role="RHUt09_persona" EntitySet="RHUt09_persona" />
+    </AssociationSet>
+    <AssociationSet Name="RefRHUt07_paciente33" Association="Self.RefRHUt07_paciente33">
+      <End Role="RHUt07_paciente" EntitySet="RHUt07_paciente" />
+      <End Role="CLlt05_cita" EntitySet="CLlt05_cita" />
+    </AssociationSet>
+    <AssociationSet Name="RefRHUt07_paciente60" Association="Self.RefRHUt07_paciente60">
+      <End Role="RHUt07_paciente" EntitySet="RHUt07_paciente" />
+      <End Role="CLlt15_seguroPaciente" EntitySet="CLlt15_seguroPaciente" />
+    </AssociationSet>
+    <AssociationSet Name="RefRHUt08_periodoRemuneracion88" Association="Self.RefRHUt08_periodoRemuneracion88">
+      <End Role="RHUt08_periodoRemuneracion" EntitySet="RHUt08_periodoRemuneracion" />
+      <End Role="RHUt01_empleado" EntitySet="RHUt01_empleado" />
+    </AssociationSet>
+    <AssociationSet Name="RefRHUt09_persona68" Association="Self.RefRHUt09_persona68">
+      <End Role="RHUt09_persona" EntitySet="RHUt09_persona" />
+      <End Role="RHUt07_paciente" EntitySet="RHUt07_paciente" />
+    </AssociationSet>
+    <AssociationSet Name="RefRHUt09_persona69" Association="Self.RefRHUt09_persona69">
+      <End Role="RHUt09_persona" EntitySet="RHUt09_persona" />
+      <End Role="RHUt01_empleado" EntitySet="RHUt01_empleado" />
+    </AssociationSet>
+    <AssociationSet Name="RefRHUt09_persona87" Association="Self.RefRHUt09_persona87">
+      <End Role="RHUt09_persona" EntitySet="RHUt09_persona" />
+      <End Role="RHUt10_personaRedSocial" EntitySet="RHUt10_personaRedSocial" />
+    </AssociationSet>
+    <AssociationSet Name="RefRHUt11_tipoDeEmpleado85" Association="Self.RefRHUt11_tipoDeEmpleado85">
+      <End Role="RHUt11_tipoDeEmpleado" EntitySet="RHUt11_tipoDeEmpleado" />
+      <End Role="RHUt01_empleado" EntitySet="RHUt01_empleado" />
+    </AssociationSet>
+    <AssociationSet Name="RefRHUt12_tipoDocIdentidad66" Association="Self.RefRHUt12_tipoDocIdentidad66">
+      <End Role="RHUt12_tipoDocIdentidad" EntitySet="RHUt12_tipoDocIdentidad" />
+      <End Role="RHUt09_persona" EntitySet="RHUt09_persona" />
+    </AssociationSet>
+    <AssociationSet Name="RefRHUt13_tipoEspecialidad83" Association="Self.RefRHUt13_tipoEspecialidad83">
+      <End Role="RHUt13_tipoEspecialidad" EntitySet="RHUt13_tipoEspecialidad" />
+      <End Role="RHUt04_especialidad" EntitySet="RHUt04_especialidad" />
+    </AssociationSet>
+    <AssociationSet Name="RefRHUt14_turno81" Association="Self.RefRHUt14_turno81">
+      <End Role="RHUt14_turno" EntitySet="RHUt14_turno" />
+      <End Role="RHUt03_empleadoTurno" EntitySet="RHUt03_empleadoTurno" />
+    </AssociationSet>
+    <AssociationSet Name="RefSNTt01_entidadFinanciera61" Association="Self.RefSNTt01_entidadFinanciera61">
+      <End Role="SNTt01_entidadFinanciera" EntitySet="SNTt01_entidadFinanciera" />
+      <End Role="RHUt01_empleado" EntitySet="RHUt01_empleado" />
+    </AssociationSet>
+    <AssociationSet Name="RefSNTt02_impuesto94" Association="Self.RefSNTt02_impuesto94">
+      <End Role="SNTt02_impuesto" EntitySet="SNTt02_impuesto" />
+      <End Role="TNSt01_comprobanteEmitido" EntitySet="TNSt01_comprobanteEmitido" />
+    </AssociationSet>
+    <AssociationSet Name="RefSNTt03_moneda114" Association="Self.RefSNTt03_moneda114">
+      <End Role="SNTt03_moneda" EntitySet="SNTt03_moneda" />
+      <End Role="TNSt06_medioDePagoDtl" EntitySet="TNSt06_medioDePagoDtl" />
+    </AssociationSet>
+    <AssociationSet Name="RefSNTt03_moneda70" Association="Self.RefSNTt03_moneda70">
+      <End Role="SNTt03_moneda" EntitySet="SNTt03_moneda" />
+      <End Role="PROt02_producto" EntitySet="PROt02_producto" />
+    </AssociationSet>
+    <AssociationSet Name="RefSNTt03_moneda71" Association="Self.RefSNTt03_moneda71">
+      <End Role="SNTt03_moneda" EntitySet="SNTt03_moneda" />
+      <End Role="TNSt01_comprobanteEmitido" EntitySet="TNSt01_comprobanteEmitido" />
+    </AssociationSet>
+    <AssociationSet Name="RefSNTt04_tipoComprobante48" Association="Self.RefSNTt04_tipoComprobante48">
+      <End Role="SNTt04_tipoComprobante" EntitySet="SNTt04_tipoComprobante" />
+      <End Role="TNSt01_comprobanteEmitido" EntitySet="TNSt01_comprobanteEmitido" />
+    </AssociationSet>
+    <AssociationSet Name="RefSNTt05_tipoMedioDePago43" Association="Self.RefSNTt05_tipoMedioDePago43">
+      <End Role="SNTt05_tipoMedioDePago" EntitySet="SNTt05_tipoMedioDePago" />
+      <End Role="MSTt01_medioDePago" EntitySet="MSTt01_medioDePago" />
+    </AssociationSet>
+    <AssociationSet Name="RefTNSt01_comprobanteEmitido35" Association="Self.RefTNSt01_comprobanteEmitido35">
+      <End Role="TNSt01_comprobanteEmitido" EntitySet="TNSt01_comprobanteEmitido" />
+      <End Role="TNSt02_comprobanteEmitidoDtl" EntitySet="TNSt02_comprobanteEmitidoDtl" />
+    </AssociationSet>
+    <AssociationSet Name="RefTNSt01_comprobanteEmitido47" Association="Self.RefTNSt01_comprobanteEmitido47">
+      <End Role="TNSt01_comprobanteEmitido" EntitySet="TNSt01_comprobanteEmitido" />
+      <End Role="TNSt06_medioDePagoDtl" EntitySet="TNSt06_medioDePagoDtl" />
+    </AssociationSet>
+    <AssociationSet Name="RefTNSt03_cuota115" Association="Self.RefTNSt03_cuota115">
+      <End Role="TNSt03_cuota" EntitySet="TNSt03_cuota" />
+      <End Role="TNSt01_comprobanteEmitido" EntitySet="TNSt01_comprobanteEmitido" />
+    </AssociationSet>
+    <AssociationSet Name="RefTNSt04_estadoComprobante74" Association="Self.RefTNSt04_estadoComprobante74">
+      <End Role="TNSt04_estadoComprobante" EntitySet="TNSt04_estadoComprobante" />
+      <End Role="TNSt01_comprobanteEmitido" EntitySet="TNSt01_comprobanteEmitido" />
+    </AssociationSet>
+    <AssociationSet Name="RefTNSt05_estadoDeCuenta50" Association="Self.RefTNSt05_estadoDeCuenta50">
+      <End Role="TNSt05_estadoDeCuenta" EntitySet="TNSt05_estadoDeCuenta" />
+      <End Role="TNSt03_cuota" EntitySet="TNSt03_cuota" />
+    </AssociationSet>
+    <AssociationSet Name="RefUBIt01_distrito67" Association="Self.RefUBIt01_distrito67">
+      <End Role="UBIt01_distrito" EntitySet="UBIt01_distrito" />
+      <End Role="RHUt09_persona" EntitySet="RHUt09_persona" />
+    </AssociationSet>
+    <AssociationSet Name="RefUBIt02_provincia42" Association="Self.RefUBIt02_provincia42">
+      <End Role="UBIt02_provincia" EntitySet="UBIt02_provincia" />
+      <End Role="UBIt01_distrito" EntitySet="UBIt01_distrito" />
+    </AssociationSet>
+    <AssociationSet Name="RefUBIt03_region41" Association="Self.RefUBIt03_region41">
+      <End Role="UBIt03_region" EntitySet="UBIt03_region" />
+      <End Role="UBIt02_provincia" EntitySet="UBIt02_provincia" />
+    </AssociationSet>
+    <AssociationSet Name="RefUBIt04_via64" Association="Self.RefUBIt04_via64">
+      <End Role="UBIt04_via" EntitySet="UBIt04_via" />
+      <End Role="RHUt09_persona" EntitySet="RHUt09_persona" />
+    </AssociationSet>
+    <AssociationSet Name="RefUBIt05_zona63" Association="Self.RefUBIt05_zona63">
+      <End Role="UBIt05_zona" EntitySet="UBIt05_zona" />
+      <End Role="RHUt09_persona" EntitySet="RHUt09_persona" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

@@ -1,0 +1,52 @@
+﻿@using Microsoft.AspNet.Identity
+@if (Request.IsAuthenticated)
+{
+    using (Html.BeginForm("LogOff", "Account", FormMethod.Post, new { id = "logoutForm", @class = "navbar-right" }))
+    {
+        @Html.AntiForgeryToken()
+
+        <li class="dropdown dropdown-user">
+            @*<a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-close-others="true">
+
+                    <span class="username username-hide-on-mobile"> @User.Identity.GetUserName() </span>
+                    <i class="fa fa-angle-down"></i>
+
+                </a>*@
+
+            <a>
+                @Html.ActionLink("Cambiar la contraseña", "ChangePassword", "Manage",null, new { @class = "fa fa-cog fa-lg" })
+            </a>
+            <a href="javascript:document.getElementById('logoutForm').submit()">
+                <i class="fa fa-sign-out fa-lg"></i> Log Out
+            </a>
+
+            
+
+
+
+            @*<ul class="dropdown-menu dropdown-menu-default">
+                @*<li>
+                    <a href="page_user_profile_1.html">
+                        <i class="icon-user"></i> My Profile
+                    </a>
+                </li>*@
+            @*<li>
+                        <a href="javascript:document.getElementById('logoutForm').submit()">
+                            <i class="fa fa-sign-out fa-lg"></i> Log Out
+                        </a>
+                    </li>
+                </ul>*@
+
+        </li>
+    }
+}
+else
+{
+    <!--
+        <li class="dropdown dropdown-user">@*Html.ActionLink("Register", "Register", "Account", routeValues: null, htmlAttributes: new { id = "registerLink" })*@</li>
+    -->
+    <li class="dropdown dropdown-user">@Html.ActionLink("Log in", "Login", "Account", routeValues: null, htmlAttributes: new { id = "loginLink" })</li>
+}
+
+
+

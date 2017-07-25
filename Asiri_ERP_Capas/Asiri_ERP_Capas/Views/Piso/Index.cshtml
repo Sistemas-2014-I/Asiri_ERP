@@ -1,0 +1,177 @@
+﻿@model IEnumerable<Common.MSTt02_piso>
+
+    <!--********************************TITULO*******************************-->
+    <div class="page-title">
+        <div>
+            <h1><i class="fa fa-edit"></i> Mantenimiento de Piso</h1>
+            <p>Lista de Pisos ...!</p>
+        </div>
+        <div>
+            <ul class="breadcrumb">
+                <li><i class="fa fa-home fa-lg"></i></li>
+                <li>Maestro</li>
+                <li><a href="#">Lista Pisos</a></li>
+            </ul>
+        </div>
+    </div>
+    <!--********************************FIN TITULO*******************************-->
+    <!--AQUÍ VA EL CODIGO-->
+    <div class="row">
+        <div class="col-md-12">
+            <!--CODIGO MODIFICAR-->
+            <div class="card">
+                <!--*********************************************AQUÍ MODIFICAR CARD***************************-->
+                <!--*********************************************CARD***************************-->
+                <!--CONTAINER TITLE-->
+                <!--ACTIONS-->
+                <div class="card-title-w-btn ">
+                    <!--NEW PATIENT-->
+                    <div class="bs-component">
+                        <div>
+                            <a class="btn btn-info icon-btn" href="@Url.Action("Create")">
+                                <i class="fa fa-fw fa-lg fa-user-plus"></i>Nuevo Piso
+                            </a>
+                        </div>
+                    </div>
+                    <!--EXPORT-->
+                    <div class="btn-group">
+                        <a class="btn btn-primary dropdown-toggle" href="#" data-toggle="dropdown"><i class="fa fa-fw fa-lg fa-cloud-download"></i>Exportar <span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">PDF</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <hr>
+
+                <!--***************TABLE*************-->
+                <div class="card-body table-responsive">
+                    <table class="table table-hover table-bordered " id="sampleTable">
+                        <thead style="color:#ffffff;background:#0094ff;">
+                            <tr>
+                                <th>
+                                    @Html.DisplayNameFor(model => model.numPiso)
+                                </th>
+                                <th>
+                                    @Html.DisplayNameFor(model => model.obsvPiso)
+                                </th>
+                                <th>
+                                    @Html.DisplayNameFor(model => model.activo)
+                                </th>
+                                <th>
+                                    @Html.Label("Acciones")
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach (var item in Model)
+                            {
+                                <tr>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.numPiso)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.obsvPiso)
+                                    </td>
+                                    <td>
+                                        @if (item.activo == true)
+                                        {
+                                            <div class="col-md-12" style="text-align: center;">
+                                                <a class="btn btn-success btn-flat"><i class="fa fa-lg fa-thumbs-o-up"></i></a>
+                                            </div>
+                                        }
+                                        else
+                                        {
+                                            <div class="col-md-12" style="text-align: center;">
+                                                <a class="btn btn-danger btn-flat"><i class="fa fa-lg fa-thumbs-o-down"></i></a>
+                                            </div>
+                                        }
+                                    </td>
+                                    <td>
+                                        <div class="col-md-12" style="text-align: center;">
+                                            <div class="col-md-4" style="text-align: center;">
+                                                <a data-id="@item.idPiso" data-num="@item.numPiso" data-obsv="@item.obsvPiso" data-activo="@item.activo" class="detallePiso btn btn-success btn-flat"><i class="fa fa-search-plus"></i></a>
+                                            </div>
+                                            <div class="col-md-4" style="text-align: center;">
+                                                <a class="btn btn-warning btn-flat" href="@Url.Action("Edit", new { id=item.idPiso })"><i class="fa fa-lg fa-edit"></i></a>
+                                            </div>
+                                            <div class="col-md-4" style="text-align: center;">
+                                                <a class="btn btn-danger btn-flat" href="@Url.Action("Delete", new { id = item.idPiso })"><i class="fa fa-lg fa-trash"></i></a>
+                                            </div>
+                                        </div>
+                                    </td>
+                                </tr>
+                            }
+                        </tbody>
+                    </table>
+
+                    <!-- Modal Detalle Modal-->
+                    <div class="modal fade" id="detalleModal" role="dialog">
+                        <div class="modal-dialog modal-lg">
+
+                            <!-- Modal content-->
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <button type="button" data-target="#detalleModal" class="close" data-dismiss="modal">&times;</button>
+                                    <h3 class="modal-title"></h3>
+                                </div>
+                                <div class="modal-body">
+                                    <div class="card col-md-12" style="justify-content:center">
+                                        <div class="card-content">
+                                            <div id="medioPago">
+                                                <div class="row col-md-12">
+                                                    <h4 class="col-md-6">Número:</h4>
+                                                    <h4 class="col-md-6" id="numModal"></h4>
+                                                </div>
+                                                <div class="row col-md-12">
+                                                    <h4 class="col-md-6">Observación:</h4>
+                                                    <h4 class="col-md-6" id="obsvModal"></h4>
+                                                </div>
+                                                <div class="row col-md-12">
+                                                    <h4 class="col-md-6">Activo:</h4>
+                                                    <h4 class="col-md-6" id="activoModal"></h4>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="modal-footer">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!--******************TABLE***********-->
+                <!--*******************************************FIN***********************************-->
+            </div>
+        </div>
+        <!--FIN DE MODIFICAR-->
+    </div>
+
+
+
+
+    @section scripts
+    {
+        @Scripts.Render("~/bundles/table")
+        <script type="text/javascript">
+        $(document).ready(function () {
+            $(".detallePiso").on("click", function () {
+                var id = $(this).attr("data-id");
+                var num = $(this).attr("data-num");
+                var estado = $(this).attr("data-activo");
+                var obsv = $(this).attr("data-obsv");
+                if (estado==="True") {
+                    estado = "activado";
+                } else {
+                    estado = "desacivado";
+                }
+                $(".modal-title").text("Código del Tipo de Medio de Pago " + id);
+                $("#numModal").text(num);
+                $("#obsvModal").text(obsv);
+                $("#activoModal").text(estado);
+                $("#detalleModal").modal("show");
+            });
+        });
+        </script>
+    }

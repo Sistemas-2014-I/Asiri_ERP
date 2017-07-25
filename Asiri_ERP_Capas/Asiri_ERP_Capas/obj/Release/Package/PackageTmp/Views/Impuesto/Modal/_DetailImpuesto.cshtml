@@ -1,0 +1,117 @@
+﻿@model Common.SNTt02_impuesto
+
+<div class="modal-dialog modal-lg">
+    <div class="modal-content">
+        <div class="modal-header">
+            <button type="button" data-target="#_DtModalImpuesto" class="close" data-dismiss="modal">&times;</button>
+            <h3 class="modal-title">Detalle de Impuesto</h3>
+        </div>
+        <div class="modal-body">
+            <div class="row">
+
+                <div class="col-md-12">
+                    <div class="col-md-6">
+                        <h4>@Html.DisplayNameFor(model => model.codImpto)</h4>
+                    </div>
+                    <div class="col-md-6">
+                        <h4>@Html.DisplayFor(model => model.codImpto)</h4>
+                    </div>
+                </div>
+
+                <div class="col-md-12">
+                    <div class="col-md-6">
+                        <h4>@Html.DisplayNameFor(model => model.abrvImpto)</h4>
+                    </div>
+
+                    <div class="col-md-6">
+                        <h4>@Html.DisplayFor(model => model.abrvImpto)</h4>
+                    </div>
+                </div>
+                <div class="col-md-12">
+                    <div class="col-md-6">
+                        <h4>@Html.DisplayNameFor(model => model.descImpto)</h4>
+                    </div>
+
+                    <div class="col-md-6">
+                        <h4>@Html.DisplayFor(model => model.descImpto)</h4>
+                    </div>
+                </div>
+                <div class="col-md-12">
+                    <div class="col-md-6">
+
+                        <h4>@Html.DisplayNameFor(model => model.porcentajeImpto)</h4>
+                    </div>
+
+                    <div class="col-md-6">
+                        <h4>@Html.DisplayFor(model => model.porcentajeImpto)</h4>
+                    </div>
+                </div>
+                <div class="col-md-12">
+                    <div class="col-md-6">
+                        <h4>@Html.DisplayNameFor(x => x.activo)</h4>
+                    </div>
+                    <div class="col-md-6">
+                        <h4>
+                            @{var estado = Model.activo ? "Activado" : "Desactivado";}
+                            @estado
+                        </h4>
+                    </div>
+                </div>
+
+                <div class="col-md-12">
+                    <div class="col-md-6">
+                        <h4>@Html.DisplayNameFor(model => model.fecRegistro)</h4>
+                    </div>
+                    <div class="col-md-6">
+
+                        <h4>@Html.DisplayFor(model => model.fecRegistro)</h4>
+                    </div>
+                </div>
+
+                <div class="col-md-12">
+                    <div class="col-md-6">
+                        <h4>@Html.DisplayNameFor(model => model.fecModificacion)</h4>
+                    </div>
+                    <div class="col-md-6">
+
+                        <h4>@Html.DisplayFor(model => model.fecModificacion)</h4>
+                    </div>
+                </div>
+                <div class="col-md-12">
+                    <div class="col-md-6">
+                        <h4>@Html.DisplayNameFor(model => model.fecEliminacion)</h4>
+                    </div>
+
+                    <div class="col-md-6">
+                        <h4>@Html.DisplayFor(model => model.fecEliminacion)</h4>
+                    </div>
+                </div>
+
+                @*<dt>
+                        @Html.DisplayNameFor(model => model.idUsuario)
+                    </dt>
+
+                    <dd>
+                        @Html.DisplayFor(model => model.idUsuario)
+                    </dd>
+
+                    <dt>
+                        @Html.DisplayNameFor(model => model.idUsuarioModificar)
+                    </dt>
+
+                    <dd>
+                        @Html.DisplayFor(model => model.idUsuarioModificar)
+                    </dd>
+
+                    <dt>
+                        @Html.DisplayNameFor(model => model.idUsuarioEliminar)
+                    </dt>
+
+                    <dd>
+                        @Html.DisplayFor(model => model.idUsuarioEliminar)
+                    </dd>*@
+
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,72 @@
+﻿@model IEnumerable<Mvc_Entity.CLlt06_citaDtl>
+
+<script>
+    $('#tableCitaDtl').dataTable({
+
+        language: {
+            processing: "En curso...",
+            search: "Buscar:",
+            lengthMenu: "Visualizar _MENU_ registros",
+            info: "_START_ de _END_ registros de un total de _TOTAL_ registros",
+            infoEmpty: "0 registros encontrados",
+            infoFiltered: "(_MAX_ registros filtrados en total)",
+            infoPostFix: "",
+            loadingRecords: "Cargando registros...",
+            zeroRecords: "No hay registros",
+            emptyTable: "Vacío",
+            paginate: {
+                first: "Primero",
+                previous: "Previo  ",
+                next: "  Siguiente",
+                last: "Último"
+            },
+            aria: {
+                sortAscending: ": Habilitado para ordenar la columna en orden ascendente",
+                sortDescending: ": Habilitado para ordenar la columna en orden descendente"
+            }
+        }
+    });
+</script>
+<table id="tableCitaDtl" class="table">
+    <thead>
+        <tr>
+            <th>
+                Servicio
+            </th>
+            <th>
+                Precio
+            </th>
+            <th>
+                Cantidad
+            </th>
+            <th>
+                Subtotal
+            </th>
+
+        </tr>
+    </thead>
+    <tbody>
+
+        @foreach (var item in Model)
+        {
+            var subtotal = item.cantidad + item.precio;
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.PROt04_servicio.nombreServicio)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.precio)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.cantidad)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => subtotal)
+                </td>
+
+
+            </tr>
+        }
+    </tbody>
+
+</table>

@@ -1,0 +1,38 @@
+﻿
+@{
+    ViewBag.Title = "ReporteMesAño";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>ReporteMesAño</h2>
+
+
+<script>
+    function validar3() {
+        //obteniendo el valor que se puso en el campo text del formulario
+        var miCampoTexto1 = document.getElementById("txtMes").value;
+        var miCampoTexto2 = document.getElementById("txtAño").value;
+        //la condición
+
+        if (miCampoTexto1.length != 2 || /^\s+$/.test(miCampoTexto1) || miCampoTexto1 == "" || miCampoTexto1 > 12 || miCampoTexto1 == 00 || isNaN(miCampoTexto1)) {
+            alert('El campo de Mes no es valido!');
+            return false;
+        }
+            alert('El campo de Año no es valido');
+            if (miCampoTexto2.length != 4 || /^\s+$/.test(miCampoTexto2) || miCampoTexto2 == "" || 2008 > miCampoTexto2 || isNaN(miCampoTexto2)) {
+            return false;
+        }
+        return true;
+    }
+</script>
+
+@using (Html.BeginForm("ShowGenerico14", "Reportes"))
+{
+    <h2>Reporte Por Mes y Año</h2>
+    <label>MES</label>
+    <input type="text" id="txtMes" name="txtMes" class="dtp" onChange="validarSiNumero(this.value)" />
+    <label>AÑO</label>
+    <input type="text" id="txtAño" name="txtAño" class="dtp" onChange="validarSiNumero(this.value)" />
+    <br />
+    <input type="submit" value="Reporte MES" onclick="return validar3();" />
+}

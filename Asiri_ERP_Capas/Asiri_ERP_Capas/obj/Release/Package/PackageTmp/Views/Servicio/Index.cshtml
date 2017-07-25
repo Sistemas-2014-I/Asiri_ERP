@@ -1,0 +1,162 @@
+﻿@using Helpers
+@model IEnumerable<Common.PROt04_servicio>
+
+@{
+    ViewBag.Title = "Lista de Servicios";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@section styles{
+    
+<link href="~/Content/jquery-confirm.min.css" rel="stylesheet" />
+<link href="~/Content/preload.css" rel="stylesheet" />
+    }
+
+
+<div class="page-title">
+    <div>
+        <h1><i class="fa fa-edit"></i> Mantenimiento de Servicios</h1>
+        <p>Lista de Servicios</p>
+    </div>
+    <ul class="breadcrumb">
+        <li><i class="fa fa-home fa-lg"></i></li>
+        <li>
+            <a href="@Url.Action("Index")">
+                Servicios
+            </a>
+        </li>
+    </ul>
+</div>
+<!--********************************FIN TITULO*******************************-->
+<!--AQUÍ VA EL CODIGO-->
+<div class="row">
+    <div class="col-md-12">
+        <!--CODIGO MODIFICAR-->
+        <div class="card">
+            <!--  gif cargar tabla   -->
+            <div class="preload">
+                <img src="~/Content/img/loading_spinner.gif" />
+            </div>
+            <!--ACTIONS-->
+            <div class="card-title-w-btn ">
+                <!--NEW PATIENT-->
+                <div class="bs-component">
+                    <div>
+                        <a class="btn btn-info icon-btn" href="@Url.Action("Create")">
+                            <i class="fa fa-fw fa-lg fa-user-plus"></i>Nuevo Servicio
+                        </a>
+                    </div>
+                </div>
+                <!--EXPORT-->
+                <div class="btn-group">
+                    <a class="btn btn-primary dropdown-toggle" href="#" data-toggle="dropdown"><i class="fa fa-fw fa-lg fa-cloud-download"></i>Exportar <span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#">PDF</a></li>
+                        <li><a href="#">Excel</a></li>
+                        <li><a href="#">Otro</a></li>
+                    </ul>
+                    <div class="bs-component borde">
+                    </div>
+                </div>
+            </div>
+            <hr>
+            <!--***************TABLE-->
+            <div class="card-body table-responsive content">
+                <table class="table table-hover table-bordered " id="tablegeneral">
+                    <thead style="color:#ffffff;background:#0094ff;">
+                        <tr>
+                            <th>
+                                @Html.DisplayNameFor(model => model.codServicio)
+                            </th>
+                            <th>
+                                @Html.DisplayNameFor(model => model.nombreServicio)
+                            </th>
+                            <th>
+                                @Html.DisplayNameFor(model => model.precio)
+                            </th>
+                            <th>
+                                @Html.DisplayNameFor(model => model.esGratis)
+                            </th>
+                            <th>
+                                @Html.DisplayNameFor(model => model.activo)
+                            </th>
+                            <th>
+                                Acciones
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var item in Model)
+                        {
+                            <tr>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.codServicio)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.nombreServicio)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.precio)
+                                </td>
+                                <td class="text-center">
+                                    @Helpers.CustomHelper.Estado(item.esGratis)
+                                </td>
+                                    <!--Estado-->
+                                <td>
+                                    <div class="text-center">
+                                        @Helpers.CustomHelper.Estado(item.activo)
+                                    </div>
+
+                                </td>
+                                
+                                <td>
+                                        <!--Detalle-->
+                                    <div class="col-md-4 text-center">
+                                        <a id="@item.idServicio" name="@item.idServicio" class="btn btn-default btn-flat BtnDetail" data-toggle="modal" data-target="#_DtModalService">
+                                            <i class="fa fa-lg fa-search-plus"></i>
+                                        </a>
+                                    </div>
+                                        <!--Editar-->
+                                    <div class="col-md-4 text-center">
+                                        <a class="btn btn-warning btn-flat" href="@Url.Action("Edit",new { id = item.idServicio})"><i class="fa fa-lg fa-edit"></i></a>
+                                    </div>
+                                        <!--Habilitar / Deshabilitar-->                                
+                                    <div class="col-md-4 text-center">
+                                        @CustomHelper.Eliminar(item.activo, Url.Action("ChangeStatus"), item.idServicio)
+                                    </div>
+
+                                </td>
+                                
+
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            </div>
+
+            <!--******************TABLE***********-->
+
+            <div class="modal fade" tabindex="-1" role="dialog" id="DtModalService">
+
+            </div><!-- /.modal-dialog -->
+            <!--*******************************************FIN***********************************-->
+        </div>
+    </div>
+    <!--FIN DE MODIFICAR-->
+</div>
+
+<!--    Script habilitar el filtro de tablas  -->
+
+@section scripts{
+    @Scripts.Render("~/bundles/table")
+    <script>
+        $('.BtnDetail').click(function () {
+            var idService = $(this).attr("id");
+            $("#DtModalService").load('@Url.Action("GetService")', { id: idService });
+            $('#DtModalService').modal('show');
+        });
+    </script>
+<script src="~/Scripts/preload.js"></script>
+<script src="~/Scripts/jquery-confirm.min.js"></script>
+<script src="~/Scripts/confirm.status.js"></script>
+}

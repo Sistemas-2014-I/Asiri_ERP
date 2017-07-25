@@ -1,0 +1,21 @@
+﻿@model IEnumerable<Common.AspNetPermisos>
+
+@{
+    ViewBag.Title = "Opciones";
+    Layout = null;
+}
+
+<h3>Opciones</h3>
+<hr />
+
+<table class="" style="width:80%">
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                <input type="checkbox" value="@item.Id" name="permisos" />
+                @Html.DisplayFor(modelItem => item.Descripcion)
+            </td>
+        </tr>
+    }
+</table>

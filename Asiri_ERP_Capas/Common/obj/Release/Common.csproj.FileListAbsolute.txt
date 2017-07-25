@@ -1,0 +1,72 @@
+E:\Ciclo VII\Calidad de Software\mas pagos 2\mas pagos\Asiri_ERP_Capas\Common\bin\Release\Common.dll.config
+E:\Ciclo VII\Calidad de Software\mas pagos 2\mas pagos\Asiri_ERP_Capas\Common\bin\Release\Common.dll
+E:\Ciclo VII\Calidad de Software\mas pagos 2\mas pagos\Asiri_ERP_Capas\Common\bin\Release\Common.pdb
+E:\Ciclo VII\Calidad de Software\mas pagos 2\mas pagos\Asiri_ERP_Capas\Common\bin\Release\CrystalDecisions.CrystalReports.Engine.dll
+E:\Ciclo VII\Calidad de Software\mas pagos 2\mas pagos\Asiri_ERP_Capas\Common\bin\Release\CrystalDecisions.ReportSource.dll
+E:\Ciclo VII\Calidad de Software\mas pagos 2\mas pagos\Asiri_ERP_Capas\Common\bin\Release\CrystalDecisions.Shared.dll
+E:\Ciclo VII\Calidad de Software\mas pagos 2\mas pagos\Asiri_ERP_Capas\Common\bin\Release\EntityFramework.dll
+E:\Ciclo VII\Calidad de Software\mas pagos 2\mas pagos\Asiri_ERP_Capas\Common\bin\Release\EntityFramework.SqlServer.dll
+E:\Ciclo VII\Calidad de Software\mas pagos 2\mas pagos\Asiri_ERP_Capas\Common\bin\Release\NLog.dll
+E:\Ciclo VII\Calidad de Software\mas pagos 2\mas pagos\Asiri_ERP_Capas\Common\bin\Release\System.Web.Mvc.dll
+E:\Ciclo VII\Calidad de Software\mas pagos 2\mas pagos\Asiri_ERP_Capas\Common\bin\Release\CrystalDecisions.ReportAppServer.DataDefModel.dll
+E:\Ciclo VII\Calidad de Software\mas pagos 2\mas pagos\Asiri_ERP_Capas\Common\bin\Release\CrystalDecisions.ReportAppServer.ClientDoc.dll
+E:\Ciclo VII\Calidad de Software\mas pagos 2\mas pagos\Asiri_ERP_Capas\Common\bin\Release\CrystalDecisions.ReportAppServer.ReportDefModel.dll
+E:\Ciclo VII\Calidad de Software\mas pagos 2\mas pagos\Asiri_ERP_Capas\Common\bin\Release\CrystalDecisions.ReportAppServer.Controllers.dll
+E:\Ciclo VII\Calidad de Software\mas pagos 2\mas pagos\Asiri_ERP_Capas\Common\bin\Release\CrystalDecisions.ReportAppServer.CommLayer.dll
+E:\Ciclo VII\Calidad de Software\mas pagos 2\mas pagos\Asiri_ERP_Capas\Common\bin\Release\CrystalDecisions.ReportAppServer.DataSetConversion.dll
+E:\Ciclo VII\Calidad de Software\mas pagos 2\mas pagos\Asiri_ERP_Capas\Common\bin\Release\CrystalDecisions.ReportAppServer.Prompting.dll
+E:\Ciclo VII\Calidad de Software\mas pagos 2\mas pagos\Asiri_ERP_Capas\Common\bin\Release\CrystalDecisions.ReportAppServer.XmlSerialize.dll
+E:\Ciclo VII\Calidad de Software\mas pagos 2\mas pagos\Asiri_ERP_Capas\Common\bin\Release\CrystalDecisions.ReportAppServer.CubeDefModel.dll
+E:\Ciclo VII\Calidad de Software\mas pagos 2\mas pagos\Asiri_ERP_Capas\Common\bin\Release\CrystalDecisions.ReportAppServer.CommonObjectModel.dll
+E:\Ciclo VII\Calidad de Software\mas pagos 2\mas pagos\Asiri_ERP_Capas\Common\bin\Release\CrystalDecisions.ReportAppServer.ObjectFactory.dll
+E:\Ciclo VII\Calidad de Software\mas pagos 2\mas pagos\Asiri_ERP_Capas\Common\bin\Release\Microsoft.Web.Infrastructure.dll
+E:\Ciclo VII\Calidad de Software\mas pagos 2\mas pagos\Asiri_ERP_Capas\Common\bin\Release\CrystalDecisions.ReportAppServer.CommonControls.dll
+E:\Ciclo VII\Calidad de Software\mas pagos 2\mas pagos\Asiri_ERP_Capas\Common\bin\Release\stdole.dll
+E:\Ciclo VII\Calidad de Software\mas pagos 2\mas pagos\Asiri_ERP_Capas\Common\bin\Release\EntityFramework.xml
+E:\Ciclo VII\Calidad de Software\mas pagos 2\mas pagos\Asiri_ERP_Capas\Common\bin\Release\EntityFramework.SqlServer.xml
+E:\Ciclo VII\Calidad de Software\mas pagos 2\mas pagos\Asiri_ERP_Capas\Common\bin\Release\NLog.xml
+E:\Ciclo VII\Calidad de Software\mas pagos 2\mas pagos\Asiri_ERP_Capas\Common\bin\Release\System.Web.Mvc.xml
+E:\Ciclo VII\Calidad de Software\mas pagos 2\mas pagos\Asiri_ERP_Capas\Common\bin\Release\Microsoft.Web.Infrastructure.xml
+E:\Ciclo VII\Calidad de Software\mas pagos 2\mas pagos\Asiri_ERP_Capas\Common\bin\Release\es\EntityFramework.resources.dll
+E:\Ciclo VII\Calidad de Software\mas pagos 2\mas pagos\Asiri_ERP_Capas\Common\bin\Release\es\EntityFramework.SqlServer.resources.dll
+E:\Ciclo VII\Calidad de Software\mas pagos 2\mas pagos\Asiri_ERP_Capas\Common\bin\Release\es\System.Web.Mvc.resources.dll
+E:\Ciclo VII\Calidad de Software\mas pagos 2\mas pagos\Asiri_ERP_Capas\Common\obj\Release\Common.csprojResolveAssemblyReference.cache
+E:\Ciclo VII\Calidad de Software\mas pagos 2\mas pagos\Asiri_ERP_Capas\Common\obj\Release\Common.dll
+E:\Ciclo VII\Calidad de Software\mas pagos 2\mas pagos\Asiri_ERP_Capas\Common\obj\Release\Common.pdb
+E:\Ciclo VII\Calidad de Software\publicar\marchan aqui\Asiri_ERP_Capas\Common\bin\Release\Common.dll.config
+E:\Ciclo VII\Calidad de Software\publicar\marchan aqui\Asiri_ERP_Capas\Common\bin\Release\Common.dll
+E:\Ciclo VII\Calidad de Software\publicar\marchan aqui\Asiri_ERP_Capas\Common\bin\Release\Common.pdb
+E:\Ciclo VII\Calidad de Software\publicar\marchan aqui\Asiri_ERP_Capas\Common\bin\Release\CrystalDecisions.CrystalReports.Engine.dll
+E:\Ciclo VII\Calidad de Software\publicar\marchan aqui\Asiri_ERP_Capas\Common\bin\Release\CrystalDecisions.ReportSource.dll
+E:\Ciclo VII\Calidad de Software\publicar\marchan aqui\Asiri_ERP_Capas\Common\bin\Release\CrystalDecisions.Shared.dll
+E:\Ciclo VII\Calidad de Software\publicar\marchan aqui\Asiri_ERP_Capas\Common\bin\Release\EntityFramework.dll
+E:\Ciclo VII\Calidad de Software\publicar\marchan aqui\Asiri_ERP_Capas\Common\bin\Release\EntityFramework.SqlServer.dll
+E:\Ciclo VII\Calidad de Software\publicar\marchan aqui\Asiri_ERP_Capas\Common\bin\Release\Newtonsoft.Json.dll
+E:\Ciclo VII\Calidad de Software\publicar\marchan aqui\Asiri_ERP_Capas\Common\bin\Release\NLog.dll
+E:\Ciclo VII\Calidad de Software\publicar\marchan aqui\Asiri_ERP_Capas\Common\bin\Release\System.Web.Mvc.dll
+E:\Ciclo VII\Calidad de Software\publicar\marchan aqui\Asiri_ERP_Capas\Common\bin\Release\CrystalDecisions.ReportAppServer.DataDefModel.dll
+E:\Ciclo VII\Calidad de Software\publicar\marchan aqui\Asiri_ERP_Capas\Common\bin\Release\CrystalDecisions.ReportAppServer.ClientDoc.dll
+E:\Ciclo VII\Calidad de Software\publicar\marchan aqui\Asiri_ERP_Capas\Common\bin\Release\CrystalDecisions.ReportAppServer.ReportDefModel.dll
+E:\Ciclo VII\Calidad de Software\publicar\marchan aqui\Asiri_ERP_Capas\Common\bin\Release\CrystalDecisions.ReportAppServer.Controllers.dll
+E:\Ciclo VII\Calidad de Software\publicar\marchan aqui\Asiri_ERP_Capas\Common\bin\Release\CrystalDecisions.ReportAppServer.CommLayer.dll
+E:\Ciclo VII\Calidad de Software\publicar\marchan aqui\Asiri_ERP_Capas\Common\bin\Release\CrystalDecisions.ReportAppServer.DataSetConversion.dll
+E:\Ciclo VII\Calidad de Software\publicar\marchan aqui\Asiri_ERP_Capas\Common\bin\Release\CrystalDecisions.ReportAppServer.Prompting.dll
+E:\Ciclo VII\Calidad de Software\publicar\marchan aqui\Asiri_ERP_Capas\Common\bin\Release\CrystalDecisions.ReportAppServer.XmlSerialize.dll
+E:\Ciclo VII\Calidad de Software\publicar\marchan aqui\Asiri_ERP_Capas\Common\bin\Release\CrystalDecisions.ReportAppServer.CubeDefModel.dll
+E:\Ciclo VII\Calidad de Software\publicar\marchan aqui\Asiri_ERP_Capas\Common\bin\Release\CrystalDecisions.ReportAppServer.CommonObjectModel.dll
+E:\Ciclo VII\Calidad de Software\publicar\marchan aqui\Asiri_ERP_Capas\Common\bin\Release\CrystalDecisions.ReportAppServer.ObjectFactory.dll
+E:\Ciclo VII\Calidad de Software\publicar\marchan aqui\Asiri_ERP_Capas\Common\bin\Release\Microsoft.Web.Infrastructure.dll
+E:\Ciclo VII\Calidad de Software\publicar\marchan aqui\Asiri_ERP_Capas\Common\bin\Release\CrystalDecisions.ReportAppServer.CommonControls.dll
+E:\Ciclo VII\Calidad de Software\publicar\marchan aqui\Asiri_ERP_Capas\Common\bin\Release\stdole.dll
+E:\Ciclo VII\Calidad de Software\publicar\marchan aqui\Asiri_ERP_Capas\Common\bin\Release\EntityFramework.xml
+E:\Ciclo VII\Calidad de Software\publicar\marchan aqui\Asiri_ERP_Capas\Common\bin\Release\EntityFramework.SqlServer.xml
+E:\Ciclo VII\Calidad de Software\publicar\marchan aqui\Asiri_ERP_Capas\Common\bin\Release\Newtonsoft.Json.xml
+E:\Ciclo VII\Calidad de Software\publicar\marchan aqui\Asiri_ERP_Capas\Common\bin\Release\NLog.xml
+E:\Ciclo VII\Calidad de Software\publicar\marchan aqui\Asiri_ERP_Capas\Common\bin\Release\System.Web.Mvc.xml
+E:\Ciclo VII\Calidad de Software\publicar\marchan aqui\Asiri_ERP_Capas\Common\bin\Release\Microsoft.Web.Infrastructure.xml
+E:\Ciclo VII\Calidad de Software\publicar\marchan aqui\Asiri_ERP_Capas\Common\bin\Release\es\EntityFramework.resources.dll
+E:\Ciclo VII\Calidad de Software\publicar\marchan aqui\Asiri_ERP_Capas\Common\bin\Release\es\EntityFramework.SqlServer.resources.dll
+E:\Ciclo VII\Calidad de Software\publicar\marchan aqui\Asiri_ERP_Capas\Common\bin\Release\es\System.Web.Mvc.resources.dll
+E:\Ciclo VII\Calidad de Software\publicar\marchan aqui\Asiri_ERP_Capas\Common\obj\Release\Common.csprojResolveAssemblyReference.cache
+E:\Ciclo VII\Calidad de Software\publicar\marchan aqui\Asiri_ERP_Capas\Common\obj\Release\Common.dll
+E:\Ciclo VII\Calidad de Software\publicar\marchan aqui\Asiri_ERP_Capas\Common\obj\Release\Common.pdb

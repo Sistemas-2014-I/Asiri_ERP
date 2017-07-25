@@ -1,0 +1,628 @@
+﻿@model Mvc_Entity.CLlt05_cita
+
+@{
+
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Create</title>
+    <script src="~/Scripts/plugins/select2.min.js"></script>
+    
+    <script type="text/javascript">
+        $.fn.select2.defaults.set('language', 'es');
+        $(document).ready(function () {
+            $("#form-cita").on("submit", function () {
+                $("#Enviar").attr("disabled",true);
+                $('body').loading({
+                    zIndex: 9999999999999999,
+                    message: "Cargando...   "
+                }, 'start');
+                var form = $(this);
+                var Cita = DatosCita();
+
+                if (form.validate()) {
+                    form.ajaxSubmit({
+                        datatype: 'JSON',
+                        type: 'post',
+                        data: {
+                            'oCita': Cita
+                        },
+                        url: form.attr('action'),
+                        success: function (r) {
+                            if (r.respuesta) {
+
+                                window.location.href = r.redirect;
+
+                            }
+                            else {
+                                $('body').loading('stop');
+                                $("#Enviar").attr("disabled", false);
+                                $("#detalle-validacion").text(r.error).show();
+                            }
+                        },
+                        error: function (jqXHR, textStatus, errorThrown) {
+                            alert(errorThrown);
+                            $("#Enviar").attr("disabled", false);
+                            $('body').loading('stop');
+                        }
+                    });
+
+                }
+
+                return false;
+            });
+            $("#idPaciente").select2({
+                ajax: {
+                    url: '@Url.Action("getPaciente")',
+                    dataType: 'json',
+                    type: 'POST',
+                    data: function (params) {
+                        return {
+                            palabra: params.term,
+                            idEmpleado: $("#idEmpleado").val()
+
+                        };
+                    },
+                    processResults: function (data) {
+
+                        var arr = []
+
+                        $.each(data, function (index, value) {
+
+                            arr.push({
+                                id: value.Value,
+                                text: value.Text
+
+                            })
+                        })
+                        return {
+                            results: arr
+                        }
+                    },
+                    cache: true
+                },
+                escapeMarkup: function (markup) { return markup; },
+                minimumInputLength: 1,
+                language: {
+
+                    noResults: function () {
+
+                        return "No hay resultado";
+                    },
+                    searching: function () {
+
+                        return "Buscando..";
+                    },
+                    inputTooShort: function () {
+
+                        return "Por favor inserta 1 o más caracteres";
+                    }
+                }
+            });
+
+            $('#tableDetalle').dataTable({
+                ordering:false, 
+                language: {
+                    processing: "En curso...",
+                    search: "Buscar:",
+                    lengthMenu: "Visualizar _MENU_ registros",
+                    info: "_START_ de _END_ registros de un total de _TOTAL_ registros",
+                    infoEmpty: "0 registros encontrados",
+                    infoFiltered: "(_MAX_ registros filtrados en total)",
+                    infoPostFix: "",
+                    loadingRecords: "Cargando registros...",
+                    zeroRecords: "No hay registros",
+                    emptyTable: "Vacío",
+                    paginate: {
+                        first: "Primero",
+                        previous: "Previo  ",
+                        next: "  Siguiente",
+                        last: "Último"
+                    },
+                    aria: {
+                        sortAscending: ": Habilitado para ordenar la columna en orden ascendente",
+                        sortDescending: ": Habilitado para ordenar la columna en orden descendente"
+                    }
+                },
+                "columnDefs": [
+                                    {
+                                        "targets": [0],
+                                        "visible": false,
+                                        "searchable": false
+                                    },
+                                    {
+                                        "targets": [5],
+                                        "visible": false,
+                                        "searchable": false
+                                    }
+                ]
+            });
+
+        });
+        var mtoTotal = 0;
+
+        function CalcularMonto()
+        {
+
+            var mto = 0;
+            var tablaDetalle = $("#tableDetalle").dataTable().fnGetData();
+
+            for (var i = 0; i < tablaDetalle.length; i++) {
+                var mto = parseFloat(tablaDetalle[i][4]) + parseFloat(mto);
+            }
+            return mto;
+        }
+        //Agregar Tabla Detalle
+        function AgregarDetalle() {
+            var comboServicio = document.getElementById("idServicio");
+            var indice = comboServicio.selectedIndex;
+            var nombreServicio = comboServicio.options[comboServicio.selectedIndex].text;
+            var subtotal = parseFloat($("#cantidad").val()) * parseFloat($("#precio").val());
+            var validos = false;
+            //mtoTotal = mtoTotal + subtotal;
+            var numTablaDetalle = $("#tableDetalle").dataTable().fnGetData();
+            for (var i = 0; i < numTablaDetalle.length; i++) {
+                if (nombreServicio == numTablaDetalle[i][1]) {
+                    alert('ya existe un Servicio llamado "' + nombreServicio + '"');
+                    validos = true;
+                    break;
+                }
+
+            }
+            if ($("#cantidad").val() != "" && $("#cantidad").val() != "0") {
+                if (validos == false) {
+
+                    $("#tableDetalle").dataTable().fnAddData([$("#idServicio").val(),
+                                                              nombreServicio,
+                                                              $("#cantidad").val(),
+                                                              parseFloat($("#precio").val()).toFixed(2),
+                                                              parseFloat(subtotal).toFixed(2),
+                                                              $("#esGratis").val(),
+                                                              "<button class='btn btn-danger' id='eliminar' alt=" + [numTablaDetalle.length + 1] + "><i class='fa fa-lg fa-trash'></i></button>"]);
+                }
+            }
+            else {
+                $.notify({ icon: 'fa fa-lg fa-close', message: 'Debe agregar una cantidad valida' }, { type: 'danger', allow_dismiss: false });
+            }
+            
+            comboServicio.selectedIndex = 0;
+            $("#cantidad").val("0");
+            $("#precio").val($("#precioEscondido").val());
+            $("#esGratis").val($("#esGratisEscondido").val());
+            mtoTotal = CalcularMonto();
+
+            $("#mtoTotal").val(mtoTotal);
+
+
+        }
+
+        function soloNumeros(e) {
+            key = e.keyCode || e.which;
+            teclado = String.fromCharCode(key);
+            numeros = "0123456789";
+            especiales = "8-37-38-46";
+            teclado_especial = false;
+
+            for (var i in especiales) {
+                if (key == especiales[i]) {
+                    teclado_especial = true;
+                }
+            }
+            if (numeros.indexOf(teclado) == -1 && !teclado_especial) {
+                return false;
+            }
+        }
+
+        function calcLong(txt, dst, formul, maximo) {
+
+            var largo
+
+            largo = formul[txt].value.length
+
+            if (largo > maximo)
+
+                formul[txt].value = formul[txt].value.substring(0, maximo)
+
+            formul[dst].value = formul[txt].value.length
+
+        }
+
+        //ELiminar Detalle
+        $(document).on("click", "#eliminar", function (event) {
+            var alt = $(this).attr("alt");
+            $("#tableDetalle").dataTable().fnDeleteRow(alt - 1);
+
+
+            var tablaDiagnostico = $("#tableDetalle").dataTable().fnGetData();
+            var count = tablaDiagnostico.length + 1;
+
+            for (var i = 1; i > 0; i++) {
+                if (i == alt) {
+                    for (var j = alt; j <= count; j++) {
+                        if (alt != count) {
+                            var mto = CalcularMonto();
+
+                            $("#mtoTotal").val(mto);
+                            $("#tableDetalle").find("button[alt = " + j + "]").attr("alt", [j - 1]);
+                        }
+                        else {
+
+                            var mto = CalcularMonto();
+
+                            $("#mtoTotal").val(mto);
+
+
+                            break;
+
+                        }
+                    }
+
+                    $.notify({ icon: 'fa fa-lg fa-check', message: 'Se eliminó Correctamente' }, { type: 'success', allow_dismiss: false });
+                    break;
+
+                }
+                else {
+
+                    $("#tableDetalle").find("button[alt = " + i + "]").attr("alt", i);
+                }
+
+            }
+        });
+
+        //Obtiene el idServicio seleccionado y manda el precio
+        var getServicioUrl = '@Url.Action("ObtenerServicio")';
+        $(function () {
+
+            $('#idServicio').change(
+                function () {
+
+                    var idServicioSeleccionado = $('#idServicio').val();
+                    if (idServicioSeleccionado != null) {
+                        $.getJSON(getServicioUrl, { idServicio: idServicioSeleccionado },
+                            function (subs) {
+                                var subSelect = $('#precio').val();
+                                $('#precio').empty();
+                                $('#precio').val(parseFloat(subs.precio.toString()).toFixed(2));
+                                $('#esGratis').empty();
+                                $('#esGratis').val(subs.esGratis);
+                            });
+                    }
+                });
+
+
+
+        });
+
+
+        //Enviar Cita al Controller
+
+        function DatosCita() {
+           
+            var Cita = { "codCita": "", "fecCita": "", "horaInicio": "", "duracionEstimada": "", "esOnline": "", "obsvCita": "", "mtoTotal": "", "idPaciente": "", "idEmpleado": "", "olistCitaDtl": [] };
+            var CitaDtl = { "idServicio": "", "cantidad": "", "precio": "", "esGratis": "" };
+
+            Cita.codCita = $("#codCita").val();
+            Cita.fecCita = $("#fecCita").val();
+            Cita.horaInicio = $("#horaInicio").val();
+            Cita.duracionEstimada = $("#duracionEstimada").val();
+            Cita.esOnline = $("#esOnline").val();
+            Cita.obsvCita = $("#obsvCita").val();
+            Cita.mtoTotal = $("#mtoTotal").val();
+            Cita.idPaciente = $("#idPaciente").val();
+            Cita.idEmpleado = $("#idEmpleado").val();
+
+
+            var tablaDetalle = $("#tableDetalle").dataTable().fnGetData();
+
+            for (var i = 0; i < tablaDetalle.length; i++) {
+
+                CitaDtl.idServicio = tablaDetalle[i][0];
+                CitaDtl.cantidad = tablaDetalle[i][2];
+                CitaDtl.precio = tablaDetalle[i][3];
+                CitaDtl.esGratis = tablaDetalle[i][5];
+                Cita.olistCitaDtl.push(CitaDtl);
+                CitaDtl = { "idServicio": "", "cantidad": "", "precio": "" };
+            }
+            return Cita;
+
+            //$.ajax(
+            //{
+            //    url: '/Cita/generarCita',
+            //    data: JSON.stringify({ 'oCita': Cita }),
+            //    type: 'POST',
+            //    contentType: 'application/json;',
+            //    dataType: 'json',
+            //    success: function (result) {
+            //        if (result.Success == "1") {
+            //            window.location.href = "/Cita/Index";
+            //        }
+            //        else {
+            //            alert(result.ex);
+            //            $('body').loading('stop');
+            //        }
+            //    }
+                
+            //});
+
+        }
+    </script>
+
+
+
+</head>
+<body class="sidebar-mini fixed">
+    <!--********************************TITULO*******************************-->
+    <div class="page-title">
+        <div>
+            <h1><i class="fa fa-edit"></i> Mantenimiento de Citas</h1>
+            <p>Registrar Nueva Cita ...!</p>
+        </div>
+        <div>
+            <ul class="breadcrumb">
+                <li><i class="fa fa-home fa-lg"></i></li>
+                <li>Citas</li>
+                <li><a href="#">Nueva Cita</a></li>
+            </ul>
+        </div>
+    </div>
+    <!--********************************FIN TITULO*******************************-->
+    @Html.Raw(TempData["msg"])
+
+
+    <form id="form-cita" name="cita" method="post" action="/Cita/generarCita">
+
+
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+
+
+        <div class="row">
+            <div class="col-md-12">
+                <div class="card col-md-12">
+                    <div class="card-content">
+                        <form id="InfFuncionVital">
+                            <div class="control-label">
+                                <div id="sandbox-container">
+                                    @Html.HiddenFor(model => model.idEmpleado, new { htmlAttributes = new { @class = "form-control" } })
+                                    @Html.ValidationMessageFor(model => model.idEmpleado, "", new { @class = "text-danger" })
+                                </div>
+                            </div>
+
+                            <div class="control-label">
+                                <div id="sandbox-container">
+
+                                    <input type="hidden" id="fecCita" value="@Model.fecCita.ToShortDateString()" />
+                                    @Html.ValidationMessageFor(model => model.fecCita, "", new { @class = "text-danger" })
+                                </div>
+                            </div>
+
+
+                            <div class="control-label">
+                                <div id="sandbox-container">
+                                    @Html.HiddenFor(model => model.horaInicio, new { htmlAttributes = new { @class = "form-control" } })
+                                    @Html.ValidationMessageFor(model => model.horaInicio, "", new { @class = "text-danger" })
+                                </div>
+                            </div>
+
+
+                            <div onkeypress="return soloNumeros(event)" onpaste="return false">
+                                @Html.HiddenFor(model => model.duracionEstimada, new { htmlAttributes = new { @class = "form-control", @id = "duracionEstimada" } })
+                                @Html.ValidationMessageFor(model => model.duracionEstimada, "", new { @class = "text-danger" })
+
+                            </div>
+
+                            <div class="form-group col-md-10">
+                                @Html.Label("Paciente", htmlAttributes: new { @class = "control-label col-md-2" })
+                                <div class="control-label">
+                                    @Html.DropDownListFor(model=>model.idPaciente, null, "Seleccionar", htmlAttributes: new { @class = "form-control", @id= "idPaciente" })
+                                    @Html.ValidationMessageFor(model => model.idPaciente, "", new { @class = "text-danger" })
+                                </div>
+                            </div>
+
+                            <div class="form-group col-md-4">
+                                @Html.Label("Servicio", htmlAttributes: new { @class = "control-label col-md-2" })
+                                <div class="control-label">
+                                    @Html.DropDownList("idServicio", null, htmlAttributes: new { @class = "form-control" })
+                                </div>
+                            </div>
+
+
+                            <div class="col-md-2">
+                                @Html.Label("Cantidad", htmlAttributes: new { @class = "control-label col-md-2" })
+                                <div class="control-label" onkeypress="return soloNumeros(event)" onpaste="return false">
+
+                                    @Html.Editor("cantidad", new { htmlAttributes = new { @class = "form-control" } })
+                                    @*@Html.ValidationMessageFor(model => model.idEmpleado, "", new { @class = "text-danger" })*@
+                                    @*<input type="text" id="cantidad" onkeypress="return soloNumeros(event)" onpaste="return false">*@
+
+                                </div>
+                            </div>
+
+                            <input type="hidden" id="precioEscondido" name="precioEscondido" value="@Html.Value("precio")" />
+                            <input type="hidden" id="esGratisEscondido" name="esGratisEscondido" value="@Html.Value("esGratis")" />
+
+                            @Html.Hidden("esGratis")
+                            <div class="form-group col-md-4">
+                                @Html.Label("Precio", htmlAttributes: new { @class = "control-label col-md-2" })
+                                <div class="control-label">
+
+                                    @Html.Editor("precio", new { htmlAttributes = new { @class = "form-control", @disabled = "disabled" } })
+                                    @Html.ValidationMessageFor(model => model.idEmpleado, "", new { @class = "text-danger" })
+                                </div>
+                            </div>
+                            &nbsp;
+
+                            <input type="hidden" id="subtotal" name="subtotal" value="0" />
+
+                            <div class="form-group col-md-2" id="but">
+                                <button class="btn btn-primary icon-btn" type="button" value="Agregar Detalle" onclick="AgregarDetalle()">
+                                    <i class="fa fa-fw fa-lg fa-plus">
+                                    </i>
+                                </button>
+                            </div>
+
+                            <div class="card col-md-12">
+                                <div class="col-md-12">
+                                    <table class="table table-responsive table-striped table-bordered" id="tableDetalle">
+                                        <thead style="color:#ffffff;background:#0094ff;">
+                                            <tr>
+                                                <th>ID Servicio</th>
+                                                <th>Servicio</th>
+                                                <th>Cantidad</th>
+                                                <th>Precio</th>
+                                                <th>SubTotal</th>
+                                                <th>Es Gratis</th>
+                                                <th>Acciones</th>
+
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            @if (Model != null)
+                                            {
+                                                foreach (var item in Model.oListCitaDtl)
+                                                {
+                                                    <tr>
+                                                        <td>@Html.DisplayTextFor(i => item.idServicio)</td>
+                                                        <td>@Html.DisplayTextFor(i => item.cantidad)</td>
+                                                        <td>@Html.DisplayTextFor(i => item.precio)</td>
+                                                    </tr>
+                                                }
+                                            }
+                                        </tbody>
+
+                                    </table>
+                                </div>
+                            </div>
+
+                            <div class="form-group col-md-10">
+                                @Html.LabelFor(model => model.obsvCita, htmlAttributes: new { @class = "control-label col-md-2" })
+                                <div class="control-label">
+                                    <div>
+                                        @Html.EditorFor(model => model.obsvCita, new { htmlAttributes = new { @class = "form-control" } })
+                                        @Html.ValidationMessageFor(model => model.obsvCita, "", new { @class = "text-danger" })
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-md-2">
+                                @Html.Label("mtoTotal", htmlAttributes: new { @class = "control-label col-md-2", @disabled = "disabled" })
+                                <div class="control-label">
+                                    <input id="mtoTotal" class="form-control" type="text" name="mtoTotal" value="0" readonly="readonly" disabled />
+
+                                </div>
+                            </div>
+
+                        </form>
+
+                        <div class="col-lg-10">
+                            <label class="control-label"></label>
+                            <button class="btn btn-primary icon-btn" type="submit" value="GUARDAR" id="Enviar">
+                                <i class="fa fa-fw fa-lg fa-edit">
+                                </i>Agregar Cita
+                            </button>&nbsp;&nbsp;&nbsp;
+                            <a class="btn btn-default icon-btn" href="/Cita/Index">
+                                <i class="fa fa-fw fa-lg fa-times-circle"></i>Cancelar
+                            </a>
+
+                            <div style="text-align:center;"> @Html.ValidationMessage("detalle", "", new { @class = "text-danger", id = "detalle-validacion" })</div>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+        </form>
+
+
+
+        <div>
+            @Html.ActionLink("Back to List", "Index") |
+            @Html.ActionLink("Calendario de Citas", "Calendario")
+        </div>
+        <script type="text/javascript">
+            var input = $('.clockpicker input').clockpicker({
+                //placement: 'top',
+                aling: 'right',
+                autoclose: true,
+                default: 'now',
+
+            });
+        </script>
+
+     
+
+        <script type="text/javascript">
+
+            $(document).ready(function () {
+                $("#idTipoDeEspeciliadad").change(function () {
+                    $("#idEspecialidad").empty();
+                    $.ajax({
+                        type: 'POST',
+                        url: '@Url.Action("getEspecialidad")',
+                        dataType: 'json',
+                        data: { id: $("#idTipoDeEspeciliadad").val() },
+                        success: function (Especialidad) {
+                            $("#idEspecialidad").append('<option value="' + '">Seleccionar</option>');
+                            $.each(Especialidad, function (i, Especialidad) {
+                                $("#idEspecialidad").append('<option value="' + Especialidad.Value + '">' +
+                                Especialidad.Text + '</option>');
+                            });
+                        },
+                    });
+
+
+                    $("#idEmpleado").empty();
+                    $("#idEmpleado").append('<option value="' + "" + '">Seleccionar</option>');
+                });
+
+                $("#idEspecialidad").change(function () {
+                    $("#idEmpleado").empty();
+                    $.ajax({
+                        type: 'POST',
+                        url: '@Url.Action("getEmpleado")',
+                        dataType: 'json',
+                        data: { id: $("#idEspecialidad").val() },
+                        success: function (Empleado) {
+                            $("#idEmpleado").append('<option value="' + "" + '">Seleccionar</option>');
+                            $.each(Empleado, function (i, Empleado) {
+                                $("#idEmpleado").append('<option value="' + Empleado.Value + '">' +
+                                Empleado.Text + '</option>');
+                            });
+                        },
+                    });
+                    $("#idServicio").empty();
+                    $("#idServicio").append('<option value="' + "" + '">Seleccionar</option>');
+                });
+
+
+                $("#idEspecialidad").change(function () {
+                    $("#idServicio").empty();
+                    $.ajax({
+                        type: 'POST',
+                        url: '@Url.Action("getServicio")',
+                        dataType: 'json',
+                        data: { id: $("#idEspecialidad").val() },
+                        success: function (Servicio) {
+                            $("#idServicio").append('<option value="' + "" + '">Seleccionar</option>');
+                            $.each(Servicio, function (i, Servicio) {
+                                $("#idServicio").append('<option value="' + Servicio.Value + '">' +
+                                Servicio.Text + '</option>');
+                            });
+                        },
+                    });
+                });
+            });
+        </script>
+
+</body>
+</html>
+

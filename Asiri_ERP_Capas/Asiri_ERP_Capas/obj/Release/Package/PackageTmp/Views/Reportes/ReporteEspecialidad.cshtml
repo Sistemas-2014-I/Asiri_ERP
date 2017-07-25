@@ -1,0 +1,35 @@
+﻿
+@{
+    ViewBag.Title = "Reporte top Especialidad";
+}
+
+<h2>Reporte Top Empleados</h2>
+<script language="javascript" type="text/javascript">
+          function validarSiNumero(numero){
+              if (/^([0-9])*$/.test(numero));
+                  else
+              {
+                      alert("El valor " + numero + " no es un número");
+                      txtDato.value = "";}
+          }
+
+          function validar() {
+              //obteniendo el valor que se puso en el campo text del formulario
+              var miCampoTexto = document.getElementById("txtDato").value;
+              //la condición
+              if (miCampoTexto.length > 7 || /^\s+$/.test(miCampoTexto) || miCampoTexto =="") {
+                  alert('El campo de texto esta vacio!');
+                  return false;
+              }
+              return true;
+          }
+</script>
+
+@using (Html.BeginForm("ReportesEspecialidad", "Reportes"))
+{
+    <label>Ingresar el TOP de Especialidades:</label>
+    <input type="text" id="txtDato" name="txtDato" class="dtp" onChange="validarSiNumero(this.value)" />
+    <br />
+    <input type="submit" value="Reporte" class="btn btn-primary" onclick="return validar();" />
+    @*<input type="button" value="Reporte MVC - Otra Ventana" onclick="GenericInNewWin()" />*@
+}

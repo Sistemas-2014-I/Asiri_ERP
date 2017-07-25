@@ -1,0 +1,934 @@
+﻿@model Common.RHUt06_horario
+
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        .borde1 {
+            border: 1px #000 solid;
+            text-align: center;
+        }
+
+        .borde {
+            border: 1px #000fff solid;
+        }
+
+        .borde2 {
+            border: 1px #295ba7 solid;
+            text-align: center;
+        }
+
+        .action {
+            float: right;
+        }
+
+        .flex-container {
+            display: flex;
+            justify-content: space-around;
+        }
+
+        .abc {
+            padding-top: 15px;
+        }
+
+        .abcd {
+            padding-top: 25px;
+        }
+
+        .abcde {
+            padding-right: 1px;
+            padding-left: 1px;
+            display: flex;
+            justify-content: space-around;
+        }
+    </style>
+    <script src="~/Scripts/jquery.validate.min.js"></script>
+    <script src="~/Scripts/jquery.validate.unobtrusive.min.js"></script>
+    <script src="~/Scripts/jquery.form.min.js"></script>
+    <script src="~/Scripts/jquery.js"></script>
+    <script src="~/Scripts/jquery.maskedinput.js"></script>
+    <script type="text/javascript">
+
+
+        $(document).ready(function () {
+            $("#formAE").on("submit", function () {
+                $("#asignar").attr("disabled", true);
+                $('body').loading({
+                    zIndex: 9999999999999999,
+                    message: "Cargando...   "
+                }, 'start');
+                var form = $(this);
+                var horario = CargarDatosHorario();
+                var ListEspecialidad = CargarDatosEspecialidad();
+
+                if (form.validate()) {
+                    form.ajaxSubmit({
+                        datatype: 'JSON',
+                        type: 'post',
+                        data: {
+                            rHUt06_horario: horario,
+                            listEspecialidad: ListEspecialidad
+                        },
+                        url: form.attr('action'),
+                        success: function (r) {
+                            if (r.respuesta) {
+                                window.location.href = r.redirect;
+                            }
+                            else {
+                                $('body').loading('stop');
+                                $("#especialidades-validacion").text(r.error).show();
+                                $("#asignar").attr("disabled", false);
+                            }
+                        },
+                        error: function (jqXHR, textStatus, errorThrown) {
+                            alert(errorThrown);
+                            $('body').loading('stop');
+                            $("#asignar").attr("disabled", false);
+                        }
+                    });
+
+                }
+
+                return false;
+
+            });
+
+
+            $('#tableDetalle').dataTable({
+                ordering: false,
+                language: {
+                    processing: "En curso...",
+                    search: "Buscar:",
+                    lengthMenu: "Visualizar _MENU_ registros",
+                    info: "_START_ de _END_ registros de un total de _TOTAL_ registros",
+                    infoEmpty: "0 registros encontrados",
+                    infoFiltered: "(_MAX_ registros filtrados en total)",
+                    infoPostFix: "",
+                    loadingRecords: "Cargando registros...",
+                    zeroRecords: "No hay registros",
+                    emptyTable: "Vacío",
+                    paginate: {
+                        first: "Primero",
+                        previous: "Previo  ",
+                        next: "  Siguiente",
+                        last: "Último"
+                    },
+                    aria: {
+                        sortAscending: ": Habilitado para ordenar la columna en orden ascendente",
+                        sortDescending: ": Habilitado para ordenar la columna en orden descendente"
+                    }
+                },
+                "columnDefs": [
+                                    {
+                                        "targets": [0],
+                                        "visible": false,
+                                        "searchable": false
+                                    }
+                ]
+            });
+
+
+
+
+            $("#horaInicioLunes").attr("disabled", true);
+            $("#horaFinLunes").attr("disabled", true);
+            $("#horaInicioMartes").attr("disabled", true);
+            $("#horaFinMartes").attr("disabled", true);
+            $("#horaInicioMiercoles").attr("disabled", true);
+            $("#horaFinMiercoles").attr("disabled", true);
+            $("#horaInicioJueves").attr("disabled", true);
+            $("#horaFinJueves").attr("disabled", true);
+            $("#horaInicioViernes").attr("disabled", true);
+            $("#horaFinViernes").attr("disabled", true);
+            $("#horaInicioSabado").attr("disabled", true);
+            $("#horaFinSabado").attr("disabled", true);
+            $("#horaInicioDomingo").attr("disabled", true);
+            $("#horaFinDomingo").attr("disabled", true);
+            $("#laboraLunes").change(function () {
+                var d = document.getElementById("laboraLunes");
+
+                if (d.checked) {
+                    $("#laboraLunes").val("true");
+                    $("#horaInicioLunes").val("");
+                    $("#horaFinLunes").val("");
+                    $("#horaInicioLunes").attr("disabled", false);
+                    $("#horaFinLunes").attr("disabled", false);
+
+                }
+                else {
+                    $("#laboraLunes").val("false");
+                    $("#horaInicioLunes").val("");
+                    $("#horaFinLunes").val("");
+                    $("#horaInicioLunes").attr("disabled", true);
+                    $("#horaFinLunes").attr("disabled", true);
+
+                }
+
+            });
+            $("#laboraMartes").change(function () {
+                var d = document.getElementById("laboraMartes");
+
+                if (d.checked) {
+                    $("#laboraMartes").val("true");
+                    $("#horaInicioMartes").val("");
+                    $("#horaFinMartes").val("");
+                    $("#horaInicioMartes").attr("disabled", false);
+                    $("#horaFinMartes").attr("disabled", false);
+                }
+                else {
+                    $("#laboraMartes").val("false");
+                    $("#horaInicioMartes").val("");
+                    $("#horaFinMartes").val("");
+                    $("#horaInicioMartes").attr("disabled", true);
+                    $("#horaFinMartes").attr("disabled", true);
+
+                }
+
+            });
+            $("#laboraMiercoles").change(function () {
+                var d = document.getElementById("laboraMiercoles");
+
+                if (d.checked) {
+                    $("#laboraMiercoles").val("true");
+                    $("#horaInicioMiercoles").val("");
+                    $("#horaFinMiercoles").val("");
+                    $("#horaInicioMiercoles").attr("disabled", false);
+                    $("#horaFinMiercoles").attr("disabled", false);
+                }
+                else {
+                    $("#laboraMiercoles").val("false");
+                    $("#horaInicioMiercoles").val("");
+                    $("#horaFinMiercoles").val("");
+                    $("#horaInicioMiercoles").attr("disabled", true);
+                    $("#horaFinMiercoles").attr("disabled", true);
+                }
+
+            });
+            $("#laboraJueves").change(function () {
+                var d = document.getElementById("laboraJueves");
+
+                if (d.checked) {
+                    $("#laboraJueves").val("true");
+                    $("#horaInicioJueves").val("");
+                    $("#horaFinJueves").val("");
+                    $("#horaInicioJueves").attr("disabled", false);
+                    $("#horaFinJueves").attr("disabled", false);
+                }
+                else {
+                    $("#laboraJueves").val("false");
+                    $("#horaInicioJueves").val("");
+                    $("#horaFinJueves").val("");
+                    $("#horaInicioJueves").attr("disabled", true);
+                    $("#horaFinJueves").attr("disabled", true);
+                }
+
+            });
+            $("#laboraViernes").change(function () {
+                var d = document.getElementById("laboraViernes");
+
+                if (d.checked) {
+                    $("#laboraViernes").val("true");
+                    $("#horaInicioViernes").val("");
+                    $("#horaFinViernes").val("");
+                    $("#horaInicioViernes").attr("disabled", false);
+                    $("#horaFinViernes").attr("disabled", false);
+                }
+                else {
+                    $("#laboraViernes").val("false");
+                    $("#horaInicioViernes").val("");
+                    $("#horaFinViernes").val("");
+                    $("#horaInicioViernes").attr("disabled", true);
+                    $("#horaFinViernes").attr("disabled", true);
+                }
+
+            });
+            $("#laboraSabado").change(function () {
+                var d = document.getElementById("laboraSabado");
+
+                if (d.checked) {
+                    $("#laboraSabado").val("true");
+                    $("#horaInicioSabado").val("");
+                    $("#horaFinSabado").val("");
+                    $("#horaInicioSabado").attr("disabled", false);
+                    $("#horaFinSabado").attr("disabled", false);
+                }
+                else {
+                    $("#laboraSabado").val("false");
+                    $("#horaInicioSabado").val("");
+                    $("#horaFinSabado").val("");
+                    $("#horaInicioSabado").attr("disabled", true);
+                    $("#horaFinSabado").attr("disabled", true);
+                }
+
+            });
+            $("#laboraDomingo").change(function () {
+                var d = document.getElementById("laboraDomingo");
+
+                if (d.checked) {
+                    $("#laboraDomingo").val("true");
+                    $("#horaInicioDomingo").val("");
+                    $("#horaFinDomingo").val("");
+                    $("#horaInicioDomingo").attr("disabled", false);
+                    $("#horaFinDomingo").attr("disabled", false)
+                }
+                else {
+                    $("#laboraDomingo").val("false");
+                    $("#horaInicioDomingo").val("");
+                    $("#horaFinDomingo").val("");
+                    $("#horaInicioDomingo").attr("disabled", true);
+                    $("#horaFinDomingo").attr("disabled", true)
+                }
+
+            });
+
+            $("#idTipoDeEspeciliadad").change(function () {
+                $("#idEspecialidad").empty();
+                $.ajax({
+                    type: 'POST',
+                    url: '@Url.Action("getEspecialidad")',
+                    dataType: 'json',
+                    data: { id: $("#idTipoDeEspeciliadad").val() },
+                    success: function (Especialidad) {
+                        $("#idEspecialidad").append('<option value="' + '">Seleccionar</option>');
+                        $.each(Especialidad, function (i, Especialidad) {
+                            $("#idEspecialidad").append('<option value="' + Especialidad.Value + '">' +
+                            Especialidad.Text + '</option>');
+                        });
+                    },
+                });
+
+
+                $("#idEmpleado").empty();
+                $("#idEmpleado").append('<option value="' + "" + '">Seleccionar</option>');
+            });
+
+
+
+
+        });
+
+
+        function CargarDatosEspecialidad()
+        {
+            var ListEspecialidad = [];
+            var Especialidad = { "idEmpleado": "", "idEspecialidad": "" };
+            var tablaDetalle = $("#tableDetalle").dataTable().fnGetData();
+
+            for (var i = 0; i < tablaDetalle.length; i++) {
+
+                Especialidad.idEmpleado = $("#idEmpleado").val();
+                Especialidad.idEspecialidad = tablaDetalle[i][0];
+                ListEspecialidad.push(Especialidad);
+                Especialidad = { "idEmpleado": "", "idEspecialidad": "" };
+            }
+            return ListEspecialidad;
+        }
+        function CargarDatosHorario() {
+            var horario = { "idEmpleado":"",
+                "laboraLunes": "", "laboraMartes": "", "laboraMiercoles": "", "laboraJueves": "", "laboraViernes": "", "laboraSabado": "",
+                "laboraDomingo": "", "horaInicioLunes": "", "horaInicioMartes": "", "horaInicioMiercoles": "", "horaInicioJueves": "",
+                "horaInicioViernes": "", "horaInicioSabado": "", "horaInicioDomingo": "", "horaFinLunes": "", "horaFinMartes": "",
+                "horaFinMiercoles": "", "horaFinJueves": "", "horaFinViernes": "", "horaFinSabado": "", "horaFinDomingo": ""
+            };
+            horario.idEmpleado = $("#idEmpleado").val();
+            horario.laboraLunes = $("#laboraLunes").val();
+            horario.laboraMartes = $("#laboraMartes").val();
+            horario.laboraMiercoles = $("#laboraMiercoles").val();
+            horario.laboraJueves = $("#laboraJueves").val();
+            horario.laboraViernes = $("#laboraViernes").val();
+            horario.laboraSabado = $("#laboraSabado").val();
+            horario.laboraDomingo = $("#laboraDomingo").val();
+            horario.horaInicioLunes = $("#horaInicioLunes").val();
+            horario.horaInicioMartes = $("#horaInicioMartes").val();
+            horario.horaInicioMiercoles = $("#horaInicioMiercoles").val();
+            horario.horaInicioJueves = $("#horaInicioJueves").val();
+            horario.horaInicioViernes = $("#horaInicioViernes").val();
+            horario.horaInicioSabado = $("#horaInicioSabado").val();
+            horario.horaInicioDomingo = $("#horaInicioDomingo").val();
+            horario.horaFinLunes = $("#horaFinLunes").val();
+            horario.horaFinMartes = $("#horaFinMartes").val();
+            horario.horaFinMiercoles = $("#horaFinMiercoles").val();
+            horario.horaFinJueves = $("#horaFinJueves").val();
+            horario.horaFinViernes = $("#horaFinViernes").val();
+            horario.horaFinSabado = $("#horaFinSabado").val();
+            horario.horaFinDomingo = $("#horaFinDomingo").val();
+            return horario;
+        }
+
+        function AgregarDetalle()
+        {
+
+
+            var comboEspecialidad = document.getElementById("idEspecialidad");
+            var indiceEspecialidad = comboEspecialidad.selectedIndex;
+            var nombreEspecialidad = comboEspecialidad.options[comboEspecialidad.selectedIndex].text;
+
+            var numEsp = $("#idEspecialidad").children("option").length;
+
+
+            var comboTipoDeEspecialidad = document.getElementById("idTipoDeEspeciliadad");
+            var indiceTE = comboTipoDeEspecialidad.selectedIndex;
+            var nombreTipoDeEspecialidad = comboTipoDeEspecialidad.options[comboTipoDeEspecialidad.selectedIndex].text;
+
+            var numTablaDetalle = $("#tableDetalle").dataTable().fnGetData();
+
+
+            if (indiceTE == 0) {
+                alert("Debe seleccionar un tipo de especialidad");
+            }
+            else {
+                var valido = false;
+                if (indiceEspecialidad == 0) {
+
+                    for (var i = 1; i < numEsp; i++) {
+                        valido = false;
+                        numTablaDetalle = $("#tableDetalle").dataTable().fnGetData();
+                        if (numTablaDetalle.length != 0) {
+                            for (var j = 0; j < numTablaDetalle.length; j++) {
+
+                                if (comboEspecialidad.options[i].value == numTablaDetalle[j][0]) {
+                                    alert('ya existe una especialidad llamada "' + comboEspecialidad.options[i].text+'"');
+                                    valido = true;
+                                    $("#idTipoDeEspeciliadad").val("");
+                                    $("#idEspecialidad").val("");
+                                    break;
+                                }
+                            }
+
+                            if (valido == false)
+                            {
+                                numTablaDetalle = $("#tableDetalle").dataTable().fnGetData();
+                                $("#tableDetalle").dataTable().fnAddData([
+                                                              comboEspecialidad.options[i].value,
+                                                              comboEspecialidad.options[i].text,
+                                                              "<button class='btn btn-danger' id='eliminarEspecialidad' alt=" + [numTablaDetalle.length + 1] + "><i class='fa fa-lg fa-trash'></i></button>"
+                                ]);
+                                $("#idTipoDeEspeciliadad").val("");
+                                $("#idEspecialidad").val("");
+                            }
+                        }
+                        else {
+                            numTablaDetalle = $("#tableDetalle").dataTable().fnGetData();
+                            $("#tableDetalle").dataTable().fnAddData([
+                                                              comboEspecialidad.options[i].value,
+                                                              comboEspecialidad.options[i].text,
+                                                              "<button class='btn btn-danger' id='eliminarEspecialidad' alt=" + [numTablaDetalle.length + 1] + "><i class='fa fa-lg fa-trash'></i></button>"
+                            ]);
+                            $("#idTipoDeEspeciliadad").val("");
+                            $("#idEspecialidad").val("");
+                        }
+
+
+
+                    }
+
+
+                }
+                else
+                {
+                    var validos= false;
+                    if (numTablaDetalle.length != 0) {
+                        for (var i = 0; i < numTablaDetalle.length; i++) {
+                            numTablaDetalle = $("#tableDetalle").dataTable().fnGetData();
+
+                            if ($("#idEspecialidad").val() == numTablaDetalle[i][0]) {
+                                alert('ya existe una especialidad llamada "' + nombreEspecialidad+'"');
+                                validos = true;
+                                break;
+                            }
+                        }
+                        if (validos == false)
+                        {
+                            numTablaDetalle = $("#tableDetalle").dataTable().fnGetData();
+                            $("#tableDetalle").dataTable().fnAddData([
+                                                              $("#idEspecialidad").val(),
+                                                              nombreEspecialidad,
+                                                              "<button class='btn btn-danger' id='eliminarEspecialidad' alt=" + [numTablaDetalle.length + 1] + "><i class='fa fa-lg fa-trash'></i></button>"
+                            ]);
+                        }
+                    }
+                    else
+                    {
+                        numTablaDetalle = $("#tableDetalle").dataTable().fnGetData();
+                        $("#tableDetalle").dataTable().fnAddData([
+                                                              $("#idEspecialidad").val(),
+                                                              nombreEspecialidad,
+                                                              "<button class='btn btn-danger' id='eliminarEspecialidad' alt=" + [numTablaDetalle.length + 1] + "><i class='fa fa-lg fa-trash'></i></button>"
+                        ]);
+                    }
+
+
+
+                    $("#idTipoDeEspeciliadad").val("");
+                    $("#idEspecialidad").val("");
+                }
+            }
+        }
+
+
+        $(document).on("click", "#eliminarEspecialidad", function (event) {
+            var alt = $(this).attr("alt");
+            $("#tableDetalle").dataTable().fnDeleteRow(alt - 1);
+
+            var tablaDetalle = $("#tableDetalle").dataTable().fnGetData();
+            var count = tablaDetalle.length + 1;
+
+            for (var i = 1; i > 0; i++) {
+                if (i == alt) {
+                    for (var j = alt; j <= count; j++) {
+                        if (alt != count) {
+                            $("#tableDetalle").find("button[alt = " + j + "]").attr("alt", [j - 1]);
+                        }
+                        else {
+
+                            break;
+
+                        }
+                    }
+
+                    alert("se eliminó Correctamente");
+                    break;
+
+                }
+                else {
+                    $("#tableDetalle").find("button[alt = " + i + "]").attr("alt", i);
+                }
+
+            }
+
+        });
+
+        function soloNumeros(e) {
+            key = e.keyCode || e.which;
+            teclado = String.fromCharCode(key);
+            numeros = "012345678    9:";
+            especiales = "8-37-38-46";
+            teclado_especial = false;
+
+            for (var i in especiales) {
+                if (key == especiales[i]) {
+                    teclado_especial = true;
+                }
+            }
+            if (numeros.indexOf(teclado) == -1 && !teclado_especial) {
+                return false;
+            }
+        }
+
+        jQuery(function ($) {
+            $.mask.definitions['H'] = '[012]';
+            $.mask.definitions['N'] = '[012345]';
+            $.mask.definitions['n'] = '[0123456789]';
+            $(".clockpicker").mask("Hn:Nn");
+        });
+
+
+
+        function valida_hora(valor) {
+            //que no existan elementos sin escribir
+            if (valor.indexOf(":") != -1) {
+                var hora = valor.split(":")[0];
+                if (parseInt(hora) > 23) {
+                    $(".clockpicker").val("");
+                }
+            }
+        }
+
+
+
+
+
+    </script>
+</head>
+<body class="sidebar-mini fixed">
+
+    <!--********************************TITULO*******************************-->
+
+    <div class="page-title">
+        <div>
+            <h1><i class="fa fa-plus"></i>Crear Horario</h1>
+            <p>Horario ...!</p>
+        </div>
+        <div>
+            <ul class="breadcrumb">
+                <li><i class="fa fa-home fa-lg"></i></li>
+                <li><a href="index.html">Lista de Horarios</a></li>
+                <li>Crear Horario</li>
+            </ul>
+        </div>
+    </div>
+    <!--********************************FIN TITULO*******************************-->
+    <!--***************************AQUÍ VA EL CODIGO******************************-->
+    <div class="row">
+        <!--CODIGO MODIFICAR-->
+        <div class="col-md-12">
+            <div class="card col-md-12">
+                <div class="" id="tabs">
+                    <div class="wrapper">
+                        <div class="container">
+                            <div class="bs-example bs-example-tabs" role="tabpanel" data-example-id="togglable-tabs">
+                                <ul id="myTab" class="nav nav-tabs nav-tabs-responsive" role="tablist">
+                                    <li role="presentation" class="active">
+                                        <a href="#tab1" id="home-tab" role="tab" data-toggle="tab" aria-controls="home" aria-expanded="true">
+                                            <span class="text">Horario</span>
+                                        </a>
+                                    </li>
+                                    <li role="presentation" class="next">
+                                        <a href="#tab2" role="tab" id="profile-tab" data-toggle="tab" aria-controls="profile">
+                                            <span class="text">Asignacion Especialidad</span>
+                                        </a>
+                                    </li>
+                                </ul>
+
+                                <form id="formAE" name="asignar" method="post" action="/Empleado/AsignacionEmpleado">
+                                    <div id="myTabContent" class="tab-content">
+
+
+
+
+                                        <!--INFOBASICA-->
+                                        <div role="tabpanel" class="tab-pane fade in active" id="tab1" aria-labelledby="home-tab">
+                                            <div class="row">
+                                                <div class="col-md-10">
+                                                    <div class="card col-md-12">
+                                                        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+                                                        @Html.HiddenFor(model => model.idEmpleado)
+
+                                                        <h3>Horario</h3>
+                                                        <div class="flex-container">
+                                                            <div class="card col-md-2">
+
+                                                                <div class="animated-checkbox">
+                                                                    <label>
+
+
+                                                                        @Html.TextBoxFor(model => model.laboraLunes, htmlAttributes: new { @type = "checkbox", @class = "valid", @value = "false" })
+
+                                                                        <span class="label-text">Lunes</span>
+                                                                        @Html.ValidationMessageFor(model => model.laboraLunes, "", new { @class = "text-danger" })
+
+                                                                    </label>
+                                                                </div>
+
+
+                                                                <div class="abc">
+                                                                    <label>Hora Entrada</label>
+
+                                                                    <div class="clockpicker" onkeypress="return soloNumeros(event), valida_hora(valor)" onpaste="return false">
+                                                                        @Html.EditorFor(model => model.horaInicioLunes, new { htmlAttributes = new { @class = "form-control", @readonly = "readonly" } })
+                                                                        @Html.ValidationMessageFor(model => model.horaInicioLunes, "", new { @class = "text-danger" })
+
+                                                                    </div>
+                                                                </div>
+                                                                <div class="abc">
+                                                                    <label>Hora Salida</label>
+                                                                    <div class="clockpicker" onkeypress="return soloNumeros(event)" onpaste="return false">
+                                                                        @Html.EditorFor(model => model.horaFinLunes, new { htmlAttributes = new { @class = "form-control", @readonly = "readonly" } })
+                                                                        @Html.ValidationMessageFor(model => model.horaFinLunes, "", new { @class = "text-danger" })
+                                                                    </div>
+
+
+
+                                                                </div>
+                                                            </div>
+
+
+
+                                                            <div class="card col-md-2">
+
+
+                                                                <div class="animated-checkbox">
+                                                                    <label>
+
+
+                                                                        @Html.TextBoxFor(model => model.laboraMartes, htmlAttributes: new { @type = "checkbox", @class = "valid", @value = "false" })
+
+                                                                        <span class="label-text">Martes</span>
+                                                                        @Html.ValidationMessageFor(model => model.laboraMartes, "", new { @class = "text-danger" })
+
+                                                                    </label>
+                                                                </div>
+
+                                                                <div class="abc">
+                                                                    <label>Hora Entrada</label>
+                                                                    <div class="clockpicker" onkeypress="return soloNumeros(event)" onpaste="return false">
+                                                                        @Html.EditorFor(model => model.horaInicioMartes, new { htmlAttributes = new { @class = "form-control", @readonly = "readonly" } })
+                                                                        @Html.ValidationMessageFor(model => model.horaInicioMartes, "", new { @class = "text-danger" })
+                                                                    </div>
+
+
+
+                                                                </div>
+                                                                <div class="abc">
+                                                                    <label>Hora Salida</label>
+                                                                    <div class="clockpicker" onkeypress="return soloNumeros(event)" onpaste="return false">
+                                                                        @Html.EditorFor(model => model.horaFinMartes, new { htmlAttributes = new { @class = "form-control", @readonly = "readonly" } })
+                                                                        @Html.ValidationMessageFor(model => model.horaFinMartes, "", new { @class = "text-danger" })
+                                                                    </div>
+
+                                                                </div>
+                                                            </div>
+
+
+                                                            <div class="card col-md-2">
+                                                                <div class="animated-checkbox">
+                                                                    <label>
+
+
+                                                                        @Html.TextBoxFor(model => model.laboraMiercoles, htmlAttributes: new { @type = "checkbox", @class = "valid", @value = "false" })
+
+                                                                        <span class="label-text">Miercoles</span>
+                                                                        @Html.ValidationMessageFor(model => model.laboraMiercoles, "", new { @class = "text-danger" })
+
+                                                                    </label>
+                                                                </div>
+
+                                                                <div class="abc">
+                                                                    <label>Hora Entrada</label>
+                                                                    <div class="clockpicker" onkeypress="return soloNumeros(event)" onpaste="return false">
+                                                                        @Html.EditorFor(model => model.horaInicioMiercoles, new { htmlAttributes = new { @class = "form-control", @readonly = "readonly" } })
+                                                                        @Html.ValidationMessageFor(model => model.horaInicioMiercoles, "", new { @class = "text-danger" })
+                                                                    </div>
+                                                                </div>
+                                                                <div class="abc">
+                                                                    <label>Hora Salida</label>
+                                                                    <div class="clockpicker" onkeypress="return soloNumeros(event)" onpaste="return false">
+                                                                        @Html.EditorFor(model => model.horaFinMiercoles, new { htmlAttributes = new { @class = "form-control", @readonly = "readonly" } })
+                                                                        @Html.ValidationMessageFor(model => model.horaFinMiercoles, "", new { @class = "text-danger" })
+                                                                    </div>
+
+
+                                                                </div>
+                                                            </div>
+                                                            <div class="card col-md-2">
+                                                                <div class="animated-checkbox">
+                                                                    <label>
+
+
+                                                                        @Html.TextBoxFor(model => model.laboraJueves, htmlAttributes: new { @type = "checkbox", @class = "valid", @value = "false" })
+
+                                                                        <span class="label-text">Jueves</span>
+                                                                        @Html.ValidationMessageFor(model => model.laboraJueves, "", new { @class = "text-danger" })
+
+                                                                    </label>
+                                                                </div>
+
+                                                                <div class="abc">
+                                                                    <label>Hora Entrada</label>
+                                                                    <div class="clockpicker" onkeypress="return soloNumeros(event)" onpaste="return false">
+                                                                        @Html.EditorFor(model => model.horaInicioJueves, new { htmlAttributes = new { @class = "form-control", @readonly = "readonly" } })
+                                                                        @Html.ValidationMessageFor(model => model.horaInicioJueves, "", new { @class = "text-danger" })
+                                                                    </div>
+                                                                </div>
+                                                                <div class="abc">
+                                                                    <label>Hora Salida</label>
+                                                                    <div class="clockpicker" onkeypress="return soloNumeros(event)" onpaste="return false">
+                                                                        @Html.EditorFor(model => model.horaFinJueves, new { htmlAttributes = new { @class = "form-control", @readonly = "readonly" } })
+                                                                        @Html.ValidationMessageFor(model => model.horaFinJueves, "", new { @class = "text-danger" })
+                                                                    </div>
+
+
+                                                                </div>
+                                                            </div>
+                                                            <div class="card col-md-2">
+                                                                <div class="animated-checkbox">
+                                                                    <label>
+
+
+                                                                        @Html.TextBoxFor(model => model.laboraViernes, htmlAttributes: new { @type = "checkbox", @class = "valid", @value = "false" })
+
+                                                                        <span class="label-text">Viernes</span>
+                                                                        @Html.ValidationMessageFor(model => model.laboraViernes, "", new { @class = "text-danger" })
+
+                                                                    </label>
+                                                                </div>
+
+                                                                <div class="abc">
+                                                                    <label>Hora Entrada</label>
+                                                                    <div class="clockpicker" onkeypress="return soloNumeros(event)" onpaste="return false">
+                                                                        @Html.EditorFor(model => model.horaInicioViernes, new { htmlAttributes = new { @class = "form-control", @readonly = "readonly" } })
+                                                                        @Html.ValidationMessageFor(model => model.horaInicioViernes, "", new { @class = "text-danger" })
+                                                                    </div>
+                                                                    <div class="abc">
+                                                                        <label>Hora Salida</label>
+                                                                        <div class="clockpicker" onkeypress="return soloNumeros(event)" onpaste="return false">
+                                                                            @Html.EditorFor(model => model.horaFinViernes, new { htmlAttributes = new { @class = "form-control", @readonly = "readonly" } })
+                                                                            @Html.ValidationMessageFor(model => model.horaFinViernes, "", new { @class = "text-danger" })
+                                                                        </div>
+
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="card col-md-2">
+                                                                <div class="animated-checkbox">
+                                                                    <label>
+
+
+                                                                        @Html.TextBoxFor(model => model.laboraSabado, htmlAttributes: new { @type = "checkbox", @class = "valid", @value = "false" })
+
+                                                                        <span class="label-text">Sábado</span>
+                                                                        @Html.ValidationMessageFor(model => model.laboraSabado, "", new { @class = "text-danger" })
+
+                                                                    </label>
+                                                                </div>
+
+
+
+                                                                <div class="abc">
+                                                                    <label>Hora Entrada</label>
+                                                                    <div class="clockpicker" onkeypress="return soloNumeros(event)" onpaste="return false">
+                                                                        @Html.EditorFor(model => model.horaInicioSabado, new { htmlAttributes = new { @class = "form-control", @readonly = "readonly" } })
+                                                                        @Html.ValidationMessageFor(model => model.horaInicioSabado, "", new { @class = "text-danger" })
+                                                                    </div>
+                                                                    <div class="abc">
+                                                                        <label>Hora Salida</label>
+                                                                        <div class="clockpicker" onkeypress="return soloNumeros(event)" onpaste="return false">
+                                                                            @Html.EditorFor(model => model.horaFinSabado, new { htmlAttributes = new { @class = "form-control", @readonly = "readonly" } })
+                                                                            @Html.ValidationMessageFor(model => model.horaFinSabado, "", new { @class = "text-danger" })
+                                                                        </div>
+
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="card col-md-2">
+                                                                <div class="animated-checkbox">
+                                                                    <label>
+
+
+                                                                        @Html.TextBoxFor(model => model.laboraDomingo, htmlAttributes: new { @type = "checkbox", @class = "valid", @value = "false" })
+
+                                                                        <span class="label-text">Domingo</span>
+                                                                        @Html.ValidationMessageFor(model => model.laboraDomingo, "", new { @class = "text-danger" })
+
+                                                                    </label>
+                                                                </div>
+
+                                                                <div class="abc">
+                                                                    <label>Hora Entrada</label>
+                                                                    <div class="clockpicker" onkeypress="return soloNumeros(event)" onpaste="return false">
+                                                                        @Html.EditorFor(model => model.horaInicioDomingo, new { htmlAttributes = new { @class = "form-control", @readonly = "readonly" } })
+                                                                        @Html.ValidationMessageFor(model => model.horaInicioDomingo, "", new { @class = "text-danger" })
+                                                                    </div>
+                                                                </div>
+                                                                <div class="abc">
+                                                                    <label>Hora Salida</label>
+                                                                    <div class="clockpicker" onkeypress="return soloNumeros(event)" onpaste="return false">
+                                                                        @Html.EditorFor(model => model.horaFinDomingo, new { htmlAttributes = new { @class = "form-control", @readonly = "readonly" } })
+                                                                        @Html.ValidationMessageFor(model => model.horaFinDomingo, "", new { @class = "text-danger" })
+                                                                    </div>
+
+                                                                </div>
+
+                                                            </div>
+
+
+
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div role="tabpanel" class="tab-pane fade" id="tab2" aria-labelledby="profile-tab">
+                                            <div class="row">
+                                                <div class="col-md-10">
+                                                    <div class="card col-md-12">
+                                                        <h3>Tipo Especialidad</h3>
+
+                                                        <div class="form-group col-md-5">
+                                                            @Html.Label("Tipo De Especiliadad", htmlAttributes: new { @class = "control-label" })
+                                                            <div class="control-label">
+                                                                @Html.DropDownList("idTipoDeEspeciliadad", null, "Seleccionar", htmlAttributes: new { @class = "form-control" })
+                                                            </div>
+                                                        </div>
+                                                        <!--SURNAME-2-->
+                                                        <div class="form-group col-md-5">
+
+
+                                                            @Html.Label("Especialidad", htmlAttributes: new { @class = "control-label" })
+                                                            <div class="control-label">
+                                                                @Html.DropDownList("idEspecialidad", null, "Seleccionar", htmlAttributes: new { @class = "form-control" })
+                                                            </div>
+
+                                                        </div>
+                                                        <div class="form-group col-md-2 abcd" id="but">
+                                                            <button id="agregarEspecialidad" onclick="AgregarDetalle()" class="btn btn-primary icon-btn" type="button">
+                                                                <i class="fa fa-fw fa-lg fa-plus">
+                                                                </i>
+                                                            </button>
+                                                        </div>
+                                                        <div class="card col-md-12">
+                                                            <div class="col-md-12 table-responsive">
+                                                                <table class="table table-responsive table-striped table-bordered" id="tableDetalle" style="width:100%">
+                                                                    <thead style="color:#ffffff;background:#0094ff;">
+                                                                        <tr>
+                                                                            <th>ID Especialidad</th>
+                                                                            <th>Especialidad</th>
+                                                                            <th>Acciones</th>
+
+                                                                        </tr>
+                                                                    </thead>
+                                                                    <tbody></tbody>
+
+                                                                </table>
+
+                                                            </div>
+                                                        </div>
+
+
+
+
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                        </div>
+
+                                    </div>
+
+
+
+
+
+                                    <div class="card" style="text-align: center;">
+                                        <div class="card-body">
+
+                                            <div class="row">
+                                                <div class="col-lg-10">
+                                                    <input type="submit" id="asignar" value="Create" class="btn btn-default" />
+                                                    </br>
+                                                    <div style="text-align:center;"> @Html.ValidationMessage("especialidades", "", new { @class = "text-danger", id = "especialidades-validacion" })</div>
+                                                </div>
+                                            </div>
+
+
+                                        </div>
+                                    </div>
+
+
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script type="text/javascript">
+                var input = $('.clockpicker input').clockpicker({
+                                    placement: 'right',
+                                    autoclose: true,
+                                    default: 'now',
+
+                                });
+    </script>
+
+
+
+</body>
+</html>

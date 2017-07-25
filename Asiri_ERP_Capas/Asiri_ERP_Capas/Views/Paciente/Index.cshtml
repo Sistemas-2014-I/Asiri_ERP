@@ -1,0 +1,164 @@
+﻿@model IEnumerable<Common.RHUt07_paciente>
+
+@{
+    ViewBag.Title = "Lista de Pacientes";
+}
+@section styles{
+
+<link href="~/Content/jquery-confirm.min.css" rel="stylesheet" />
+<link href="~/Content/preload.css" rel="stylesheet" />
+}
+<div class="row">
+    <div class="col-md-12">
+        <div class="card">
+            <!--  gif cargar tabla   -->
+            <div class="preload">
+                <img src="~/Content/img/loading_spinner.gif" />
+            </div>
+            <div class="card-title">
+                @Html.Partial("~/Views/Shared/_HeadpartialIndex.cshtml")
+            </div>
+            <hr />
+            
+                <div class="card-body table-responsive content">
+                    <div class="col-md-12">
+                        <table class="table table-hover table-bordered " id="tablegeneral" style="text-align:center;">
+                            <thead style="color:#ffffff;background:#0094ff;">
+                                <tr>
+                                    <th>
+                                        Codigo Paciente
+                                    </th>
+                                    <th>
+                                        @Html.DisplayNameFor(model => model.RHUt09_persona.nombrePersona)
+                                    </th>
+                                    <th>
+                                        Apellidos
+                                    </th>
+                                    <th>
+                                        Grupo Sanguineo
+                                    </th>
+                                    <th>
+                                        Activo
+                                    </th>
+                                    <th>
+                                        @Html.DisplayNameFor(model => model.fecRegistro)
+                                    </th>
+                                    <th>
+                                        Acciones
+                                    </th>
+                                    
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @foreach (var item in Model)
+                                {
+                                    <tr>
+                                        <td>
+                                            @Html.DisplayFor(modelItem => item.codPaciente)
+                                        </td>
+                                        <td>
+                                            <div class="text-center">
+                                                @Helpers.CustomHelper.NombrePersona(item.RHUt09_persona.tipoPersoneria, item.RHUt09_persona.nombrePersona, item.RHUt09_persona.nombreRepresentante)
+                                            </div>
+                                        </td>
+                                        <td>
+                                            @Html.DisplayFor(modelItem => item.RHUt09_persona.apellidoPaterno)
+                                            @Html.DisplayFor(modelItem => item.RHUt09_persona.apellidoMaterno)
+                                        </td>
+                                        <td>
+                                            @Html.DisplayFor(modelItem => item.grupoSanguineo)
+                                        </td>
+                                        <td>
+                                            <div class="text-center">
+                                                @Helpers.CustomHelper.Estado(Convert.ToBoolean(item.activo))
+                                            </div>
+                                        </td>
+                                        <td>
+                                            @Html.DisplayFor(modelItem => item.fecRegistro)
+                                        </td>
+                                        <td>
+                                            <div class="col-md-12" style="display:flex;justify-content:space-around">
+                                                <div class="col-md-3 text-center">
+                                                    <a class="btn btn-default btn-flat" href="@Url.Action("Details", "Persona", new { id = item.RHUt09_persona.idPersona })"><i class="fa fa-lg fa-plus"></i></a>
+                                                </div>
+                                                <div class="col-md-3 text-center">
+                                                    <a class="btn btn-warning btn-flat" href="@Url.Action("Edit","Persona",new { id = item.RHUt09_persona.idPersona})"><i class="fa fa-lg fa-edit"></i></a>
+                                                </div>
+                                                <div class="col-md-3 text-center">
+                                                    @Helpers.CustomHelper.Eliminar(Convert.ToBoolean(item.activo), Url.Action("Estado", "Paciente") + "", item.idPaciente)
+                                                </div>
+                                                <div class="col-md-3" style="text-align: center;">
+                                                    <a class="hc-paciente btn btn-primary btn-flat" data-numHC="@item.numHistoriaClinica" data-paciente="@item.RHUt09_persona.apellidoPaterno @item.RHUt09_persona.apellidoMaterno, @item.RHUt09_persona.nombrePersona" data-id="@item.idPaciente"><i class="fa fa-lg fa-heartbeat"></i></a>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        
+                                    </tr>
+                                }
+                            </tbody>
+                        </table>
+                        <div class="modal fade" id="modal-atenciones" role="dialog">
+                            <div class="modal-dialog modal-lg">
+
+                                <!-- Modal content-->
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                        <h4 class="modal-title"></h4>
+                                    </div>
+                                    <div class="modal-body">
+                                        <div class="card col-md-12">
+                                            <div class="card-content">
+                                                <form class="form-horizontal">
+                                                    <div class="card col-md-12">
+                                                        <div id="atenciones" class="col-md-12">
+
+
+                                                        </div>
+                                                    </div>
+
+
+                                                </form>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>&nbsp;&nbsp;&nbsp;
+
+
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+            </div>
+            </div>
+        </div>
+    </div>
+
+
+<script type="text/javascript">
+    $(document).ready(function () {
+        $("#btn_nuevo").attr("href", "@Url.Action("Create","Persona")");
+        $(".hc-paciente").on("click", function () {
+            var id = $(this).attr("data-id");
+            var numHC = $(this).attr("data-numHC");
+            var paciente = $(this).attr("data-paciente");
+            $("#atenciones").load("/Paciente/ObtenerAtenciones/" + parseInt(id));
+            $(".modal-title").text(numHC + "-" + paciente);
+            $("#modal-atenciones").modal("show");
+        });
+    })
+</script>
+
+@section Scripts{
+<script src="~/Scripts/preload.js"></script>
+
+<script src="~/Scripts/jquery-confirm.min.js"></script>
+
+@Scripts.Render("~/bundles/table")
+    
+<script src="~/Scripts/confirm.status.js"></script>
+}

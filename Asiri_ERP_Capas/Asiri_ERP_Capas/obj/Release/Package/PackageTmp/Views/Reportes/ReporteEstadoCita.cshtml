@@ -1,0 +1,37 @@
+﻿@model  IEnumerable<Common.CLlt09_estadoCita>
+
+@{
+    ViewBag.Title = "ReporteEstadoCita";
+}
+<script language="javascript" type="text/javascript">
+          function validarSiNumero(numero){
+              if (/^([0-9])*$/.test(numero));
+                  else
+              {
+                      alert("El valor " + numero + " no es un número");
+                      txtDato.value = "";}
+          }
+
+          function validar() {
+
+              //Validando el combo select
+              var miCombo = document.getElementById("idEstadoCita").value;
+              if (miCombo == "") {
+                  alert('Debe Elegir una opcion en el combo!');
+                  return false;
+              }
+          }
+</script>
+<h2>Reporte Estado de la Cita</h2>
+@using (Html.BeginForm("RepEstCita", "Reportes"))
+{
+    <form required onChange="validarSiNumero(this.value)" minlength="1">
+        <label>Seleccione Estado de Cita</label>
+
+        @Html.DropDownList("idEstadoCita")
+        <br />
+
+        <input type="submit" value="Reporte " class="btn btn-primary" onclick="return validar();" />
+    </form>
+}
+

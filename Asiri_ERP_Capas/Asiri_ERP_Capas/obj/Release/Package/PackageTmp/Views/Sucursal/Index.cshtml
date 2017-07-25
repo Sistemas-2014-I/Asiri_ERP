@@ -1,0 +1,265 @@
+﻿@model IEnumerable<Common.MSTt04_sucursal>
+
+<!DOCTYPE html>
+<html>
+<head>
+    
+</head>
+<body class="sidebar-mini fixed">
+    <!--********************************TITULO*******************************-->
+    <div class="page-title">
+        <div>
+            <h1><i class="fa fa-edit"></i> Mantenimiento de Sucursales</h1>
+            <p>Lista de Sucursales ...!</p>
+        </div>
+        <div>
+            <ul class="breadcrumb">
+                <li><i class="fa fa-home fa-lg"></i></li>
+                <li>Maestro</li>
+                <li><a href="#">Lista de Sucursales</a></li>
+            </ul>
+        </div>
+    </div>
+    <!--********************************FIN TITULO*******************************-->
+    <!--AQUÍ VA EL CODIGO-->
+    <div class="row">
+        <div class="col-md-12">
+            <!--CODIGO MODIFICAR-->
+            <div class="card">
+                <!--*********************************************AQUÍ MODIFICAR CARD***************************-->
+                <!--*********************************************CARD***************************-->
+                <!--CONTAINER TITLE-->
+                <div class="container" id="MantenimientoEmpleado">
+                    <!--NOMBRE DE MANTENIMIENTO-->
+                    <h3 style="display:inline-block;" class="header-title"><i class="glyphicon glyphicon-cog"></i></h3>
+                </div>
+                <!--ACTIONS-->
+                <div class="card-title-w-btn ">
+                    <!--NEW PATIENT-->
+                    <div class="bs-component">
+                        <div>
+                            <a class="btn btn-info icon-btn" href="@Url.Action("Create")">
+                                <i class="fa fa-fw fa-lg fa-user-plus"></i>Nueva Sucursal
+                            </a>
+                        </div>
+                    </div>
+                    <!--EXPORT-->
+                    <div class="btn-group">
+                        <a class="btn btn-primary dropdown-toggle" href="#" data-toggle="dropdown"><i class="fa fa-fw fa-lg fa-cloud-download"></i>Exportar <span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">PDF</a></li>
+                            <li><a href="#">Excel</a></li>
+                            <li><a href="#">Otro</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <hr>
+
+                <!--***************TABLE*************-->
+                <div class="card-body table-responsive">
+                    <table class="table table-hover table-bordered " id="sampleTable">
+                        <thead style="color:#ffffff;background:#0094ff;">
+                            <tr>
+                                <th>
+                                    @*@Html.DisplayNameFor(model => model.descSucursal)*@
+                                    @Html.Label("Descripción")
+                                </th>
+                                <th>
+                                    @*@Html.DisplayNameFor(model => model.direccion)*@
+                                    @Html.Label("Dirección")
+                                </th>
+                                <th>
+                                    @*@Html.DisplayNameFor(model => model.numTelefonico01)*@
+                                    @Html.Label("Teléfono 1")
+                                </th>
+                                <th>
+                                    @*@Html.DisplayNameFor(model => model.numTelefonico02)*@
+                                    @Html.Label("Teléfono 2")
+                                </th>
+                                <th>
+                                    @*@Html.DisplayNameFor(model => model.obsvSucursal)*@
+                                    @Html.Label("Observación")
+                                </th>
+                                <th>
+                                    @Html.DisplayNameFor(model => model.MSTt05_tipoSucursal.abrvSurcursal)
+                                </th>
+                                <th>
+                                    @Html.DisplayNameFor(model => model.activo)
+                                </th>
+                                <th class="col-md-3">
+                                    @Html.Label("Acciones")
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach (var item in Model)
+                            {
+                                <tr>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.descSucursal)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.direccion)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.numTelefonico01)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.numTelefonico02)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.obsvSucursal)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.MSTt05_tipoSucursal.abrvSurcursal)
+                                    </td>
+                                    <td>
+                                        @if (item.activo == true)
+                                        {
+                                            <div class="col-md-12" style="text-align: center;">
+                                                <a class="btn btn-success btn-flat"><i class="fa fa-lg fa-thumbs-o-up"></i></a>
+                                            </div>
+                                        }
+                                        else
+                                        {
+                                            <div class="col-md-12" style="text-align: center;">
+                                                <a class="btn btn-danger btn-flat"><i class="fa fa-lg fa-thumbs-o-down"></i></a>
+                                            </div>
+                                        }
+                                    </td>
+                                    <td class="col-md-3">
+                                        <div class="col-md-12" style="text-align: center;">
+                                            <div class="col-md-4" style="text-align: center;">
+                                                <a data-id="@item.idSucursal" data-desc="@item.descSucursal" data-dir="@item.direccion" data-nt1="@item.numTelefonico01" data-nt2="@item.numTelefonico02" data-obsv="@item.obsvSucursal" data-tipo="@item.MSTt05_tipoSucursal.abrvSurcursal" data-activo="@item.activo" class="detalleSucursal btn btn-success btn-flat"><i class="fa fa-search-plus"></i></a>
+                                            </div>
+                                            <div class="col-md-4" style="text-align: center;">
+                                                <a class="btn btn-warning btn-flat" href="@Url.Action("Edit", new { id=item.idSucursal })"><i class="fa fa-lg fa-edit"></i></a>
+                                            </div>
+                                            <div class="col-md-4" style="text-align: center;">
+                                                <a class="btn btn-danger btn-flat" href="@Url.Action("Delete", new { id = item.idSucursal })"><i class="fa fa-lg fa-trash"></i></a>
+                                            </div>
+                                        </div>
+                                    </td>
+                                </tr>
+                            }
+                        </tbody>
+                    </table>
+
+                    <!-- Modal Detalle Modal-->
+                    <div class="modal fade" id="detalleModal" role="dialog">
+                        <div class="modal-dialog modal-lg">
+
+                            <!-- Modal content-->
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <button type="button" data-target="#detalleModal" class="close" data-dismiss="modal">&times;</button>
+                                    <h3 class="modal-title"></h3>
+                                </div>
+                                <div class="modal-body">
+                                    <div class="card col-md-12" style="justify-content:center">
+                                        <div class="card-content">
+                                            <div id="tipoSucursal">
+                                                <div class="row col-md-12">
+                                                    <h4 class="col-md-6">Descripción:</h4>
+                                                    <h4 class="col-md-6" id="descModal"></h4>
+                                                </div>
+                                                <div class="row col-md-12">
+                                                    <h4 class="col-md-6">Dirección:</h4>
+                                                    <h4 class="col-md-6" id="dirModal"></h4>
+                                                </div>
+                                                <div class="row col-md-12">
+                                                    <h4 class="col-md-6">Número de Teléfono 01:</h4>
+                                                    <h4 class="col-md-6" id="nt1Modal"></h4>
+                                                </div>
+                                                <div class="row col-md-12">
+                                                    <h4 class="col-md-6">Número de Teléfono 02:</h4>
+                                                    <h4 class="col-md-6" id="nt2Modal"></h4>
+                                                </div>
+                                                <div class="row col-md-12">
+                                                    <h4 class="col-md-6">Observación:</h4>
+                                                    <h4 class="col-md-6" id="obsvModal"></h4>
+                                                </div>
+                                                <div class="row col-md-12">
+                                                    <h4 class="col-md-6">Tipo de Sucursal:</h4>
+                                                    <h4 class="col-md-6" id="tipoModal"></h4>
+                                                </div>
+                                                <div class="row col-md-12">
+                                                    <h4 class="col-md-6">Activo:</h4>
+                                                    <h4 class="col-md-6" id="activoModal"></h4>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="modal-footer">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!--******************TABLE***********-->
+                <!--*******************************************FIN***********************************-->
+            </div>
+        </div>
+        <!--FIN DE MODIFICAR-->
+    </div>
+
+
+
+    <!-- Javascripts-->
+    <script type="text/javascript">
+    //$('#sampleTable').DataTable();
+
+        $(document).ready(function () {
+            $('#sampleTable').dataTable({
+
+                language: {
+                    processing: "En curso...",
+                    search: "Buscar:",
+                    lengthMenu: "Visualizar _MENU_ registros",
+                    info: "_START_ de _END_ registros de un total de _TOTAL_ registros",
+                    infoEmpty: "0 registros encontrados",
+                    infoFiltered: "(_MAX_ registros filtrados en total)",
+                    infoPostFix: "",
+                    loadingRecords: "Cargando registros...",
+                    zeroRecords: "No hay registros",
+                    emptyTable: "Vacío",
+                    paginate: {
+                        first: "Primero",
+                        previous: "Previo  ",
+                        next: "  Siguiente",
+                        last: "Último"
+                    },
+                    aria: {
+                        sortAscending: ": Habilitado para ordenar la columna en orden ascendente",
+                        sortDescending: ": Habilitado para ordenar la columna en orden descendente"
+                    }
+                }
+            });
+
+            $(".detalleSucursal").on("click", function () {
+                var id = $(this).attr("data-id");
+                var desc = $(this).attr("data-desc");
+                var dir = $(this).attr("data-dir");
+                var nt1 = $(this).attr("data-nt1");
+                var nt2 = $(this).attr("data-nt2");
+                var obsv = $(this).attr("data-obsv");
+                var tipo = $(this).attr("data-tipo");
+                var estado = $(this).attr("data-activo");
+
+                $(".modal-title").text("Código de la Sucursal " + id);
+                $("#descModal").text(desc);
+                $("#dirModal").text(dir);
+                $("#nt1Modal").text(nt1);
+                $("#nt2Modal").text(nt2);
+                $("#obsvModal").text(obsv);
+                $("#tipoModal").text(tipo);
+                $("#activoModal").text(estado);
+                $("#detalleModal").modal("show");
+            });
+        });
+    </script>
+</body>
+</html>
+

@@ -1,0 +1,42 @@
+﻿@model IEnumerable<Common.MenuTemp>
+
+@{
+    Layout = null;
+}
+
+@foreach (var menu in Model)
+{
+    if (menu.ParentMenuID == 0)
+    {
+        <li class="treeview">
+
+            <a href="javascript:;" class="nav-link nav-toggle">
+                <i class="@menu.MenuIcon"></i>
+                <span class="title">@menu.DisplayName</span>
+                <i class="fa fa-angle-right"></i>
+                @*<span class="arrow"></span>*@
+            </a>
+
+
+
+
+            <ul class="treeview-menu">
+                @foreach (var childx in Model)
+                {
+                    if (childx.ParentMenuID == menu.MenuID)
+                    {
+                        <li class="nav-item  ">
+                            <a href="@childx.MenuURL" class="nav-link ">
+                                <span class="title">@childx.DisplayName</span>
+                            </a>
+                        </li>
+                    }
+                }
+            </ul>
+
+
+
+        </li>
+    }
+}
+

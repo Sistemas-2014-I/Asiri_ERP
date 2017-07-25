@@ -1,0 +1,141 @@
+﻿@model Common.View.ViewModel.ComprobanteVM
+@using Common.Helper
+<div class="modal-header">
+    <button type="button" class="close" data-dismiss="modal">&times;</button>
+    <h4 class="modal-title">Anulación de comprobrante</h4>
+</div>
+@using (Html.BeginForm("Anular", "Comprobante", FormMethod.Post, new { id = "form-anular-comp" }))
+{
+    <div id="modal-body-anular-comp" class="modal-body container-fluid">
+        <div class="row" style="margin-top:10px;">
+
+            <div class="col-md-7">
+                <h3 style="margin-top:0px;">
+                    <b>
+                        <span class="text-success">@Model.nombreTipoComp</span>
+                        @("N° " + Model.serie + " - " + Model.numComprobanteEmitido)
+                    </b>
+                </h3>
+
+                @if (Model.tipoPersoneria == ValuesSystem.PersonaNatural)
+                {
+                    <p>
+                        <b>Paciente:</b>
+                        <span>@Model.GetNombrePaciente()</span>
+                    </p>
+                }
+                else if (Model.tipoPersoneria == ValuesSystem.PersonaJuridica)
+                {
+                    <p>
+                        <b>Paciente:</b>
+                        <span>@Model.nombreRepresentante</span>
+                    </p>
+
+                    <p>
+                        <b>Razón social:</b>
+                        <span>@Model.razonSocial</span>
+                    </p>
+                }
+
+                <p>
+                    <b>@Model.tipoDoc:</b>
+                    <span>@Model.numDoc</span>
+                </p>
+
+                <p>
+                    <b>Fecha emisión:</b>
+                    <span>@(Model.fecEmision.OnlyDate()) </span>
+                </p>
+
+
+            </div>
+            <div class="col-md-5">
+                <img class="img-responsive img-circle" src="~/Image/logo-magicDent-pequeno.png" />
+            </div>
+
+        </div>
+
+        <div class="table-responsive">
+            <table class="table table-bordered table-condensed">
+                <tr>
+                    <th class="bg-primary text-nowrap">Cantidad</th>
+                    <th class="bg-primary text-nowrap">Servicio</th>
+                    <th class="bg-primary text-nowrap">Precio</th>
+                    <th class="bg-primary text-nowrap">Importe</th>
+                </tr>
+                @foreach (var item in Model.ComprobanteDtl)
+                {
+                    <tr>
+                        <td class="text-right text-nowrap">@item.cantidad.RoundOut(2)</td>
+                        <td class="text-nowrap">@item.nombreServicio</td>
+                        <td class="text-right text-nowrap">@Model.simboloMoneda @item.precio.RoundOut(2)</td>
+                        <td class="text-right text-nowrap">@Model.simboloMoneda @((Math.Round(item.cantidad, 2) * Math.Round(item.precio, 2)).RoundOut(2))</td>
+                    </tr>
+                }
+            </table>
+        </div>
+
+        <div class="table-responsive">
+            <table class="table table-condensed table-bordered">
+                <tr>
+                    <th colspan="4" class="text-center bg-primary">
+                        Montos
+                    </th>
+                </tr>
+                <tr>
+                    <td class="text-center">
+                        <b>Subtotal:</b><br />
+                        <span class="text-nowrap">@Model.simboloMoneda @Model.mtoSubTotal.RoundOut(2)</span>
+                    </td>
+
+                    <td class="text-center">
+                        <b>@Model.abrvImpto (@Model.porcentajeImpto.RoundOut(2) %):</b><br />
+                        <span class="text-nowrap">@Model.simboloMoneda @Model.mtoImpto.RoundOut(2)</span>
+                    </td>
+                    <td class="text-center">
+                        <b>Descuento (@Model.porcentajeDescuento.RoundOut(2) %):</b><br />
+                        <span class="text-nowrap">@Model.simboloMoneda @Model.mtoDescuento.RoundOut(2)</span>
+                    </td>
+                    <td class="bg-success text-center">
+                        <b>Total:</b><br />
+                        <span class="text-nowrap"><b>@Model.simboloMoneda @Model.mtoTotal.RoundOut(2)</b></span>
+                    </td>
+
+                </tr>
+            </table>
+        </div>
+    </div>
+
+
+    @Html.AntiForgeryToken()
+    @Html.HiddenFor(x => x.idComprobanteEmitido)
+
+    <h4 class="text-center" style="margin-top:10px;"><span>¿Por qué anulas el comprobante?</span></h4>
+    <div class="form-group container-fluid">
+        @Html.EditorFor(model => model.razonAnulacion, new { htmlAttributes = new { @class = "form-control" } })
+        @Html.ValidationMessageFor(model => model.razonAnulacion, "", new { @class = "text-danger" })
+    </div>
+
+
+    <div class="modal-footer">
+        <input type="submit" id="btn-anular-comp" value="Anular" class="btn btn-primary" />
+        <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
+    </div>
+}
+
+<script>
+    $(document).ready(function () {
+        $("#modal-anular-comp").on("hidden.bs.modal", function () {
+            $("#modal-content-anular-comp").text("");
+        });
+
+
+
+        $("#form-anular-comp").submit(function (e) {
+
+            //VALIDAR QUE SE BLOQUEE CUANDO ENVÍA
+            $("#btn-anular-comp").prop("disabled", true);
+        });
+
+    });
+</script>

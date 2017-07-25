@@ -1,0 +1,1163 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="AsiriModelStoreContainer" CdmEntityContainer="AsiriEntities1">
+    <EntitySetMapping Name="C__MigrationHistory">
+      <EntityTypeMapping TypeName="AsiriModel.C__MigrationHistory">
+        <MappingFragment StoreEntitySet="__MigrationHistory">
+          <ScalarProperty Name="MigrationId" ColumnName="MigrationId" />
+          <ScalarProperty Name="ContextKey" ColumnName="ContextKey" />
+          <ScalarProperty Name="Model" ColumnName="Model" />
+          <ScalarProperty Name="ProductVersion" ColumnName="ProductVersion" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="AspNetPermisos">
+      <EntityTypeMapping TypeName="AsiriModel.AspNetPermisos">
+        <MappingFragment StoreEntitySet="AspNetPermisos">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Descripcion" ColumnName="Descripcion" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="AspNetRoles">
+      <EntityTypeMapping TypeName="AsiriModel.AspNetRoles">
+        <MappingFragment StoreEntitySet="AspNetRoles">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="Discriminator" ColumnName="Discriminator" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="AspNetUserClaims">
+      <EntityTypeMapping TypeName="AsiriModel.AspNetUserClaims">
+        <MappingFragment StoreEntitySet="AspNetUserClaims">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+          <ScalarProperty Name="ClaimType" ColumnName="ClaimType" />
+          <ScalarProperty Name="ClaimValue" ColumnName="ClaimValue" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="AspNetUserLogins">
+      <EntityTypeMapping TypeName="AsiriModel.AspNetUserLogins">
+        <MappingFragment StoreEntitySet="AspNetUserLogins">
+          <ScalarProperty Name="LoginProvider" ColumnName="LoginProvider" />
+          <ScalarProperty Name="ProviderKey" ColumnName="ProviderKey" />
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="AspNetUsers">
+      <EntityTypeMapping TypeName="AsiriModel.AspNetUsers">
+        <MappingFragment StoreEntitySet="AspNetUsers">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="EmailConfirmed" ColumnName="EmailConfirmed" />
+          <ScalarProperty Name="PasswordHash" ColumnName="PasswordHash" />
+          <ScalarProperty Name="SecurityStamp" ColumnName="SecurityStamp" />
+          <ScalarProperty Name="PhoneNumber" ColumnName="PhoneNumber" />
+          <ScalarProperty Name="PhoneNumberConfirmed" ColumnName="PhoneNumberConfirmed" />
+          <ScalarProperty Name="TwoFactorEnabled" ColumnName="TwoFactorEnabled" />
+          <ScalarProperty Name="LockoutEndDateUtc" ColumnName="LockoutEndDateUtc" />
+          <ScalarProperty Name="LockoutEnabled" ColumnName="LockoutEnabled" />
+          <ScalarProperty Name="AccessFailedCount" ColumnName="AccessFailedCount" />
+          <ScalarProperty Name="UserName" ColumnName="UserName" />
+          <ScalarProperty Name="idEmpleado" ColumnName="idEmpleado" />
+          <ScalarProperty Name="Discriminator" ColumnName="Discriminator" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CLIt01_anamnesis">
+      <EntityTypeMapping TypeName="AsiriModel.CLIt01_anamnesis">
+        <MappingFragment StoreEntitySet="CLIt01_anamnesis">
+          <ScalarProperty Name="idAnamnesis" ColumnName="idAnamnesis" />
+          <ScalarProperty Name="descAnamnesis" ColumnName="descAnamnesis" />
+          <ScalarProperty Name="idAtencion" ColumnName="idAtencion" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CLIt02_archivoEstudioCompl">
+      <EntityTypeMapping TypeName="AsiriModel.CLIt02_archivoEstudioCompl">
+        <MappingFragment StoreEntitySet="CLIt02_archivoEstudioCompl">
+          <ScalarProperty Name="idArchivoEstudioCompl" ColumnName="idArchivoEstudioCompl" />
+          <ScalarProperty Name="pathArchivo" ColumnName="pathArchivo" />
+          <ScalarProperty Name="idEstudioCompl" ColumnName="idEstudioCompl" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CLlt03_atencion">
+      <EntityTypeMapping TypeName="AsiriModel.CLlt03_atencion">
+        <MappingFragment StoreEntitySet="CLlt03_atencion">
+          <ScalarProperty Name="idAtencion" ColumnName="idAtencion" />
+          <ScalarProperty Name="codAtencion" ColumnName="codAtencion" />
+          <ScalarProperty Name="fecRegistro" ColumnName="fecRegistro" />
+          <ScalarProperty Name="idUsuario" ColumnName="idUsuario" />
+          <ScalarProperty Name="idCita" ColumnName="idCita" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CLlt04_cie10">
+      <EntityTypeMapping TypeName="AsiriModel.CLlt04_cie10">
+        <MappingFragment StoreEntitySet="CLlt04_cie10">
+          <ScalarProperty Name="idCie10" ColumnName="idCie10" />
+          <ScalarProperty Name="codCie10" ColumnName="codCie10" />
+          <ScalarProperty Name="descCie10" ColumnName="descCie10" />
+          <ScalarProperty Name="activo" ColumnName="activo" />
+          <ScalarProperty Name="fecRegistro" ColumnName="fecRegistro" />
+          <ScalarProperty Name="fecModificacion" ColumnName="fecModificacion" />
+          <ScalarProperty Name="fecEliminacion" ColumnName="fecEliminacion" />
+          <ScalarProperty Name="idUsuario" ColumnName="idUsuario" />
+          <ScalarProperty Name="idUsuarioModificar" ColumnName="idUsuarioModificar" />
+          <ScalarProperty Name="idUsuarioEliminar" ColumnName="idUsuarioEliminar" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CLlt05_cita">
+      <EntityTypeMapping TypeName="AsiriModel.CLlt05_cita">
+        <MappingFragment StoreEntitySet="CLlt05_cita">
+          <ScalarProperty Name="idCita" ColumnName="idCita" />
+          <ScalarProperty Name="codCita" ColumnName="codCita" />
+          <ScalarProperty Name="fecCita" ColumnName="fecCita" />
+          <ScalarProperty Name="fecRegistro" ColumnName="fecRegistro" />
+          <ScalarProperty Name="fecModificacion" ColumnName="fecModificacion" />
+          <ScalarProperty Name="horaInicio" ColumnName="horaInicio" />
+          <ScalarProperty Name="duracionEstimada" ColumnName="duracionEstimada" />
+          <ScalarProperty Name="esReprogramado" ColumnName="esReprogramado" />
+          <ScalarProperty Name="numReprogramacion" ColumnName="numReprogramacion" />
+          <ScalarProperty Name="esOnline" ColumnName="esOnline" />
+          <ScalarProperty Name="esCerrado" ColumnName="esCerrado" />
+          <ScalarProperty Name="idCitaPadre" ColumnName="idCitaPadre" />
+          <ScalarProperty Name="obsvCita" ColumnName="obsvCita" />
+          <ScalarProperty Name="mtoTotal" ColumnName="mtoTotal" />
+          <ScalarProperty Name="idEstadoCita" ColumnName="idEstadoCita" />
+          <ScalarProperty Name="idPaciente" ColumnName="idPaciente" />
+          <ScalarProperty Name="idEmpleado" ColumnName="idEmpleado" />
+          <ScalarProperty Name="idUsuario" ColumnName="idUsuario" />
+          <ScalarProperty Name="idUsuarioModificar" ColumnName="idUsuarioModificar" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CLlt06_citaDtl">
+      <EntityTypeMapping TypeName="AsiriModel.CLlt06_citaDtl">
+        <MappingFragment StoreEntitySet="CLlt06_citaDtl">
+          <ScalarProperty Name="idCitaDtl" ColumnName="idCitaDtl" />
+          <ScalarProperty Name="precio" ColumnName="precio" />
+          <ScalarProperty Name="cantidad" ColumnName="cantidad" />
+          <ScalarProperty Name="esGratis" ColumnName="esGratis" />
+          <ScalarProperty Name="activo" ColumnName="activo" />
+          <ScalarProperty Name="idCita" ColumnName="idCita" />
+          <ScalarProperty Name="idServicio" ColumnName="idServicio" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CLlt07_consultorio">
+      <EntityTypeMapping TypeName="AsiriModel.CLlt07_consultorio">
+        <MappingFragment StoreEntitySet="CLlt07_consultorio">
+          <ScalarProperty Name="idConsultorio" ColumnName="idConsultorio" />
+          <ScalarProperty Name="codConsultorio" ColumnName="codConsultorio" />
+          <ScalarProperty Name="fecRegistro" ColumnName="fecRegistro" />
+          <ScalarProperty Name="fecModificacion" ColumnName="fecModificacion" />
+          <ScalarProperty Name="fecEliminacion" ColumnName="fecEliminacion" />
+          <ScalarProperty Name="obsvPiso" ColumnName="obsvPiso" />
+          <ScalarProperty Name="activo" ColumnName="activo" />
+          <ScalarProperty Name="idPiso" ColumnName="idPiso" />
+          <ScalarProperty Name="idUsuario" ColumnName="idUsuario" />
+          <ScalarProperty Name="idUsuarioModificar" ColumnName="idUsuarioModificar" />
+          <ScalarProperty Name="idUsuarioEliminar" ColumnName="idUsuarioEliminar" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CLlt08_diagnostico">
+      <EntityTypeMapping TypeName="AsiriModel.CLlt08_diagnostico">
+        <MappingFragment StoreEntitySet="CLlt08_diagnostico">
+          <ScalarProperty Name="idDiagnostico" ColumnName="idDiagnostico" />
+          <ScalarProperty Name="descDiagnostico" ColumnName="descDiagnostico" />
+          <ScalarProperty Name="idAtencion" ColumnName="idAtencion" />
+          <ScalarProperty Name="idCie10" ColumnName="idCie10" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CLlt09_estadoCita">
+      <EntityTypeMapping TypeName="AsiriModel.CLlt09_estadoCita">
+        <MappingFragment StoreEntitySet="CLlt09_estadoCita">
+          <ScalarProperty Name="idEstadoCita" ColumnName="idEstadoCita" />
+          <ScalarProperty Name="codEstadoCita" ColumnName="codEstadoCita" />
+          <ScalarProperty Name="descEstadoCita" ColumnName="descEstadoCita" />
+          <ScalarProperty Name="activo" ColumnName="activo" />
+          <ScalarProperty Name="fecRegistro" ColumnName="fecRegistro" />
+          <ScalarProperty Name="fecModificacion" ColumnName="fecModificacion" />
+          <ScalarProperty Name="fecEliminacion" ColumnName="fecEliminacion" />
+          <ScalarProperty Name="idUsuario" ColumnName="idUsuario" />
+          <ScalarProperty Name="idUsuarioModificar" ColumnName="idUsuarioModificar" />
+          <ScalarProperty Name="idUsuarioEliminar" ColumnName="idUsuarioEliminar" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CLlt10_estudioCompl">
+      <EntityTypeMapping TypeName="AsiriModel.CLlt10_estudioCompl">
+        <MappingFragment StoreEntitySet="CLlt10_estudioCompl">
+          <ScalarProperty Name="idEstudioCompl" ColumnName="idEstudioCompl" />
+          <ScalarProperty Name="descEstudioCompl" ColumnName="descEstudioCompl" />
+          <ScalarProperty Name="idAtencion" ColumnName="idAtencion" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CLlt11_evolucion">
+      <EntityTypeMapping TypeName="AsiriModel.CLlt11_evolucion">
+        <MappingFragment StoreEntitySet="CLlt11_evolucion">
+          <ScalarProperty Name="idEvolucion" ColumnName="idEvolucion" />
+          <ScalarProperty Name="descEvolucion" ColumnName="descEvolucion" />
+          <ScalarProperty Name="pesimo" ColumnName="pesimo" />
+          <ScalarProperty Name="malo" ColumnName="malo" />
+          <ScalarProperty Name="regular" ColumnName="regular" />
+          <ScalarProperty Name="bueno" ColumnName="bueno" />
+          <ScalarProperty Name="excelente" ColumnName="excelente" />
+          <ScalarProperty Name="idAtencion" ColumnName="idAtencion" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CLlt12_examenFisico">
+      <EntityTypeMapping TypeName="AsiriModel.CLlt12_examenFisico">
+        <MappingFragment StoreEntitySet="CLlt12_examenFisico">
+          <ScalarProperty Name="idExamenFisico" ColumnName="idExamenFisico" />
+          <ScalarProperty Name="descExamenFisico" ColumnName="descExamenFisico" />
+          <ScalarProperty Name="idAtencion" ColumnName="idAtencion" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CLlt13_funcionVital">
+      <EntityTypeMapping TypeName="AsiriModel.CLlt13_funcionVital">
+        <MappingFragment StoreEntitySet="CLlt13_funcionVital">
+          <ScalarProperty Name="idFuncionVital" ColumnName="idFuncionVital" />
+          <ScalarProperty Name="sistole" ColumnName="sistole" />
+          <ScalarProperty Name="diastole" ColumnName="diastole" />
+          <ScalarProperty Name="pulsacion" ColumnName="pulsacion" />
+          <ScalarProperty Name="ritmoRespiratorio" ColumnName="ritmoRespiratorio" />
+          <ScalarProperty Name="temperatura" ColumnName="temperatura" />
+          <ScalarProperty Name="altura" ColumnName="altura" />
+          <ScalarProperty Name="peso" ColumnName="peso" />
+          <ScalarProperty Name="imc" ColumnName="imc" />
+          <ScalarProperty Name="idAtencion" ColumnName="idAtencion" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CLlt14_seguro">
+      <EntityTypeMapping TypeName="AsiriModel.CLlt14_seguro">
+        <MappingFragment StoreEntitySet="CLlt14_seguro">
+          <ScalarProperty Name="idSeguro" ColumnName="idSeguro" />
+          <ScalarProperty Name="nombreSeguro" ColumnName="nombreSeguro" />
+          <ScalarProperty Name="abrvSeguro" ColumnName="abrvSeguro" />
+          <ScalarProperty Name="esPrivado" ColumnName="esPrivado" />
+          <ScalarProperty Name="activo" ColumnName="activo" />
+          <ScalarProperty Name="fecRegistro" ColumnName="fecRegistro" />
+          <ScalarProperty Name="fecModificacion" ColumnName="fecModificacion" />
+          <ScalarProperty Name="fecEliminacion" ColumnName="fecEliminacion" />
+          <ScalarProperty Name="idUsuario" ColumnName="idUsuario" />
+          <ScalarProperty Name="idUsuarioModificar" ColumnName="idUsuarioModificar" />
+          <ScalarProperty Name="idUsuarioEliminar" ColumnName="idUsuarioEliminar" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CLlt15_seguroPaciente">
+      <EntityTypeMapping TypeName="AsiriModel.CLlt15_seguroPaciente">
+        <MappingFragment StoreEntitySet="CLlt15_seguroPaciente">
+          <ScalarProperty Name="idSeguro" ColumnName="idSeguro" />
+          <ScalarProperty Name="idPaciente" ColumnName="idPaciente" />
+          <ScalarProperty Name="fecVencimiento" ColumnName="fecVencimiento" />
+          <ScalarProperty Name="activo" ColumnName="activo" />
+          <ScalarProperty Name="fecRegistro" ColumnName="fecRegistro" />
+          <ScalarProperty Name="fecModificacion" ColumnName="fecModificacion" />
+          <ScalarProperty Name="fecEliminacion" ColumnName="fecEliminacion" />
+          <ScalarProperty Name="idUsuario" ColumnName="idUsuario" />
+          <ScalarProperty Name="idUsuarioModificar" ColumnName="idUsuarioModificar" />
+          <ScalarProperty Name="idUsuarioEliminar" ColumnName="idUsuarioEliminar" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CLlt16_tratamiento">
+      <EntityTypeMapping TypeName="AsiriModel.CLlt16_tratamiento">
+        <MappingFragment StoreEntitySet="CLlt16_tratamiento">
+          <ScalarProperty Name="idTratamiento" ColumnName="idTratamiento" />
+          <ScalarProperty Name="descTratamiento" ColumnName="descTratamiento" />
+          <ScalarProperty Name="idDiagnostico" ColumnName="idDiagnostico" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CLlt17_tratamientoDtl">
+      <EntityTypeMapping TypeName="AsiriModel.CLlt17_tratamientoDtl">
+        <MappingFragment StoreEntitySet="CLlt17_tratamientoDtl">
+          <ScalarProperty Name="idTratamientoDtl" ColumnName="idTratamientoDtl" />
+          <ScalarProperty Name="esServicio" ColumnName="esServicio" />
+          <ScalarProperty Name="indicacionServicio" ColumnName="indicacionServicio" />
+          <ScalarProperty Name="idTratamiento" ColumnName="idTratamiento" />
+          <ScalarProperty Name="idProducto" ColumnName="idProducto" />
+          <ScalarProperty Name="idServicio" ColumnName="idServicio" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CustomPermiso">
+      <EntityTypeMapping TypeName="AsiriModel.CustomPermiso">
+        <MappingFragment StoreEntitySet="CustomPermiso">
+          <ScalarProperty Name="CustomPermisoID" ColumnName="CustomPermisoID" />
+          <ScalarProperty Name="UserID" ColumnName="UserID" />
+          <ScalarProperty Name="MenuID" ColumnName="MenuID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Menu">
+      <EntityTypeMapping TypeName="AsiriModel.Menu">
+        <MappingFragment StoreEntitySet="Menu">
+          <ScalarProperty Name="MenuID" ColumnName="MenuID" />
+          <ScalarProperty Name="DisplayName" ColumnName="DisplayName" />
+          <ScalarProperty Name="ParentMenuID" ColumnName="ParentMenuID" />
+          <ScalarProperty Name="OrderNumber" ColumnName="OrderNumber" />
+          <ScalarProperty Name="MenuURL" ColumnName="MenuURL" />
+          <ScalarProperty Name="MenuIcon" ColumnName="MenuIcon" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="MSTt01_medioDePago">
+      <EntityTypeMapping TypeName="AsiriModel.MSTt01_medioDePago">
+        <MappingFragment StoreEntitySet="MSTt01_medioDePago">
+          <ScalarProperty Name="idMedioDePago" ColumnName="idMedioDePago" />
+          <ScalarProperty Name="descMedioDePago" ColumnName="descMedioDePago" />
+          <ScalarProperty Name="abrvMedioDePago" ColumnName="abrvMedioDePago" />
+          <ScalarProperty Name="activo" ColumnName="activo" />
+          <ScalarProperty Name="fecRegistro" ColumnName="fecRegistro" />
+          <ScalarProperty Name="fecModificacion" ColumnName="fecModificacion" />
+          <ScalarProperty Name="fecEliminacion" ColumnName="fecEliminacion" />
+          <ScalarProperty Name="idUsuario" ColumnName="idUsuario" />
+          <ScalarProperty Name="idUsuarioModificar" ColumnName="idUsuarioModificar" />
+          <ScalarProperty Name="idUsuarioEliminar" ColumnName="idUsuarioEliminar" />
+          <ScalarProperty Name="idTipoMedioDePago" ColumnName="idTipoMedioDePago" />
+          <ScalarProperty Name="medioDePagoRapido" ColumnName="medioDePagoRapido" />
+          <ScalarProperty Name="photoPath" ColumnName="photoPath" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="MSTt02_piso">
+      <EntityTypeMapping TypeName="AsiriModel.MSTt02_piso">
+        <MappingFragment StoreEntitySet="MSTt02_piso">
+          <ScalarProperty Name="idPiso" ColumnName="idPiso" />
+          <ScalarProperty Name="numPiso" ColumnName="numPiso" />
+          <ScalarProperty Name="obsvPiso" ColumnName="obsvPiso" />
+          <ScalarProperty Name="activo" ColumnName="activo" />
+          <ScalarProperty Name="fecRegistro" ColumnName="fecRegistro" />
+          <ScalarProperty Name="fecModificacion" ColumnName="fecModificacion" />
+          <ScalarProperty Name="fecEliminacion" ColumnName="fecEliminacion" />
+          <ScalarProperty Name="idUsuario" ColumnName="idUsuario" />
+          <ScalarProperty Name="idUsuarioModificar" ColumnName="idUsuarioModificar" />
+          <ScalarProperty Name="idUsuarioEliminar" ColumnName="idUsuarioEliminar" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="MSTt03_redSocial">
+      <EntityTypeMapping TypeName="AsiriModel.MSTt03_redSocial">
+        <MappingFragment StoreEntitySet="MSTt03_redSocial">
+          <ScalarProperty Name="idRedSocial" ColumnName="idRedSocial" />
+          <ScalarProperty Name="nombreRedSocial" ColumnName="nombreRedSocial" />
+          <ScalarProperty Name="abrvRedSocial" ColumnName="abrvRedSocial" />
+          <ScalarProperty Name="activo" ColumnName="activo" />
+          <ScalarProperty Name="fecRegistro" ColumnName="fecRegistro" />
+          <ScalarProperty Name="fecModificacion" ColumnName="fecModificacion" />
+          <ScalarProperty Name="fecEliminacion" ColumnName="fecEliminacion" />
+          <ScalarProperty Name="idUsuario" ColumnName="idUsuario" />
+          <ScalarProperty Name="idUsuarioModificar" ColumnName="idUsuarioModificar" />
+          <ScalarProperty Name="idUsuarioEliminar" ColumnName="idUsuarioEliminar" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="MSTt04_sucursal">
+      <EntityTypeMapping TypeName="AsiriModel.MSTt04_sucursal">
+        <MappingFragment StoreEntitySet="MSTt04_sucursal">
+          <ScalarProperty Name="idSucursal" ColumnName="idSucursal" />
+          <ScalarProperty Name="descSucursal" ColumnName="descSucursal" />
+          <ScalarProperty Name="direccion" ColumnName="direccion" />
+          <ScalarProperty Name="numTelefonico01" ColumnName="numTelefonico01" />
+          <ScalarProperty Name="numTelefonico02" ColumnName="numTelefonico02" />
+          <ScalarProperty Name="obsvSucursal" ColumnName="obsvSucursal" />
+          <ScalarProperty Name="activo" ColumnName="activo" />
+          <ScalarProperty Name="fecRegistro" ColumnName="fecRegistro" />
+          <ScalarProperty Name="fecModificacion" ColumnName="fecModificacion" />
+          <ScalarProperty Name="fecEliminacion" ColumnName="fecEliminacion" />
+          <ScalarProperty Name="idUsuario" ColumnName="idUsuario" />
+          <ScalarProperty Name="idUsuarioModificar" ColumnName="idUsuarioModificar" />
+          <ScalarProperty Name="idUsuarioEliminar" ColumnName="idUsuarioEliminar" />
+          <ScalarProperty Name="idTipoSucursal" ColumnName="idTipoSucursal" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="MSTt05_tipoSucursal">
+      <EntityTypeMapping TypeName="AsiriModel.MSTt05_tipoSucursal">
+        <MappingFragment StoreEntitySet="MSTt05_tipoSucursal">
+          <ScalarProperty Name="idTipoSucursal" ColumnName="idTipoSucursal" />
+          <ScalarProperty Name="descTipoSucursal" ColumnName="descTipoSucursal" />
+          <ScalarProperty Name="abrvSurcursal" ColumnName="abrvSurcursal" />
+          <ScalarProperty Name="activo" ColumnName="activo" />
+          <ScalarProperty Name="fecRegistro" ColumnName="fecRegistro" />
+          <ScalarProperty Name="fecModificacion" ColumnName="fecModificacion" />
+          <ScalarProperty Name="fecEliminacion" ColumnName="fecEliminacion" />
+          <ScalarProperty Name="idUsuario" ColumnName="idUsuario" />
+          <ScalarProperty Name="IdUsuarioModificar" ColumnName="IdUsuarioModificar" />
+          <ScalarProperty Name="idUsuarioEliminar" ColumnName="idUsuarioEliminar" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Permiso">
+      <EntityTypeMapping TypeName="AsiriModel.Permiso">
+        <MappingFragment StoreEntitySet="Permiso">
+          <ScalarProperty Name="PermisoID" ColumnName="PermisoID" />
+          <ScalarProperty Name="RoleID" ColumnName="RoleID" />
+          <ScalarProperty Name="MenuID" ColumnName="MenuID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PROt01_categoria">
+      <EntityTypeMapping TypeName="AsiriModel.PROt01_categoria">
+        <MappingFragment StoreEntitySet="PROt01_categoria">
+          <ScalarProperty Name="idCategoria" ColumnName="idCategoria" />
+          <ScalarProperty Name="fecRegistro" ColumnName="fecRegistro" />
+          <ScalarProperty Name="fecModificacion" ColumnName="fecModificacion" />
+          <ScalarProperty Name="fecEliminacion" ColumnName="fecEliminacion" />
+          <ScalarProperty Name="idUsuario" ColumnName="idUsuario" />
+          <ScalarProperty Name="idUsuarioModificar" ColumnName="idUsuarioModificar" />
+          <ScalarProperty Name="idUsuarioEliminar" ColumnName="idUsuarioEliminar" />
+          <ScalarProperty Name="nombreCategoria" ColumnName="nombreCategoria" />
+          <ScalarProperty Name="descCategoria" ColumnName="descCategoria" />
+          <ScalarProperty Name="activo" ColumnName="activo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PROt02_producto">
+      <EntityTypeMapping TypeName="AsiriModel.PROt02_producto">
+        <MappingFragment StoreEntitySet="PROt02_producto">
+          <ScalarProperty Name="idProducto" ColumnName="idProducto" />
+          <ScalarProperty Name="codProducto" ColumnName="codProducto" />
+          <ScalarProperty Name="codBarra" ColumnName="codBarra" />
+          <ScalarProperty Name="nombreProductoGenerico" ColumnName="nombreProductoGenerico" />
+          <ScalarProperty Name="nombreProductoComercial" ColumnName="nombreProductoComercial" />
+          <ScalarProperty Name="descProducto" ColumnName="descProducto" />
+          <ScalarProperty Name="obsvProducto" ColumnName="obsvProducto" />
+          <ScalarProperty Name="activo" ColumnName="activo" />
+          <ScalarProperty Name="fecRegistro" ColumnName="fecRegistro" />
+          <ScalarProperty Name="fecModificacion" ColumnName="fecModificacion" />
+          <ScalarProperty Name="fecEliminacion" ColumnName="fecEliminacion" />
+          <ScalarProperty Name="idUsuario" ColumnName="idUsuario" />
+          <ScalarProperty Name="idUsuarioModificar" ColumnName="idUsuarioModificar" />
+          <ScalarProperty Name="idUsuarioEliminar" ColumnName="idUsuarioEliminar" />
+          <ScalarProperty Name="idCategoria" ColumnName="idCategoria" />
+          <ScalarProperty Name="idMoneda" ColumnName="idMoneda" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PROt03_productoUnidadDeMedida">
+      <EntityTypeMapping TypeName="AsiriModel.PROt03_productoUnidadDeMedida">
+        <MappingFragment StoreEntitySet="PROt03_productoUnidadDeMedida">
+          <ScalarProperty Name="idUnidadDeMedida" ColumnName="idUnidadDeMedida" />
+          <ScalarProperty Name="idProducto" ColumnName="idProducto" />
+          <ScalarProperty Name="precio" ColumnName="precio" />
+          <ScalarProperty Name="precioMinimo" ColumnName="precioMinimo" />
+          <ScalarProperty Name="precioMaximo" ColumnName="precioMaximo" />
+          <ScalarProperty Name="activo" ColumnName="activo" />
+          <ScalarProperty Name="fecRegistro" ColumnName="fecRegistro" />
+          <ScalarProperty Name="fecModificacion" ColumnName="fecModificacion" />
+          <ScalarProperty Name="fecEliminacion" ColumnName="fecEliminacion" />
+          <ScalarProperty Name="idUsuario" ColumnName="idUsuario" />
+          <ScalarProperty Name="idUsuarioModificar" ColumnName="idUsuarioModificar" />
+          <ScalarProperty Name="idUsuarioEliminar" ColumnName="idUsuarioEliminar" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PROt04_servicio">
+      <EntityTypeMapping TypeName="AsiriModel.PROt04_servicio">
+        <MappingFragment StoreEntitySet="PROt04_servicio">
+          <ScalarProperty Name="idServicio" ColumnName="idServicio" />
+          <ScalarProperty Name="codServicio" ColumnName="codServicio" />
+          <ScalarProperty Name="nombreServicio" ColumnName="nombreServicio" />
+          <ScalarProperty Name="descServicio" ColumnName="descServicio" />
+          <ScalarProperty Name="precio" ColumnName="precio" />
+          <ScalarProperty Name="precioMinimo" ColumnName="precioMinimo" />
+          <ScalarProperty Name="precioMaximo" ColumnName="precioMaximo" />
+          <ScalarProperty Name="esGratis" ColumnName="esGratis" />
+          <ScalarProperty Name="activo" ColumnName="activo" />
+          <ScalarProperty Name="fecRegistro" ColumnName="fecRegistro" />
+          <ScalarProperty Name="fecModificacion" ColumnName="fecModificacion" />
+          <ScalarProperty Name="fecEliminacion" ColumnName="fecEliminacion" />
+          <ScalarProperty Name="idUsuario" ColumnName="idUsuario" />
+          <ScalarProperty Name="idUsuarioModificar" ColumnName="idUsuarioModificar" />
+          <ScalarProperty Name="idUsuarioEliminar" ColumnName="idUsuarioEliminar" />
+          <ScalarProperty Name="idTipoDeServicio" ColumnName="idTipoDeServicio" />
+          <ScalarProperty Name="idEspecialidad" ColumnName="idEspecialidad" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PROt05_tipoDeServicio">
+      <EntityTypeMapping TypeName="AsiriModel.PROt05_tipoDeServicio">
+        <MappingFragment StoreEntitySet="PROt05_tipoDeServicio">
+          <ScalarProperty Name="idTipoDeServicio" ColumnName="idTipoDeServicio" />
+          <ScalarProperty Name="descTipoDeServicio" ColumnName="descTipoDeServicio" />
+          <ScalarProperty Name="activo" ColumnName="activo" />
+          <ScalarProperty Name="fecRegistro" ColumnName="fecRegistro" />
+          <ScalarProperty Name="fecModificacion" ColumnName="fecModificacion" />
+          <ScalarProperty Name="fecEliminacion" ColumnName="fecEliminacion" />
+          <ScalarProperty Name="idUsuario" ColumnName="idUsuario" />
+          <ScalarProperty Name="idUsuarioModificar" ColumnName="idUsuarioModificar" />
+          <ScalarProperty Name="idUsuarioEliminar" ColumnName="idUsuarioEliminar" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PROt06_unidadDeMedida">
+      <EntityTypeMapping TypeName="AsiriModel.PROt06_unidadDeMedida">
+        <MappingFragment StoreEntitySet="PROt06_unidadDeMedida">
+          <ScalarProperty Name="idUnidadDeMedida" ColumnName="idUnidadDeMedida" />
+          <ScalarProperty Name="codUnidadDeMedida" ColumnName="codUnidadDeMedida" />
+          <ScalarProperty Name="descUnidadDeMedida" ColumnName="descUnidadDeMedida" />
+          <ScalarProperty Name="activo" ColumnName="activo" />
+          <ScalarProperty Name="fecRegistro" ColumnName="fecRegistro" />
+          <ScalarProperty Name="fecModificacion" ColumnName="fecModificacion" />
+          <ScalarProperty Name="fecEliminacion" ColumnName="fecEliminacion" />
+          <ScalarProperty Name="idUsuario" ColumnName="idUsuario" />
+          <ScalarProperty Name="idUsuarioModificar" ColumnName="idUsuarioModificar" />
+          <ScalarProperty Name="idUsuarioEliminar" ColumnName="idUsuarioEliminar" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="RHUt01_empleado">
+      <EntityTypeMapping TypeName="AsiriModel.RHUt01_empleado">
+        <MappingFragment StoreEntitySet="RHUt01_empleado">
+          <ScalarProperty Name="idEmpleado" ColumnName="idEmpleado" />
+          <ScalarProperty Name="codEmpleado" ColumnName="codEmpleado" />
+          <ScalarProperty Name="fecRegistro" ColumnName="fecRegistro" />
+          <ScalarProperty Name="fecModificacion" ColumnName="fecModificacion" />
+          <ScalarProperty Name="fecEliminacion" ColumnName="fecEliminacion" />
+          <ScalarProperty Name="fecIngreso" ColumnName="fecIngreso" />
+          <ScalarProperty Name="fecCese" ColumnName="fecCese" />
+          <ScalarProperty Name="horasPorPeriodo" ColumnName="horasPorPeriodo" />
+          <ScalarProperty Name="mtoRemuneracion" ColumnName="mtoRemuneracion" />
+          <ScalarProperty Name="esHorarioTurno" ColumnName="esHorarioTurno" />
+          <ScalarProperty Name="activo" ColumnName="activo" />
+          <ScalarProperty Name="idUsuario" ColumnName="idUsuario" />
+          <ScalarProperty Name="idUsuarioModificar" ColumnName="idUsuarioModificar" />
+          <ScalarProperty Name="idUsuarioEliminar" ColumnName="idUsuarioEliminar" />
+          <ScalarProperty Name="idEntidadFinanciera" ColumnName="idEntidadFinanciera" />
+          <ScalarProperty Name="idTipoDeEmpleado" ColumnName="idTipoDeEmpleado" />
+          <ScalarProperty Name="idPersona" ColumnName="idPersona" />
+          <ScalarProperty Name="idPeriodoRemuneracion" ColumnName="idPeriodoRemuneracion" />
+          <ScalarProperty Name="idMedioDePago" ColumnName="idMedioDePago" />
+          <ScalarProperty Name="idConsultorio" ColumnName="idConsultorio" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="RHUt02_empleadoEspecialidad">
+      <EntityTypeMapping TypeName="AsiriModel.RHUt02_empleadoEspecialidad">
+        <MappingFragment StoreEntitySet="RHUt02_empleadoEspecialidad">
+          <ScalarProperty Name="idEmpleado" ColumnName="idEmpleado" />
+          <ScalarProperty Name="idEspecialidad" ColumnName="idEspecialidad" />
+          <ScalarProperty Name="fecRegistro" ColumnName="fecRegistro" />
+          <ScalarProperty Name="fecModificacion" ColumnName="fecModificacion" />
+          <ScalarProperty Name="fecEliminacion" ColumnName="fecEliminacion" />
+          <ScalarProperty Name="activo" ColumnName="activo" />
+          <ScalarProperty Name="idUsuario" ColumnName="idUsuario" />
+          <ScalarProperty Name="idUsuarioModificar" ColumnName="idUsuarioModificar" />
+          <ScalarProperty Name="IdUsuarioEliminar" ColumnName="IdUsuarioEliminar" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="RHUt03_empleadoTurno">
+      <EntityTypeMapping TypeName="AsiriModel.RHUt03_empleadoTurno">
+        <MappingFragment StoreEntitySet="RHUt03_empleadoTurno">
+          <ScalarProperty Name="idEmpleado" ColumnName="idEmpleado" />
+          <ScalarProperty Name="idTurno" ColumnName="idTurno" />
+          <ScalarProperty Name="fecRegistro" ColumnName="fecRegistro" />
+          <ScalarProperty Name="fecModificacion" ColumnName="fecModificacion" />
+          <ScalarProperty Name="fecEliminacion" ColumnName="fecEliminacion" />
+          <ScalarProperty Name="activo" ColumnName="activo" />
+          <ScalarProperty Name="idUsuario" ColumnName="idUsuario" />
+          <ScalarProperty Name="idUsuarioModificar" ColumnName="idUsuarioModificar" />
+          <ScalarProperty Name="idUsuarioEliminar" ColumnName="idUsuarioEliminar" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="RHUt04_especialidad">
+      <EntityTypeMapping TypeName="AsiriModel.RHUt04_especialidad">
+        <MappingFragment StoreEntitySet="RHUt04_especialidad">
+          <ScalarProperty Name="idEspecialidad" ColumnName="idEspecialidad" />
+          <ScalarProperty Name="nombreEspecialidad" ColumnName="nombreEspecialidad" />
+          <ScalarProperty Name="abrvEspecialidad" ColumnName="abrvEspecialidad" />
+          <ScalarProperty Name="activo" ColumnName="activo" />
+          <ScalarProperty Name="fecRegistro" ColumnName="fecRegistro" />
+          <ScalarProperty Name="fecModificacion" ColumnName="fecModificacion" />
+          <ScalarProperty Name="fecEliminacion" ColumnName="fecEliminacion" />
+          <ScalarProperty Name="idUsuario" ColumnName="idUsuario" />
+          <ScalarProperty Name="idUsuarioModificar" ColumnName="idUsuarioModificar" />
+          <ScalarProperty Name="idUsuarioEliminar" ColumnName="idUsuarioEliminar" />
+          <ScalarProperty Name="idTipoDeEspeciliadad" ColumnName="idTipoDeEspeciliadad" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="RHUt05_estadoCivil">
+      <EntityTypeMapping TypeName="AsiriModel.RHUt05_estadoCivil">
+        <MappingFragment StoreEntitySet="RHUt05_estadoCivil">
+          <ScalarProperty Name="idEstadoCivil" ColumnName="idEstadoCivil" />
+          <ScalarProperty Name="descEstadoCivil" ColumnName="descEstadoCivil" />
+          <ScalarProperty Name="abrvEstadoCivil" ColumnName="abrvEstadoCivil" />
+          <ScalarProperty Name="activo" ColumnName="activo" />
+          <ScalarProperty Name="fecRegistro" ColumnName="fecRegistro" />
+          <ScalarProperty Name="fecModificacion" ColumnName="fecModificacion" />
+          <ScalarProperty Name="idUsuario" ColumnName="idUsuario" />
+          <ScalarProperty Name="idUsuarioModificar" ColumnName="idUsuarioModificar" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="RHUt06_horario">
+      <EntityTypeMapping TypeName="AsiriModel.RHUt06_horario">
+        <MappingFragment StoreEntitySet="RHUt06_horario">
+          <ScalarProperty Name="idHorario" ColumnName="idHorario" />
+          <ScalarProperty Name="laboraLunes" ColumnName="laboraLunes" />
+          <ScalarProperty Name="laboraMartes" ColumnName="laboraMartes" />
+          <ScalarProperty Name="laboraMiercoles" ColumnName="laboraMiercoles" />
+          <ScalarProperty Name="laboraJueves" ColumnName="laboraJueves" />
+          <ScalarProperty Name="laboraViernes" ColumnName="laboraViernes" />
+          <ScalarProperty Name="laboraSabado" ColumnName="laboraSabado" />
+          <ScalarProperty Name="laboraDomingo" ColumnName="laboraDomingo" />
+          <ScalarProperty Name="horaInicioLunes" ColumnName="horaInicioLunes" />
+          <ScalarProperty Name="horaFinLunes" ColumnName="horaFinLunes" />
+          <ScalarProperty Name="horaInicioMartes" ColumnName="horaInicioMartes" />
+          <ScalarProperty Name="horaFinMartes" ColumnName="horaFinMartes" />
+          <ScalarProperty Name="horaInicioMiercoles" ColumnName="horaInicioMiercoles" />
+          <ScalarProperty Name="horaFinMiercoles" ColumnName="horaFinMiercoles" />
+          <ScalarProperty Name="horaInicioJueves" ColumnName="horaInicioJueves" />
+          <ScalarProperty Name="horaFinJueves" ColumnName="horaFinJueves" />
+          <ScalarProperty Name="horaInicioViernes" ColumnName="horaInicioViernes" />
+          <ScalarProperty Name="horaFinViernes" ColumnName="horaFinViernes" />
+          <ScalarProperty Name="horaInicioSabado" ColumnName="horaInicioSabado" />
+          <ScalarProperty Name="horaFinSabado" ColumnName="horaFinSabado" />
+          <ScalarProperty Name="horaInicioDomingo" ColumnName="horaInicioDomingo" />
+          <ScalarProperty Name="horaFinDomingo" ColumnName="horaFinDomingo" />
+          <ScalarProperty Name="fecRegistro" ColumnName="fecRegistro" />
+          <ScalarProperty Name="fecModificacion" ColumnName="fecModificacion" />
+          <ScalarProperty Name="idUsuario" ColumnName="idUsuario" />
+          <ScalarProperty Name="idUsuarioModificar" ColumnName="idUsuarioModificar" />
+          <ScalarProperty Name="idEmpleado" ColumnName="idEmpleado" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="RHUt07_paciente">
+      <EntityTypeMapping TypeName="AsiriModel.RHUt07_paciente">
+        <MappingFragment StoreEntitySet="RHUt07_paciente">
+          <ScalarProperty Name="idPaciente" ColumnName="idPaciente" />
+          <ScalarProperty Name="codPaciente" ColumnName="codPaciente" />
+          <ScalarProperty Name="numHistoriaClinica" ColumnName="numHistoriaClinica" />
+          <ScalarProperty Name="grupoSanguineo" ColumnName="grupoSanguineo" />
+          <ScalarProperty Name="activo" ColumnName="activo" />
+          <ScalarProperty Name="fecRegistro" ColumnName="fecRegistro" />
+          <ScalarProperty Name="fecModificacion" ColumnName="fecModificacion" />
+          <ScalarProperty Name="fecEliminacion" ColumnName="fecEliminacion" />
+          <ScalarProperty Name="idUsuario" ColumnName="idUsuario" />
+          <ScalarProperty Name="idUsuarioModificar" ColumnName="idUsuarioModificar" />
+          <ScalarProperty Name="idUsuarioEliminar" ColumnName="idUsuarioEliminar" />
+          <ScalarProperty Name="idPersona" ColumnName="idPersona" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="RHUt08_periodoRemuneracion">
+      <EntityTypeMapping TypeName="AsiriModel.RHUt08_periodoRemuneracion">
+        <MappingFragment StoreEntitySet="RHUt08_periodoRemuneracion">
+          <ScalarProperty Name="idPeriodoRemuneracion" ColumnName="idPeriodoRemuneracion" />
+          <ScalarProperty Name="codPeriodoRemuneracion" ColumnName="codPeriodoRemuneracion" />
+          <ScalarProperty Name="descPeriodoRemuneracion" ColumnName="descPeriodoRemuneracion" />
+          <ScalarProperty Name="abrvPeriodoRemuneracion" ColumnName="abrvPeriodoRemuneracion" />
+          <ScalarProperty Name="activo" ColumnName="activo" />
+          <ScalarProperty Name="fecRegistro" ColumnName="fecRegistro" />
+          <ScalarProperty Name="fecModificacion" ColumnName="fecModificacion" />
+          <ScalarProperty Name="fecEliminacion" ColumnName="fecEliminacion" />
+          <ScalarProperty Name="idUsuario" ColumnName="idUsuario" />
+          <ScalarProperty Name="idUsuarioModificar" ColumnName="idUsuarioModificar" />
+          <ScalarProperty Name="idUsuarioEliminar" ColumnName="idUsuarioEliminar" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="RHUt09_persona">
+      <EntityTypeMapping TypeName="AsiriModel.RHUt09_persona">
+        <MappingFragment StoreEntitySet="RHUt09_persona">
+          <ScalarProperty Name="idPersona" ColumnName="idPersona" />
+          <ScalarProperty Name="tipoPersoneria" ColumnName="tipoPersoneria" />
+          <ScalarProperty Name="nombreRepresentante" ColumnName="nombreRepresentante" />
+          <ScalarProperty Name="nombrePersona" ColumnName="nombrePersona" />
+          <ScalarProperty Name="apellidoPaterno" ColumnName="apellidoPaterno" />
+          <ScalarProperty Name="apellidoMaterno" ColumnName="apellidoMaterno" />
+          <ScalarProperty Name="numDocIdentidad" ColumnName="numDocIdentidad" />
+          <ScalarProperty Name="razonSocial" ColumnName="razonSocial" />
+          <ScalarProperty Name="fecNacimiento" ColumnName="fecNacimiento" />
+          <ScalarProperty Name="nombreVia" ColumnName="nombreVia" />
+          <ScalarProperty Name="numVia" ColumnName="numVia" />
+          <ScalarProperty Name="nombreZona" ColumnName="nombreZona" />
+          <ScalarProperty Name="direccion01" ColumnName="direccion01" />
+          <ScalarProperty Name="direccion02" ColumnName="direccion02" />
+          <ScalarProperty Name="numTelefonico01" ColumnName="numTelefonico01" />
+          <ScalarProperty Name="numTelefonico02" ColumnName="numTelefonico02" />
+          <ScalarProperty Name="email01" ColumnName="email01" />
+          <ScalarProperty Name="email02" ColumnName="email02" />
+          <ScalarProperty Name="sexo" ColumnName="sexo" />
+          <ScalarProperty Name="difunto" ColumnName="difunto" />
+          <ScalarProperty Name="fecDefuncion" ColumnName="fecDefuncion" />
+          <ScalarProperty Name="pathFoto" ColumnName="pathFoto" />
+          <ScalarProperty Name="activo" ColumnName="activo" />
+          <ScalarProperty Name="fecRegistro" ColumnName="fecRegistro" />
+          <ScalarProperty Name="fecModificacion" ColumnName="fecModificacion" />
+          <ScalarProperty Name="fecEliminacion" ColumnName="fecEliminacion" />
+          <ScalarProperty Name="idUsuario" ColumnName="idUsuario" />
+          <ScalarProperty Name="idUsuarioModificar" ColumnName="idUsuarioModificar" />
+          <ScalarProperty Name="idUsuarioEliminar" ColumnName="idUsuarioEliminar" />
+          <ScalarProperty Name="idVia" ColumnName="idVia" />
+          <ScalarProperty Name="idZona" ColumnName="idZona" />
+          <ScalarProperty Name="idTipoDocIdentidad" ColumnName="idTipoDocIdentidad" />
+          <ScalarProperty Name="idDistrito" ColumnName="idDistrito" />
+          <ScalarProperty Name="idEstadoCivil" ColumnName="idEstadoCivil" />
+          <ScalarProperty Name="obsvPersona" ColumnName="obsvPersona" />
+          <ScalarProperty Name="esOnline" ColumnName="esOnline" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="RHUt10_personaRedSocial">
+      <EntityTypeMapping TypeName="AsiriModel.RHUt10_personaRedSocial">
+        <MappingFragment StoreEntitySet="RHUt10_personaRedSocial">
+          <ScalarProperty Name="idRedSocial" ColumnName="idRedSocial" />
+          <ScalarProperty Name="idPersona" ColumnName="idPersona" />
+          <ScalarProperty Name="nombrePerfil" ColumnName="nombrePerfil" />
+          <ScalarProperty Name="obsvPerfil" ColumnName="obsvPerfil" />
+          <ScalarProperty Name="activo" ColumnName="activo" />
+          <ScalarProperty Name="fecRegistro" ColumnName="fecRegistro" />
+          <ScalarProperty Name="fecModificacion" ColumnName="fecModificacion" />
+          <ScalarProperty Name="fecEliminacion" ColumnName="fecEliminacion" />
+          <ScalarProperty Name="idUsuario" ColumnName="idUsuario" />
+          <ScalarProperty Name="idUsuarioModificar" ColumnName="idUsuarioModificar" />
+          <ScalarProperty Name="idUsuarioEliminar" ColumnName="idUsuarioEliminar" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="RHUt11_tipoDeEmpleado">
+      <EntityTypeMapping TypeName="AsiriModel.RHUt11_tipoDeEmpleado">
+        <MappingFragment StoreEntitySet="RHUt11_tipoDeEmpleado">
+          <ScalarProperty Name="idTipoDeEmpleado" ColumnName="idTipoDeEmpleado" />
+          <ScalarProperty Name="descTipoDeEmpleado" ColumnName="descTipoDeEmpleado" />
+          <ScalarProperty Name="activo" ColumnName="activo" />
+          <ScalarProperty Name="fecRegistro" ColumnName="fecRegistro" />
+          <ScalarProperty Name="fecModificacion" ColumnName="fecModificacion" />
+          <ScalarProperty Name="fecEliminacion" ColumnName="fecEliminacion" />
+          <ScalarProperty Name="idUsuario" ColumnName="idUsuario" />
+          <ScalarProperty Name="idUsuarioModificar" ColumnName="idUsuarioModificar" />
+          <ScalarProperty Name="idUsuarioEliminar" ColumnName="idUsuarioEliminar" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="RHUt12_tipoDocIdentidad">
+      <EntityTypeMapping TypeName="AsiriModel.RHUt12_tipoDocIdentidad">
+        <MappingFragment StoreEntitySet="RHUt12_tipoDocIdentidad">
+          <ScalarProperty Name="idTipoDocIdentidad" ColumnName="idTipoDocIdentidad" />
+          <ScalarProperty Name="codTipoDocIdentidad" ColumnName="codTipoDocIdentidad" />
+          <ScalarProperty Name="descTipoDocIdentidad" ColumnName="descTipoDocIdentidad" />
+          <ScalarProperty Name="abrvTipoDocIdentidad" ColumnName="abrvTipoDocIdentidad" />
+          <ScalarProperty Name="activo" ColumnName="activo" />
+          <ScalarProperty Name="fecRegistro" ColumnName="fecRegistro" />
+          <ScalarProperty Name="fecModificacion" ColumnName="fecModificacion" />
+          <ScalarProperty Name="fecEliminacion" ColumnName="fecEliminacion" />
+          <ScalarProperty Name="idUsuario" ColumnName="idUsuario" />
+          <ScalarProperty Name="idUsuarioModificar" ColumnName="idUsuarioModificar" />
+          <ScalarProperty Name="idUsuarioEliminar" ColumnName="idUsuarioEliminar" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="RHUt13_tipoEspecialidad">
+      <EntityTypeMapping TypeName="AsiriModel.RHUt13_tipoEspecialidad">
+        <MappingFragment StoreEntitySet="RHUt13_tipoEspecialidad">
+          <ScalarProperty Name="idTipoDeEspeciliadad" ColumnName="idTipoDeEspeciliadad" />
+          <ScalarProperty Name="nombreEspecialidad" ColumnName="nombreEspecialidad" />
+          <ScalarProperty Name="descEspecialidad" ColumnName="descEspecialidad" />
+          <ScalarProperty Name="abrvTipoEspecialidad" ColumnName="abrvTipoEspecialidad" />
+          <ScalarProperty Name="activo" ColumnName="activo" />
+          <ScalarProperty Name="fecRegistro" ColumnName="fecRegistro" />
+          <ScalarProperty Name="fecModificacion" ColumnName="fecModificacion" />
+          <ScalarProperty Name="fecEliminacion" ColumnName="fecEliminacion" />
+          <ScalarProperty Name="idUsuario" ColumnName="idUsuario" />
+          <ScalarProperty Name="idUsuarioModificar" ColumnName="idUsuarioModificar" />
+          <ScalarProperty Name="idUsuarioEliminar" ColumnName="idUsuarioEliminar" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="RHUt14_turno">
+      <EntityTypeMapping TypeName="AsiriModel.RHUt14_turno">
+        <MappingFragment StoreEntitySet="RHUt14_turno">
+          <ScalarProperty Name="idTurno" ColumnName="idTurno" />
+          <ScalarProperty Name="descTurno" ColumnName="descTurno" />
+          <ScalarProperty Name="abrvTurno" ColumnName="abrvTurno" />
+          <ScalarProperty Name="horaInicio" ColumnName="horaInicio" />
+          <ScalarProperty Name="horaFin" ColumnName="horaFin" />
+          <ScalarProperty Name="activo" ColumnName="activo" />
+          <ScalarProperty Name="fecRegistro" ColumnName="fecRegistro" />
+          <ScalarProperty Name="fecModficiacion" ColumnName="fecModficiacion" />
+          <ScalarProperty Name="fecEliminacion" ColumnName="fecEliminacion" />
+          <ScalarProperty Name="idUsuario" ColumnName="idUsuario" />
+          <ScalarProperty Name="idUsuarioModificar" ColumnName="idUsuarioModificar" />
+          <ScalarProperty Name="idUsuarioEliminar" ColumnName="idUsuarioEliminar" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SISt01_parametro">
+      <EntityTypeMapping TypeName="AsiriModel.SISt01_parametro">
+        <MappingFragment StoreEntitySet="SISt01_parametro">
+          <ScalarProperty Name="idParametro" ColumnName="idParametro" />
+          <ScalarProperty Name="codParametro" ColumnName="codParametro" />
+          <ScalarProperty Name="nombreParametro" ColumnName="nombreParametro" />
+          <ScalarProperty Name="descParametro" ColumnName="descParametro" />
+          <ScalarProperty Name="valorDeTexto" ColumnName="valorDeTexto" />
+          <ScalarProperty Name="valorNumerico" ColumnName="valorNumerico" />
+          <ScalarProperty Name="valorTextoDefault" ColumnName="valorTextoDefault" />
+          <ScalarProperty Name="valorNumericoDefault" ColumnName="valorNumericoDefault" />
+          <ScalarProperty Name="fecModificacion" ColumnName="fecModificacion" />
+          <ScalarProperty Name="idUsuarioModificar" ColumnName="idUsuarioModificar" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SNTt01_entidadFinanciera">
+      <EntityTypeMapping TypeName="AsiriModel.SNTt01_entidadFinanciera">
+        <MappingFragment StoreEntitySet="SNTt01_entidadFinanciera">
+          <ScalarProperty Name="idEntidadFinanciera" ColumnName="idEntidadFinanciera" />
+          <ScalarProperty Name="nombreEntidadFinanciera" ColumnName="nombreEntidadFinanciera" />
+          <ScalarProperty Name="abrvEntidadFinanciera" ColumnName="abrvEntidadFinanciera" />
+          <ScalarProperty Name="activo" ColumnName="activo" />
+          <ScalarProperty Name="fecRegistro" ColumnName="fecRegistro" />
+          <ScalarProperty Name="feModificacion" ColumnName="feModificacion" />
+          <ScalarProperty Name="fecEliminacion" ColumnName="fecEliminacion" />
+          <ScalarProperty Name="idUsuario" ColumnName="idUsuario" />
+          <ScalarProperty Name="idUsuarioModificar" ColumnName="idUsuarioModificar" />
+          <ScalarProperty Name="idUsuarioEliminar" ColumnName="idUsuarioEliminar" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SNTt02_impuesto">
+      <EntityTypeMapping TypeName="AsiriModel.SNTt02_impuesto">
+        <MappingFragment StoreEntitySet="SNTt02_impuesto">
+          <ScalarProperty Name="idImpto" ColumnName="idImpto" />
+          <ScalarProperty Name="codImpto" ColumnName="codImpto" />
+          <ScalarProperty Name="descImpto" ColumnName="descImpto" />
+          <ScalarProperty Name="abrvImpto" ColumnName="abrvImpto" />
+          <ScalarProperty Name="porcentajeImpto" ColumnName="porcentajeImpto" />
+          <ScalarProperty Name="activo" ColumnName="activo" />
+          <ScalarProperty Name="fecRegistro" ColumnName="fecRegistro" />
+          <ScalarProperty Name="fecModificacion" ColumnName="fecModificacion" />
+          <ScalarProperty Name="fecEliminacion" ColumnName="fecEliminacion" />
+          <ScalarProperty Name="idUsuario" ColumnName="idUsuario" />
+          <ScalarProperty Name="idUsuarioModificar" ColumnName="idUsuarioModificar" />
+          <ScalarProperty Name="idUsuarioEliminar" ColumnName="idUsuarioEliminar" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SNTt03_moneda">
+      <EntityTypeMapping TypeName="AsiriModel.SNTt03_moneda">
+        <MappingFragment StoreEntitySet="SNTt03_moneda">
+          <ScalarProperty Name="idMoneda" ColumnName="idMoneda" />
+          <ScalarProperty Name="codMoneda" ColumnName="codMoneda" />
+          <ScalarProperty Name="codIsoMoneda" ColumnName="codIsoMoneda" />
+          <ScalarProperty Name="codIsoNumMoneda" ColumnName="codIsoNumMoneda" />
+          <ScalarProperty Name="descMoneda" ColumnName="descMoneda" />
+          <ScalarProperty Name="abrvMoneda" ColumnName="abrvMoneda" />
+          <ScalarProperty Name="simbolo" ColumnName="simbolo" />
+          <ScalarProperty Name="decimalCambio" ColumnName="decimalCambio" />
+          <ScalarProperty Name="fraccion" ColumnName="fraccion" />
+          <ScalarProperty Name="activo" ColumnName="activo" />
+          <ScalarProperty Name="fecRegistro" ColumnName="fecRegistro" />
+          <ScalarProperty Name="fecModificacion" ColumnName="fecModificacion" />
+          <ScalarProperty Name="fecEliminacion" ColumnName="fecEliminacion" />
+          <ScalarProperty Name="idUsuario" ColumnName="idUsuario" />
+          <ScalarProperty Name="idUsuarioModificar" ColumnName="idUsuarioModificar" />
+          <ScalarProperty Name="idUsuarioEliminar" ColumnName="idUsuarioEliminar" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SNTt04_tipoComprobante">
+      <EntityTypeMapping TypeName="AsiriModel.SNTt04_tipoComprobante">
+        <MappingFragment StoreEntitySet="SNTt04_tipoComprobante">
+          <ScalarProperty Name="idTipoComprobante" ColumnName="idTipoComprobante" />
+          <ScalarProperty Name="codTipoComprobante" ColumnName="codTipoComprobante" />
+          <ScalarProperty Name="descTipoComprobante" ColumnName="descTipoComprobante" />
+          <ScalarProperty Name="activo" ColumnName="activo" />
+          <ScalarProperty Name="fecRegistro" ColumnName="fecRegistro" />
+          <ScalarProperty Name="fecModificacion" ColumnName="fecModificacion" />
+          <ScalarProperty Name="fecEliminacion" ColumnName="fecEliminacion" />
+          <ScalarProperty Name="idUsuario" ColumnName="idUsuario" />
+          <ScalarProperty Name="idUsuarioModificar" ColumnName="idUsuarioModificar" />
+          <ScalarProperty Name="idUsuarioEliminar" ColumnName="idUsuarioEliminar" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SNTt05_tipoMedioDePago">
+      <EntityTypeMapping TypeName="AsiriModel.SNTt05_tipoMedioDePago">
+        <MappingFragment StoreEntitySet="SNTt05_tipoMedioDePago">
+          <ScalarProperty Name="idTipoMedioDePago" ColumnName="idTipoMedioDePago" />
+          <ScalarProperty Name="codTipoMedioDePago" ColumnName="codTipoMedioDePago" />
+          <ScalarProperty Name="descTipoMedioDePago" ColumnName="descTipoMedioDePago" />
+          <ScalarProperty Name="activo" ColumnName="activo" />
+          <ScalarProperty Name="fecRegistro" ColumnName="fecRegistro" />
+          <ScalarProperty Name="fecModificacion" ColumnName="fecModificacion" />
+          <ScalarProperty Name="fecEliminacion" ColumnName="fecEliminacion" />
+          <ScalarProperty Name="idUsuario" ColumnName="idUsuario" />
+          <ScalarProperty Name="idUsuarioModificar" ColumnName="idUsuarioModificar" />
+          <ScalarProperty Name="idUsuarioEliminar" ColumnName="idUsuarioEliminar" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TNSt01_comprobanteEmitido">
+      <EntityTypeMapping TypeName="AsiriModel.TNSt01_comprobanteEmitido">
+        <MappingFragment StoreEntitySet="TNSt01_comprobanteEmitido">
+          <ScalarProperty Name="idComprobanteEmitido" ColumnName="idComprobanteEmitido" />
+          <ScalarProperty Name="serie" ColumnName="serie" />
+          <ScalarProperty Name="numComprobanteEmitido" ColumnName="numComprobanteEmitido" />
+          <ScalarProperty Name="fecRegistro" ColumnName="fecRegistro" />
+          <ScalarProperty Name="fecModificacion" ColumnName="fecModificacion" />
+          <ScalarProperty Name="fecAnulacion" ColumnName="fecAnulacion" />
+          <ScalarProperty Name="razonAnulacion" ColumnName="razonAnulacion" />
+          <ScalarProperty Name="esAnulado" ColumnName="esAnulado" />
+          <ScalarProperty Name="fecEmision" ColumnName="fecEmision" />
+          <ScalarProperty Name="fecVencimiento" ColumnName="fecVencimiento" />
+          <ScalarProperty Name="fecCancelacion" ColumnName="fecCancelacion" />
+          <ScalarProperty Name="mtoTotal" ColumnName="mtoTotal" />
+          <ScalarProperty Name="mtoSubTotal" ColumnName="mtoSubTotal" />
+          <ScalarProperty Name="mtoImpto" ColumnName="mtoImpto" />
+          <ScalarProperty Name="mtoDescuento" ColumnName="mtoDescuento" />
+          <ScalarProperty Name="porcentajeImpto" ColumnName="porcentajeImpto" />
+          <ScalarProperty Name="porcentajeDescuento" ColumnName="porcentajeDescuento" />
+          <ScalarProperty Name="obsvComprobanteEmitido" ColumnName="obsvComprobanteEmitido" />
+          <ScalarProperty Name="info01" ColumnName="info01" />
+          <ScalarProperty Name="info02" ColumnName="info02" />
+          <ScalarProperty Name="info03" ColumnName="info03" />
+          <ScalarProperty Name="fecha01" ColumnName="fecha01" />
+          <ScalarProperty Name="fecha02" ColumnName="fecha02" />
+          <ScalarProperty Name="fecha03" ColumnName="fecha03" />
+          <ScalarProperty Name="idCita" ColumnName="idCita" />
+          <ScalarProperty Name="idEstadoComprobante" ColumnName="idEstadoComprobante" />
+          <ScalarProperty Name="idSucursal" ColumnName="idSucursal" />
+          <ScalarProperty Name="idTipoComprobante" ColumnName="idTipoComprobante" />
+          <ScalarProperty Name="idMoneda" ColumnName="idMoneda" />
+          <ScalarProperty Name="idImpto" ColumnName="idImpto" />
+          <ScalarProperty Name="idUsuario" ColumnName="idUsuario" />
+          <ScalarProperty Name="idUsuarioModificar" ColumnName="idUsuarioModificar" />
+          <ScalarProperty Name="idUsuarioAnular" ColumnName="idUsuarioAnular" />
+          <ScalarProperty Name="idCuota" ColumnName="idCuota" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TNSt02_comprobanteEmitidoDtl">
+      <EntityTypeMapping TypeName="AsiriModel.TNSt02_comprobanteEmitidoDtl">
+        <MappingFragment StoreEntitySet="TNSt02_comprobanteEmitidoDtl">
+          <ScalarProperty Name="idComprobanteEmitidoDtl" ColumnName="idComprobanteEmitidoDtl" />
+          <ScalarProperty Name="precio" ColumnName="precio" />
+          <ScalarProperty Name="cantidad" ColumnName="cantidad" />
+          <ScalarProperty Name="idComprobanteEmitido" ColumnName="idComprobanteEmitido" />
+          <ScalarProperty Name="idCitaDtl" ColumnName="idCitaDtl" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TNSt03_cuota">
+      <EntityTypeMapping TypeName="AsiriModel.TNSt03_cuota">
+        <MappingFragment StoreEntitySet="TNSt03_cuota">
+          <ScalarProperty Name="idCuota" ColumnName="idCuota" />
+          <ScalarProperty Name="mtoPago" ColumnName="mtoPago" />
+          <ScalarProperty Name="mtoInteres" ColumnName="mtoInteres" />
+          <ScalarProperty Name="fecDesembolso" ColumnName="fecDesembolso" />
+          <ScalarProperty Name="fecPago" ColumnName="fecPago" />
+          <ScalarProperty Name="esCancelado" ColumnName="esCancelado" />
+          <ScalarProperty Name="activo" ColumnName="activo" />
+          <ScalarProperty Name="fecRegistro" ColumnName="fecRegistro" />
+          <ScalarProperty Name="fecModificacion" ColumnName="fecModificacion" />
+          <ScalarProperty Name="fecEliminacion" ColumnName="fecEliminacion" />
+          <ScalarProperty Name="idEstadoDeCuenta" ColumnName="idEstadoDeCuenta" />
+          <ScalarProperty Name="idUsuario" ColumnName="idUsuario" />
+          <ScalarProperty Name="idUsuarioModificar" ColumnName="idUsuarioModificar" />
+          <ScalarProperty Name="idUsuarioEliminar" ColumnName="idUsuarioEliminar" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TNSt04_estadoComprobante">
+      <EntityTypeMapping TypeName="AsiriModel.TNSt04_estadoComprobante">
+        <MappingFragment StoreEntitySet="TNSt04_estadoComprobante">
+          <ScalarProperty Name="idEstadoComprobante" ColumnName="idEstadoComprobante" />
+          <ScalarProperty Name="fecRegistro" ColumnName="fecRegistro" />
+          <ScalarProperty Name="fecModificacion" ColumnName="fecModificacion" />
+          <ScalarProperty Name="fecEliminacion" ColumnName="fecEliminacion" />
+          <ScalarProperty Name="nombreEstadoComprobante" ColumnName="nombreEstadoComprobante" />
+          <ScalarProperty Name="descEstadoComprobante" ColumnName="descEstadoComprobante" />
+          <ScalarProperty Name="activo" ColumnName="activo" />
+          <ScalarProperty Name="idUsuario" ColumnName="idUsuario" />
+          <ScalarProperty Name="idUsuarioModificar" ColumnName="idUsuarioModificar" />
+          <ScalarProperty Name="idUsuarioEliminar" ColumnName="idUsuarioEliminar" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TNSt05_estadoDeCuenta">
+      <EntityTypeMapping TypeName="AsiriModel.TNSt05_estadoDeCuenta">
+        <MappingFragment StoreEntitySet="TNSt05_estadoDeCuenta">
+          <ScalarProperty Name="idEstadoDeCuenta" ColumnName="idEstadoDeCuenta" />
+          <ScalarProperty Name="porcentajeDescuento" ColumnName="porcentajeDescuento" />
+          <ScalarProperty Name="mtoDescuento" ColumnName="mtoDescuento" />
+          <ScalarProperty Name="mtoSubtotal" ColumnName="mtoSubtotal" />
+          <ScalarProperty Name="debe" ColumnName="debe" />
+          <ScalarProperty Name="haber" ColumnName="haber" />
+          <ScalarProperty Name="saldo" ColumnName="saldo" />
+          <ScalarProperty Name="inicial" ColumnName="inicial" />
+          <ScalarProperty Name="porcentajeInteres" ColumnName="porcentajeInteres" />
+          <ScalarProperty Name="mtoInteres" ColumnName="mtoInteres" />
+          <ScalarProperty Name="fecRegistro" ColumnName="fecRegistro" />
+          <ScalarProperty Name="fecModificacion" ColumnName="fecModificacion" />
+          <ScalarProperty Name="idUsuario" ColumnName="idUsuario" />
+          <ScalarProperty Name="idUsuarioModificar" ColumnName="idUsuarioModificar" />
+          <ScalarProperty Name="idCita" ColumnName="idCita" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TNSt06_medioDePagoDtl">
+      <EntityTypeMapping TypeName="AsiriModel.TNSt06_medioDePagoDtl">
+        <MappingFragment StoreEntitySet="TNSt06_medioDePagoDtl">
+          <ScalarProperty Name="idMedioDePagoDtl" ColumnName="idMedioDePagoDtl" />
+          <ScalarProperty Name="fecRegistro" ColumnName="fecRegistro" />
+          <ScalarProperty Name="fecModificacion" ColumnName="fecModificacion" />
+          <ScalarProperty Name="fecEliminacion" ColumnName="fecEliminacion" />
+          <ScalarProperty Name="mtoMedioDePago" ColumnName="mtoMedioDePago" />
+          <ScalarProperty Name="tipoDeCambio" ColumnName="tipoDeCambio" />
+          <ScalarProperty Name="activo" ColumnName="activo" />
+          <ScalarProperty Name="idUsuario" ColumnName="idUsuario" />
+          <ScalarProperty Name="idUsuarioModificar" ColumnName="idUsuarioModificar" />
+          <ScalarProperty Name="idUsuarioEliminar" ColumnName="idUsuarioEliminar" />
+          <ScalarProperty Name="idComprobanteEmitido" ColumnName="idComprobanteEmitido" />
+          <ScalarProperty Name="idMedioDePago" ColumnName="idMedioDePago" />
+          <ScalarProperty Name="idMoneda" ColumnName="idMoneda" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TNSt07_numeracion">
+      <EntityTypeMapping TypeName="AsiriModel.TNSt07_numeracion">
+        <MappingFragment StoreEntitySet="TNSt07_numeracion">
+          <ScalarProperty Name="idNumeracion" ColumnName="idNumeracion" />
+          <ScalarProperty Name="serie" ColumnName="serie" />
+          <ScalarProperty Name="num_corr_inicial" ColumnName="num_corr_inicial" />
+          <ScalarProperty Name="num_corr_final" ColumnName="num_corr_final" />
+          <ScalarProperty Name="num_corr_actual" ColumnName="num_corr_actual" />
+          <ScalarProperty Name="idTipoComprobante" ColumnName="idTipoComprobante" />
+          <ScalarProperty Name="idSucursal" ColumnName="idSucursal" />
+          <ScalarProperty Name="fecRegistro" ColumnName="fecRegistro" />
+          <ScalarProperty Name="idUsuario" ColumnName="idUsuario" />
+          <ScalarProperty Name="fecModificacion" ColumnName="fecModificacion" />
+          <ScalarProperty Name="idUsuarioModificar" ColumnName="idUsuarioModificar" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="UBIt01_distrito">
+      <EntityTypeMapping TypeName="AsiriModel.UBIt01_distrito">
+        <MappingFragment StoreEntitySet="UBIt01_distrito">
+          <ScalarProperty Name="idDistrito" ColumnName="idDistrito" />
+          <ScalarProperty Name="nombreDistrito" ColumnName="nombreDistrito" />
+          <ScalarProperty Name="activo" ColumnName="activo" />
+          <ScalarProperty Name="fecRegistro" ColumnName="fecRegistro" />
+          <ScalarProperty Name="fecModificacion" ColumnName="fecModificacion" />
+          <ScalarProperty Name="FecEliminacion" ColumnName="FecEliminacion" />
+          <ScalarProperty Name="idUsuario" ColumnName="idUsuario" />
+          <ScalarProperty Name="idUsuarioModificar" ColumnName="idUsuarioModificar" />
+          <ScalarProperty Name="idUsuarioEliminar" ColumnName="idUsuarioEliminar" />
+          <ScalarProperty Name="idProvincia" ColumnName="idProvincia" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="UBIt02_provincia">
+      <EntityTypeMapping TypeName="AsiriModel.UBIt02_provincia">
+        <MappingFragment StoreEntitySet="UBIt02_provincia">
+          <ScalarProperty Name="idProvincia" ColumnName="idProvincia" />
+          <ScalarProperty Name="nombreProvincia" ColumnName="nombreProvincia" />
+          <ScalarProperty Name="activo" ColumnName="activo" />
+          <ScalarProperty Name="fecRegistro" ColumnName="fecRegistro" />
+          <ScalarProperty Name="fecModificacion" ColumnName="fecModificacion" />
+          <ScalarProperty Name="fecEliminacion" ColumnName="fecEliminacion" />
+          <ScalarProperty Name="idUsuario" ColumnName="idUsuario" />
+          <ScalarProperty Name="idUsuarioModificar" ColumnName="idUsuarioModificar" />
+          <ScalarProperty Name="idUsuarioEliminar" ColumnName="idUsuarioEliminar" />
+          <ScalarProperty Name="idRegion" ColumnName="idRegion" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="UBIt03_region">
+      <EntityTypeMapping TypeName="AsiriModel.UBIt03_region">
+        <MappingFragment StoreEntitySet="UBIt03_region">
+          <ScalarProperty Name="idRegion" ColumnName="idRegion" />
+          <ScalarProperty Name="nombreRegion" ColumnName="nombreRegion" />
+          <ScalarProperty Name="activo" ColumnName="activo" />
+          <ScalarProperty Name="fecRegistro" ColumnName="fecRegistro" />
+          <ScalarProperty Name="fecModificacion" ColumnName="fecModificacion" />
+          <ScalarProperty Name="fecEliminacion" ColumnName="fecEliminacion" />
+          <ScalarProperty Name="idUsuario" ColumnName="idUsuario" />
+          <ScalarProperty Name="idUsuarioModificar" ColumnName="idUsuarioModificar" />
+          <ScalarProperty Name="idUsuarioEliminar" ColumnName="idUsuarioEliminar" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="UBIt04_via">
+      <EntityTypeMapping TypeName="AsiriModel.UBIt04_via">
+        <MappingFragment StoreEntitySet="UBIt04_via">
+          <ScalarProperty Name="idVia" ColumnName="idVia" />
+          <ScalarProperty Name="descVia" ColumnName="descVia" />
+          <ScalarProperty Name="abrvVia" ColumnName="abrvVia" />
+          <ScalarProperty Name="estado" ColumnName="estado" />
+          <ScalarProperty Name="fecRegistro" ColumnName="fecRegistro" />
+          <ScalarProperty Name="fecModificacion" ColumnName="fecModificacion" />
+          <ScalarProperty Name="fecEliminacion" ColumnName="fecEliminacion" />
+          <ScalarProperty Name="idUsuario" ColumnName="idUsuario" />
+          <ScalarProperty Name="idUsuarioModificar" ColumnName="idUsuarioModificar" />
+          <ScalarProperty Name="idUsuarioEliminar" ColumnName="idUsuarioEliminar" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="UBIt05_zona">
+      <EntityTypeMapping TypeName="AsiriModel.UBIt05_zona">
+        <MappingFragment StoreEntitySet="UBIt05_zona">
+          <ScalarProperty Name="idZona" ColumnName="idZona" />
+          <ScalarProperty Name="descZona" ColumnName="descZona" />
+          <ScalarProperty Name="abrvZona" ColumnName="abrvZona" />
+          <ScalarProperty Name="activo" ColumnName="activo" />
+          <ScalarProperty Name="fecRegistro" ColumnName="fecRegistro" />
+          <ScalarProperty Name="fecModificacion" ColumnName="fecModificacion" />
+          <ScalarProperty Name="fecEliminacion" ColumnName="fecEliminacion" />
+          <ScalarProperty Name="idUsuario" ColumnName="idUsuario" />
+          <ScalarProperty Name="idUsuarioModificar" ColumnName="idUsuarioModificar" />
+          <ScalarProperty Name="idUsuarioEliminar" ColumnName="idUsuarioEliminar" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="MenuTemp">
+      <EntityTypeMapping TypeName="AsiriModel.MenuTemp">
+        <MappingFragment StoreEntitySet="MenuTemp">
+          <ScalarProperty Name="MenuID" ColumnName="MenuID" />
+          <ScalarProperty Name="DisplayName" ColumnName="DisplayName" />
+          <ScalarProperty Name="ParentMenuID" ColumnName="ParentMenuID" />
+          <ScalarProperty Name="OrderNumber" ColumnName="OrderNumber" />
+          <ScalarProperty Name="MenuURL" ColumnName="MenuURL" />
+          <ScalarProperty Name="MenuIcon" ColumnName="MenuIcon" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <AssociationSetMapping Name="AspNetRolesPermisos" TypeName="AsiriModel.AspNetRolesPermisos" StoreEntitySet="AspNetRolesPermisos">
+      <EndProperty Name="AspNetPermisos">
+        <ScalarProperty Name="Id" ColumnName="PermisoId" />
+      </EndProperty>
+      <EndProperty Name="AspNetRoles">
+        <ScalarProperty Name="Id" ColumnName="RoleId" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="AspNetUserRoles" TypeName="AsiriModel.AspNetUserRoles" StoreEntitySet="AspNetUserRoles">
+      <EndProperty Name="AspNetRoles">
+        <ScalarProperty Name="Id" ColumnName="RoleId" />
+      </EndProperty>
+      <EndProperty Name="AspNetUsers">
+        <ScalarProperty Name="Id" ColumnName="UserId" />
+      </EndProperty>
+    </AssociationSetMapping>
+  </EntityContainerMapping>
+</Mapping>

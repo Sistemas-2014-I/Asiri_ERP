@@ -1,0 +1,256 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{8CBFF6AC-1502-4CA6-98C2-9CE792107A2B}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Common</RootNamespace>
+    <AssemblyName>Common</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=10.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.10.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="NLog">
+      <HintPath>..\packages\NLog.4.4.11\lib\net45\NLog.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Mvc">
+      <HintPath>..\packages\Microsoft.AspNet.Mvc.5.2.3\lib\net45\System.Web.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AsiriContext.cs" />
+    <Compile Include="AspNetPermisos.cs" />
+    <Compile Include="AspNetRoles.cs" />
+    <Compile Include="AspNetUserClaims.cs" />
+    <Compile Include="AspNetUserLogins.cs" />
+    <Compile Include="AspNetUsers.cs" />
+    <Compile Include="CLIt01_anamnesis.cs" />
+    <Compile Include="CLIt02_archivoEstudioCompl.cs" />
+    <Compile Include="CLlt03_atencion.cs" />
+    <Compile Include="CLlt04_cie10.cs" />
+    <Compile Include="CLlt05_cita.cs" />
+    <Compile Include="CLlt06_citaDtl.cs" />
+    <Compile Include="CLlt07_consultorio.cs" />
+    <Compile Include="CLlt08_diagnostico.cs" />
+    <Compile Include="CLlt09_estadoCita.cs" />
+    <Compile Include="CLlt10_estudioCompl.cs" />
+    <Compile Include="CLlt11_evolucion.cs" />
+    <Compile Include="CLlt12_examenFisico.cs" />
+    <Compile Include="CLlt13_funcionVital.cs" />
+    <Compile Include="CLlt14_seguro.cs" />
+    <Compile Include="CLlt15_seguroPaciente.cs" />
+    <Compile Include="CLlt16_tratamiento.cs" />
+    <Compile Include="CLlt17_tratamientoDtl.cs" />
+    <Compile Include="CustomPermiso.cs" />
+    <Compile Include="C__MigrationHistory.cs" />
+    <Compile Include="Helper\Appointment.cs" />
+    <Compile Include="Helper\CodParam.cs" />
+    <Compile Include="Helper\CodSystem.cs" />
+    <Compile Include="Helper\Coin.cs" />
+    <Compile Include="Helper\CrystalReportPdfResult.cs" />
+    <Compile Include="Helper\DateExt.cs" />
+    <Compile Include="Helper\ErrorMsj.cs" />
+    <Compile Include="Helper\NumExt.cs" />
+    <Compile Include="Helper\StringExt.cs" />
+    <Compile Include="Helper\UrlSystem.cs" />
+    <Compile Include="Helper\ValuesSystem.cs" />
+    <Compile Include="Menu.cs" />
+    <Compile Include="MenuTemp.cs" />
+    <Compile Include="Model\AsiriContext.cs" />
+    <Compile Include="Model\Clinica\CLIt01_anamnesis.cs" />
+    <Compile Include="Model\Clinica\CLIt02_archivoEstudioCompl.cs" />
+    <Compile Include="Model\Clinica\CLlt03_atencion.cs" />
+    <Compile Include="Model\Clinica\CLlt04_cie10.cs" />
+    <Compile Include="Model\Clinica\CLlt05_cita.cs" />
+    <Compile Include="Model\Clinica\CLlt06_citaDtl.cs" />
+    <Compile Include="Model\Clinica\CLlt07_consultorio.cs" />
+    <Compile Include="Model\Clinica\CLlt08_diagnostico.cs" />
+    <Compile Include="Model\Clinica\CLlt09_estadoCita.cs" />
+    <Compile Include="Model\Clinica\CLlt10_estudioCompl.cs" />
+    <Compile Include="Model\Clinica\CLlt11_evolucion.cs" />
+    <Compile Include="Model\Clinica\CLlt12_examenFisico.cs" />
+    <Compile Include="Model\Clinica\CLlt13_funcionVital.cs" />
+    <Compile Include="Model\Clinica\CLlt14_seguro.cs" />
+    <Compile Include="Model\Clinica\CLlt15_seguroPaciente.cs" />
+    <Compile Include="Model\Clinica\CLlt16_tratamiento.cs" />
+    <Compile Include="Model\Clinica\CLlt17_tratamientoDtl.cs" />
+    <Compile Include="Model\Maestro\MSTt01_medioDePago.cs" />
+    <Compile Include="Model\Maestro\MSTt02_piso.cs" />
+    <Compile Include="Model\Maestro\MSTt03_redSocial.cs" />
+    <Compile Include="Model\Maestro\MSTt04_sucursal.cs" />
+    <Compile Include="Model\Maestro\MSTt05_tipoSucursal.cs" />
+    <Compile Include="Model\Producto\PROt01_categoria.cs" />
+    <Compile Include="Model\Producto\PROt02_producto.cs" />
+    <Compile Include="Model\Producto\PROt03_productoUnidadDeMedida.cs" />
+    <Compile Include="Model\Producto\PROt04_servicio.cs" />
+    <Compile Include="Model\Producto\PROt05_tipoDeServicio.cs" />
+    <Compile Include="Model\Producto\PROt06_unidadDeMedida.cs" />
+    <Compile Include="Model\RRHH\RHUt01_empleado.cs" />
+    <Compile Include="Model\RRHH\RHUt02_empleadoEspecialidad.cs" />
+    <Compile Include="Model\RRHH\RHUt03_empleadoTurno.cs" />
+    <Compile Include="Model\RRHH\RHUt04_especialidad.cs" />
+    <Compile Include="Model\RRHH\RHUt05_estadoCivil.cs" />
+    <Compile Include="Model\RRHH\RHUt06_horario.cs" />
+    <Compile Include="Model\RRHH\RHUt07_paciente.cs" />
+    <Compile Include="Model\RRHH\RHUt08_periodoRemuneracion.cs" />
+    <Compile Include="Model\RRHH\RHUt09_persona.cs" />
+    <Compile Include="Model\RRHH\RHUt10_personaRedSocial.cs" />
+    <Compile Include="Model\RRHH\RHUt11_tipoDeEmpleado.cs" />
+    <Compile Include="Model\RRHH\RHUt12_tipoDocIdentidad.cs" />
+    <Compile Include="Model\RRHH\RHUt13_tipoEspecialidad.cs" />
+    <Compile Include="Model\RRHH\RHUt14_turno.cs" />
+    <Compile Include="Model\Sistema\SISt01_parametro.cs" />
+    <Compile Include="Model\Sunat\SNTt01_entidadFinanciera.cs" />
+    <Compile Include="Model\Sunat\SNTt02_impuesto.cs" />
+    <Compile Include="Model\Sunat\SNTt03_moneda.cs" />
+    <Compile Include="Model\Sunat\SNTt04_tipoComprobante.cs" />
+    <Compile Include="Model\Sunat\SNTt05_tipoMedioDePago.cs" />
+    <Compile Include="Model\Transaccion\TNSt01_comprobanteEmitido.cs" />
+    <Compile Include="Model\Transaccion\TNSt02_comprobanteEmitidoDtl.cs" />
+    <Compile Include="Model\Transaccion\TNSt03_cuota.cs" />
+    <Compile Include="Model\Transaccion\TNSt04_estadoComprobante.cs" />
+    <Compile Include="Model\Transaccion\TNSt05_estadoDeCuenta.cs" />
+    <Compile Include="Model\Transaccion\TNSt06_medioDePagoDtl.cs" />
+    <Compile Include="Model\Transaccion\TNSt07_numeracion.cs" />
+    <Compile Include="Model\Ubigeo\UBIt01_distrito.cs" />
+    <Compile Include="Model\Ubigeo\UBIt02_provincia.cs" />
+    <Compile Include="Model\Ubigeo\UBIt03_region.cs" />
+    <Compile Include="Model\Ubigeo\UBIt04_via.cs" />
+    <Compile Include="Model\Ubigeo\UBIt05_zona.cs" />
+    <Compile Include="MSTt01_medioDePago.cs" />
+    <Compile Include="MSTt02_piso.cs" />
+    <Compile Include="MSTt03_redSocial.cs" />
+    <Compile Include="MSTt04_sucursal.cs" />
+    <Compile Include="MSTt05_tipoSucursal.cs" />
+    <Compile Include="Permiso.cs" />
+    <Compile Include="PermisoMenu.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="PROt01_categoria.cs" />
+    <Compile Include="PROt02_producto.cs" />
+    <Compile Include="PROt03_productoUnidadDeMedida.cs" />
+    <Compile Include="PROt04_servicio.cs" />
+    <Compile Include="PROt05_tipoDeServicio.cs" />
+    <Compile Include="PROt06_unidadDeMedida.cs" />
+    <Compile Include="Reportes\AtencionBE.cs" />
+    <Compile Include="Reportes\CitaBE.cs" />
+    <Compile Include="Reportes\ComprobanteBE.cs" />
+    <Compile Include="Reportes\EmpleadoBE.cs" />
+    <Compile Include="Reportes\EmpleadoReporteBE.cs" />
+    <Compile Include="Reportes\EspecialidadBE.cs" />
+    <Compile Include="Reportes\PacienteBE.cs" />
+    <Compile Include="Reportes\ProductoBE.cs" />
+    <Compile Include="Reportes\RangoFechaBE.cs" />
+    <Compile Include="Reportes\RepBuscDocBE.cs" />
+    <Compile Include="Reportes\RepBuscPacBE.cs" />
+    <Compile Include="Reportes\RepBusFecBE.cs" />
+    <Compile Include="Reportes\RepBusFecCitaBE.cs" />
+    <Compile Include="Reportes\RepEvoPacBE.cs" />
+    <Compile Include="Reportes\ReporteBE.cs" />
+    <Compile Include="Reportes\RepUltimaCitaBE.cs" />
+    <Compile Include="Reportes\ServicioBE.cs" />
+    <Compile Include="ResponseModel.cs" />
+    <Compile Include="RHUt01_empleado.cs" />
+    <Compile Include="RHUt02_empleadoEspecialidad.cs" />
+    <Compile Include="RHUt03_empleadoTurno.cs" />
+    <Compile Include="RHUt04_especialidad.cs" />
+    <Compile Include="RHUt05_estadoCivil.cs" />
+    <Compile Include="RHUt06_horario.cs" />
+    <Compile Include="RHUt07_paciente.cs" />
+    <Compile Include="RHUt08_periodoRemuneracion.cs" />
+    <Compile Include="RHUt09_persona.cs" />
+    <Compile Include="RHUt10_personaRedSocial.cs" />
+    <Compile Include="RHUt11_tipoDeEmpleado.cs" />
+    <Compile Include="RHUt12_tipoDocIdentidad.cs" />
+    <Compile Include="RHUt13_tipoEspecialidad.cs" />
+    <Compile Include="RHUt14_turno.cs" />
+    <Compile Include="SISt01_parametro.cs" />
+    <Compile Include="SNTt01_entidadFinanciera.cs" />
+    <Compile Include="SNTt02_impuesto.cs" />
+    <Compile Include="SNTt03_moneda.cs" />
+    <Compile Include="SNTt04_tipoComprobante.cs" />
+    <Compile Include="SNTt05_tipoMedioDePago.cs" />
+    <Compile Include="sysdiagrams.cs" />
+    <Compile Include="TNSt01_comprobanteEmitido.cs" />
+    <Compile Include="TNSt02_comprobanteEmitidoDtl.cs" />
+    <Compile Include="TNSt03_cuota.cs" />
+    <Compile Include="TNSt04_estadoComprobante.cs" />
+    <Compile Include="TNSt05_estadoDeCuenta.cs" />
+    <Compile Include="TNSt06_medioDePagoDtl.cs" />
+    <Compile Include="TNSt07_numeracion.cs" />
+    <Compile Include="UBIt01_distrito.cs" />
+    <Compile Include="UBIt02_provincia.cs" />
+    <Compile Include="UBIt03_region.cs" />
+    <Compile Include="UBIt04_via.cs" />
+    <Compile Include="UBIt05_zona.cs" />
+    <Compile Include="Validation\Datanotations.cs" />
+    <Compile Include="ViewModel\EmpleadoVM.cs" />
+    <Compile Include="ViewModel\PacienteBE.cs" />
+    <Compile Include="View\API\MonedaISO.cs" />
+    <Compile Include="View\API\TipoCambio.cs" />
+    <Compile Include="View\View Report\ComprobanteVR.cs" />
+    <Compile Include="View\ViewModel\AuditoriaVM.cs" />
+    <Compile Include="View\ViewModel\CitasPorCobrarVM.cs" />
+    <Compile Include="View\ViewModel\ComprobanteVM.cs" />
+    <Compile Include="View\ViewModel\NumeracionVM.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

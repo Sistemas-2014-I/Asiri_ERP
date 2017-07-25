@@ -1,0 +1,51 @@
+﻿@model Mvc_Entity.CLlt03_atencion
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>CLlt03_atencion</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.codAtencion)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.codAtencion)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.fecRegistro)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.fecRegistro)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.idUsuario)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.idUsuario)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CLlt05_cita.codCita)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CLlt05_cita.codCita)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.idAtencion }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

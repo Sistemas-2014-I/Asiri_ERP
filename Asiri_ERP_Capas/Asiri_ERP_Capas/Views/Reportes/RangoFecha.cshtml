@@ -1,0 +1,35 @@
+﻿
+@{
+    ViewBag.Title = "RangoFecha";
+}
+
+<script type="text/javascript">
+    function validar() {
+ //obteniendo el valor que se puso en el campo text del formulario
+        var miCampoTexto = document.getElementById("txtFromDate").value;
+        var miCampoTexto1 = document.getElementById("txtToDate").value;
+ //la condición
+        if (!isNaN(miCampoTexto)) {
+     alert('El campo Desde esta vacio!');
+     return false;
+ }
+        if (!isNaN(miCampoTexto1)) {
+     alert('El campo Hasta esta vacio!');
+     return false;
+ }
+ return true;
+ }
+</script>
+
+<h2>Rango de Fecha de pacientes registrados</h2>
+@using (Html.BeginForm("RangoFechas", "Reportes"))
+{
+    @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+    <label>Desde</label>
+        <input type="date" id="txtFromDate" name="txtFromDate" class="dtp" />
+        <label>Hasta</label>
+        <input type="date" id="txtToDate" name="txtToDate" class="dtp" />
+
+        <input type="submit" value="Reporte" class="btn btn-primary" target="_blank" onclick="return validar(); restarFechas('txtFromDate', 'txtToDate');" />
+        @*<input type="button" value="Reporte MVC - Otra Ventana" onclick="GenericInNewWin()" />*@
+}

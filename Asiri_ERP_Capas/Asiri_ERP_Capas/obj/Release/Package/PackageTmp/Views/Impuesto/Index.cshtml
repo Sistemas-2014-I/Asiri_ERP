@@ -1,0 +1,152 @@
+﻿@using Helpers
+@model IEnumerable<Common.SNTt02_impuesto>
+
+@{
+    ViewBag.Title = "Lista de Impuestos";
+}
+
+@section styles{
+    
+<link href="~/Content/jquery-confirm.min.css" rel="stylesheet" />
+    
+<link href="~/Content/preload.css" rel="stylesheet" />
+    }
+
+
+<div class="page-title">
+    <div>
+        <h1><i class="fa fa-edit"></i> Mantenimiento Impuestos</h1>
+        <p>Lista de impuestos</p>
+    </div>
+    <ul class="breadcrumb">
+        <li><i class="fa fa-home fa-lg"></i></li>
+        <li>
+            <a href="@Url.Action("Index")">
+                Impuestos
+            </a>
+        </li>
+    </ul>
+</div>
+<!--********************************FIN TITULO*******************************-->
+<!--AQUÍ VA EL CODIGO-->
+<div class="row">
+    <div class="col-md-12">
+        <!--CODIGO MODIFICAR-->
+        <div class="card">
+            <!--  gif cargar tabla   -->
+            <div class="preload">
+                <img src="~/Content/img/loading_spinner.gif" />
+            </div>
+            <!--ACTIONS-->
+            <div class="card-title-w-btn ">
+                <!--NEW PATIENT-->
+                <div class="bs-component">
+                    <div>
+                        <a class="btn btn-info icon-btn" href="@Url.Action("Create")">
+                            <i class="fa fa-fw fa-lg fa-user-plus"></i>Nueva impuesto
+                        </a>
+                    </div>
+                </div>
+                <!--EXPORT-->
+                <div class="btn-group">
+                    <a class="btn btn-primary dropdown-toggle" href="#" data-toggle="dropdown"><i class="fa fa-fw fa-lg fa-cloud-download"></i>Exportar <span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#">PDF</a></li>
+                        <li><a href="#">Excel</a></li>
+                        <li><a href="#">Otro</a></li>
+                    </ul>
+                    <div class="bs-component borde">
+                    </div>
+                </div>
+            </div>
+            <hr>
+            <!--***************TABLE-->
+            <div class="card-body table-responsive content">
+                <table class="table table-hover table-bordered " id="tablegeneral">
+                    <thead style="color:#ffffff;background:#0094ff;">
+                        <tr>
+                            <th>
+                                @Html.DisplayNameFor(model => model.codImpto)
+                            </th>
+                            <th>
+                                @Html.DisplayNameFor(model => model.abrvImpto)
+                            </th>
+                            <th>
+                                @Html.DisplayNameFor(model => model.porcentajeImpto)
+                            </th>
+                            <th>
+                                @Html.DisplayNameFor(model => model.activo)
+                            </th>
+                            <th>
+                                Acciones
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var item in Model)
+                        {
+                            <tr>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.codImpto)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.abrvImpto)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.porcentajeImpto)
+                                </td>
+                                    <!--Estado-->
+                                <td>
+                                    <div class="text-center">
+                                        @CustomHelper.Estado(item.activo)
+                                    </div>
+
+                                </td>
+                                <td>
+                                    <!--Detalle-->
+                                    <div class="col-md-4 text-center">
+                                        <a id="@item.idImpto" name="@item.idImpto" class="btn btn-default btn-flat BtnDetail" data-toggle="modal" data-target="#_DtModalImpuesto">
+                                            <i class="fa fa-lg fa-search-plus"></i>
+                                        </a>
+                                    </div>
+                                
+                                    <!--Editar-->
+                                
+                                    <div class="col-md-4 text-center">
+                                        <a class="btn btn-warning btn-flat" href="@Url.Action("Edit", new {id = item.idImpto})">
+                                            <i class="fa fa-lg fa-edit"></i>
+                                        </a>
+                                    </div>
+                                
+                                    <!--Eliminar-->
+                                    <div class="col-md-4 text-center">
+                                        @CustomHelper.Eliminar(item.activo, Url.Action("ChangeStatus"), item.idImpto)
+                                    </div>
+
+                                </td>
+                                
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            </div>
+            <div class="modal fade" tabindex="-1" role="dialog" id="DtModalImpuesto">
+            </div>
+        </div>
+        <!--FIN DE MODIFICAR-->
+    </div>
+</div>
+@section Scripts{
+<script src="~/Scripts/jquery-confirm.min.js"></script>
+<script src="~/Scripts/confirm.status.js"></script>
+<script src="~/Scripts/preload.js"></script>
+    <!--    Script habilitar el filtro de tablas  -->
+    @Scripts.Render("~/bundles/table")
+    <script>
+        $('.BtnDetail').click(function () {
+            var idImpuesto= $(this).attr("id");
+            $("#DtModalImpuesto").load('@Url.Action("GetImpuesto")', { id: idImpuesto});
+            $('#DtModalImpuesto').modal('show');
+        });
+    </script>
+}

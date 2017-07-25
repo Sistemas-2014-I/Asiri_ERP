@@ -1,0 +1,174 @@
+﻿@model IEnumerable<Mvc_Entity.CLlt05_cita>
+
+@{
+    Layout = null;
+}
+
+<!--********************************TITULO*******************************-->
+<div class="page-title">
+    <div>
+        <h1><i class="fa fa-edit"></i> Mantenimiento de Citas</h1>
+        <p>Lista de citas ...!</p>
+    </div>
+    <div>
+        <ul class="breadcrumb">
+            <li><i class="fa fa-home fa-lg"></i></li>
+            <li>Citas</li>
+            <li><a href="#">Lista Citas</a></li>
+        </ul>
+    </div>
+</div>
+
+<!--********************************FIN TITULO*******************************-->
+<!--AQUÍ VA EL CODIGO-->
+<div class="row">
+    <div class="col-md-12">
+        <!--CODIGO MODIFICAR-->
+        <div class="card">
+            <!--*********************************************AQUÍ MODIFICAR CARD***************************-->
+            <!--*********************************************CARD***************************-->
+            <!--CONTAINER TITLE-->
+            <div class="container" id="MantenimientoEmpleado">
+                <!--NOMBRE DE MANTENIMIENTO-->
+                <h3 style="display:inline-block;" class="header-title"><i class="glyphicon glyphicon-cog"></i></h3>
+            </div>
+            
+            <hr>
+
+            <!--***************TABLE*************-->
+            <div id="pru" class="card-body table-responsive">
+
+                <table class="table table-hover table-bordered " id="sampleTable">
+
+                    <thead style="color:#ffffff;background:#0094ff;">
+                        <tr>
+                            <th>Código</th>
+                            <th>Paciente</th>
+                            <th>Hora de Inicio</th>
+                            <th>Hora Fin</th>
+                            <th>Online</th>
+                            <th>Estado</th>
+                            <th>Atender</th>
+                        </tr>
+                    </thead>
+
+                    <tbody id="bod">
+                        @foreach (var item in Model)
+                        {
+                            var horafin = TimeSpan.Parse(item.horaInicio) + TimeSpan.Parse("00:" + item.duracionEstimada);
+                            <tr>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.codCita)
+                                </td>
+                                <td>
+                                   
+                                    @item.RHUt07_paciente.RHUt09_persona.apellidoPaterno @item.RHUt07_paciente.RHUt09_persona.apellidoMaterno, @item.RHUt07_paciente.RHUt09_persona.nombrePersona
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.horaInicio)
+                                </td>
+                                <td>
+                                    @horafin
+                                </td>
+                                <td>
+                                    <!--<i class="fa fa-lg fa-square-o"></i-->
+                                    <div class="col-md-12" style="text-align: center;">
+                                        @if (item.esOnline == true)
+                                        {
+                                            <a class="btn btn-primary btn-container" href="">SI</a>
+                                        }
+                                        else
+                                        {
+                                            <a class="btn btn-primary btn-container" href="">NO</a>
+                                        }
+
+                                    </div>
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.CLlt09_estadoCita.descEstadoCita)
+                                </td>
+                                <td>
+                                    <div class="col-md-12">
+
+                                        <a id="atencion" class="btn btn-danger btn-flat" href="~/Atencion/Create/@item.idCita"><i class="fa fa-lg fa-heartbeat"></i></a>
+                                    </div>
+                                </td>
+                            </tr>
+
+                        }
+                    </tbody>
+                </table>
+            </div>
+
+            <!--******************TABLE***********-->
+            <!--*******************************************FIN***********************************-->
+        </div>
+    </div>
+    <!--FIN DE MODIFICAR-->
+</div>
+<script type="text/javascript">
+    //$('#sampleTable').DataTable();
+
+                $(document).ready(function ()
+            {
+                $('#sampleTable').dataTable({
+
+                    language: {
+                        processing: "En curso...",
+                        search: "Buscar:",
+                        lengthMenu: "Visualizar _MENU_ registros",
+                        info: "_START_ de _END_ registros de un total de _TOTAL_ registros",
+                        infoEmpty: "0 registros encontrados",
+                        infoFiltered: "(_MAX_ registros filtrados en total)",
+                        infoPostFix: "",
+                        loadingRecords: "Cargando registros...",
+                        zeroRecords: "No hay registros",
+                        emptyTable: "Vacío",
+                        paginate: {
+                            first: "Primero",
+                            previous: "Previo  ",
+                            next: "  Siguiente",
+                            last: "Último"
+                        },
+                        aria: {
+                            sortAscending: ": Habilitado para ordenar la columna en orden ascendente",
+                            sortDescending: ": Habilitado para ordenar la columna en orden descendente"                }
+                    }
+                });
+
+                });
+                var parar;
+                $(document).ready(function () {
+
+
+                    parar = setTimeout(refrescarTabla, 1000); //Se llamará cada 1 segundos y se refrescarán los datos de dicha tabla que se cargan mediante la función LOAD de JQuery.
+
+
+                });
+
+                function refrescarTabla() {
+                    $("#listar").load('IndexPartial', function () {
+                        //Realizar las funciones pertinentes
+
+                    });
+
+
+
+                }
+                $(document).on("focus","input[type='search']",function () {
+                    clearTimeout(parar);
+                });
+                $(document).on("change", "input[type='search']", function () {
+                    parar = setTimeout(refrescarTabla, 1000);
+                });
+                $(document).on("click","#atencion", function(){
+                    clearTimeout(parar);
+                });
+                $(document).on("click","#editar",function () {
+                    clearTimeout(parar);
+                });
+                $(document).on("click","#eliminar",function () {
+                    clearTimeout(parar);
+                });
+
+</script>

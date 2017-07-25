@@ -1,0 +1,76 @@
+D:\Universidad-JFSC\Ciclo VII\Calidad de Software\Proyecto_Clinica\Visual_Projects\Asiri_ERP_Capas\Model\bin\Debug\Model.dll.config
+D:\Universidad-JFSC\Ciclo VII\Calidad de Software\Proyecto_Clinica\Visual_Projects\Asiri_ERP_Capas\Model\bin\Debug\Model.dll
+D:\Universidad-JFSC\Ciclo VII\Calidad de Software\Proyecto_Clinica\Visual_Projects\Asiri_ERP_Capas\Model\bin\Debug\Model.pdb
+D:\Universidad-JFSC\Ciclo VII\Calidad de Software\Proyecto_Clinica\Visual_Projects\Asiri_ERP_Capas\Model\bin\Debug\EntityFramework.dll
+D:\Universidad-JFSC\Ciclo VII\Calidad de Software\Proyecto_Clinica\Visual_Projects\Asiri_ERP_Capas\Model\bin\Debug\EntityFramework.SqlServer.dll
+D:\Universidad-JFSC\Ciclo VII\Calidad de Software\Proyecto_Clinica\Visual_Projects\Asiri_ERP_Capas\Model\bin\Debug\Microsoft.AspNet.Identity.Core.dll
+D:\Universidad-JFSC\Ciclo VII\Calidad de Software\Proyecto_Clinica\Visual_Projects\Asiri_ERP_Capas\Model\bin\Debug\Microsoft.AspNet.Identity.EntityFramework.dll
+D:\Universidad-JFSC\Ciclo VII\Calidad de Software\Proyecto_Clinica\Visual_Projects\Asiri_ERP_Capas\Model\bin\Debug\EntityFramework.xml
+D:\Universidad-JFSC\Ciclo VII\Calidad de Software\Proyecto_Clinica\Visual_Projects\Asiri_ERP_Capas\Model\bin\Debug\EntityFramework.SqlServer.xml
+D:\Universidad-JFSC\Ciclo VII\Calidad de Software\Proyecto_Clinica\Visual_Projects\Asiri_ERP_Capas\Model\bin\Debug\Microsoft.AspNet.Identity.Core.xml
+D:\Universidad-JFSC\Ciclo VII\Calidad de Software\Proyecto_Clinica\Visual_Projects\Asiri_ERP_Capas\Model\bin\Debug\Microsoft.AspNet.Identity.EntityFramework.xml
+D:\Universidad-JFSC\Ciclo VII\Calidad de Software\Proyecto_Clinica\Visual_Projects\Asiri_ERP_Capas\Model\bin\Debug\es\Microsoft.AspNet.Identity.Core.resources.dll
+D:\Universidad-JFSC\Ciclo VII\Calidad de Software\Proyecto_Clinica\Visual_Projects\Asiri_ERP_Capas\Model\bin\Debug\es\Microsoft.AspNet.Identity.EntityFramework.resources.dll
+D:\Universidad-JFSC\Ciclo VII\Calidad de Software\Proyecto_Clinica\Visual_Projects\Asiri_ERP_Capas\Model\obj\Debug\Model.csprojResolveAssemblyReference.cache
+D:\Universidad-JFSC\Ciclo VII\Calidad de Software\Proyecto_Clinica\Visual_Projects\Asiri_ERP_Capas\Model\obj\Debug\Model.dll
+D:\Universidad-JFSC\Ciclo VII\Calidad de Software\Proyecto_Clinica\Visual_Projects\Asiri_ERP_Capas\Model\obj\Debug\Model.pdb
+E:\Ciclo VII\Calidad de Software\Prueba_Integrar\Asiri_ERP_Capas\Model\bin\Debug\Model.dll.config
+E:\Ciclo VII\Calidad de Software\Prueba_Integrar\Asiri_ERP_Capas\Model\bin\Debug\Model.dll
+E:\Ciclo VII\Calidad de Software\Prueba_Integrar\Asiri_ERP_Capas\Model\bin\Debug\Model.pdb
+E:\Ciclo VII\Calidad de Software\Prueba_Integrar\Asiri_ERP_Capas\Model\bin\Debug\EntityFramework.dll
+E:\Ciclo VII\Calidad de Software\Prueba_Integrar\Asiri_ERP_Capas\Model\bin\Debug\EntityFramework.SqlServer.dll
+E:\Ciclo VII\Calidad de Software\Prueba_Integrar\Asiri_ERP_Capas\Model\bin\Debug\Microsoft.AspNet.Identity.Core.dll
+E:\Ciclo VII\Calidad de Software\Prueba_Integrar\Asiri_ERP_Capas\Model\bin\Debug\Microsoft.AspNet.Identity.EntityFramework.dll
+E:\Ciclo VII\Calidad de Software\Prueba_Integrar\Asiri_ERP_Capas\Model\bin\Debug\EntityFramework.xml
+E:\Ciclo VII\Calidad de Software\Prueba_Integrar\Asiri_ERP_Capas\Model\bin\Debug\EntityFramework.SqlServer.xml
+E:\Ciclo VII\Calidad de Software\Prueba_Integrar\Asiri_ERP_Capas\Model\bin\Debug\Microsoft.AspNet.Identity.Core.xml
+E:\Ciclo VII\Calidad de Software\Prueba_Integrar\Asiri_ERP_Capas\Model\bin\Debug\Microsoft.AspNet.Identity.EntityFramework.xml
+E:\Ciclo VII\Calidad de Software\Prueba_Integrar\Asiri_ERP_Capas\Model\bin\Debug\es\Microsoft.AspNet.Identity.Core.resources.dll
+E:\Ciclo VII\Calidad de Software\Prueba_Integrar\Asiri_ERP_Capas\Model\bin\Debug\es\Microsoft.AspNet.Identity.EntityFramework.resources.dll
+E:\Ciclo VII\Calidad de Software\Prueba_Integrar\Asiri_ERP_Capas\Model\obj\Debug\Model.dll
+E:\Ciclo VII\Calidad de Software\Prueba_Integrar\Asiri_ERP_Capas\Model\obj\Debug\Model.pdb
+D:\Universidad-JFSC\Ciclo VII\Calidad de Software\Proyecto_Clinica\Visual_Projects\2\Asiri_ERP_Capas\Model\bin\Debug\Model.dll.config
+D:\Universidad-JFSC\Ciclo VII\Calidad de Software\Proyecto_Clinica\Visual_Projects\2\Asiri_ERP_Capas\Model\bin\Debug\Model.dll
+D:\Universidad-JFSC\Ciclo VII\Calidad de Software\Proyecto_Clinica\Visual_Projects\2\Asiri_ERP_Capas\Model\bin\Debug\Model.pdb
+D:\Universidad-JFSC\Ciclo VII\Calidad de Software\Proyecto_Clinica\Visual_Projects\2\Asiri_ERP_Capas\Model\bin\Debug\EntityFramework.dll
+D:\Universidad-JFSC\Ciclo VII\Calidad de Software\Proyecto_Clinica\Visual_Projects\2\Asiri_ERP_Capas\Model\bin\Debug\EntityFramework.SqlServer.dll
+D:\Universidad-JFSC\Ciclo VII\Calidad de Software\Proyecto_Clinica\Visual_Projects\2\Asiri_ERP_Capas\Model\bin\Debug\Microsoft.AspNet.Identity.Core.dll
+D:\Universidad-JFSC\Ciclo VII\Calidad de Software\Proyecto_Clinica\Visual_Projects\2\Asiri_ERP_Capas\Model\bin\Debug\Microsoft.AspNet.Identity.EntityFramework.dll
+D:\Universidad-JFSC\Ciclo VII\Calidad de Software\Proyecto_Clinica\Visual_Projects\2\Asiri_ERP_Capas\Model\bin\Debug\EntityFramework.xml
+D:\Universidad-JFSC\Ciclo VII\Calidad de Software\Proyecto_Clinica\Visual_Projects\2\Asiri_ERP_Capas\Model\bin\Debug\EntityFramework.SqlServer.xml
+D:\Universidad-JFSC\Ciclo VII\Calidad de Software\Proyecto_Clinica\Visual_Projects\2\Asiri_ERP_Capas\Model\bin\Debug\Microsoft.AspNet.Identity.Core.xml
+D:\Universidad-JFSC\Ciclo VII\Calidad de Software\Proyecto_Clinica\Visual_Projects\2\Asiri_ERP_Capas\Model\bin\Debug\Microsoft.AspNet.Identity.EntityFramework.xml
+D:\Universidad-JFSC\Ciclo VII\Calidad de Software\Proyecto_Clinica\Visual_Projects\2\Asiri_ERP_Capas\Model\bin\Debug\es\Microsoft.AspNet.Identity.Core.resources.dll
+D:\Universidad-JFSC\Ciclo VII\Calidad de Software\Proyecto_Clinica\Visual_Projects\2\Asiri_ERP_Capas\Model\bin\Debug\es\Microsoft.AspNet.Identity.EntityFramework.resources.dll
+D:\Universidad-JFSC\Ciclo VII\Calidad de Software\Proyecto_Clinica\Visual_Projects\2\Asiri_ERP_Capas\Model\obj\Debug\Model.dll
+D:\Universidad-JFSC\Ciclo VII\Calidad de Software\Proyecto_Clinica\Visual_Projects\2\Asiri_ERP_Capas\Model\obj\Debug\Model.pdb
+E:\Ciclo VII\Calidad de Software\ultimo_backup_manuel\Asiri_ERP_Capas\Model\bin\Debug\Model.dll.config
+E:\Ciclo VII\Calidad de Software\ultimo_backup_manuel\Asiri_ERP_Capas\Model\bin\Debug\Model.dll
+E:\Ciclo VII\Calidad de Software\ultimo_backup_manuel\Asiri_ERP_Capas\Model\bin\Debug\Model.pdb
+E:\Ciclo VII\Calidad de Software\ultimo_backup_manuel\Asiri_ERP_Capas\Model\bin\Debug\EntityFramework.dll
+E:\Ciclo VII\Calidad de Software\ultimo_backup_manuel\Asiri_ERP_Capas\Model\bin\Debug\EntityFramework.SqlServer.dll
+E:\Ciclo VII\Calidad de Software\ultimo_backup_manuel\Asiri_ERP_Capas\Model\bin\Debug\Microsoft.AspNet.Identity.Core.dll
+E:\Ciclo VII\Calidad de Software\ultimo_backup_manuel\Asiri_ERP_Capas\Model\bin\Debug\Microsoft.AspNet.Identity.EntityFramework.dll
+E:\Ciclo VII\Calidad de Software\ultimo_backup_manuel\Asiri_ERP_Capas\Model\bin\Debug\EntityFramework.xml
+E:\Ciclo VII\Calidad de Software\ultimo_backup_manuel\Asiri_ERP_Capas\Model\bin\Debug\EntityFramework.SqlServer.xml
+E:\Ciclo VII\Calidad de Software\ultimo_backup_manuel\Asiri_ERP_Capas\Model\bin\Debug\Microsoft.AspNet.Identity.Core.xml
+E:\Ciclo VII\Calidad de Software\ultimo_backup_manuel\Asiri_ERP_Capas\Model\bin\Debug\Microsoft.AspNet.Identity.EntityFramework.xml
+E:\Ciclo VII\Calidad de Software\ultimo_backup_manuel\Asiri_ERP_Capas\Model\bin\Debug\es\Microsoft.AspNet.Identity.Core.resources.dll
+E:\Ciclo VII\Calidad de Software\ultimo_backup_manuel\Asiri_ERP_Capas\Model\bin\Debug\es\Microsoft.AspNet.Identity.EntityFramework.resources.dll
+E:\Ciclo VII\Calidad de Software\ultimo_backup_manuel\Asiri_ERP_Capas\Model\obj\Debug\Model.dll
+E:\Ciclo VII\Calidad de Software\ultimo_backup_manuel\Asiri_ERP_Capas\Model\obj\Debug\Model.pdb
+E:\Ciclo VII\Calidad de Software\mas pagos 2\mas pagos\Asiri_ERP_Capas\Model\bin\Debug\Model.dll.config
+E:\Ciclo VII\Calidad de Software\mas pagos 2\mas pagos\Asiri_ERP_Capas\Model\bin\Debug\Model.dll
+E:\Ciclo VII\Calidad de Software\mas pagos 2\mas pagos\Asiri_ERP_Capas\Model\bin\Debug\Model.pdb
+E:\Ciclo VII\Calidad de Software\mas pagos 2\mas pagos\Asiri_ERP_Capas\Model\bin\Debug\EntityFramework.dll
+E:\Ciclo VII\Calidad de Software\mas pagos 2\mas pagos\Asiri_ERP_Capas\Model\bin\Debug\EntityFramework.SqlServer.dll
+E:\Ciclo VII\Calidad de Software\mas pagos 2\mas pagos\Asiri_ERP_Capas\Model\bin\Debug\Microsoft.AspNet.Identity.Core.dll
+E:\Ciclo VII\Calidad de Software\mas pagos 2\mas pagos\Asiri_ERP_Capas\Model\bin\Debug\Microsoft.AspNet.Identity.EntityFramework.dll
+E:\Ciclo VII\Calidad de Software\mas pagos 2\mas pagos\Asiri_ERP_Capas\Model\bin\Debug\EntityFramework.xml
+E:\Ciclo VII\Calidad de Software\mas pagos 2\mas pagos\Asiri_ERP_Capas\Model\bin\Debug\EntityFramework.SqlServer.xml
+E:\Ciclo VII\Calidad de Software\mas pagos 2\mas pagos\Asiri_ERP_Capas\Model\bin\Debug\Microsoft.AspNet.Identity.Core.xml
+E:\Ciclo VII\Calidad de Software\mas pagos 2\mas pagos\Asiri_ERP_Capas\Model\bin\Debug\Microsoft.AspNet.Identity.EntityFramework.xml
+E:\Ciclo VII\Calidad de Software\mas pagos 2\mas pagos\Asiri_ERP_Capas\Model\bin\Debug\es\Microsoft.AspNet.Identity.Core.resources.dll
+E:\Ciclo VII\Calidad de Software\mas pagos 2\mas pagos\Asiri_ERP_Capas\Model\bin\Debug\es\Microsoft.AspNet.Identity.EntityFramework.resources.dll
+E:\Ciclo VII\Calidad de Software\mas pagos 2\mas pagos\Asiri_ERP_Capas\Model\obj\Debug\Model.dll
+E:\Ciclo VII\Calidad de Software\mas pagos 2\mas pagos\Asiri_ERP_Capas\Model\obj\Debug\Model.pdb

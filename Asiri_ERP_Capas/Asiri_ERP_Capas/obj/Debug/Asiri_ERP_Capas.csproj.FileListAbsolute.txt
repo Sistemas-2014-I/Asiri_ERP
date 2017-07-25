@@ -1,0 +1,1275 @@
+D:\Universidad-JFSC\Ciclo VII\Calidad de Software\Proyecto_Clinica\Visual_Projects\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\ApplicationInsights.config
+D:\Universidad-JFSC\Ciclo VII\Calidad de Software\Proyecto_Clinica\Visual_Projects\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\roslyn\csc.exe
+D:\Universidad-JFSC\Ciclo VII\Calidad de Software\Proyecto_Clinica\Visual_Projects\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+D:\Universidad-JFSC\Ciclo VII\Calidad de Software\Proyecto_Clinica\Visual_Projects\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+D:\Universidad-JFSC\Ciclo VII\Calidad de Software\Proyecto_Clinica\Visual_Projects\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\roslyn\Microsoft.CodeAnalysis.dll
+D:\Universidad-JFSC\Ciclo VII\Calidad de Software\Proyecto_Clinica\Visual_Projects\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+D:\Universidad-JFSC\Ciclo VII\Calidad de Software\Proyecto_Clinica\Visual_Projects\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\roslyn\Microsoft.CSharp.Core.targets
+D:\Universidad-JFSC\Ciclo VII\Calidad de Software\Proyecto_Clinica\Visual_Projects\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\roslyn\Microsoft.VisualBasic.Core.targets
+D:\Universidad-JFSC\Ciclo VII\Calidad de Software\Proyecto_Clinica\Visual_Projects\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\roslyn\System.Collections.Immutable.dll
+D:\Universidad-JFSC\Ciclo VII\Calidad de Software\Proyecto_Clinica\Visual_Projects\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\roslyn\System.Reflection.Metadata.dll
+D:\Universidad-JFSC\Ciclo VII\Calidad de Software\Proyecto_Clinica\Visual_Projects\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\roslyn\vbc.exe
+D:\Universidad-JFSC\Ciclo VII\Calidad de Software\Proyecto_Clinica\Visual_Projects\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\roslyn\VBCSCompiler.exe
+D:\Universidad-JFSC\Ciclo VII\Calidad de Software\Proyecto_Clinica\Visual_Projects\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\roslyn\VBCSCompiler.exe.config
+D:\Universidad-JFSC\Ciclo VII\Calidad de Software\Proyecto_Clinica\Visual_Projects\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\Asiri_ERP_Capas.dll.config
+D:\Universidad-JFSC\Ciclo VII\Calidad de Software\Proyecto_Clinica\Visual_Projects\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\Asiri_ERP_Capas.dll
+D:\Universidad-JFSC\Ciclo VII\Calidad de Software\Proyecto_Clinica\Visual_Projects\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\Asiri_ERP_Capas.pdb
+D:\Universidad-JFSC\Ciclo VII\Calidad de Software\Proyecto_Clinica\Visual_Projects\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\Antlr3.Runtime.dll
+D:\Universidad-JFSC\Ciclo VII\Calidad de Software\Proyecto_Clinica\Visual_Projects\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\Common.dll
+D:\Universidad-JFSC\Ciclo VII\Calidad de Software\Proyecto_Clinica\Visual_Projects\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\EntityFramework.dll
+D:\Universidad-JFSC\Ciclo VII\Calidad de Software\Proyecto_Clinica\Visual_Projects\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\EntityFramework.SqlServer.dll
+D:\Universidad-JFSC\Ciclo VII\Calidad de Software\Proyecto_Clinica\Visual_Projects\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\Microsoft.AI.Agent.Intercept.dll
+D:\Universidad-JFSC\Ciclo VII\Calidad de Software\Proyecto_Clinica\Visual_Projects\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\Microsoft.AI.DependencyCollector.dll
+D:\Universidad-JFSC\Ciclo VII\Calidad de Software\Proyecto_Clinica\Visual_Projects\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\Microsoft.AI.PerfCounterCollector.dll
+D:\Universidad-JFSC\Ciclo VII\Calidad de Software\Proyecto_Clinica\Visual_Projects\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\Microsoft.AI.ServerTelemetryChannel.dll
+D:\Universidad-JFSC\Ciclo VII\Calidad de Software\Proyecto_Clinica\Visual_Projects\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\Microsoft.AI.Web.dll
+D:\Universidad-JFSC\Ciclo VII\Calidad de Software\Proyecto_Clinica\Visual_Projects\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\Microsoft.AI.WindowsServer.dll
+D:\Universidad-JFSC\Ciclo VII\Calidad de Software\Proyecto_Clinica\Visual_Projects\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\Microsoft.ApplicationInsights.dll
+D:\Universidad-JFSC\Ciclo VII\Calidad de Software\Proyecto_Clinica\Visual_Projects\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\Microsoft.AspNet.Identity.Core.dll
+D:\Universidad-JFSC\Ciclo VII\Calidad de Software\Proyecto_Clinica\Visual_Projects\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+D:\Universidad-JFSC\Ciclo VII\Calidad de Software\Proyecto_Clinica\Visual_Projects\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\Microsoft.AspNet.Identity.Owin.dll
+D:\Universidad-JFSC\Ciclo VII\Calidad de Software\Proyecto_Clinica\Visual_Projects\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+D:\Universidad-JFSC\Ciclo VII\Calidad de Software\Proyecto_Clinica\Visual_Projects\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\Microsoft.Owin.dll
+D:\Universidad-JFSC\Ciclo VII\Calidad de Software\Proyecto_Clinica\Visual_Projects\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\Microsoft.Owin.Host.SystemWeb.dll
+D:\Universidad-JFSC\Ciclo VII\Calidad de Software\Proyecto_Clinica\Visual_Projects\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\Microsoft.Owin.Security.Cookies.dll
+D:\Universidad-JFSC\Ciclo VII\Calidad de Software\Proyecto_Clinica\Visual_Projects\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\Microsoft.Owin.Security.dll
+D:\Universidad-JFSC\Ciclo VII\Calidad de Software\Proyecto_Clinica\Visual_Projects\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\Microsoft.Owin.Security.Facebook.dll
+D:\Universidad-JFSC\Ciclo VII\Calidad de Software\Proyecto_Clinica\Visual_Projects\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\Microsoft.Owin.Security.Google.dll
+D:\Universidad-JFSC\Ciclo VII\Calidad de Software\Proyecto_Clinica\Visual_Projects\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+D:\Universidad-JFSC\Ciclo VII\Calidad de Software\Proyecto_Clinica\Visual_Projects\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\Microsoft.Owin.Security.OAuth.dll
+D:\Universidad-JFSC\Ciclo VII\Calidad de Software\Proyecto_Clinica\Visual_Projects\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\Microsoft.Owin.Security.Twitter.dll
+D:\Universidad-JFSC\Ciclo VII\Calidad de Software\Proyecto_Clinica\Visual_Projects\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\Microsoft.Web.Infrastructure.dll
+D:\Universidad-JFSC\Ciclo VII\Calidad de Software\Proyecto_Clinica\Visual_Projects\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\Model.dll
+D:\Universidad-JFSC\Ciclo VII\Calidad de Software\Proyecto_Clinica\Visual_Projects\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\Mvc_Entity.dll
+D:\Universidad-JFSC\Ciclo VII\Calidad de Software\Proyecto_Clinica\Visual_Projects\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\Newtonsoft.Json.dll
+D:\Universidad-JFSC\Ciclo VII\Calidad de Software\Proyecto_Clinica\Visual_Projects\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\Owin.dll
+D:\Universidad-JFSC\Ciclo VII\Calidad de Software\Proyecto_Clinica\Visual_Projects\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\Persistence.dll
+D:\Universidad-JFSC\Ciclo VII\Calidad de Software\Proyecto_Clinica\Visual_Projects\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\Service.dll
+D:\Universidad-JFSC\Ciclo VII\Calidad de Software\Proyecto_Clinica\Visual_Projects\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\System.Web.Helpers.dll
+D:\Universidad-JFSC\Ciclo VII\Calidad de Software\Proyecto_Clinica\Visual_Projects\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\System.Web.Mvc.dll
+D:\Universidad-JFSC\Ciclo VII\Calidad de Software\Proyecto_Clinica\Visual_Projects\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\System.Web.Optimization.dll
+D:\Universidad-JFSC\Ciclo VII\Calidad de Software\Proyecto_Clinica\Visual_Projects\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\System.Web.Razor.dll
+D:\Universidad-JFSC\Ciclo VII\Calidad de Software\Proyecto_Clinica\Visual_Projects\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\System.Web.WebPages.Deployment.dll
+D:\Universidad-JFSC\Ciclo VII\Calidad de Software\Proyecto_Clinica\Visual_Projects\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\System.Web.WebPages.dll
+D:\Universidad-JFSC\Ciclo VII\Calidad de Software\Proyecto_Clinica\Visual_Projects\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\System.Web.WebPages.Razor.dll
+D:\Universidad-JFSC\Ciclo VII\Calidad de Software\Proyecto_Clinica\Visual_Projects\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\WebGrease.dll
+D:\Universidad-JFSC\Ciclo VII\Calidad de Software\Proyecto_Clinica\Visual_Projects\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\Common.pdb
+D:\Universidad-JFSC\Ciclo VII\Calidad de Software\Proyecto_Clinica\Visual_Projects\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\Model.pdb
+D:\Universidad-JFSC\Ciclo VII\Calidad de Software\Proyecto_Clinica\Visual_Projects\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\Mvc_Entity.pdb
+D:\Universidad-JFSC\Ciclo VII\Calidad de Software\Proyecto_Clinica\Visual_Projects\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\Persistence.pdb
+D:\Universidad-JFSC\Ciclo VII\Calidad de Software\Proyecto_Clinica\Visual_Projects\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\Service.pdb
+D:\Universidad-JFSC\Ciclo VII\Calidad de Software\Proyecto_Clinica\Visual_Projects\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\Microsoft.AI.DependencyCollector.xml
+D:\Universidad-JFSC\Ciclo VII\Calidad de Software\Proyecto_Clinica\Visual_Projects\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\Microsoft.AI.ServerTelemetryChannel.xml
+D:\Universidad-JFSC\Ciclo VII\Calidad de Software\Proyecto_Clinica\Visual_Projects\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\Microsoft.AI.Web.xml
+D:\Universidad-JFSC\Ciclo VII\Calidad de Software\Proyecto_Clinica\Visual_Projects\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\Microsoft.AI.WindowsServer.xml
+D:\Universidad-JFSC\Ciclo VII\Calidad de Software\Proyecto_Clinica\Visual_Projects\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\Microsoft.ApplicationInsights.xml
+D:\Universidad-JFSC\Ciclo VII\Calidad de Software\Proyecto_Clinica\Visual_Projects\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+D:\Universidad-JFSC\Ciclo VII\Calidad de Software\Proyecto_Clinica\Visual_Projects\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\System.Web.Helpers.xml
+D:\Universidad-JFSC\Ciclo VII\Calidad de Software\Proyecto_Clinica\Visual_Projects\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\System.Web.Mvc.xml
+D:\Universidad-JFSC\Ciclo VII\Calidad de Software\Proyecto_Clinica\Visual_Projects\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\System.Web.Optimization.xml
+D:\Universidad-JFSC\Ciclo VII\Calidad de Software\Proyecto_Clinica\Visual_Projects\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\System.Web.Razor.xml
+D:\Universidad-JFSC\Ciclo VII\Calidad de Software\Proyecto_Clinica\Visual_Projects\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\System.Web.WebPages.xml
+D:\Universidad-JFSC\Ciclo VII\Calidad de Software\Proyecto_Clinica\Visual_Projects\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\System.Web.WebPages.Deployment.xml
+D:\Universidad-JFSC\Ciclo VII\Calidad de Software\Proyecto_Clinica\Visual_Projects\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\System.Web.WebPages.Razor.xml
+D:\Universidad-JFSC\Ciclo VII\Calidad de Software\Proyecto_Clinica\Visual_Projects\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\Antlr3.Runtime.pdb
+D:\Universidad-JFSC\Ciclo VII\Calidad de Software\Proyecto_Clinica\Visual_Projects\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\Newtonsoft.Json.xml
+D:\Universidad-JFSC\Ciclo VII\Calidad de Software\Proyecto_Clinica\Visual_Projects\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\EntityFramework.xml
+D:\Universidad-JFSC\Ciclo VII\Calidad de Software\Proyecto_Clinica\Visual_Projects\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\EntityFramework.SqlServer.xml
+D:\Universidad-JFSC\Ciclo VII\Calidad de Software\Proyecto_Clinica\Visual_Projects\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\Microsoft.AspNet.Identity.Core.xml
+D:\Universidad-JFSC\Ciclo VII\Calidad de Software\Proyecto_Clinica\Visual_Projects\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\Microsoft.AspNet.Identity.Owin.xml
+D:\Universidad-JFSC\Ciclo VII\Calidad de Software\Proyecto_Clinica\Visual_Projects\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+D:\Universidad-JFSC\Ciclo VII\Calidad de Software\Proyecto_Clinica\Visual_Projects\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\Microsoft.Owin.xml
+D:\Universidad-JFSC\Ciclo VII\Calidad de Software\Proyecto_Clinica\Visual_Projects\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\Microsoft.Owin.Host.SystemWeb.xml
+D:\Universidad-JFSC\Ciclo VII\Calidad de Software\Proyecto_Clinica\Visual_Projects\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\Microsoft.Owin.Security.xml
+D:\Universidad-JFSC\Ciclo VII\Calidad de Software\Proyecto_Clinica\Visual_Projects\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\Microsoft.Owin.Security.Facebook.xml
+D:\Universidad-JFSC\Ciclo VII\Calidad de Software\Proyecto_Clinica\Visual_Projects\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\Microsoft.Owin.Security.Cookies.xml
+D:\Universidad-JFSC\Ciclo VII\Calidad de Software\Proyecto_Clinica\Visual_Projects\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\Microsoft.Owin.Security.OAuth.xml
+D:\Universidad-JFSC\Ciclo VII\Calidad de Software\Proyecto_Clinica\Visual_Projects\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\Microsoft.Owin.Security.Google.xml
+D:\Universidad-JFSC\Ciclo VII\Calidad de Software\Proyecto_Clinica\Visual_Projects\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\Microsoft.Owin.Security.Twitter.xml
+D:\Universidad-JFSC\Ciclo VII\Calidad de Software\Proyecto_Clinica\Visual_Projects\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+D:\Universidad-JFSC\Ciclo VII\Calidad de Software\Proyecto_Clinica\Visual_Projects\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\es\System.Web.Helpers.resources.dll
+D:\Universidad-JFSC\Ciclo VII\Calidad de Software\Proyecto_Clinica\Visual_Projects\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\es\System.Web.Mvc.resources.dll
+D:\Universidad-JFSC\Ciclo VII\Calidad de Software\Proyecto_Clinica\Visual_Projects\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\es\System.Web.Optimization.resources.dll
+D:\Universidad-JFSC\Ciclo VII\Calidad de Software\Proyecto_Clinica\Visual_Projects\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\es\System.Web.Razor.resources.dll
+D:\Universidad-JFSC\Ciclo VII\Calidad de Software\Proyecto_Clinica\Visual_Projects\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\es\System.Web.WebPages.resources.dll
+D:\Universidad-JFSC\Ciclo VII\Calidad de Software\Proyecto_Clinica\Visual_Projects\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\es\System.Web.WebPages.Deployment.resources.dll
+D:\Universidad-JFSC\Ciclo VII\Calidad de Software\Proyecto_Clinica\Visual_Projects\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\es\System.Web.WebPages.Razor.resources.dll
+D:\Universidad-JFSC\Ciclo VII\Calidad de Software\Proyecto_Clinica\Visual_Projects\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\es\EntityFramework.resources.dll
+D:\Universidad-JFSC\Ciclo VII\Calidad de Software\Proyecto_Clinica\Visual_Projects\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\es\EntityFramework.SqlServer.resources.dll
+D:\Universidad-JFSC\Ciclo VII\Calidad de Software\Proyecto_Clinica\Visual_Projects\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\es\Microsoft.AspNet.Identity.Core.resources.dll
+D:\Universidad-JFSC\Ciclo VII\Calidad de Software\Proyecto_Clinica\Visual_Projects\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\es\Microsoft.AspNet.Identity.Owin.resources.dll
+D:\Universidad-JFSC\Ciclo VII\Calidad de Software\Proyecto_Clinica\Visual_Projects\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\es\Microsoft.AspNet.Identity.EntityFramework.resources.dll
+D:\Universidad-JFSC\Ciclo VII\Calidad de Software\Proyecto_Clinica\Visual_Projects\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\es\Microsoft.Owin.resources.dll
+D:\Universidad-JFSC\Ciclo VII\Calidad de Software\Proyecto_Clinica\Visual_Projects\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\es\Microsoft.Owin.Host.SystemWeb.resources.dll
+D:\Universidad-JFSC\Ciclo VII\Calidad de Software\Proyecto_Clinica\Visual_Projects\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\es\Microsoft.Owin.Security.resources.dll
+D:\Universidad-JFSC\Ciclo VII\Calidad de Software\Proyecto_Clinica\Visual_Projects\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\es\Microsoft.Owin.Security.Facebook.resources.dll
+D:\Universidad-JFSC\Ciclo VII\Calidad de Software\Proyecto_Clinica\Visual_Projects\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\es\Microsoft.Owin.Security.Google.resources.dll
+D:\Universidad-JFSC\Ciclo VII\Calidad de Software\Proyecto_Clinica\Visual_Projects\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\es\Microsoft.Owin.Security.Twitter.resources.dll
+D:\Universidad-JFSC\Ciclo VII\Calidad de Software\Proyecto_Clinica\Visual_Projects\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\es\Microsoft.Owin.Security.MicrosoftAccount.resources.dll
+D:\Universidad-JFSC\Ciclo VII\Calidad de Software\Proyecto_Clinica\Visual_Projects\Asiri_ERP_Capas\Asiri_ERP_Capas\obj\Debug\Asiri_ERP_Capas.csprojResolveAssemblyReference.cache
+D:\Universidad-JFSC\Ciclo VII\Calidad de Software\Proyecto_Clinica\Visual_Projects\Asiri_ERP_Capas\Asiri_ERP_Capas\obj\Debug\Asiri_ERP_Capas.dll
+D:\Universidad-JFSC\Ciclo VII\Calidad de Software\Proyecto_Clinica\Visual_Projects\Asiri_ERP_Capas\Asiri_ERP_Capas\obj\Debug\Asiri_ERP_Capas.pdb
+E:\Ciclo VII\Calidad de Software\Prueba_Integrar\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\ApplicationInsights.config
+E:\Ciclo VII\Calidad de Software\Prueba_Integrar\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\roslyn\csc.exe
+E:\Ciclo VII\Calidad de Software\Prueba_Integrar\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+E:\Ciclo VII\Calidad de Software\Prueba_Integrar\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+E:\Ciclo VII\Calidad de Software\Prueba_Integrar\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\roslyn\Microsoft.CodeAnalysis.dll
+E:\Ciclo VII\Calidad de Software\Prueba_Integrar\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+E:\Ciclo VII\Calidad de Software\Prueba_Integrar\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\roslyn\Microsoft.CSharp.Core.targets
+E:\Ciclo VII\Calidad de Software\Prueba_Integrar\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\roslyn\Microsoft.VisualBasic.Core.targets
+E:\Ciclo VII\Calidad de Software\Prueba_Integrar\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\roslyn\System.Collections.Immutable.dll
+E:\Ciclo VII\Calidad de Software\Prueba_Integrar\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\roslyn\System.Reflection.Metadata.dll
+E:\Ciclo VII\Calidad de Software\Prueba_Integrar\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\roslyn\vbc.exe
+E:\Ciclo VII\Calidad de Software\Prueba_Integrar\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\roslyn\VBCSCompiler.exe
+E:\Ciclo VII\Calidad de Software\Prueba_Integrar\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\roslyn\VBCSCompiler.exe.config
+E:\Ciclo VII\Calidad de Software\Prueba_Integrar\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\Asiri_ERP_Capas.dll.config
+E:\Ciclo VII\Calidad de Software\Prueba_Integrar\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\Asiri_ERP_Capas.dll
+E:\Ciclo VII\Calidad de Software\Prueba_Integrar\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\Asiri_ERP_Capas.pdb
+E:\Ciclo VII\Calidad de Software\Prueba_Integrar\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\Antlr3.Runtime.dll
+E:\Ciclo VII\Calidad de Software\Prueba_Integrar\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\Common.dll
+E:\Ciclo VII\Calidad de Software\Prueba_Integrar\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\EntityFramework.dll
+E:\Ciclo VII\Calidad de Software\Prueba_Integrar\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\EntityFramework.SqlServer.dll
+E:\Ciclo VII\Calidad de Software\Prueba_Integrar\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\Microsoft.AI.Agent.Intercept.dll
+E:\Ciclo VII\Calidad de Software\Prueba_Integrar\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\Microsoft.AI.DependencyCollector.dll
+E:\Ciclo VII\Calidad de Software\Prueba_Integrar\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\Microsoft.AI.PerfCounterCollector.dll
+E:\Ciclo VII\Calidad de Software\Prueba_Integrar\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\Microsoft.AI.ServerTelemetryChannel.dll
+E:\Ciclo VII\Calidad de Software\Prueba_Integrar\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\Microsoft.AI.Web.dll
+E:\Ciclo VII\Calidad de Software\Prueba_Integrar\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\Microsoft.AI.WindowsServer.dll
+E:\Ciclo VII\Calidad de Software\Prueba_Integrar\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\Microsoft.ApplicationInsights.dll
+E:\Ciclo VII\Calidad de Software\Prueba_Integrar\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\Microsoft.AspNet.Identity.Core.dll
+E:\Ciclo VII\Calidad de Software\Prueba_Integrar\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+E:\Ciclo VII\Calidad de Software\Prueba_Integrar\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\Microsoft.AspNet.Identity.Owin.dll
+E:\Ciclo VII\Calidad de Software\Prueba_Integrar\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+E:\Ciclo VII\Calidad de Software\Prueba_Integrar\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\Microsoft.Owin.dll
+E:\Ciclo VII\Calidad de Software\Prueba_Integrar\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\Microsoft.Owin.Host.SystemWeb.dll
+E:\Ciclo VII\Calidad de Software\Prueba_Integrar\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\Microsoft.Owin.Security.Cookies.dll
+E:\Ciclo VII\Calidad de Software\Prueba_Integrar\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\Microsoft.Owin.Security.dll
+E:\Ciclo VII\Calidad de Software\Prueba_Integrar\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\Microsoft.Owin.Security.Facebook.dll
+E:\Ciclo VII\Calidad de Software\Prueba_Integrar\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\Microsoft.Owin.Security.Google.dll
+E:\Ciclo VII\Calidad de Software\Prueba_Integrar\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+E:\Ciclo VII\Calidad de Software\Prueba_Integrar\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\Microsoft.Owin.Security.OAuth.dll
+E:\Ciclo VII\Calidad de Software\Prueba_Integrar\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\Microsoft.Owin.Security.Twitter.dll
+E:\Ciclo VII\Calidad de Software\Prueba_Integrar\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\Microsoft.Web.Infrastructure.dll
+E:\Ciclo VII\Calidad de Software\Prueba_Integrar\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\Model.dll
+E:\Ciclo VII\Calidad de Software\Prueba_Integrar\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\Mvc_Entity.dll
+E:\Ciclo VII\Calidad de Software\Prueba_Integrar\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\Newtonsoft.Json.dll
+E:\Ciclo VII\Calidad de Software\Prueba_Integrar\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\Owin.dll
+E:\Ciclo VII\Calidad de Software\Prueba_Integrar\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\Persistence.dll
+E:\Ciclo VII\Calidad de Software\Prueba_Integrar\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\Service.dll
+E:\Ciclo VII\Calidad de Software\Prueba_Integrar\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\System.Web.Helpers.dll
+E:\Ciclo VII\Calidad de Software\Prueba_Integrar\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\System.Web.Mvc.dll
+E:\Ciclo VII\Calidad de Software\Prueba_Integrar\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\System.Web.Optimization.dll
+E:\Ciclo VII\Calidad de Software\Prueba_Integrar\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\System.Web.Razor.dll
+E:\Ciclo VII\Calidad de Software\Prueba_Integrar\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\System.Web.WebPages.Deployment.dll
+E:\Ciclo VII\Calidad de Software\Prueba_Integrar\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\System.Web.WebPages.dll
+E:\Ciclo VII\Calidad de Software\Prueba_Integrar\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\System.Web.WebPages.Razor.dll
+E:\Ciclo VII\Calidad de Software\Prueba_Integrar\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\WebGrease.dll
+E:\Ciclo VII\Calidad de Software\Prueba_Integrar\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\Common.pdb
+E:\Ciclo VII\Calidad de Software\Prueba_Integrar\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\Model.pdb
+E:\Ciclo VII\Calidad de Software\Prueba_Integrar\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\Mvc_Entity.pdb
+E:\Ciclo VII\Calidad de Software\Prueba_Integrar\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\Persistence.pdb
+E:\Ciclo VII\Calidad de Software\Prueba_Integrar\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\Service.pdb
+E:\Ciclo VII\Calidad de Software\Prueba_Integrar\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\Microsoft.AI.DependencyCollector.xml
+E:\Ciclo VII\Calidad de Software\Prueba_Integrar\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\Microsoft.AI.ServerTelemetryChannel.xml
+E:\Ciclo VII\Calidad de Software\Prueba_Integrar\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\Microsoft.AI.Web.xml
+E:\Ciclo VII\Calidad de Software\Prueba_Integrar\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\Microsoft.AI.WindowsServer.xml
+E:\Ciclo VII\Calidad de Software\Prueba_Integrar\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\Microsoft.ApplicationInsights.xml
+E:\Ciclo VII\Calidad de Software\Prueba_Integrar\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+E:\Ciclo VII\Calidad de Software\Prueba_Integrar\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\System.Web.Helpers.xml
+E:\Ciclo VII\Calidad de Software\Prueba_Integrar\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\System.Web.Mvc.xml
+E:\Ciclo VII\Calidad de Software\Prueba_Integrar\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\System.Web.Optimization.xml
+E:\Ciclo VII\Calidad de Software\Prueba_Integrar\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\System.Web.Razor.xml
+E:\Ciclo VII\Calidad de Software\Prueba_Integrar\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\System.Web.WebPages.xml
+E:\Ciclo VII\Calidad de Software\Prueba_Integrar\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\System.Web.WebPages.Deployment.xml
+E:\Ciclo VII\Calidad de Software\Prueba_Integrar\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\System.Web.WebPages.Razor.xml
+E:\Ciclo VII\Calidad de Software\Prueba_Integrar\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\Antlr3.Runtime.pdb
+E:\Ciclo VII\Calidad de Software\Prueba_Integrar\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\Newtonsoft.Json.xml
+E:\Ciclo VII\Calidad de Software\Prueba_Integrar\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\EntityFramework.xml
+E:\Ciclo VII\Calidad de Software\Prueba_Integrar\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\EntityFramework.SqlServer.xml
+E:\Ciclo VII\Calidad de Software\Prueba_Integrar\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\Microsoft.AspNet.Identity.Core.xml
+E:\Ciclo VII\Calidad de Software\Prueba_Integrar\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\Microsoft.AspNet.Identity.Owin.xml
+E:\Ciclo VII\Calidad de Software\Prueba_Integrar\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+E:\Ciclo VII\Calidad de Software\Prueba_Integrar\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\Microsoft.Owin.xml
+E:\Ciclo VII\Calidad de Software\Prueba_Integrar\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\Microsoft.Owin.Host.SystemWeb.xml
+E:\Ciclo VII\Calidad de Software\Prueba_Integrar\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\Microsoft.Owin.Security.xml
+E:\Ciclo VII\Calidad de Software\Prueba_Integrar\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\Microsoft.Owin.Security.Facebook.xml
+E:\Ciclo VII\Calidad de Software\Prueba_Integrar\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\Microsoft.Owin.Security.Cookies.xml
+E:\Ciclo VII\Calidad de Software\Prueba_Integrar\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\Microsoft.Owin.Security.OAuth.xml
+E:\Ciclo VII\Calidad de Software\Prueba_Integrar\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\Microsoft.Owin.Security.Google.xml
+E:\Ciclo VII\Calidad de Software\Prueba_Integrar\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\Microsoft.Owin.Security.Twitter.xml
+E:\Ciclo VII\Calidad de Software\Prueba_Integrar\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+E:\Ciclo VII\Calidad de Software\Prueba_Integrar\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\es\System.Web.Helpers.resources.dll
+E:\Ciclo VII\Calidad de Software\Prueba_Integrar\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\es\System.Web.Mvc.resources.dll
+E:\Ciclo VII\Calidad de Software\Prueba_Integrar\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\es\System.Web.Optimization.resources.dll
+E:\Ciclo VII\Calidad de Software\Prueba_Integrar\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\es\System.Web.Razor.resources.dll
+E:\Ciclo VII\Calidad de Software\Prueba_Integrar\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\es\System.Web.WebPages.resources.dll
+E:\Ciclo VII\Calidad de Software\Prueba_Integrar\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\es\System.Web.WebPages.Deployment.resources.dll
+E:\Ciclo VII\Calidad de Software\Prueba_Integrar\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\es\System.Web.WebPages.Razor.resources.dll
+E:\Ciclo VII\Calidad de Software\Prueba_Integrar\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\es\EntityFramework.resources.dll
+E:\Ciclo VII\Calidad de Software\Prueba_Integrar\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\es\EntityFramework.SqlServer.resources.dll
+E:\Ciclo VII\Calidad de Software\Prueba_Integrar\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\es\Microsoft.AspNet.Identity.Core.resources.dll
+E:\Ciclo VII\Calidad de Software\Prueba_Integrar\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\es\Microsoft.AspNet.Identity.Owin.resources.dll
+E:\Ciclo VII\Calidad de Software\Prueba_Integrar\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\es\Microsoft.AspNet.Identity.EntityFramework.resources.dll
+E:\Ciclo VII\Calidad de Software\Prueba_Integrar\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\es\Microsoft.Owin.resources.dll
+E:\Ciclo VII\Calidad de Software\Prueba_Integrar\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\es\Microsoft.Owin.Host.SystemWeb.resources.dll
+E:\Ciclo VII\Calidad de Software\Prueba_Integrar\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\es\Microsoft.Owin.Security.resources.dll
+E:\Ciclo VII\Calidad de Software\Prueba_Integrar\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\es\Microsoft.Owin.Security.Facebook.resources.dll
+E:\Ciclo VII\Calidad de Software\Prueba_Integrar\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\es\Microsoft.Owin.Security.Google.resources.dll
+E:\Ciclo VII\Calidad de Software\Prueba_Integrar\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\es\Microsoft.Owin.Security.Twitter.resources.dll
+E:\Ciclo VII\Calidad de Software\Prueba_Integrar\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\es\Microsoft.Owin.Security.MicrosoftAccount.resources.dll
+E:\Ciclo VII\Calidad de Software\Prueba_Integrar\Asiri_ERP_Capas\Asiri_ERP_Capas\obj\Debug\Asiri_ERP_Capas.csprojResolveAssemblyReference.cache
+E:\Ciclo VII\Calidad de Software\Prueba_Integrar\Asiri_ERP_Capas\Asiri_ERP_Capas\obj\Debug\Asiri_ERP_Capas.dll
+E:\Ciclo VII\Calidad de Software\Prueba_Integrar\Asiri_ERP_Capas\Asiri_ERP_Capas\obj\Debug\Asiri_ERP_Capas.pdb
+D:\Universidad-JFSC\Ciclo VII\Calidad de Software\Proyecto_Clinica\Visual_Projects\2\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\ApplicationInsights.config
+D:\Universidad-JFSC\Ciclo VII\Calidad de Software\Proyecto_Clinica\Visual_Projects\2\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\roslyn\csc.exe
+D:\Universidad-JFSC\Ciclo VII\Calidad de Software\Proyecto_Clinica\Visual_Projects\2\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+D:\Universidad-JFSC\Ciclo VII\Calidad de Software\Proyecto_Clinica\Visual_Projects\2\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+D:\Universidad-JFSC\Ciclo VII\Calidad de Software\Proyecto_Clinica\Visual_Projects\2\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\roslyn\Microsoft.CodeAnalysis.dll
+D:\Universidad-JFSC\Ciclo VII\Calidad de Software\Proyecto_Clinica\Visual_Projects\2\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+D:\Universidad-JFSC\Ciclo VII\Calidad de Software\Proyecto_Clinica\Visual_Projects\2\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\roslyn\Microsoft.CSharp.Core.targets
+D:\Universidad-JFSC\Ciclo VII\Calidad de Software\Proyecto_Clinica\Visual_Projects\2\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\roslyn\Microsoft.VisualBasic.Core.targets
+D:\Universidad-JFSC\Ciclo VII\Calidad de Software\Proyecto_Clinica\Visual_Projects\2\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\roslyn\System.Collections.Immutable.dll
+D:\Universidad-JFSC\Ciclo VII\Calidad de Software\Proyecto_Clinica\Visual_Projects\2\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\roslyn\System.Reflection.Metadata.dll
+D:\Universidad-JFSC\Ciclo VII\Calidad de Software\Proyecto_Clinica\Visual_Projects\2\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\roslyn\vbc.exe
+D:\Universidad-JFSC\Ciclo VII\Calidad de Software\Proyecto_Clinica\Visual_Projects\2\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\roslyn\VBCSCompiler.exe
+D:\Universidad-JFSC\Ciclo VII\Calidad de Software\Proyecto_Clinica\Visual_Projects\2\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\roslyn\VBCSCompiler.exe.config
+D:\Universidad-JFSC\Ciclo VII\Calidad de Software\Proyecto_Clinica\Visual_Projects\2\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\Asiri_ERP_Capas.dll.config
+D:\Universidad-JFSC\Ciclo VII\Calidad de Software\Proyecto_Clinica\Visual_Projects\2\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\Asiri_ERP_Capas.dll
+D:\Universidad-JFSC\Ciclo VII\Calidad de Software\Proyecto_Clinica\Visual_Projects\2\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\Asiri_ERP_Capas.pdb
+D:\Universidad-JFSC\Ciclo VII\Calidad de Software\Proyecto_Clinica\Visual_Projects\2\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\Antlr3.Runtime.dll
+D:\Universidad-JFSC\Ciclo VII\Calidad de Software\Proyecto_Clinica\Visual_Projects\2\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\Common.dll
+D:\Universidad-JFSC\Ciclo VII\Calidad de Software\Proyecto_Clinica\Visual_Projects\2\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\EntityFramework.dll
+D:\Universidad-JFSC\Ciclo VII\Calidad de Software\Proyecto_Clinica\Visual_Projects\2\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\EntityFramework.SqlServer.dll
+D:\Universidad-JFSC\Ciclo VII\Calidad de Software\Proyecto_Clinica\Visual_Projects\2\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\Microsoft.AI.Agent.Intercept.dll
+D:\Universidad-JFSC\Ciclo VII\Calidad de Software\Proyecto_Clinica\Visual_Projects\2\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\Microsoft.AI.DependencyCollector.dll
+D:\Universidad-JFSC\Ciclo VII\Calidad de Software\Proyecto_Clinica\Visual_Projects\2\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\Microsoft.AI.PerfCounterCollector.dll
+D:\Universidad-JFSC\Ciclo VII\Calidad de Software\Proyecto_Clinica\Visual_Projects\2\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\Microsoft.AI.ServerTelemetryChannel.dll
+D:\Universidad-JFSC\Ciclo VII\Calidad de Software\Proyecto_Clinica\Visual_Projects\2\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\Microsoft.AI.Web.dll
+D:\Universidad-JFSC\Ciclo VII\Calidad de Software\Proyecto_Clinica\Visual_Projects\2\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\Microsoft.AI.WindowsServer.dll
+D:\Universidad-JFSC\Ciclo VII\Calidad de Software\Proyecto_Clinica\Visual_Projects\2\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\Microsoft.ApplicationInsights.dll
+D:\Universidad-JFSC\Ciclo VII\Calidad de Software\Proyecto_Clinica\Visual_Projects\2\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\Microsoft.AspNet.Identity.Core.dll
+D:\Universidad-JFSC\Ciclo VII\Calidad de Software\Proyecto_Clinica\Visual_Projects\2\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+D:\Universidad-JFSC\Ciclo VII\Calidad de Software\Proyecto_Clinica\Visual_Projects\2\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\Microsoft.AspNet.Identity.Owin.dll
+D:\Universidad-JFSC\Ciclo VII\Calidad de Software\Proyecto_Clinica\Visual_Projects\2\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+D:\Universidad-JFSC\Ciclo VII\Calidad de Software\Proyecto_Clinica\Visual_Projects\2\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\Microsoft.Owin.dll
+D:\Universidad-JFSC\Ciclo VII\Calidad de Software\Proyecto_Clinica\Visual_Projects\2\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\Microsoft.Owin.Host.SystemWeb.dll
+D:\Universidad-JFSC\Ciclo VII\Calidad de Software\Proyecto_Clinica\Visual_Projects\2\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\Microsoft.Owin.Security.Cookies.dll
+D:\Universidad-JFSC\Ciclo VII\Calidad de Software\Proyecto_Clinica\Visual_Projects\2\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\Microsoft.Owin.Security.dll
+D:\Universidad-JFSC\Ciclo VII\Calidad de Software\Proyecto_Clinica\Visual_Projects\2\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\Microsoft.Owin.Security.Facebook.dll
+D:\Universidad-JFSC\Ciclo VII\Calidad de Software\Proyecto_Clinica\Visual_Projects\2\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\Microsoft.Owin.Security.Google.dll
+D:\Universidad-JFSC\Ciclo VII\Calidad de Software\Proyecto_Clinica\Visual_Projects\2\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+D:\Universidad-JFSC\Ciclo VII\Calidad de Software\Proyecto_Clinica\Visual_Projects\2\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\Microsoft.Owin.Security.OAuth.dll
+D:\Universidad-JFSC\Ciclo VII\Calidad de Software\Proyecto_Clinica\Visual_Projects\2\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\Microsoft.Owin.Security.Twitter.dll
+D:\Universidad-JFSC\Ciclo VII\Calidad de Software\Proyecto_Clinica\Visual_Projects\2\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\Microsoft.Web.Infrastructure.dll
+D:\Universidad-JFSC\Ciclo VII\Calidad de Software\Proyecto_Clinica\Visual_Projects\2\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\Model.dll
+D:\Universidad-JFSC\Ciclo VII\Calidad de Software\Proyecto_Clinica\Visual_Projects\2\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\Mvc_Entity.dll
+D:\Universidad-JFSC\Ciclo VII\Calidad de Software\Proyecto_Clinica\Visual_Projects\2\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\Newtonsoft.Json.dll
+D:\Universidad-JFSC\Ciclo VII\Calidad de Software\Proyecto_Clinica\Visual_Projects\2\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\Owin.dll
+D:\Universidad-JFSC\Ciclo VII\Calidad de Software\Proyecto_Clinica\Visual_Projects\2\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\Persistence.dll
+D:\Universidad-JFSC\Ciclo VII\Calidad de Software\Proyecto_Clinica\Visual_Projects\2\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\Service.dll
+D:\Universidad-JFSC\Ciclo VII\Calidad de Software\Proyecto_Clinica\Visual_Projects\2\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\System.Web.Helpers.dll
+D:\Universidad-JFSC\Ciclo VII\Calidad de Software\Proyecto_Clinica\Visual_Projects\2\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\System.Web.Mvc.dll
+D:\Universidad-JFSC\Ciclo VII\Calidad de Software\Proyecto_Clinica\Visual_Projects\2\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\System.Web.Optimization.dll
+D:\Universidad-JFSC\Ciclo VII\Calidad de Software\Proyecto_Clinica\Visual_Projects\2\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\System.Web.Razor.dll
+D:\Universidad-JFSC\Ciclo VII\Calidad de Software\Proyecto_Clinica\Visual_Projects\2\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\System.Web.WebPages.Deployment.dll
+D:\Universidad-JFSC\Ciclo VII\Calidad de Software\Proyecto_Clinica\Visual_Projects\2\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\System.Web.WebPages.dll
+D:\Universidad-JFSC\Ciclo VII\Calidad de Software\Proyecto_Clinica\Visual_Projects\2\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\System.Web.WebPages.Razor.dll
+D:\Universidad-JFSC\Ciclo VII\Calidad de Software\Proyecto_Clinica\Visual_Projects\2\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\WebGrease.dll
+D:\Universidad-JFSC\Ciclo VII\Calidad de Software\Proyecto_Clinica\Visual_Projects\2\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\Common.pdb
+D:\Universidad-JFSC\Ciclo VII\Calidad de Software\Proyecto_Clinica\Visual_Projects\2\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\Model.pdb
+D:\Universidad-JFSC\Ciclo VII\Calidad de Software\Proyecto_Clinica\Visual_Projects\2\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\Mvc_Entity.pdb
+D:\Universidad-JFSC\Ciclo VII\Calidad de Software\Proyecto_Clinica\Visual_Projects\2\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\Persistence.pdb
+D:\Universidad-JFSC\Ciclo VII\Calidad de Software\Proyecto_Clinica\Visual_Projects\2\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\Service.pdb
+D:\Universidad-JFSC\Ciclo VII\Calidad de Software\Proyecto_Clinica\Visual_Projects\2\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\Microsoft.AI.DependencyCollector.xml
+D:\Universidad-JFSC\Ciclo VII\Calidad de Software\Proyecto_Clinica\Visual_Projects\2\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\Microsoft.AI.ServerTelemetryChannel.xml
+D:\Universidad-JFSC\Ciclo VII\Calidad de Software\Proyecto_Clinica\Visual_Projects\2\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\Microsoft.AI.Web.xml
+D:\Universidad-JFSC\Ciclo VII\Calidad de Software\Proyecto_Clinica\Visual_Projects\2\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\Microsoft.AI.WindowsServer.xml
+D:\Universidad-JFSC\Ciclo VII\Calidad de Software\Proyecto_Clinica\Visual_Projects\2\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\Microsoft.ApplicationInsights.xml
+D:\Universidad-JFSC\Ciclo VII\Calidad de Software\Proyecto_Clinica\Visual_Projects\2\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+D:\Universidad-JFSC\Ciclo VII\Calidad de Software\Proyecto_Clinica\Visual_Projects\2\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\System.Web.Helpers.xml
+D:\Universidad-JFSC\Ciclo VII\Calidad de Software\Proyecto_Clinica\Visual_Projects\2\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\System.Web.Mvc.xml
+D:\Universidad-JFSC\Ciclo VII\Calidad de Software\Proyecto_Clinica\Visual_Projects\2\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\System.Web.Optimization.xml
+D:\Universidad-JFSC\Ciclo VII\Calidad de Software\Proyecto_Clinica\Visual_Projects\2\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\System.Web.Razor.xml
+D:\Universidad-JFSC\Ciclo VII\Calidad de Software\Proyecto_Clinica\Visual_Projects\2\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\System.Web.WebPages.xml
+D:\Universidad-JFSC\Ciclo VII\Calidad de Software\Proyecto_Clinica\Visual_Projects\2\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\System.Web.WebPages.Deployment.xml
+D:\Universidad-JFSC\Ciclo VII\Calidad de Software\Proyecto_Clinica\Visual_Projects\2\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\System.Web.WebPages.Razor.xml
+D:\Universidad-JFSC\Ciclo VII\Calidad de Software\Proyecto_Clinica\Visual_Projects\2\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\Antlr3.Runtime.pdb
+D:\Universidad-JFSC\Ciclo VII\Calidad de Software\Proyecto_Clinica\Visual_Projects\2\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\Newtonsoft.Json.xml
+D:\Universidad-JFSC\Ciclo VII\Calidad de Software\Proyecto_Clinica\Visual_Projects\2\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\EntityFramework.xml
+D:\Universidad-JFSC\Ciclo VII\Calidad de Software\Proyecto_Clinica\Visual_Projects\2\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\EntityFramework.SqlServer.xml
+D:\Universidad-JFSC\Ciclo VII\Calidad de Software\Proyecto_Clinica\Visual_Projects\2\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\Microsoft.AspNet.Identity.Core.xml
+D:\Universidad-JFSC\Ciclo VII\Calidad de Software\Proyecto_Clinica\Visual_Projects\2\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\Microsoft.AspNet.Identity.Owin.xml
+D:\Universidad-JFSC\Ciclo VII\Calidad de Software\Proyecto_Clinica\Visual_Projects\2\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+D:\Universidad-JFSC\Ciclo VII\Calidad de Software\Proyecto_Clinica\Visual_Projects\2\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\Microsoft.Owin.xml
+D:\Universidad-JFSC\Ciclo VII\Calidad de Software\Proyecto_Clinica\Visual_Projects\2\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\Microsoft.Owin.Host.SystemWeb.xml
+D:\Universidad-JFSC\Ciclo VII\Calidad de Software\Proyecto_Clinica\Visual_Projects\2\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\Microsoft.Owin.Security.xml
+D:\Universidad-JFSC\Ciclo VII\Calidad de Software\Proyecto_Clinica\Visual_Projects\2\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\Microsoft.Owin.Security.Facebook.xml
+D:\Universidad-JFSC\Ciclo VII\Calidad de Software\Proyecto_Clinica\Visual_Projects\2\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\Microsoft.Owin.Security.Cookies.xml
+D:\Universidad-JFSC\Ciclo VII\Calidad de Software\Proyecto_Clinica\Visual_Projects\2\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\Microsoft.Owin.Security.OAuth.xml
+D:\Universidad-JFSC\Ciclo VII\Calidad de Software\Proyecto_Clinica\Visual_Projects\2\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\Microsoft.Owin.Security.Google.xml
+D:\Universidad-JFSC\Ciclo VII\Calidad de Software\Proyecto_Clinica\Visual_Projects\2\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\Microsoft.Owin.Security.Twitter.xml
+D:\Universidad-JFSC\Ciclo VII\Calidad de Software\Proyecto_Clinica\Visual_Projects\2\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+D:\Universidad-JFSC\Ciclo VII\Calidad de Software\Proyecto_Clinica\Visual_Projects\2\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\es\System.Web.Helpers.resources.dll
+D:\Universidad-JFSC\Ciclo VII\Calidad de Software\Proyecto_Clinica\Visual_Projects\2\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\es\System.Web.Mvc.resources.dll
+D:\Universidad-JFSC\Ciclo VII\Calidad de Software\Proyecto_Clinica\Visual_Projects\2\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\es\System.Web.Optimization.resources.dll
+D:\Universidad-JFSC\Ciclo VII\Calidad de Software\Proyecto_Clinica\Visual_Projects\2\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\es\System.Web.Razor.resources.dll
+D:\Universidad-JFSC\Ciclo VII\Calidad de Software\Proyecto_Clinica\Visual_Projects\2\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\es\System.Web.WebPages.resources.dll
+D:\Universidad-JFSC\Ciclo VII\Calidad de Software\Proyecto_Clinica\Visual_Projects\2\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\es\System.Web.WebPages.Deployment.resources.dll
+D:\Universidad-JFSC\Ciclo VII\Calidad de Software\Proyecto_Clinica\Visual_Projects\2\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\es\System.Web.WebPages.Razor.resources.dll
+D:\Universidad-JFSC\Ciclo VII\Calidad de Software\Proyecto_Clinica\Visual_Projects\2\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\es\EntityFramework.resources.dll
+D:\Universidad-JFSC\Ciclo VII\Calidad de Software\Proyecto_Clinica\Visual_Projects\2\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\es\EntityFramework.SqlServer.resources.dll
+D:\Universidad-JFSC\Ciclo VII\Calidad de Software\Proyecto_Clinica\Visual_Projects\2\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\es\Microsoft.AspNet.Identity.Core.resources.dll
+D:\Universidad-JFSC\Ciclo VII\Calidad de Software\Proyecto_Clinica\Visual_Projects\2\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\es\Microsoft.AspNet.Identity.Owin.resources.dll
+D:\Universidad-JFSC\Ciclo VII\Calidad de Software\Proyecto_Clinica\Visual_Projects\2\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\es\Microsoft.AspNet.Identity.EntityFramework.resources.dll
+D:\Universidad-JFSC\Ciclo VII\Calidad de Software\Proyecto_Clinica\Visual_Projects\2\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\es\Microsoft.Owin.resources.dll
+D:\Universidad-JFSC\Ciclo VII\Calidad de Software\Proyecto_Clinica\Visual_Projects\2\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\es\Microsoft.Owin.Host.SystemWeb.resources.dll
+D:\Universidad-JFSC\Ciclo VII\Calidad de Software\Proyecto_Clinica\Visual_Projects\2\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\es\Microsoft.Owin.Security.resources.dll
+D:\Universidad-JFSC\Ciclo VII\Calidad de Software\Proyecto_Clinica\Visual_Projects\2\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\es\Microsoft.Owin.Security.Facebook.resources.dll
+D:\Universidad-JFSC\Ciclo VII\Calidad de Software\Proyecto_Clinica\Visual_Projects\2\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\es\Microsoft.Owin.Security.Google.resources.dll
+D:\Universidad-JFSC\Ciclo VII\Calidad de Software\Proyecto_Clinica\Visual_Projects\2\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\es\Microsoft.Owin.Security.Twitter.resources.dll
+D:\Universidad-JFSC\Ciclo VII\Calidad de Software\Proyecto_Clinica\Visual_Projects\2\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\es\Microsoft.Owin.Security.MicrosoftAccount.resources.dll
+D:\Universidad-JFSC\Ciclo VII\Calidad de Software\Proyecto_Clinica\Visual_Projects\2\Asiri_ERP_Capas\Asiri_ERP_Capas\obj\Debug\Asiri_ERP_Capas.csprojResolveAssemblyReference.cache
+D:\Universidad-JFSC\Ciclo VII\Calidad de Software\Proyecto_Clinica\Visual_Projects\2\Asiri_ERP_Capas\Asiri_ERP_Capas\obj\Debug\Asiri_ERP_Capas.dll
+D:\Universidad-JFSC\Ciclo VII\Calidad de Software\Proyecto_Clinica\Visual_Projects\2\Asiri_ERP_Capas\Asiri_ERP_Capas\obj\Debug\Asiri_ERP_Capas.pdb
+E:\Ciclo VII\Calidad de Software\ultimo_backup_manuel\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\ApplicationInsights.config
+E:\Ciclo VII\Calidad de Software\ultimo_backup_manuel\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\roslyn\csc.exe
+E:\Ciclo VII\Calidad de Software\ultimo_backup_manuel\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+E:\Ciclo VII\Calidad de Software\ultimo_backup_manuel\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+E:\Ciclo VII\Calidad de Software\ultimo_backup_manuel\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\roslyn\Microsoft.CodeAnalysis.dll
+E:\Ciclo VII\Calidad de Software\ultimo_backup_manuel\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+E:\Ciclo VII\Calidad de Software\ultimo_backup_manuel\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\roslyn\Microsoft.CSharp.Core.targets
+E:\Ciclo VII\Calidad de Software\ultimo_backup_manuel\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\roslyn\Microsoft.VisualBasic.Core.targets
+E:\Ciclo VII\Calidad de Software\ultimo_backup_manuel\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\roslyn\System.Collections.Immutable.dll
+E:\Ciclo VII\Calidad de Software\ultimo_backup_manuel\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\roslyn\System.Reflection.Metadata.dll
+E:\Ciclo VII\Calidad de Software\ultimo_backup_manuel\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\roslyn\vbc.exe
+E:\Ciclo VII\Calidad de Software\ultimo_backup_manuel\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\roslyn\VBCSCompiler.exe
+E:\Ciclo VII\Calidad de Software\ultimo_backup_manuel\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\roslyn\VBCSCompiler.exe.config
+E:\Ciclo VII\Calidad de Software\ultimo_backup_manuel\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\NLog.config
+E:\Ciclo VII\Calidad de Software\ultimo_backup_manuel\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\Asiri_ERP_Capas.dll.config
+E:\Ciclo VII\Calidad de Software\ultimo_backup_manuel\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\Asiri_ERP_Capas.dll
+E:\Ciclo VII\Calidad de Software\ultimo_backup_manuel\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\Asiri_ERP_Capas.pdb
+E:\Ciclo VII\Calidad de Software\ultimo_backup_manuel\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\Antlr3.Runtime.dll
+E:\Ciclo VII\Calidad de Software\ultimo_backup_manuel\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\Common.dll
+E:\Ciclo VII\Calidad de Software\ultimo_backup_manuel\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\EntityFramework.dll
+E:\Ciclo VII\Calidad de Software\ultimo_backup_manuel\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\EntityFramework.SqlServer.dll
+E:\Ciclo VII\Calidad de Software\ultimo_backup_manuel\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\Microsoft.AI.Agent.Intercept.dll
+E:\Ciclo VII\Calidad de Software\ultimo_backup_manuel\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\Microsoft.AI.DependencyCollector.dll
+E:\Ciclo VII\Calidad de Software\ultimo_backup_manuel\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\Microsoft.AI.PerfCounterCollector.dll
+E:\Ciclo VII\Calidad de Software\ultimo_backup_manuel\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\Microsoft.AI.ServerTelemetryChannel.dll
+E:\Ciclo VII\Calidad de Software\ultimo_backup_manuel\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\Microsoft.AI.Web.dll
+E:\Ciclo VII\Calidad de Software\ultimo_backup_manuel\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\Microsoft.AI.WindowsServer.dll
+E:\Ciclo VII\Calidad de Software\ultimo_backup_manuel\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\Microsoft.ApplicationInsights.dll
+E:\Ciclo VII\Calidad de Software\ultimo_backup_manuel\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\Microsoft.AspNet.Identity.Core.dll
+E:\Ciclo VII\Calidad de Software\ultimo_backup_manuel\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+E:\Ciclo VII\Calidad de Software\ultimo_backup_manuel\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\Microsoft.AspNet.Identity.Owin.dll
+E:\Ciclo VII\Calidad de Software\ultimo_backup_manuel\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+E:\Ciclo VII\Calidad de Software\ultimo_backup_manuel\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\Microsoft.Owin.dll
+E:\Ciclo VII\Calidad de Software\ultimo_backup_manuel\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\Microsoft.Owin.Host.SystemWeb.dll
+E:\Ciclo VII\Calidad de Software\ultimo_backup_manuel\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\Microsoft.Owin.Security.Cookies.dll
+E:\Ciclo VII\Calidad de Software\ultimo_backup_manuel\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\Microsoft.Owin.Security.dll
+E:\Ciclo VII\Calidad de Software\ultimo_backup_manuel\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\Microsoft.Owin.Security.Facebook.dll
+E:\Ciclo VII\Calidad de Software\ultimo_backup_manuel\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\Microsoft.Owin.Security.Google.dll
+E:\Ciclo VII\Calidad de Software\ultimo_backup_manuel\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+E:\Ciclo VII\Calidad de Software\ultimo_backup_manuel\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\Microsoft.Owin.Security.OAuth.dll
+E:\Ciclo VII\Calidad de Software\ultimo_backup_manuel\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\Microsoft.Owin.Security.Twitter.dll
+E:\Ciclo VII\Calidad de Software\ultimo_backup_manuel\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\Microsoft.Web.Infrastructure.dll
+E:\Ciclo VII\Calidad de Software\ultimo_backup_manuel\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\Model.dll
+E:\Ciclo VII\Calidad de Software\ultimo_backup_manuel\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\Mvc_Entity.dll
+E:\Ciclo VII\Calidad de Software\ultimo_backup_manuel\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\Newtonsoft.Json.dll
+E:\Ciclo VII\Calidad de Software\ultimo_backup_manuel\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\Owin.dll
+E:\Ciclo VII\Calidad de Software\ultimo_backup_manuel\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\Persistence.dll
+E:\Ciclo VII\Calidad de Software\ultimo_backup_manuel\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\Service.dll
+E:\Ciclo VII\Calidad de Software\ultimo_backup_manuel\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\System.Web.Helpers.dll
+E:\Ciclo VII\Calidad de Software\ultimo_backup_manuel\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\System.Web.Mvc.dll
+E:\Ciclo VII\Calidad de Software\ultimo_backup_manuel\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\System.Web.Optimization.dll
+E:\Ciclo VII\Calidad de Software\ultimo_backup_manuel\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\System.Web.Razor.dll
+E:\Ciclo VII\Calidad de Software\ultimo_backup_manuel\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\System.Web.WebPages.Deployment.dll
+E:\Ciclo VII\Calidad de Software\ultimo_backup_manuel\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\System.Web.WebPages.dll
+E:\Ciclo VII\Calidad de Software\ultimo_backup_manuel\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\System.Web.WebPages.Razor.dll
+E:\Ciclo VII\Calidad de Software\ultimo_backup_manuel\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\WebGrease.dll
+E:\Ciclo VII\Calidad de Software\ultimo_backup_manuel\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\NLog.dll
+E:\Ciclo VII\Calidad de Software\ultimo_backup_manuel\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\Common.pdb
+E:\Ciclo VII\Calidad de Software\ultimo_backup_manuel\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\Model.pdb
+E:\Ciclo VII\Calidad de Software\ultimo_backup_manuel\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\Mvc_Entity.pdb
+E:\Ciclo VII\Calidad de Software\ultimo_backup_manuel\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\Persistence.pdb
+E:\Ciclo VII\Calidad de Software\ultimo_backup_manuel\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\Service.pdb
+E:\Ciclo VII\Calidad de Software\ultimo_backup_manuel\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\Microsoft.AI.DependencyCollector.xml
+E:\Ciclo VII\Calidad de Software\ultimo_backup_manuel\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\Microsoft.AI.ServerTelemetryChannel.xml
+E:\Ciclo VII\Calidad de Software\ultimo_backup_manuel\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\Microsoft.AI.Web.xml
+E:\Ciclo VII\Calidad de Software\ultimo_backup_manuel\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\Microsoft.AI.WindowsServer.xml
+E:\Ciclo VII\Calidad de Software\ultimo_backup_manuel\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\Microsoft.ApplicationInsights.xml
+E:\Ciclo VII\Calidad de Software\ultimo_backup_manuel\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+E:\Ciclo VII\Calidad de Software\ultimo_backup_manuel\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\System.Web.Helpers.xml
+E:\Ciclo VII\Calidad de Software\ultimo_backup_manuel\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\System.Web.Mvc.xml
+E:\Ciclo VII\Calidad de Software\ultimo_backup_manuel\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\System.Web.Optimization.xml
+E:\Ciclo VII\Calidad de Software\ultimo_backup_manuel\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\System.Web.Razor.xml
+E:\Ciclo VII\Calidad de Software\ultimo_backup_manuel\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\System.Web.WebPages.xml
+E:\Ciclo VII\Calidad de Software\ultimo_backup_manuel\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\System.Web.WebPages.Deployment.xml
+E:\Ciclo VII\Calidad de Software\ultimo_backup_manuel\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\System.Web.WebPages.Razor.xml
+E:\Ciclo VII\Calidad de Software\ultimo_backup_manuel\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\Antlr3.Runtime.pdb
+E:\Ciclo VII\Calidad de Software\ultimo_backup_manuel\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\Newtonsoft.Json.xml
+E:\Ciclo VII\Calidad de Software\ultimo_backup_manuel\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\EntityFramework.xml
+E:\Ciclo VII\Calidad de Software\ultimo_backup_manuel\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\EntityFramework.SqlServer.xml
+E:\Ciclo VII\Calidad de Software\ultimo_backup_manuel\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\Microsoft.AspNet.Identity.Core.xml
+E:\Ciclo VII\Calidad de Software\ultimo_backup_manuel\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\Microsoft.AspNet.Identity.Owin.xml
+E:\Ciclo VII\Calidad de Software\ultimo_backup_manuel\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+E:\Ciclo VII\Calidad de Software\ultimo_backup_manuel\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\Microsoft.Owin.xml
+E:\Ciclo VII\Calidad de Software\ultimo_backup_manuel\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\Microsoft.Owin.Host.SystemWeb.xml
+E:\Ciclo VII\Calidad de Software\ultimo_backup_manuel\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\Microsoft.Owin.Security.xml
+E:\Ciclo VII\Calidad de Software\ultimo_backup_manuel\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\Microsoft.Owin.Security.Facebook.xml
+E:\Ciclo VII\Calidad de Software\ultimo_backup_manuel\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\Microsoft.Owin.Security.Cookies.xml
+E:\Ciclo VII\Calidad de Software\ultimo_backup_manuel\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\Microsoft.Owin.Security.OAuth.xml
+E:\Ciclo VII\Calidad de Software\ultimo_backup_manuel\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\Microsoft.Owin.Security.Google.xml
+E:\Ciclo VII\Calidad de Software\ultimo_backup_manuel\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\Microsoft.Owin.Security.Twitter.xml
+E:\Ciclo VII\Calidad de Software\ultimo_backup_manuel\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+E:\Ciclo VII\Calidad de Software\ultimo_backup_manuel\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\NLog.xml
+E:\Ciclo VII\Calidad de Software\ultimo_backup_manuel\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\es\System.Web.Helpers.resources.dll
+E:\Ciclo VII\Calidad de Software\ultimo_backup_manuel\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\es\System.Web.Mvc.resources.dll
+E:\Ciclo VII\Calidad de Software\ultimo_backup_manuel\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\es\System.Web.Optimization.resources.dll
+E:\Ciclo VII\Calidad de Software\ultimo_backup_manuel\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\es\System.Web.Razor.resources.dll
+E:\Ciclo VII\Calidad de Software\ultimo_backup_manuel\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\es\System.Web.WebPages.resources.dll
+E:\Ciclo VII\Calidad de Software\ultimo_backup_manuel\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\es\System.Web.WebPages.Deployment.resources.dll
+E:\Ciclo VII\Calidad de Software\ultimo_backup_manuel\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\es\System.Web.WebPages.Razor.resources.dll
+E:\Ciclo VII\Calidad de Software\ultimo_backup_manuel\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\es\EntityFramework.resources.dll
+E:\Ciclo VII\Calidad de Software\ultimo_backup_manuel\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\es\EntityFramework.SqlServer.resources.dll
+E:\Ciclo VII\Calidad de Software\ultimo_backup_manuel\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\es\Microsoft.AspNet.Identity.Core.resources.dll
+E:\Ciclo VII\Calidad de Software\ultimo_backup_manuel\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\es\Microsoft.AspNet.Identity.Owin.resources.dll
+E:\Ciclo VII\Calidad de Software\ultimo_backup_manuel\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\es\Microsoft.AspNet.Identity.EntityFramework.resources.dll
+E:\Ciclo VII\Calidad de Software\ultimo_backup_manuel\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\es\Microsoft.Owin.resources.dll
+E:\Ciclo VII\Calidad de Software\ultimo_backup_manuel\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\es\Microsoft.Owin.Host.SystemWeb.resources.dll
+E:\Ciclo VII\Calidad de Software\ultimo_backup_manuel\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\es\Microsoft.Owin.Security.resources.dll
+E:\Ciclo VII\Calidad de Software\ultimo_backup_manuel\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\es\Microsoft.Owin.Security.Facebook.resources.dll
+E:\Ciclo VII\Calidad de Software\ultimo_backup_manuel\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\es\Microsoft.Owin.Security.Google.resources.dll
+E:\Ciclo VII\Calidad de Software\ultimo_backup_manuel\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\es\Microsoft.Owin.Security.Twitter.resources.dll
+E:\Ciclo VII\Calidad de Software\ultimo_backup_manuel\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\es\Microsoft.Owin.Security.MicrosoftAccount.resources.dll
+E:\Ciclo VII\Calidad de Software\ultimo_backup_manuel\Asiri_ERP_Capas\Asiri_ERP_Capas\obj\Debug\Asiri_ERP_Capas.csprojResolveAssemblyReference.cache
+E:\Ciclo VII\Calidad de Software\ultimo_backup_manuel\Asiri_ERP_Capas\Asiri_ERP_Capas\obj\Debug\Asiri_ERP_Capas.dll
+E:\Ciclo VII\Calidad de Software\ultimo_backup_manuel\Asiri_ERP_Capas\Asiri_ERP_Capas\obj\Debug\Asiri_ERP_Capas.pdb
+E:\Ciclo VII\Calidad de Software\ultimo_backup_manuel\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\RestSharp.dll
+E:\Ciclo VII\Calidad de Software\ultimo_backup_manuel\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\Tecactus.dll
+E:\Ciclo VII\Calidad de Software\ultimo_backup_manuel\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\RestSharp.xml
+E:\Ciclo VII\Calidad de Software\ultimo_backup_manuel\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\CrystalDecisions.CrystalReports.Engine.dll
+E:\Ciclo VII\Calidad de Software\ultimo_backup_manuel\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\CrystalDecisions.ReportSource.dll
+E:\Ciclo VII\Calidad de Software\ultimo_backup_manuel\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\CrystalDecisions.Shared.dll
+E:\Ciclo VII\Calidad de Software\ultimo_backup_manuel\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\CrystalDecisions.ReportAppServer.DataDefModel.dll
+E:\Ciclo VII\Calidad de Software\ultimo_backup_manuel\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\CrystalDecisions.ReportAppServer.ClientDoc.dll
+E:\Ciclo VII\Calidad de Software\ultimo_backup_manuel\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\CrystalDecisions.ReportAppServer.ReportDefModel.dll
+E:\Ciclo VII\Calidad de Software\ultimo_backup_manuel\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\CrystalDecisions.ReportAppServer.Controllers.dll
+E:\Ciclo VII\Calidad de Software\ultimo_backup_manuel\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\CrystalDecisions.ReportAppServer.CommLayer.dll
+E:\Ciclo VII\Calidad de Software\ultimo_backup_manuel\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\CrystalDecisions.ReportAppServer.DataSetConversion.dll
+E:\Ciclo VII\Calidad de Software\ultimo_backup_manuel\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\CrystalDecisions.ReportAppServer.Prompting.dll
+E:\Ciclo VII\Calidad de Software\ultimo_backup_manuel\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\CrystalDecisions.ReportAppServer.XmlSerialize.dll
+E:\Ciclo VII\Calidad de Software\ultimo_backup_manuel\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\CrystalDecisions.ReportAppServer.CubeDefModel.dll
+E:\Ciclo VII\Calidad de Software\ultimo_backup_manuel\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\CrystalDecisions.ReportAppServer.CommonObjectModel.dll
+E:\Ciclo VII\Calidad de Software\ultimo_backup_manuel\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\CrystalDecisions.ReportAppServer.ObjectFactory.dll
+E:\Ciclo VII\Calidad de Software\ultimo_backup_manuel\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\CrystalDecisions.ReportAppServer.CommonControls.dll
+E:\Ciclo VII\Calidad de Software\ultimo_backup_manuel\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\stdole.dll
+C:\Users\Jeyson Soto\Desktop\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\ApplicationInsights.config
+C:\Users\Jeyson Soto\Desktop\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\roslyn\csc.exe
+C:\Users\Jeyson Soto\Desktop\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\Jeyson Soto\Desktop\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\Jeyson Soto\Desktop\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\Jeyson Soto\Desktop\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\Jeyson Soto\Desktop\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\Jeyson Soto\Desktop\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\Jeyson Soto\Desktop\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\Jeyson Soto\Desktop\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\Jeyson Soto\Desktop\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\roslyn\vbc.exe
+C:\Users\Jeyson Soto\Desktop\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\roslyn\VBCSCompiler.exe
+C:\Users\Jeyson Soto\Desktop\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\Jeyson Soto\Desktop\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\NLog.config
+C:\Users\Jeyson Soto\Desktop\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\Asiri_ERP_Capas.dll.config
+C:\Users\Jeyson Soto\Desktop\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\Asiri_ERP_Capas.dll
+C:\Users\Jeyson Soto\Desktop\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\Asiri_ERP_Capas.pdb
+C:\Users\Jeyson Soto\Desktop\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\Antlr3.Runtime.dll
+C:\Users\Jeyson Soto\Desktop\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\AutoMapper.dll
+C:\Users\Jeyson Soto\Desktop\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\Common.dll
+C:\Users\Jeyson Soto\Desktop\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\CrystalDecisions.CrystalReports.Engine.dll
+C:\Users\Jeyson Soto\Desktop\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\CrystalDecisions.ReportSource.dll
+C:\Users\Jeyson Soto\Desktop\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\CrystalDecisions.Shared.dll
+C:\Users\Jeyson Soto\Desktop\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\EntityFramework.dll
+C:\Users\Jeyson Soto\Desktop\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\EntityFramework.SqlServer.dll
+C:\Users\Jeyson Soto\Desktop\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\Microsoft.AI.Agent.Intercept.dll
+C:\Users\Jeyson Soto\Desktop\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\Microsoft.AI.DependencyCollector.dll
+C:\Users\Jeyson Soto\Desktop\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\Microsoft.AI.PerfCounterCollector.dll
+C:\Users\Jeyson Soto\Desktop\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\Microsoft.AI.ServerTelemetryChannel.dll
+C:\Users\Jeyson Soto\Desktop\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\Microsoft.AI.Web.dll
+C:\Users\Jeyson Soto\Desktop\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\Microsoft.AI.WindowsServer.dll
+C:\Users\Jeyson Soto\Desktop\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\Microsoft.ApplicationInsights.dll
+C:\Users\Jeyson Soto\Desktop\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\Microsoft.AspNet.Identity.Core.dll
+C:\Users\Jeyson Soto\Desktop\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+C:\Users\Jeyson Soto\Desktop\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\Microsoft.AspNet.Identity.Owin.dll
+C:\Users\Jeyson Soto\Desktop\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\Jeyson Soto\Desktop\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\Microsoft.Owin.dll
+C:\Users\Jeyson Soto\Desktop\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\Microsoft.Owin.Host.SystemWeb.dll
+C:\Users\Jeyson Soto\Desktop\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\Microsoft.Owin.Security.Cookies.dll
+C:\Users\Jeyson Soto\Desktop\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\Microsoft.Owin.Security.dll
+C:\Users\Jeyson Soto\Desktop\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\Microsoft.Owin.Security.Facebook.dll
+C:\Users\Jeyson Soto\Desktop\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\Microsoft.Owin.Security.Google.dll
+C:\Users\Jeyson Soto\Desktop\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+C:\Users\Jeyson Soto\Desktop\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\Microsoft.Owin.Security.OAuth.dll
+C:\Users\Jeyson Soto\Desktop\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\Microsoft.Owin.Security.Twitter.dll
+C:\Users\Jeyson Soto\Desktop\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\Jeyson Soto\Desktop\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\Model.dll
+C:\Users\Jeyson Soto\Desktop\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\Mvc_Entity.dll
+C:\Users\Jeyson Soto\Desktop\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\Newtonsoft.Json.dll
+C:\Users\Jeyson Soto\Desktop\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\Owin.dll
+C:\Users\Jeyson Soto\Desktop\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\Persistence.dll
+C:\Users\Jeyson Soto\Desktop\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\RestSharp.dll
+C:\Users\Jeyson Soto\Desktop\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\Service.dll
+C:\Users\Jeyson Soto\Desktop\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\System.Web.Helpers.dll
+C:\Users\Jeyson Soto\Desktop\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\System.Web.Mvc.dll
+C:\Users\Jeyson Soto\Desktop\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\System.Web.Optimization.dll
+C:\Users\Jeyson Soto\Desktop\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\System.Web.Razor.dll
+C:\Users\Jeyson Soto\Desktop\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\System.Web.WebPages.Deployment.dll
+C:\Users\Jeyson Soto\Desktop\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\System.Web.WebPages.dll
+C:\Users\Jeyson Soto\Desktop\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\System.Web.WebPages.Razor.dll
+C:\Users\Jeyson Soto\Desktop\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\Tecactus.dll
+C:\Users\Jeyson Soto\Desktop\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\WebGrease.dll
+C:\Users\Jeyson Soto\Desktop\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\NLog.dll
+C:\Users\Jeyson Soto\Desktop\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\CrystalDecisions.ReportAppServer.DataDefModel.dll
+C:\Users\Jeyson Soto\Desktop\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\CrystalDecisions.ReportAppServer.ClientDoc.dll
+C:\Users\Jeyson Soto\Desktop\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\CrystalDecisions.ReportAppServer.ReportDefModel.dll
+C:\Users\Jeyson Soto\Desktop\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\CrystalDecisions.ReportAppServer.Controllers.dll
+C:\Users\Jeyson Soto\Desktop\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\CrystalDecisions.ReportAppServer.CommLayer.dll
+C:\Users\Jeyson Soto\Desktop\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\CrystalDecisions.ReportAppServer.DataSetConversion.dll
+C:\Users\Jeyson Soto\Desktop\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\CrystalDecisions.ReportAppServer.Prompting.dll
+C:\Users\Jeyson Soto\Desktop\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\CrystalDecisions.ReportAppServer.XmlSerialize.dll
+C:\Users\Jeyson Soto\Desktop\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\CrystalDecisions.ReportAppServer.CubeDefModel.dll
+C:\Users\Jeyson Soto\Desktop\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\CrystalDecisions.ReportAppServer.CommonObjectModel.dll
+C:\Users\Jeyson Soto\Desktop\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\CrystalDecisions.ReportAppServer.ObjectFactory.dll
+C:\Users\Jeyson Soto\Desktop\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\CrystalDecisions.ReportAppServer.CommonControls.dll
+C:\Users\Jeyson Soto\Desktop\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\stdole.dll
+C:\Users\Jeyson Soto\Desktop\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\Common.pdb
+C:\Users\Jeyson Soto\Desktop\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\Model.pdb
+C:\Users\Jeyson Soto\Desktop\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\Mvc_Entity.pdb
+C:\Users\Jeyson Soto\Desktop\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\Persistence.pdb
+C:\Users\Jeyson Soto\Desktop\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\Service.pdb
+C:\Users\Jeyson Soto\Desktop\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\AutoMapper.xml
+C:\Users\Jeyson Soto\Desktop\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\Microsoft.AI.DependencyCollector.xml
+C:\Users\Jeyson Soto\Desktop\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\Microsoft.AI.ServerTelemetryChannel.xml
+C:\Users\Jeyson Soto\Desktop\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\Microsoft.AI.Web.xml
+C:\Users\Jeyson Soto\Desktop\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\Microsoft.AI.WindowsServer.xml
+C:\Users\Jeyson Soto\Desktop\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\Microsoft.ApplicationInsights.xml
+C:\Users\Jeyson Soto\Desktop\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\Jeyson Soto\Desktop\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\RestSharp.xml
+C:\Users\Jeyson Soto\Desktop\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\System.Web.Helpers.xml
+C:\Users\Jeyson Soto\Desktop\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\System.Web.Mvc.xml
+C:\Users\Jeyson Soto\Desktop\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\System.Web.Optimization.xml
+C:\Users\Jeyson Soto\Desktop\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\System.Web.Razor.xml
+C:\Users\Jeyson Soto\Desktop\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\System.Web.WebPages.xml
+C:\Users\Jeyson Soto\Desktop\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\System.Web.WebPages.Deployment.xml
+C:\Users\Jeyson Soto\Desktop\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\System.Web.WebPages.Razor.xml
+C:\Users\Jeyson Soto\Desktop\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\Antlr3.Runtime.pdb
+C:\Users\Jeyson Soto\Desktop\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\Newtonsoft.Json.xml
+C:\Users\Jeyson Soto\Desktop\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\EntityFramework.xml
+C:\Users\Jeyson Soto\Desktop\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\EntityFramework.SqlServer.xml
+C:\Users\Jeyson Soto\Desktop\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\Microsoft.AspNet.Identity.Core.xml
+C:\Users\Jeyson Soto\Desktop\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\Microsoft.AspNet.Identity.Owin.xml
+C:\Users\Jeyson Soto\Desktop\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+C:\Users\Jeyson Soto\Desktop\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\Microsoft.Owin.xml
+C:\Users\Jeyson Soto\Desktop\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\Microsoft.Owin.Host.SystemWeb.xml
+C:\Users\Jeyson Soto\Desktop\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\Microsoft.Owin.Security.xml
+C:\Users\Jeyson Soto\Desktop\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\Microsoft.Owin.Security.Facebook.xml
+C:\Users\Jeyson Soto\Desktop\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\Microsoft.Owin.Security.Cookies.xml
+C:\Users\Jeyson Soto\Desktop\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\Microsoft.Owin.Security.OAuth.xml
+C:\Users\Jeyson Soto\Desktop\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\Microsoft.Owin.Security.Google.xml
+C:\Users\Jeyson Soto\Desktop\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\Microsoft.Owin.Security.Twitter.xml
+C:\Users\Jeyson Soto\Desktop\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+C:\Users\Jeyson Soto\Desktop\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\NLog.xml
+C:\Users\Jeyson Soto\Desktop\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\es\System.Web.Helpers.resources.dll
+C:\Users\Jeyson Soto\Desktop\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\es\System.Web.Mvc.resources.dll
+C:\Users\Jeyson Soto\Desktop\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\es\System.Web.Optimization.resources.dll
+C:\Users\Jeyson Soto\Desktop\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\es\System.Web.Razor.resources.dll
+C:\Users\Jeyson Soto\Desktop\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\es\System.Web.WebPages.resources.dll
+C:\Users\Jeyson Soto\Desktop\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\es\System.Web.WebPages.Deployment.resources.dll
+C:\Users\Jeyson Soto\Desktop\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\es\System.Web.WebPages.Razor.resources.dll
+C:\Users\Jeyson Soto\Desktop\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\es\EntityFramework.resources.dll
+C:\Users\Jeyson Soto\Desktop\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\es\EntityFramework.SqlServer.resources.dll
+C:\Users\Jeyson Soto\Desktop\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\es\Microsoft.AspNet.Identity.Core.resources.dll
+C:\Users\Jeyson Soto\Desktop\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\es\Microsoft.AspNet.Identity.Owin.resources.dll
+C:\Users\Jeyson Soto\Desktop\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\es\Microsoft.AspNet.Identity.EntityFramework.resources.dll
+C:\Users\Jeyson Soto\Desktop\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\es\Microsoft.Owin.resources.dll
+C:\Users\Jeyson Soto\Desktop\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\es\Microsoft.Owin.Host.SystemWeb.resources.dll
+C:\Users\Jeyson Soto\Desktop\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\es\Microsoft.Owin.Security.resources.dll
+C:\Users\Jeyson Soto\Desktop\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\es\Microsoft.Owin.Security.Facebook.resources.dll
+C:\Users\Jeyson Soto\Desktop\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\es\Microsoft.Owin.Security.Google.resources.dll
+C:\Users\Jeyson Soto\Desktop\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\es\Microsoft.Owin.Security.Twitter.resources.dll
+C:\Users\Jeyson Soto\Desktop\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\es\Microsoft.Owin.Security.MicrosoftAccount.resources.dll
+C:\Users\Jeyson Soto\Desktop\Asiri_ERP_Capas\Asiri_ERP_Capas\obj\Debug\Asiri_ERP_Capas.csprojResolveAssemblyReference.cache
+C:\Users\Jeyson Soto\Desktop\Asiri_ERP_Capas\Asiri_ERP_Capas\obj\Debug\Asiri_ERP_Capas.dll
+C:\Users\Jeyson Soto\Desktop\Asiri_ERP_Capas\Asiri_ERP_Capas\obj\Debug\Asiri_ERP_Capas.pdb
+E:\Ciclo VII\Calidad de Software\mas pagos\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\ApplicationInsights.config
+E:\Ciclo VII\Calidad de Software\mas pagos\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\roslyn\csc.exe
+E:\Ciclo VII\Calidad de Software\mas pagos\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+E:\Ciclo VII\Calidad de Software\mas pagos\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+E:\Ciclo VII\Calidad de Software\mas pagos\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\roslyn\Microsoft.CodeAnalysis.dll
+E:\Ciclo VII\Calidad de Software\mas pagos\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+E:\Ciclo VII\Calidad de Software\mas pagos\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\roslyn\Microsoft.CSharp.Core.targets
+E:\Ciclo VII\Calidad de Software\mas pagos\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\roslyn\Microsoft.VisualBasic.Core.targets
+E:\Ciclo VII\Calidad de Software\mas pagos\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\roslyn\System.Collections.Immutable.dll
+E:\Ciclo VII\Calidad de Software\mas pagos\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\roslyn\System.Reflection.Metadata.dll
+E:\Ciclo VII\Calidad de Software\mas pagos\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\roslyn\vbc.exe
+E:\Ciclo VII\Calidad de Software\mas pagos\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\roslyn\VBCSCompiler.exe
+E:\Ciclo VII\Calidad de Software\mas pagos\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\roslyn\VBCSCompiler.exe.config
+E:\Ciclo VII\Calidad de Software\mas pagos\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\NLog.config
+E:\Ciclo VII\Calidad de Software\mas pagos\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\Asiri_ERP_Capas.dll.config
+E:\Ciclo VII\Calidad de Software\mas pagos\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\Asiri_ERP_Capas.dll
+E:\Ciclo VII\Calidad de Software\mas pagos\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\Asiri_ERP_Capas.pdb
+E:\Ciclo VII\Calidad de Software\mas pagos\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\Antlr3.Runtime.dll
+E:\Ciclo VII\Calidad de Software\mas pagos\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\AutoMapper.dll
+E:\Ciclo VII\Calidad de Software\mas pagos\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\Common.dll
+E:\Ciclo VII\Calidad de Software\mas pagos\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\CrystalDecisions.CrystalReports.Engine.dll
+E:\Ciclo VII\Calidad de Software\mas pagos\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\CrystalDecisions.ReportSource.dll
+E:\Ciclo VII\Calidad de Software\mas pagos\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\CrystalDecisions.Shared.dll
+E:\Ciclo VII\Calidad de Software\mas pagos\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\EntityFramework.dll
+E:\Ciclo VII\Calidad de Software\mas pagos\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\EntityFramework.SqlServer.dll
+E:\Ciclo VII\Calidad de Software\mas pagos\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\Microsoft.AI.Agent.Intercept.dll
+E:\Ciclo VII\Calidad de Software\mas pagos\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\Microsoft.AI.DependencyCollector.dll
+E:\Ciclo VII\Calidad de Software\mas pagos\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\Microsoft.AI.PerfCounterCollector.dll
+E:\Ciclo VII\Calidad de Software\mas pagos\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\Microsoft.AI.ServerTelemetryChannel.dll
+E:\Ciclo VII\Calidad de Software\mas pagos\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\Microsoft.AI.Web.dll
+E:\Ciclo VII\Calidad de Software\mas pagos\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\Microsoft.AI.WindowsServer.dll
+E:\Ciclo VII\Calidad de Software\mas pagos\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\Microsoft.ApplicationInsights.dll
+E:\Ciclo VII\Calidad de Software\mas pagos\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\Microsoft.AspNet.Identity.Core.dll
+E:\Ciclo VII\Calidad de Software\mas pagos\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+E:\Ciclo VII\Calidad de Software\mas pagos\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\Microsoft.AspNet.Identity.Owin.dll
+E:\Ciclo VII\Calidad de Software\mas pagos\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+E:\Ciclo VII\Calidad de Software\mas pagos\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\Microsoft.Owin.dll
+E:\Ciclo VII\Calidad de Software\mas pagos\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\Microsoft.Owin.Host.SystemWeb.dll
+E:\Ciclo VII\Calidad de Software\mas pagos\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\Microsoft.Owin.Security.Cookies.dll
+E:\Ciclo VII\Calidad de Software\mas pagos\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\Microsoft.Owin.Security.dll
+E:\Ciclo VII\Calidad de Software\mas pagos\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\Microsoft.Owin.Security.Facebook.dll
+E:\Ciclo VII\Calidad de Software\mas pagos\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\Microsoft.Owin.Security.Google.dll
+E:\Ciclo VII\Calidad de Software\mas pagos\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+E:\Ciclo VII\Calidad de Software\mas pagos\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\Microsoft.Owin.Security.OAuth.dll
+E:\Ciclo VII\Calidad de Software\mas pagos\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\Microsoft.Owin.Security.Twitter.dll
+E:\Ciclo VII\Calidad de Software\mas pagos\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\Microsoft.Web.Infrastructure.dll
+E:\Ciclo VII\Calidad de Software\mas pagos\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\Model.dll
+E:\Ciclo VII\Calidad de Software\mas pagos\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\Mvc_Entity.dll
+E:\Ciclo VII\Calidad de Software\mas pagos\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\Newtonsoft.Json.dll
+E:\Ciclo VII\Calidad de Software\mas pagos\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\Owin.dll
+E:\Ciclo VII\Calidad de Software\mas pagos\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\Persistence.dll
+E:\Ciclo VII\Calidad de Software\mas pagos\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\RestSharp.dll
+E:\Ciclo VII\Calidad de Software\mas pagos\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\Service.dll
+E:\Ciclo VII\Calidad de Software\mas pagos\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\System.Web.Helpers.dll
+E:\Ciclo VII\Calidad de Software\mas pagos\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\System.Web.Mvc.dll
+E:\Ciclo VII\Calidad de Software\mas pagos\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\System.Web.Optimization.dll
+E:\Ciclo VII\Calidad de Software\mas pagos\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\System.Web.Razor.dll
+E:\Ciclo VII\Calidad de Software\mas pagos\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\System.Web.WebPages.Deployment.dll
+E:\Ciclo VII\Calidad de Software\mas pagos\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\System.Web.WebPages.dll
+E:\Ciclo VII\Calidad de Software\mas pagos\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\System.Web.WebPages.Razor.dll
+E:\Ciclo VII\Calidad de Software\mas pagos\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\Tecactus.dll
+E:\Ciclo VII\Calidad de Software\mas pagos\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\WebGrease.dll
+E:\Ciclo VII\Calidad de Software\mas pagos\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\NLog.dll
+E:\Ciclo VII\Calidad de Software\mas pagos\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\CrystalDecisions.ReportAppServer.DataDefModel.dll
+E:\Ciclo VII\Calidad de Software\mas pagos\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\CrystalDecisions.ReportAppServer.ClientDoc.dll
+E:\Ciclo VII\Calidad de Software\mas pagos\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\CrystalDecisions.ReportAppServer.ReportDefModel.dll
+E:\Ciclo VII\Calidad de Software\mas pagos\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\CrystalDecisions.ReportAppServer.Controllers.dll
+E:\Ciclo VII\Calidad de Software\mas pagos\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\CrystalDecisions.ReportAppServer.CommLayer.dll
+E:\Ciclo VII\Calidad de Software\mas pagos\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\CrystalDecisions.ReportAppServer.DataSetConversion.dll
+E:\Ciclo VII\Calidad de Software\mas pagos\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\CrystalDecisions.ReportAppServer.Prompting.dll
+E:\Ciclo VII\Calidad de Software\mas pagos\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\CrystalDecisions.ReportAppServer.XmlSerialize.dll
+E:\Ciclo VII\Calidad de Software\mas pagos\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\CrystalDecisions.ReportAppServer.CubeDefModel.dll
+E:\Ciclo VII\Calidad de Software\mas pagos\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\CrystalDecisions.ReportAppServer.CommonObjectModel.dll
+E:\Ciclo VII\Calidad de Software\mas pagos\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\CrystalDecisions.ReportAppServer.ObjectFactory.dll
+E:\Ciclo VII\Calidad de Software\mas pagos\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\CrystalDecisions.ReportAppServer.CommonControls.dll
+E:\Ciclo VII\Calidad de Software\mas pagos\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\stdole.dll
+E:\Ciclo VII\Calidad de Software\mas pagos\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\Common.pdb
+E:\Ciclo VII\Calidad de Software\mas pagos\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\Model.pdb
+E:\Ciclo VII\Calidad de Software\mas pagos\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\Mvc_Entity.pdb
+E:\Ciclo VII\Calidad de Software\mas pagos\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\Persistence.pdb
+E:\Ciclo VII\Calidad de Software\mas pagos\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\Service.pdb
+E:\Ciclo VII\Calidad de Software\mas pagos\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\AutoMapper.xml
+E:\Ciclo VII\Calidad de Software\mas pagos\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\Microsoft.AI.DependencyCollector.xml
+E:\Ciclo VII\Calidad de Software\mas pagos\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\Microsoft.AI.ServerTelemetryChannel.xml
+E:\Ciclo VII\Calidad de Software\mas pagos\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\Microsoft.AI.Web.xml
+E:\Ciclo VII\Calidad de Software\mas pagos\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\Microsoft.AI.WindowsServer.xml
+E:\Ciclo VII\Calidad de Software\mas pagos\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\Microsoft.ApplicationInsights.xml
+E:\Ciclo VII\Calidad de Software\mas pagos\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+E:\Ciclo VII\Calidad de Software\mas pagos\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\RestSharp.xml
+E:\Ciclo VII\Calidad de Software\mas pagos\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\System.Web.Helpers.xml
+E:\Ciclo VII\Calidad de Software\mas pagos\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\System.Web.Mvc.xml
+E:\Ciclo VII\Calidad de Software\mas pagos\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\System.Web.Optimization.xml
+E:\Ciclo VII\Calidad de Software\mas pagos\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\System.Web.Razor.xml
+E:\Ciclo VII\Calidad de Software\mas pagos\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\System.Web.WebPages.xml
+E:\Ciclo VII\Calidad de Software\mas pagos\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\System.Web.WebPages.Deployment.xml
+E:\Ciclo VII\Calidad de Software\mas pagos\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\System.Web.WebPages.Razor.xml
+E:\Ciclo VII\Calidad de Software\mas pagos\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\Antlr3.Runtime.pdb
+E:\Ciclo VII\Calidad de Software\mas pagos\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\Newtonsoft.Json.xml
+E:\Ciclo VII\Calidad de Software\mas pagos\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\EntityFramework.xml
+E:\Ciclo VII\Calidad de Software\mas pagos\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\EntityFramework.SqlServer.xml
+E:\Ciclo VII\Calidad de Software\mas pagos\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\Microsoft.AspNet.Identity.Core.xml
+E:\Ciclo VII\Calidad de Software\mas pagos\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\Microsoft.AspNet.Identity.Owin.xml
+E:\Ciclo VII\Calidad de Software\mas pagos\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+E:\Ciclo VII\Calidad de Software\mas pagos\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\Microsoft.Owin.xml
+E:\Ciclo VII\Calidad de Software\mas pagos\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\Microsoft.Owin.Host.SystemWeb.xml
+E:\Ciclo VII\Calidad de Software\mas pagos\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\Microsoft.Owin.Security.xml
+E:\Ciclo VII\Calidad de Software\mas pagos\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\Microsoft.Owin.Security.Facebook.xml
+E:\Ciclo VII\Calidad de Software\mas pagos\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\Microsoft.Owin.Security.Cookies.xml
+E:\Ciclo VII\Calidad de Software\mas pagos\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\Microsoft.Owin.Security.OAuth.xml
+E:\Ciclo VII\Calidad de Software\mas pagos\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\Microsoft.Owin.Security.Google.xml
+E:\Ciclo VII\Calidad de Software\mas pagos\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\Microsoft.Owin.Security.Twitter.xml
+E:\Ciclo VII\Calidad de Software\mas pagos\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+E:\Ciclo VII\Calidad de Software\mas pagos\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\es\System.Web.Helpers.resources.dll
+E:\Ciclo VII\Calidad de Software\mas pagos\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\es\System.Web.Mvc.resources.dll
+E:\Ciclo VII\Calidad de Software\mas pagos\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\es\System.Web.Optimization.resources.dll
+E:\Ciclo VII\Calidad de Software\mas pagos\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\es\System.Web.Razor.resources.dll
+E:\Ciclo VII\Calidad de Software\mas pagos\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\es\System.Web.WebPages.resources.dll
+E:\Ciclo VII\Calidad de Software\mas pagos\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\es\System.Web.WebPages.Deployment.resources.dll
+E:\Ciclo VII\Calidad de Software\mas pagos\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\es\System.Web.WebPages.Razor.resources.dll
+E:\Ciclo VII\Calidad de Software\mas pagos\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\es\EntityFramework.resources.dll
+E:\Ciclo VII\Calidad de Software\mas pagos\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\es\EntityFramework.SqlServer.resources.dll
+E:\Ciclo VII\Calidad de Software\mas pagos\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\es\Microsoft.AspNet.Identity.Core.resources.dll
+E:\Ciclo VII\Calidad de Software\mas pagos\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\es\Microsoft.AspNet.Identity.Owin.resources.dll
+E:\Ciclo VII\Calidad de Software\mas pagos\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\es\Microsoft.AspNet.Identity.EntityFramework.resources.dll
+E:\Ciclo VII\Calidad de Software\mas pagos\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\es\Microsoft.Owin.resources.dll
+E:\Ciclo VII\Calidad de Software\mas pagos\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\es\Microsoft.Owin.Host.SystemWeb.resources.dll
+E:\Ciclo VII\Calidad de Software\mas pagos\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\es\Microsoft.Owin.Security.resources.dll
+E:\Ciclo VII\Calidad de Software\mas pagos\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\es\Microsoft.Owin.Security.Facebook.resources.dll
+E:\Ciclo VII\Calidad de Software\mas pagos\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\es\Microsoft.Owin.Security.Google.resources.dll
+E:\Ciclo VII\Calidad de Software\mas pagos\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\es\Microsoft.Owin.Security.Twitter.resources.dll
+E:\Ciclo VII\Calidad de Software\mas pagos\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\es\Microsoft.Owin.Security.MicrosoftAccount.resources.dll
+E:\Ciclo VII\Calidad de Software\mas pagos\Asiri_ERP_Capas\Asiri_ERP_Capas\obj\Debug\Asiri_ERP_Capas.csprojResolveAssemblyReference.cache
+E:\Ciclo VII\Calidad de Software\mas pagos\Asiri_ERP_Capas\Asiri_ERP_Capas\obj\Debug\Asiri_ERP_Capas.dll
+E:\Ciclo VII\Calidad de Software\mas pagos\Asiri_ERP_Capas\Asiri_ERP_Capas\obj\Debug\Asiri_ERP_Capas.pdb
+E:\Ciclo VII\Calidad de Software\mas pagos 2\mas pagos\Asiri_ERP_Capas\Asiri_ERP_Capas\obj\Debug\Asiri_ERP_Capas.csprojResolveAssemblyReference.cache
+E:\Ciclo VII\Calidad de Software\mas pagos 2\mas pagos\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\ApplicationInsights.config
+E:\Ciclo VII\Calidad de Software\mas pagos 2\mas pagos\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\roslyn\csc.exe
+E:\Ciclo VII\Calidad de Software\mas pagos 2\mas pagos\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+E:\Ciclo VII\Calidad de Software\mas pagos 2\mas pagos\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+E:\Ciclo VII\Calidad de Software\mas pagos 2\mas pagos\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\roslyn\Microsoft.CodeAnalysis.dll
+E:\Ciclo VII\Calidad de Software\mas pagos 2\mas pagos\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+E:\Ciclo VII\Calidad de Software\mas pagos 2\mas pagos\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\roslyn\Microsoft.CSharp.Core.targets
+E:\Ciclo VII\Calidad de Software\mas pagos 2\mas pagos\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\roslyn\Microsoft.VisualBasic.Core.targets
+E:\Ciclo VII\Calidad de Software\mas pagos 2\mas pagos\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\roslyn\System.Collections.Immutable.dll
+E:\Ciclo VII\Calidad de Software\mas pagos 2\mas pagos\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\roslyn\System.Reflection.Metadata.dll
+E:\Ciclo VII\Calidad de Software\mas pagos 2\mas pagos\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\roslyn\vbc.exe
+E:\Ciclo VII\Calidad de Software\mas pagos 2\mas pagos\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\roslyn\VBCSCompiler.exe
+E:\Ciclo VII\Calidad de Software\mas pagos 2\mas pagos\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\roslyn\VBCSCompiler.exe.config
+E:\Ciclo VII\Calidad de Software\mas pagos 2\mas pagos\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\NLog.config
+E:\Ciclo VII\Calidad de Software\mas pagos 2\mas pagos\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\Asiri_ERP_Capas.dll.config
+E:\Ciclo VII\Calidad de Software\mas pagos 2\mas pagos\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\Asiri_ERP_Capas.dll
+E:\Ciclo VII\Calidad de Software\mas pagos 2\mas pagos\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\Asiri_ERP_Capas.pdb
+E:\Ciclo VII\Calidad de Software\mas pagos 2\mas pagos\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\Antlr3.Runtime.dll
+E:\Ciclo VII\Calidad de Software\mas pagos 2\mas pagos\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\AutoMapper.dll
+E:\Ciclo VII\Calidad de Software\mas pagos 2\mas pagos\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\Common.dll
+E:\Ciclo VII\Calidad de Software\mas pagos 2\mas pagos\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\CrystalDecisions.CrystalReports.Engine.dll
+E:\Ciclo VII\Calidad de Software\mas pagos 2\mas pagos\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\CrystalDecisions.ReportSource.dll
+E:\Ciclo VII\Calidad de Software\mas pagos 2\mas pagos\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\CrystalDecisions.Shared.dll
+E:\Ciclo VII\Calidad de Software\mas pagos 2\mas pagos\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\EntityFramework.dll
+E:\Ciclo VII\Calidad de Software\mas pagos 2\mas pagos\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\EntityFramework.SqlServer.dll
+E:\Ciclo VII\Calidad de Software\mas pagos 2\mas pagos\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\Microsoft.AI.Agent.Intercept.dll
+E:\Ciclo VII\Calidad de Software\mas pagos 2\mas pagos\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\Microsoft.AI.DependencyCollector.dll
+E:\Ciclo VII\Calidad de Software\mas pagos 2\mas pagos\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\Microsoft.AI.PerfCounterCollector.dll
+E:\Ciclo VII\Calidad de Software\mas pagos 2\mas pagos\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\Microsoft.AI.ServerTelemetryChannel.dll
+E:\Ciclo VII\Calidad de Software\mas pagos 2\mas pagos\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\Microsoft.AI.Web.dll
+E:\Ciclo VII\Calidad de Software\mas pagos 2\mas pagos\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\Microsoft.AI.WindowsServer.dll
+E:\Ciclo VII\Calidad de Software\mas pagos 2\mas pagos\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\Microsoft.ApplicationInsights.dll
+E:\Ciclo VII\Calidad de Software\mas pagos 2\mas pagos\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\Microsoft.AspNet.Identity.Core.dll
+E:\Ciclo VII\Calidad de Software\mas pagos 2\mas pagos\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+E:\Ciclo VII\Calidad de Software\mas pagos 2\mas pagos\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\Microsoft.AspNet.Identity.Owin.dll
+E:\Ciclo VII\Calidad de Software\mas pagos 2\mas pagos\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+E:\Ciclo VII\Calidad de Software\mas pagos 2\mas pagos\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\Microsoft.Owin.dll
+E:\Ciclo VII\Calidad de Software\mas pagos 2\mas pagos\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\Microsoft.Owin.Host.SystemWeb.dll
+E:\Ciclo VII\Calidad de Software\mas pagos 2\mas pagos\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\Microsoft.Owin.Security.Cookies.dll
+E:\Ciclo VII\Calidad de Software\mas pagos 2\mas pagos\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\Microsoft.Owin.Security.dll
+E:\Ciclo VII\Calidad de Software\mas pagos 2\mas pagos\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\Microsoft.Owin.Security.Facebook.dll
+E:\Ciclo VII\Calidad de Software\mas pagos 2\mas pagos\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\Microsoft.Owin.Security.Google.dll
+E:\Ciclo VII\Calidad de Software\mas pagos 2\mas pagos\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+E:\Ciclo VII\Calidad de Software\mas pagos 2\mas pagos\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\Microsoft.Owin.Security.OAuth.dll
+E:\Ciclo VII\Calidad de Software\mas pagos 2\mas pagos\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\Microsoft.Owin.Security.Twitter.dll
+E:\Ciclo VII\Calidad de Software\mas pagos 2\mas pagos\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\Microsoft.Web.Infrastructure.dll
+E:\Ciclo VII\Calidad de Software\mas pagos 2\mas pagos\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\Model.dll
+E:\Ciclo VII\Calidad de Software\mas pagos 2\mas pagos\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\Mvc_Entity.dll
+E:\Ciclo VII\Calidad de Software\mas pagos 2\mas pagos\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\Newtonsoft.Json.dll
+E:\Ciclo VII\Calidad de Software\mas pagos 2\mas pagos\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\NLog.dll
+E:\Ciclo VII\Calidad de Software\mas pagos 2\mas pagos\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\Owin.dll
+E:\Ciclo VII\Calidad de Software\mas pagos 2\mas pagos\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\Persistence.dll
+E:\Ciclo VII\Calidad de Software\mas pagos 2\mas pagos\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\RestSharp.dll
+E:\Ciclo VII\Calidad de Software\mas pagos 2\mas pagos\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\Service.dll
+E:\Ciclo VII\Calidad de Software\mas pagos 2\mas pagos\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\System.Web.Helpers.dll
+E:\Ciclo VII\Calidad de Software\mas pagos 2\mas pagos\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\System.Web.Mvc.dll
+E:\Ciclo VII\Calidad de Software\mas pagos 2\mas pagos\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\System.Web.Optimization.dll
+E:\Ciclo VII\Calidad de Software\mas pagos 2\mas pagos\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\System.Web.Razor.dll
+E:\Ciclo VII\Calidad de Software\mas pagos 2\mas pagos\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\System.Web.WebPages.Deployment.dll
+E:\Ciclo VII\Calidad de Software\mas pagos 2\mas pagos\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\System.Web.WebPages.dll
+E:\Ciclo VII\Calidad de Software\mas pagos 2\mas pagos\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\System.Web.WebPages.Razor.dll
+E:\Ciclo VII\Calidad de Software\mas pagos 2\mas pagos\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\Tecactus.dll
+E:\Ciclo VII\Calidad de Software\mas pagos 2\mas pagos\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\WebGrease.dll
+E:\Ciclo VII\Calidad de Software\mas pagos 2\mas pagos\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\CrystalDecisions.ReportAppServer.DataDefModel.dll
+E:\Ciclo VII\Calidad de Software\mas pagos 2\mas pagos\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\CrystalDecisions.ReportAppServer.ClientDoc.dll
+E:\Ciclo VII\Calidad de Software\mas pagos 2\mas pagos\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\CrystalDecisions.ReportAppServer.ReportDefModel.dll
+E:\Ciclo VII\Calidad de Software\mas pagos 2\mas pagos\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\CrystalDecisions.ReportAppServer.Controllers.dll
+E:\Ciclo VII\Calidad de Software\mas pagos 2\mas pagos\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\CrystalDecisions.ReportAppServer.CommLayer.dll
+E:\Ciclo VII\Calidad de Software\mas pagos 2\mas pagos\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\CrystalDecisions.ReportAppServer.DataSetConversion.dll
+E:\Ciclo VII\Calidad de Software\mas pagos 2\mas pagos\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\CrystalDecisions.ReportAppServer.Prompting.dll
+E:\Ciclo VII\Calidad de Software\mas pagos 2\mas pagos\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\CrystalDecisions.ReportAppServer.XmlSerialize.dll
+E:\Ciclo VII\Calidad de Software\mas pagos 2\mas pagos\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\CrystalDecisions.ReportAppServer.CubeDefModel.dll
+E:\Ciclo VII\Calidad de Software\mas pagos 2\mas pagos\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\CrystalDecisions.ReportAppServer.CommonObjectModel.dll
+E:\Ciclo VII\Calidad de Software\mas pagos 2\mas pagos\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\CrystalDecisions.ReportAppServer.ObjectFactory.dll
+E:\Ciclo VII\Calidad de Software\mas pagos 2\mas pagos\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\CrystalDecisions.ReportAppServer.CommonControls.dll
+E:\Ciclo VII\Calidad de Software\mas pagos 2\mas pagos\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\stdole.dll
+E:\Ciclo VII\Calidad de Software\mas pagos 2\mas pagos\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\Common.pdb
+E:\Ciclo VII\Calidad de Software\mas pagos 2\mas pagos\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\Model.pdb
+E:\Ciclo VII\Calidad de Software\mas pagos 2\mas pagos\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\Mvc_Entity.pdb
+E:\Ciclo VII\Calidad de Software\mas pagos 2\mas pagos\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\Persistence.pdb
+E:\Ciclo VII\Calidad de Software\mas pagos 2\mas pagos\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\Service.pdb
+E:\Ciclo VII\Calidad de Software\mas pagos 2\mas pagos\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\AutoMapper.xml
+E:\Ciclo VII\Calidad de Software\mas pagos 2\mas pagos\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\Microsoft.AI.DependencyCollector.xml
+E:\Ciclo VII\Calidad de Software\mas pagos 2\mas pagos\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\Microsoft.AI.ServerTelemetryChannel.xml
+E:\Ciclo VII\Calidad de Software\mas pagos 2\mas pagos\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\Microsoft.AI.Web.xml
+E:\Ciclo VII\Calidad de Software\mas pagos 2\mas pagos\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\Microsoft.AI.WindowsServer.xml
+E:\Ciclo VII\Calidad de Software\mas pagos 2\mas pagos\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\Microsoft.ApplicationInsights.xml
+E:\Ciclo VII\Calidad de Software\mas pagos 2\mas pagos\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+E:\Ciclo VII\Calidad de Software\mas pagos 2\mas pagos\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\NLog.xml
+E:\Ciclo VII\Calidad de Software\mas pagos 2\mas pagos\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\RestSharp.xml
+E:\Ciclo VII\Calidad de Software\mas pagos 2\mas pagos\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\System.Web.Helpers.xml
+E:\Ciclo VII\Calidad de Software\mas pagos 2\mas pagos\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\System.Web.Mvc.xml
+E:\Ciclo VII\Calidad de Software\mas pagos 2\mas pagos\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\System.Web.Optimization.xml
+E:\Ciclo VII\Calidad de Software\mas pagos 2\mas pagos\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\System.Web.Razor.xml
+E:\Ciclo VII\Calidad de Software\mas pagos 2\mas pagos\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\System.Web.WebPages.xml
+E:\Ciclo VII\Calidad de Software\mas pagos 2\mas pagos\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\System.Web.WebPages.Deployment.xml
+E:\Ciclo VII\Calidad de Software\mas pagos 2\mas pagos\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\System.Web.WebPages.Razor.xml
+E:\Ciclo VII\Calidad de Software\mas pagos 2\mas pagos\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\Antlr3.Runtime.pdb
+E:\Ciclo VII\Calidad de Software\mas pagos 2\mas pagos\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\Newtonsoft.Json.xml
+E:\Ciclo VII\Calidad de Software\mas pagos 2\mas pagos\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\EntityFramework.xml
+E:\Ciclo VII\Calidad de Software\mas pagos 2\mas pagos\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\EntityFramework.SqlServer.xml
+E:\Ciclo VII\Calidad de Software\mas pagos 2\mas pagos\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\Microsoft.AspNet.Identity.Core.xml
+E:\Ciclo VII\Calidad de Software\mas pagos 2\mas pagos\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\Microsoft.AspNet.Identity.Owin.xml
+E:\Ciclo VII\Calidad de Software\mas pagos 2\mas pagos\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+E:\Ciclo VII\Calidad de Software\mas pagos 2\mas pagos\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\Microsoft.Owin.xml
+E:\Ciclo VII\Calidad de Software\mas pagos 2\mas pagos\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\Microsoft.Owin.Host.SystemWeb.xml
+E:\Ciclo VII\Calidad de Software\mas pagos 2\mas pagos\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\Microsoft.Owin.Security.xml
+E:\Ciclo VII\Calidad de Software\mas pagos 2\mas pagos\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\Microsoft.Owin.Security.Facebook.xml
+E:\Ciclo VII\Calidad de Software\mas pagos 2\mas pagos\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\Microsoft.Owin.Security.Cookies.xml
+E:\Ciclo VII\Calidad de Software\mas pagos 2\mas pagos\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\Microsoft.Owin.Security.OAuth.xml
+E:\Ciclo VII\Calidad de Software\mas pagos 2\mas pagos\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\Microsoft.Owin.Security.Google.xml
+E:\Ciclo VII\Calidad de Software\mas pagos 2\mas pagos\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\Microsoft.Owin.Security.Twitter.xml
+E:\Ciclo VII\Calidad de Software\mas pagos 2\mas pagos\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+E:\Ciclo VII\Calidad de Software\mas pagos 2\mas pagos\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\es\System.Web.Helpers.resources.dll
+E:\Ciclo VII\Calidad de Software\mas pagos 2\mas pagos\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\es\System.Web.Mvc.resources.dll
+E:\Ciclo VII\Calidad de Software\mas pagos 2\mas pagos\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\es\System.Web.Optimization.resources.dll
+E:\Ciclo VII\Calidad de Software\mas pagos 2\mas pagos\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\es\System.Web.Razor.resources.dll
+E:\Ciclo VII\Calidad de Software\mas pagos 2\mas pagos\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\es\System.Web.WebPages.resources.dll
+E:\Ciclo VII\Calidad de Software\mas pagos 2\mas pagos\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\es\System.Web.WebPages.Deployment.resources.dll
+E:\Ciclo VII\Calidad de Software\mas pagos 2\mas pagos\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\es\System.Web.WebPages.Razor.resources.dll
+E:\Ciclo VII\Calidad de Software\mas pagos 2\mas pagos\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\es\EntityFramework.resources.dll
+E:\Ciclo VII\Calidad de Software\mas pagos 2\mas pagos\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\es\EntityFramework.SqlServer.resources.dll
+E:\Ciclo VII\Calidad de Software\mas pagos 2\mas pagos\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\es\Microsoft.AspNet.Identity.Core.resources.dll
+E:\Ciclo VII\Calidad de Software\mas pagos 2\mas pagos\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\es\Microsoft.AspNet.Identity.Owin.resources.dll
+E:\Ciclo VII\Calidad de Software\mas pagos 2\mas pagos\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\es\Microsoft.AspNet.Identity.EntityFramework.resources.dll
+E:\Ciclo VII\Calidad de Software\mas pagos 2\mas pagos\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\es\Microsoft.Owin.resources.dll
+E:\Ciclo VII\Calidad de Software\mas pagos 2\mas pagos\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\es\Microsoft.Owin.Host.SystemWeb.resources.dll
+E:\Ciclo VII\Calidad de Software\mas pagos 2\mas pagos\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\es\Microsoft.Owin.Security.resources.dll
+E:\Ciclo VII\Calidad de Software\mas pagos 2\mas pagos\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\es\Microsoft.Owin.Security.Facebook.resources.dll
+E:\Ciclo VII\Calidad de Software\mas pagos 2\mas pagos\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\es\Microsoft.Owin.Security.Google.resources.dll
+E:\Ciclo VII\Calidad de Software\mas pagos 2\mas pagos\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\es\Microsoft.Owin.Security.Twitter.resources.dll
+E:\Ciclo VII\Calidad de Software\mas pagos 2\mas pagos\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\es\Microsoft.Owin.Security.MicrosoftAccount.resources.dll
+E:\Ciclo VII\Calidad de Software\mas pagos 2\mas pagos\Asiri_ERP_Capas\Asiri_ERP_Capas\obj\Debug\Asiri_ERP_Capas.dll
+E:\Ciclo VII\Calidad de Software\mas pagos 2\mas pagos\Asiri_ERP_Capas\Asiri_ERP_Capas\obj\Debug\Asiri_ERP_Capas.pdb
+C:\Users\Jeyson Soto\Desktop\mas pagos\Asiri_ERP_Capas\Asiri_ERP_Capas\obj\Debug\Asiri_ERP_Capas.csprojResolveAssemblyReference.cache
+C:\Users\Jeyson Soto\Desktop\mas pagos\Asiri_ERP_Capas\Asiri_ERP_Capas\obj\Debug\Asiri_ERP_Capas.dll
+C:\Users\Jeyson Soto\Desktop\mas pagos\Asiri_ERP_Capas\Asiri_ERP_Capas\obj\Debug\Asiri_ERP_Capas.pdb
+C:\Users\Jeyson Soto\Desktop\mas pagos\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\ApplicationInsights.config
+C:\Users\Jeyson Soto\Desktop\mas pagos\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\roslyn\csc.exe
+C:\Users\Jeyson Soto\Desktop\mas pagos\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\Jeyson Soto\Desktop\mas pagos\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\Jeyson Soto\Desktop\mas pagos\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\Jeyson Soto\Desktop\mas pagos\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\Jeyson Soto\Desktop\mas pagos\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\Jeyson Soto\Desktop\mas pagos\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\Jeyson Soto\Desktop\mas pagos\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\Jeyson Soto\Desktop\mas pagos\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\Jeyson Soto\Desktop\mas pagos\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\roslyn\vbc.exe
+C:\Users\Jeyson Soto\Desktop\mas pagos\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\roslyn\VBCSCompiler.exe
+C:\Users\Jeyson Soto\Desktop\mas pagos\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\Jeyson Soto\Desktop\mas pagos\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\NLog.config
+C:\Users\Jeyson Soto\Desktop\mas pagos\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\Asiri_ERP_Capas.dll.config
+C:\Users\Jeyson Soto\Desktop\mas pagos\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\Asiri_ERP_Capas.dll
+C:\Users\Jeyson Soto\Desktop\mas pagos\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\Asiri_ERP_Capas.pdb
+C:\Users\Jeyson Soto\Desktop\mas pagos\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\Antlr3.Runtime.dll
+C:\Users\Jeyson Soto\Desktop\mas pagos\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\AutoMapper.dll
+C:\Users\Jeyson Soto\Desktop\mas pagos\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\Common.dll
+C:\Users\Jeyson Soto\Desktop\mas pagos\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\CrystalDecisions.CrystalReports.Engine.dll
+C:\Users\Jeyson Soto\Desktop\mas pagos\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\CrystalDecisions.ReportSource.dll
+C:\Users\Jeyson Soto\Desktop\mas pagos\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\CrystalDecisions.Shared.dll
+C:\Users\Jeyson Soto\Desktop\mas pagos\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\EntityFramework.dll
+C:\Users\Jeyson Soto\Desktop\mas pagos\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\EntityFramework.SqlServer.dll
+C:\Users\Jeyson Soto\Desktop\mas pagos\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\Microsoft.AI.Agent.Intercept.dll
+C:\Users\Jeyson Soto\Desktop\mas pagos\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\Microsoft.AI.DependencyCollector.dll
+C:\Users\Jeyson Soto\Desktop\mas pagos\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\Microsoft.AI.PerfCounterCollector.dll
+C:\Users\Jeyson Soto\Desktop\mas pagos\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\Microsoft.AI.ServerTelemetryChannel.dll
+C:\Users\Jeyson Soto\Desktop\mas pagos\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\Microsoft.AI.Web.dll
+C:\Users\Jeyson Soto\Desktop\mas pagos\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\Microsoft.AI.WindowsServer.dll
+C:\Users\Jeyson Soto\Desktop\mas pagos\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\Microsoft.ApplicationInsights.dll
+C:\Users\Jeyson Soto\Desktop\mas pagos\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\Microsoft.AspNet.Identity.Core.dll
+C:\Users\Jeyson Soto\Desktop\mas pagos\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+C:\Users\Jeyson Soto\Desktop\mas pagos\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\Microsoft.AspNet.Identity.Owin.dll
+C:\Users\Jeyson Soto\Desktop\mas pagos\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\Jeyson Soto\Desktop\mas pagos\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\Microsoft.Owin.dll
+C:\Users\Jeyson Soto\Desktop\mas pagos\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\Microsoft.Owin.Host.SystemWeb.dll
+C:\Users\Jeyson Soto\Desktop\mas pagos\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\Microsoft.Owin.Security.Cookies.dll
+C:\Users\Jeyson Soto\Desktop\mas pagos\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\Microsoft.Owin.Security.dll
+C:\Users\Jeyson Soto\Desktop\mas pagos\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\Microsoft.Owin.Security.Facebook.dll
+C:\Users\Jeyson Soto\Desktop\mas pagos\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\Microsoft.Owin.Security.Google.dll
+C:\Users\Jeyson Soto\Desktop\mas pagos\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+C:\Users\Jeyson Soto\Desktop\mas pagos\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\Microsoft.Owin.Security.OAuth.dll
+C:\Users\Jeyson Soto\Desktop\mas pagos\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\Microsoft.Owin.Security.Twitter.dll
+C:\Users\Jeyson Soto\Desktop\mas pagos\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\Jeyson Soto\Desktop\mas pagos\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\Model.dll
+C:\Users\Jeyson Soto\Desktop\mas pagos\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\Mvc_Entity.dll
+C:\Users\Jeyson Soto\Desktop\mas pagos\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\Newtonsoft.Json.dll
+C:\Users\Jeyson Soto\Desktop\mas pagos\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\NLog.dll
+C:\Users\Jeyson Soto\Desktop\mas pagos\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\Owin.dll
+C:\Users\Jeyson Soto\Desktop\mas pagos\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\Persistence.dll
+C:\Users\Jeyson Soto\Desktop\mas pagos\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\RestSharp.dll
+C:\Users\Jeyson Soto\Desktop\mas pagos\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\Service.dll
+C:\Users\Jeyson Soto\Desktop\mas pagos\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\System.Web.Helpers.dll
+C:\Users\Jeyson Soto\Desktop\mas pagos\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\System.Web.Mvc.dll
+C:\Users\Jeyson Soto\Desktop\mas pagos\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\System.Web.Optimization.dll
+C:\Users\Jeyson Soto\Desktop\mas pagos\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\System.Web.Razor.dll
+C:\Users\Jeyson Soto\Desktop\mas pagos\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\System.Web.WebPages.Deployment.dll
+C:\Users\Jeyson Soto\Desktop\mas pagos\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\System.Web.WebPages.dll
+C:\Users\Jeyson Soto\Desktop\mas pagos\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\System.Web.WebPages.Razor.dll
+C:\Users\Jeyson Soto\Desktop\mas pagos\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\Tecactus.dll
+C:\Users\Jeyson Soto\Desktop\mas pagos\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\WebGrease.dll
+C:\Users\Jeyson Soto\Desktop\mas pagos\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\CrystalDecisions.ReportAppServer.DataDefModel.dll
+C:\Users\Jeyson Soto\Desktop\mas pagos\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\CrystalDecisions.ReportAppServer.ClientDoc.dll
+C:\Users\Jeyson Soto\Desktop\mas pagos\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\CrystalDecisions.ReportAppServer.ReportDefModel.dll
+C:\Users\Jeyson Soto\Desktop\mas pagos\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\CrystalDecisions.ReportAppServer.Controllers.dll
+C:\Users\Jeyson Soto\Desktop\mas pagos\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\CrystalDecisions.ReportAppServer.CommLayer.dll
+C:\Users\Jeyson Soto\Desktop\mas pagos\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\CrystalDecisions.ReportAppServer.DataSetConversion.dll
+C:\Users\Jeyson Soto\Desktop\mas pagos\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\CrystalDecisions.ReportAppServer.Prompting.dll
+C:\Users\Jeyson Soto\Desktop\mas pagos\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\CrystalDecisions.ReportAppServer.XmlSerialize.dll
+C:\Users\Jeyson Soto\Desktop\mas pagos\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\CrystalDecisions.ReportAppServer.CubeDefModel.dll
+C:\Users\Jeyson Soto\Desktop\mas pagos\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\CrystalDecisions.ReportAppServer.CommonObjectModel.dll
+C:\Users\Jeyson Soto\Desktop\mas pagos\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\CrystalDecisions.ReportAppServer.ObjectFactory.dll
+C:\Users\Jeyson Soto\Desktop\mas pagos\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\CrystalDecisions.ReportAppServer.CommonControls.dll
+C:\Users\Jeyson Soto\Desktop\mas pagos\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\stdole.dll
+C:\Users\Jeyson Soto\Desktop\mas pagos\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\Common.pdb
+C:\Users\Jeyson Soto\Desktop\mas pagos\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\Model.pdb
+C:\Users\Jeyson Soto\Desktop\mas pagos\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\Mvc_Entity.pdb
+C:\Users\Jeyson Soto\Desktop\mas pagos\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\Persistence.pdb
+C:\Users\Jeyson Soto\Desktop\mas pagos\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\Service.pdb
+C:\Users\Jeyson Soto\Desktop\mas pagos\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\AutoMapper.xml
+C:\Users\Jeyson Soto\Desktop\mas pagos\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\Microsoft.AI.DependencyCollector.xml
+C:\Users\Jeyson Soto\Desktop\mas pagos\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\Microsoft.AI.ServerTelemetryChannel.xml
+C:\Users\Jeyson Soto\Desktop\mas pagos\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\Microsoft.AI.Web.xml
+C:\Users\Jeyson Soto\Desktop\mas pagos\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\Microsoft.AI.WindowsServer.xml
+C:\Users\Jeyson Soto\Desktop\mas pagos\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\Microsoft.ApplicationInsights.xml
+C:\Users\Jeyson Soto\Desktop\mas pagos\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\Jeyson Soto\Desktop\mas pagos\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\NLog.xml
+C:\Users\Jeyson Soto\Desktop\mas pagos\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\RestSharp.xml
+C:\Users\Jeyson Soto\Desktop\mas pagos\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\System.Web.Helpers.xml
+C:\Users\Jeyson Soto\Desktop\mas pagos\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\System.Web.Mvc.xml
+C:\Users\Jeyson Soto\Desktop\mas pagos\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\System.Web.Optimization.xml
+C:\Users\Jeyson Soto\Desktop\mas pagos\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\System.Web.Razor.xml
+C:\Users\Jeyson Soto\Desktop\mas pagos\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\System.Web.WebPages.xml
+C:\Users\Jeyson Soto\Desktop\mas pagos\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\System.Web.WebPages.Deployment.xml
+C:\Users\Jeyson Soto\Desktop\mas pagos\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\System.Web.WebPages.Razor.xml
+C:\Users\Jeyson Soto\Desktop\mas pagos\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\Antlr3.Runtime.pdb
+C:\Users\Jeyson Soto\Desktop\mas pagos\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\Newtonsoft.Json.xml
+C:\Users\Jeyson Soto\Desktop\mas pagos\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\EntityFramework.xml
+C:\Users\Jeyson Soto\Desktop\mas pagos\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\EntityFramework.SqlServer.xml
+C:\Users\Jeyson Soto\Desktop\mas pagos\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\Microsoft.AspNet.Identity.Core.xml
+C:\Users\Jeyson Soto\Desktop\mas pagos\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\Microsoft.AspNet.Identity.Owin.xml
+C:\Users\Jeyson Soto\Desktop\mas pagos\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+C:\Users\Jeyson Soto\Desktop\mas pagos\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\Microsoft.Owin.xml
+C:\Users\Jeyson Soto\Desktop\mas pagos\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\Microsoft.Owin.Host.SystemWeb.xml
+C:\Users\Jeyson Soto\Desktop\mas pagos\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\Microsoft.Owin.Security.xml
+C:\Users\Jeyson Soto\Desktop\mas pagos\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\Microsoft.Owin.Security.Facebook.xml
+C:\Users\Jeyson Soto\Desktop\mas pagos\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\Microsoft.Owin.Security.Cookies.xml
+C:\Users\Jeyson Soto\Desktop\mas pagos\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\Microsoft.Owin.Security.OAuth.xml
+C:\Users\Jeyson Soto\Desktop\mas pagos\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\Microsoft.Owin.Security.Google.xml
+C:\Users\Jeyson Soto\Desktop\mas pagos\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\Microsoft.Owin.Security.Twitter.xml
+C:\Users\Jeyson Soto\Desktop\mas pagos\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+C:\Users\Jeyson Soto\Desktop\mas pagos\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\es\System.Web.Helpers.resources.dll
+C:\Users\Jeyson Soto\Desktop\mas pagos\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\es\System.Web.Mvc.resources.dll
+C:\Users\Jeyson Soto\Desktop\mas pagos\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\es\System.Web.Optimization.resources.dll
+C:\Users\Jeyson Soto\Desktop\mas pagos\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\es\System.Web.Razor.resources.dll
+C:\Users\Jeyson Soto\Desktop\mas pagos\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\es\System.Web.WebPages.resources.dll
+C:\Users\Jeyson Soto\Desktop\mas pagos\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\es\System.Web.WebPages.Deployment.resources.dll
+C:\Users\Jeyson Soto\Desktop\mas pagos\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\es\System.Web.WebPages.Razor.resources.dll
+C:\Users\Jeyson Soto\Desktop\mas pagos\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\es\EntityFramework.resources.dll
+C:\Users\Jeyson Soto\Desktop\mas pagos\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\es\EntityFramework.SqlServer.resources.dll
+C:\Users\Jeyson Soto\Desktop\mas pagos\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\es\Microsoft.AspNet.Identity.Core.resources.dll
+C:\Users\Jeyson Soto\Desktop\mas pagos\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\es\Microsoft.AspNet.Identity.Owin.resources.dll
+C:\Users\Jeyson Soto\Desktop\mas pagos\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\es\Microsoft.AspNet.Identity.EntityFramework.resources.dll
+C:\Users\Jeyson Soto\Desktop\mas pagos\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\es\Microsoft.Owin.resources.dll
+C:\Users\Jeyson Soto\Desktop\mas pagos\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\es\Microsoft.Owin.Host.SystemWeb.resources.dll
+C:\Users\Jeyson Soto\Desktop\mas pagos\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\es\Microsoft.Owin.Security.resources.dll
+C:\Users\Jeyson Soto\Desktop\mas pagos\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\es\Microsoft.Owin.Security.Facebook.resources.dll
+C:\Users\Jeyson Soto\Desktop\mas pagos\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\es\Microsoft.Owin.Security.Google.resources.dll
+C:\Users\Jeyson Soto\Desktop\mas pagos\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\es\Microsoft.Owin.Security.Twitter.resources.dll
+C:\Users\Jeyson Soto\Desktop\mas pagos\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\es\Microsoft.Owin.Security.MicrosoftAccount.resources.dll
+C:\Users\Jeyson Soto\Desktop\mas pagos\multiples medio de pago\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\ApplicationInsights.config
+C:\Users\Jeyson Soto\Desktop\mas pagos\multiples medio de pago\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\roslyn\csc.exe
+C:\Users\Jeyson Soto\Desktop\mas pagos\multiples medio de pago\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\Jeyson Soto\Desktop\mas pagos\multiples medio de pago\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\Jeyson Soto\Desktop\mas pagos\multiples medio de pago\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\Jeyson Soto\Desktop\mas pagos\multiples medio de pago\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\Jeyson Soto\Desktop\mas pagos\multiples medio de pago\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\Jeyson Soto\Desktop\mas pagos\multiples medio de pago\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\Jeyson Soto\Desktop\mas pagos\multiples medio de pago\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\Jeyson Soto\Desktop\mas pagos\multiples medio de pago\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\Jeyson Soto\Desktop\mas pagos\multiples medio de pago\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\roslyn\vbc.exe
+C:\Users\Jeyson Soto\Desktop\mas pagos\multiples medio de pago\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\roslyn\VBCSCompiler.exe
+C:\Users\Jeyson Soto\Desktop\mas pagos\multiples medio de pago\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\Jeyson Soto\Desktop\mas pagos\multiples medio de pago\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\NLog.config
+C:\Users\Jeyson Soto\Desktop\mas pagos\multiples medio de pago\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\Asiri_ERP_Capas.dll.config
+C:\Users\Jeyson Soto\Desktop\mas pagos\multiples medio de pago\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\Asiri_ERP_Capas.dll
+C:\Users\Jeyson Soto\Desktop\mas pagos\multiples medio de pago\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\Asiri_ERP_Capas.pdb
+C:\Users\Jeyson Soto\Desktop\mas pagos\multiples medio de pago\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\Antlr3.Runtime.dll
+C:\Users\Jeyson Soto\Desktop\mas pagos\multiples medio de pago\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\AutoMapper.dll
+C:\Users\Jeyson Soto\Desktop\mas pagos\multiples medio de pago\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\Common.dll
+C:\Users\Jeyson Soto\Desktop\mas pagos\multiples medio de pago\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\CrystalDecisions.CrystalReports.Engine.dll
+C:\Users\Jeyson Soto\Desktop\mas pagos\multiples medio de pago\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\CrystalDecisions.ReportSource.dll
+C:\Users\Jeyson Soto\Desktop\mas pagos\multiples medio de pago\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\CrystalDecisions.Shared.dll
+C:\Users\Jeyson Soto\Desktop\mas pagos\multiples medio de pago\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\EntityFramework.dll
+C:\Users\Jeyson Soto\Desktop\mas pagos\multiples medio de pago\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\EntityFramework.SqlServer.dll
+C:\Users\Jeyson Soto\Desktop\mas pagos\multiples medio de pago\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\Microsoft.AI.Agent.Intercept.dll
+C:\Users\Jeyson Soto\Desktop\mas pagos\multiples medio de pago\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\Microsoft.AI.DependencyCollector.dll
+C:\Users\Jeyson Soto\Desktop\mas pagos\multiples medio de pago\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\Microsoft.AI.PerfCounterCollector.dll
+C:\Users\Jeyson Soto\Desktop\mas pagos\multiples medio de pago\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\Microsoft.AI.ServerTelemetryChannel.dll
+C:\Users\Jeyson Soto\Desktop\mas pagos\multiples medio de pago\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\Microsoft.AI.Web.dll
+C:\Users\Jeyson Soto\Desktop\mas pagos\multiples medio de pago\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\Microsoft.AI.WindowsServer.dll
+C:\Users\Jeyson Soto\Desktop\mas pagos\multiples medio de pago\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\Microsoft.ApplicationInsights.dll
+C:\Users\Jeyson Soto\Desktop\mas pagos\multiples medio de pago\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\Microsoft.AspNet.Identity.Core.dll
+C:\Users\Jeyson Soto\Desktop\mas pagos\multiples medio de pago\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+C:\Users\Jeyson Soto\Desktop\mas pagos\multiples medio de pago\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\Microsoft.AspNet.Identity.Owin.dll
+C:\Users\Jeyson Soto\Desktop\mas pagos\multiples medio de pago\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\Jeyson Soto\Desktop\mas pagos\multiples medio de pago\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\Microsoft.Owin.dll
+C:\Users\Jeyson Soto\Desktop\mas pagos\multiples medio de pago\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\Microsoft.Owin.Host.SystemWeb.dll
+C:\Users\Jeyson Soto\Desktop\mas pagos\multiples medio de pago\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\Microsoft.Owin.Security.Cookies.dll
+C:\Users\Jeyson Soto\Desktop\mas pagos\multiples medio de pago\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\Microsoft.Owin.Security.dll
+C:\Users\Jeyson Soto\Desktop\mas pagos\multiples medio de pago\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\Microsoft.Owin.Security.Facebook.dll
+C:\Users\Jeyson Soto\Desktop\mas pagos\multiples medio de pago\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\Microsoft.Owin.Security.Google.dll
+C:\Users\Jeyson Soto\Desktop\mas pagos\multiples medio de pago\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+C:\Users\Jeyson Soto\Desktop\mas pagos\multiples medio de pago\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\Microsoft.Owin.Security.OAuth.dll
+C:\Users\Jeyson Soto\Desktop\mas pagos\multiples medio de pago\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\Microsoft.Owin.Security.Twitter.dll
+C:\Users\Jeyson Soto\Desktop\mas pagos\multiples medio de pago\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\Jeyson Soto\Desktop\mas pagos\multiples medio de pago\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\Model.dll
+C:\Users\Jeyson Soto\Desktop\mas pagos\multiples medio de pago\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\Mvc_Entity.dll
+C:\Users\Jeyson Soto\Desktop\mas pagos\multiples medio de pago\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\Newtonsoft.Json.dll
+C:\Users\Jeyson Soto\Desktop\mas pagos\multiples medio de pago\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\NLog.dll
+C:\Users\Jeyson Soto\Desktop\mas pagos\multiples medio de pago\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\Owin.dll
+C:\Users\Jeyson Soto\Desktop\mas pagos\multiples medio de pago\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\Persistence.dll
+C:\Users\Jeyson Soto\Desktop\mas pagos\multiples medio de pago\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\RestSharp.dll
+C:\Users\Jeyson Soto\Desktop\mas pagos\multiples medio de pago\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\Service.dll
+C:\Users\Jeyson Soto\Desktop\mas pagos\multiples medio de pago\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\System.Web.Helpers.dll
+C:\Users\Jeyson Soto\Desktop\mas pagos\multiples medio de pago\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\System.Web.Mvc.dll
+C:\Users\Jeyson Soto\Desktop\mas pagos\multiples medio de pago\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\System.Web.Optimization.dll
+C:\Users\Jeyson Soto\Desktop\mas pagos\multiples medio de pago\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\System.Web.Razor.dll
+C:\Users\Jeyson Soto\Desktop\mas pagos\multiples medio de pago\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\System.Web.WebPages.Deployment.dll
+C:\Users\Jeyson Soto\Desktop\mas pagos\multiples medio de pago\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\System.Web.WebPages.dll
+C:\Users\Jeyson Soto\Desktop\mas pagos\multiples medio de pago\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\System.Web.WebPages.Razor.dll
+C:\Users\Jeyson Soto\Desktop\mas pagos\multiples medio de pago\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\Tecactus.dll
+C:\Users\Jeyson Soto\Desktop\mas pagos\multiples medio de pago\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\WebGrease.dll
+C:\Users\Jeyson Soto\Desktop\mas pagos\multiples medio de pago\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\CrystalDecisions.ReportAppServer.DataDefModel.dll
+C:\Users\Jeyson Soto\Desktop\mas pagos\multiples medio de pago\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\CrystalDecisions.ReportAppServer.ClientDoc.dll
+C:\Users\Jeyson Soto\Desktop\mas pagos\multiples medio de pago\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\CrystalDecisions.ReportAppServer.ReportDefModel.dll
+C:\Users\Jeyson Soto\Desktop\mas pagos\multiples medio de pago\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\CrystalDecisions.ReportAppServer.Controllers.dll
+C:\Users\Jeyson Soto\Desktop\mas pagos\multiples medio de pago\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\CrystalDecisions.ReportAppServer.CommLayer.dll
+C:\Users\Jeyson Soto\Desktop\mas pagos\multiples medio de pago\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\CrystalDecisions.ReportAppServer.DataSetConversion.dll
+C:\Users\Jeyson Soto\Desktop\mas pagos\multiples medio de pago\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\CrystalDecisions.ReportAppServer.Prompting.dll
+C:\Users\Jeyson Soto\Desktop\mas pagos\multiples medio de pago\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\CrystalDecisions.ReportAppServer.XmlSerialize.dll
+C:\Users\Jeyson Soto\Desktop\mas pagos\multiples medio de pago\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\CrystalDecisions.ReportAppServer.CubeDefModel.dll
+C:\Users\Jeyson Soto\Desktop\mas pagos\multiples medio de pago\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\CrystalDecisions.ReportAppServer.CommonObjectModel.dll
+C:\Users\Jeyson Soto\Desktop\mas pagos\multiples medio de pago\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\CrystalDecisions.ReportAppServer.ObjectFactory.dll
+C:\Users\Jeyson Soto\Desktop\mas pagos\multiples medio de pago\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\CrystalDecisions.ReportAppServer.CommonControls.dll
+C:\Users\Jeyson Soto\Desktop\mas pagos\multiples medio de pago\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\stdole.dll
+C:\Users\Jeyson Soto\Desktop\mas pagos\multiples medio de pago\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\Common.pdb
+C:\Users\Jeyson Soto\Desktop\mas pagos\multiples medio de pago\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\Model.pdb
+C:\Users\Jeyson Soto\Desktop\mas pagos\multiples medio de pago\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\Mvc_Entity.pdb
+C:\Users\Jeyson Soto\Desktop\mas pagos\multiples medio de pago\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\Persistence.pdb
+C:\Users\Jeyson Soto\Desktop\mas pagos\multiples medio de pago\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\Service.pdb
+C:\Users\Jeyson Soto\Desktop\mas pagos\multiples medio de pago\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\AutoMapper.xml
+C:\Users\Jeyson Soto\Desktop\mas pagos\multiples medio de pago\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\Microsoft.AI.DependencyCollector.xml
+C:\Users\Jeyson Soto\Desktop\mas pagos\multiples medio de pago\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\Microsoft.AI.ServerTelemetryChannel.xml
+C:\Users\Jeyson Soto\Desktop\mas pagos\multiples medio de pago\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\Microsoft.AI.Web.xml
+C:\Users\Jeyson Soto\Desktop\mas pagos\multiples medio de pago\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\Microsoft.AI.WindowsServer.xml
+C:\Users\Jeyson Soto\Desktop\mas pagos\multiples medio de pago\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\Microsoft.ApplicationInsights.xml
+C:\Users\Jeyson Soto\Desktop\mas pagos\multiples medio de pago\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\Jeyson Soto\Desktop\mas pagos\multiples medio de pago\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\NLog.xml
+C:\Users\Jeyson Soto\Desktop\mas pagos\multiples medio de pago\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\RestSharp.xml
+C:\Users\Jeyson Soto\Desktop\mas pagos\multiples medio de pago\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\System.Web.Helpers.xml
+C:\Users\Jeyson Soto\Desktop\mas pagos\multiples medio de pago\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\System.Web.Mvc.xml
+C:\Users\Jeyson Soto\Desktop\mas pagos\multiples medio de pago\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\System.Web.Optimization.xml
+C:\Users\Jeyson Soto\Desktop\mas pagos\multiples medio de pago\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\System.Web.Razor.xml
+C:\Users\Jeyson Soto\Desktop\mas pagos\multiples medio de pago\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\System.Web.WebPages.xml
+C:\Users\Jeyson Soto\Desktop\mas pagos\multiples medio de pago\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\System.Web.WebPages.Deployment.xml
+C:\Users\Jeyson Soto\Desktop\mas pagos\multiples medio de pago\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\System.Web.WebPages.Razor.xml
+C:\Users\Jeyson Soto\Desktop\mas pagos\multiples medio de pago\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\Antlr3.Runtime.pdb
+C:\Users\Jeyson Soto\Desktop\mas pagos\multiples medio de pago\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\Newtonsoft.Json.xml
+C:\Users\Jeyson Soto\Desktop\mas pagos\multiples medio de pago\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\EntityFramework.xml
+C:\Users\Jeyson Soto\Desktop\mas pagos\multiples medio de pago\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\EntityFramework.SqlServer.xml
+C:\Users\Jeyson Soto\Desktop\mas pagos\multiples medio de pago\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\Microsoft.AspNet.Identity.Core.xml
+C:\Users\Jeyson Soto\Desktop\mas pagos\multiples medio de pago\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\Microsoft.AspNet.Identity.Owin.xml
+C:\Users\Jeyson Soto\Desktop\mas pagos\multiples medio de pago\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+C:\Users\Jeyson Soto\Desktop\mas pagos\multiples medio de pago\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\Microsoft.Owin.xml
+C:\Users\Jeyson Soto\Desktop\mas pagos\multiples medio de pago\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\Microsoft.Owin.Host.SystemWeb.xml
+C:\Users\Jeyson Soto\Desktop\mas pagos\multiples medio de pago\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\Microsoft.Owin.Security.xml
+C:\Users\Jeyson Soto\Desktop\mas pagos\multiples medio de pago\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\Microsoft.Owin.Security.Facebook.xml
+C:\Users\Jeyson Soto\Desktop\mas pagos\multiples medio de pago\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\Microsoft.Owin.Security.Cookies.xml
+C:\Users\Jeyson Soto\Desktop\mas pagos\multiples medio de pago\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\Microsoft.Owin.Security.OAuth.xml
+C:\Users\Jeyson Soto\Desktop\mas pagos\multiples medio de pago\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\Microsoft.Owin.Security.Google.xml
+C:\Users\Jeyson Soto\Desktop\mas pagos\multiples medio de pago\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\Microsoft.Owin.Security.Twitter.xml
+C:\Users\Jeyson Soto\Desktop\mas pagos\multiples medio de pago\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+C:\Users\Jeyson Soto\Desktop\mas pagos\multiples medio de pago\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\es\System.Web.Helpers.resources.dll
+C:\Users\Jeyson Soto\Desktop\mas pagos\multiples medio de pago\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\es\System.Web.Mvc.resources.dll
+C:\Users\Jeyson Soto\Desktop\mas pagos\multiples medio de pago\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\es\System.Web.Optimization.resources.dll
+C:\Users\Jeyson Soto\Desktop\mas pagos\multiples medio de pago\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\es\System.Web.Razor.resources.dll
+C:\Users\Jeyson Soto\Desktop\mas pagos\multiples medio de pago\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\es\System.Web.WebPages.resources.dll
+C:\Users\Jeyson Soto\Desktop\mas pagos\multiples medio de pago\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\es\System.Web.WebPages.Deployment.resources.dll
+C:\Users\Jeyson Soto\Desktop\mas pagos\multiples medio de pago\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\es\System.Web.WebPages.Razor.resources.dll
+C:\Users\Jeyson Soto\Desktop\mas pagos\multiples medio de pago\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\es\EntityFramework.resources.dll
+C:\Users\Jeyson Soto\Desktop\mas pagos\multiples medio de pago\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\es\EntityFramework.SqlServer.resources.dll
+C:\Users\Jeyson Soto\Desktop\mas pagos\multiples medio de pago\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\es\Microsoft.AspNet.Identity.Core.resources.dll
+C:\Users\Jeyson Soto\Desktop\mas pagos\multiples medio de pago\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\es\Microsoft.AspNet.Identity.Owin.resources.dll
+C:\Users\Jeyson Soto\Desktop\mas pagos\multiples medio de pago\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\es\Microsoft.AspNet.Identity.EntityFramework.resources.dll
+C:\Users\Jeyson Soto\Desktop\mas pagos\multiples medio de pago\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\es\Microsoft.Owin.resources.dll
+C:\Users\Jeyson Soto\Desktop\mas pagos\multiples medio de pago\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\es\Microsoft.Owin.Host.SystemWeb.resources.dll
+C:\Users\Jeyson Soto\Desktop\mas pagos\multiples medio de pago\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\es\Microsoft.Owin.Security.resources.dll
+C:\Users\Jeyson Soto\Desktop\mas pagos\multiples medio de pago\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\es\Microsoft.Owin.Security.Facebook.resources.dll
+C:\Users\Jeyson Soto\Desktop\mas pagos\multiples medio de pago\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\es\Microsoft.Owin.Security.Google.resources.dll
+C:\Users\Jeyson Soto\Desktop\mas pagos\multiples medio de pago\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\es\Microsoft.Owin.Security.Twitter.resources.dll
+C:\Users\Jeyson Soto\Desktop\mas pagos\multiples medio de pago\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\es\Microsoft.Owin.Security.MicrosoftAccount.resources.dll
+C:\Users\Jeyson Soto\Desktop\mas pagos\multiples medio de pago\Asiri_ERP_Capas\Asiri_ERP_Capas\obj\Debug\Asiri_ERP_Capas.csprojResolveAssemblyReference.cache
+C:\Users\Jeyson Soto\Desktop\mas pagos\multiples medio de pago\Asiri_ERP_Capas\Asiri_ERP_Capas\obj\Debug\Asiri_ERP_Capas.dll
+C:\Users\Jeyson Soto\Desktop\mas pagos\multiples medio de pago\Asiri_ERP_Capas\Asiri_ERP_Capas\obj\Debug\Asiri_ERP_Capas.pdb
+E:\Ciclo VII\Calidad de Software\publicar\marchan aqui\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\ApplicationInsights.config
+E:\Ciclo VII\Calidad de Software\publicar\marchan aqui\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\roslyn\csc.exe
+E:\Ciclo VII\Calidad de Software\publicar\marchan aqui\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+E:\Ciclo VII\Calidad de Software\publicar\marchan aqui\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+E:\Ciclo VII\Calidad de Software\publicar\marchan aqui\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\roslyn\Microsoft.CodeAnalysis.dll
+E:\Ciclo VII\Calidad de Software\publicar\marchan aqui\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+E:\Ciclo VII\Calidad de Software\publicar\marchan aqui\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\roslyn\Microsoft.CSharp.Core.targets
+E:\Ciclo VII\Calidad de Software\publicar\marchan aqui\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\roslyn\Microsoft.VisualBasic.Core.targets
+E:\Ciclo VII\Calidad de Software\publicar\marchan aqui\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\roslyn\System.Collections.Immutable.dll
+E:\Ciclo VII\Calidad de Software\publicar\marchan aqui\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\roslyn\System.Reflection.Metadata.dll
+E:\Ciclo VII\Calidad de Software\publicar\marchan aqui\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\roslyn\vbc.exe
+E:\Ciclo VII\Calidad de Software\publicar\marchan aqui\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\roslyn\VBCSCompiler.exe
+E:\Ciclo VII\Calidad de Software\publicar\marchan aqui\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\roslyn\VBCSCompiler.exe.config
+E:\Ciclo VII\Calidad de Software\publicar\marchan aqui\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\NLog.config
+E:\Ciclo VII\Calidad de Software\publicar\marchan aqui\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\Asiri_ERP_Capas.dll.config
+E:\Ciclo VII\Calidad de Software\publicar\marchan aqui\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\Asiri_ERP_Capas.dll
+E:\Ciclo VII\Calidad de Software\publicar\marchan aqui\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\Asiri_ERP_Capas.pdb
+E:\Ciclo VII\Calidad de Software\publicar\marchan aqui\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\Antlr3.Runtime.dll
+E:\Ciclo VII\Calidad de Software\publicar\marchan aqui\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\AutoMapper.dll
+E:\Ciclo VII\Calidad de Software\publicar\marchan aqui\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\Common.dll
+E:\Ciclo VII\Calidad de Software\publicar\marchan aqui\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\CrystalDecisions.CrystalReports.Engine.dll
+E:\Ciclo VII\Calidad de Software\publicar\marchan aqui\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\CrystalDecisions.ReportSource.dll
+E:\Ciclo VII\Calidad de Software\publicar\marchan aqui\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\CrystalDecisions.Shared.dll
+E:\Ciclo VII\Calidad de Software\publicar\marchan aqui\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\EntityFramework.dll
+E:\Ciclo VII\Calidad de Software\publicar\marchan aqui\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\EntityFramework.SqlServer.dll
+E:\Ciclo VII\Calidad de Software\publicar\marchan aqui\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\Microsoft.AI.Agent.Intercept.dll
+E:\Ciclo VII\Calidad de Software\publicar\marchan aqui\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\Microsoft.AI.DependencyCollector.dll
+E:\Ciclo VII\Calidad de Software\publicar\marchan aqui\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\Microsoft.AI.PerfCounterCollector.dll
+E:\Ciclo VII\Calidad de Software\publicar\marchan aqui\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\Microsoft.AI.ServerTelemetryChannel.dll
+E:\Ciclo VII\Calidad de Software\publicar\marchan aqui\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\Microsoft.AI.Web.dll
+E:\Ciclo VII\Calidad de Software\publicar\marchan aqui\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\Microsoft.AI.WindowsServer.dll
+E:\Ciclo VII\Calidad de Software\publicar\marchan aqui\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\Microsoft.ApplicationInsights.dll
+E:\Ciclo VII\Calidad de Software\publicar\marchan aqui\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\Microsoft.AspNet.Identity.Core.dll
+E:\Ciclo VII\Calidad de Software\publicar\marchan aqui\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+E:\Ciclo VII\Calidad de Software\publicar\marchan aqui\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\Microsoft.AspNet.Identity.Owin.dll
+E:\Ciclo VII\Calidad de Software\publicar\marchan aqui\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+E:\Ciclo VII\Calidad de Software\publicar\marchan aqui\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\Microsoft.Owin.dll
+E:\Ciclo VII\Calidad de Software\publicar\marchan aqui\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\Microsoft.Owin.Host.SystemWeb.dll
+E:\Ciclo VII\Calidad de Software\publicar\marchan aqui\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\Microsoft.Owin.Security.Cookies.dll
+E:\Ciclo VII\Calidad de Software\publicar\marchan aqui\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\Microsoft.Owin.Security.dll
+E:\Ciclo VII\Calidad de Software\publicar\marchan aqui\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\Microsoft.Owin.Security.Facebook.dll
+E:\Ciclo VII\Calidad de Software\publicar\marchan aqui\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\Microsoft.Owin.Security.Google.dll
+E:\Ciclo VII\Calidad de Software\publicar\marchan aqui\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+E:\Ciclo VII\Calidad de Software\publicar\marchan aqui\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\Microsoft.Owin.Security.OAuth.dll
+E:\Ciclo VII\Calidad de Software\publicar\marchan aqui\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\Microsoft.Owin.Security.Twitter.dll
+E:\Ciclo VII\Calidad de Software\publicar\marchan aqui\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\Microsoft.Web.Infrastructure.dll
+E:\Ciclo VII\Calidad de Software\publicar\marchan aqui\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\Model.dll
+E:\Ciclo VII\Calidad de Software\publicar\marchan aqui\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\Mvc_Entity.dll
+E:\Ciclo VII\Calidad de Software\publicar\marchan aqui\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\Newtonsoft.Json.dll
+E:\Ciclo VII\Calidad de Software\publicar\marchan aqui\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\NLog.dll
+E:\Ciclo VII\Calidad de Software\publicar\marchan aqui\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\Owin.dll
+E:\Ciclo VII\Calidad de Software\publicar\marchan aqui\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\Persistence.dll
+E:\Ciclo VII\Calidad de Software\publicar\marchan aqui\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\RestSharp.dll
+E:\Ciclo VII\Calidad de Software\publicar\marchan aqui\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\Service.dll
+E:\Ciclo VII\Calidad de Software\publicar\marchan aqui\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\System.Web.Helpers.dll
+E:\Ciclo VII\Calidad de Software\publicar\marchan aqui\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\System.Web.Mvc.dll
+E:\Ciclo VII\Calidad de Software\publicar\marchan aqui\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\System.Web.Optimization.dll
+E:\Ciclo VII\Calidad de Software\publicar\marchan aqui\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\System.Web.Razor.dll
+E:\Ciclo VII\Calidad de Software\publicar\marchan aqui\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\System.Web.WebPages.Deployment.dll
+E:\Ciclo VII\Calidad de Software\publicar\marchan aqui\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\System.Web.WebPages.dll
+E:\Ciclo VII\Calidad de Software\publicar\marchan aqui\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\System.Web.WebPages.Razor.dll
+E:\Ciclo VII\Calidad de Software\publicar\marchan aqui\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\Tecactus.dll
+E:\Ciclo VII\Calidad de Software\publicar\marchan aqui\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\WebGrease.dll
+E:\Ciclo VII\Calidad de Software\publicar\marchan aqui\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\CrystalDecisions.ReportAppServer.DataDefModel.dll
+E:\Ciclo VII\Calidad de Software\publicar\marchan aqui\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\CrystalDecisions.ReportAppServer.ClientDoc.dll
+E:\Ciclo VII\Calidad de Software\publicar\marchan aqui\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\CrystalDecisions.ReportAppServer.ReportDefModel.dll
+E:\Ciclo VII\Calidad de Software\publicar\marchan aqui\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\CrystalDecisions.ReportAppServer.Controllers.dll
+E:\Ciclo VII\Calidad de Software\publicar\marchan aqui\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\CrystalDecisions.ReportAppServer.CommLayer.dll
+E:\Ciclo VII\Calidad de Software\publicar\marchan aqui\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\CrystalDecisions.ReportAppServer.DataSetConversion.dll
+E:\Ciclo VII\Calidad de Software\publicar\marchan aqui\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\CrystalDecisions.ReportAppServer.Prompting.dll
+E:\Ciclo VII\Calidad de Software\publicar\marchan aqui\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\CrystalDecisions.ReportAppServer.XmlSerialize.dll
+E:\Ciclo VII\Calidad de Software\publicar\marchan aqui\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\CrystalDecisions.ReportAppServer.CubeDefModel.dll
+E:\Ciclo VII\Calidad de Software\publicar\marchan aqui\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\CrystalDecisions.ReportAppServer.CommonObjectModel.dll
+E:\Ciclo VII\Calidad de Software\publicar\marchan aqui\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\CrystalDecisions.ReportAppServer.ObjectFactory.dll
+E:\Ciclo VII\Calidad de Software\publicar\marchan aqui\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\CrystalDecisions.ReportAppServer.CommonControls.dll
+E:\Ciclo VII\Calidad de Software\publicar\marchan aqui\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\stdole.dll
+E:\Ciclo VII\Calidad de Software\publicar\marchan aqui\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\Common.pdb
+E:\Ciclo VII\Calidad de Software\publicar\marchan aqui\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\Model.pdb
+E:\Ciclo VII\Calidad de Software\publicar\marchan aqui\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\Mvc_Entity.pdb
+E:\Ciclo VII\Calidad de Software\publicar\marchan aqui\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\Persistence.pdb
+E:\Ciclo VII\Calidad de Software\publicar\marchan aqui\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\Service.pdb
+E:\Ciclo VII\Calidad de Software\publicar\marchan aqui\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\AutoMapper.xml
+E:\Ciclo VII\Calidad de Software\publicar\marchan aqui\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\Microsoft.AI.DependencyCollector.xml
+E:\Ciclo VII\Calidad de Software\publicar\marchan aqui\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\Microsoft.AI.ServerTelemetryChannel.xml
+E:\Ciclo VII\Calidad de Software\publicar\marchan aqui\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\Microsoft.AI.Web.xml
+E:\Ciclo VII\Calidad de Software\publicar\marchan aqui\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\Microsoft.AI.WindowsServer.xml
+E:\Ciclo VII\Calidad de Software\publicar\marchan aqui\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\Microsoft.ApplicationInsights.xml
+E:\Ciclo VII\Calidad de Software\publicar\marchan aqui\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+E:\Ciclo VII\Calidad de Software\publicar\marchan aqui\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\NLog.xml
+E:\Ciclo VII\Calidad de Software\publicar\marchan aqui\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\RestSharp.xml
+E:\Ciclo VII\Calidad de Software\publicar\marchan aqui\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\System.Web.Helpers.xml
+E:\Ciclo VII\Calidad de Software\publicar\marchan aqui\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\System.Web.Mvc.xml
+E:\Ciclo VII\Calidad de Software\publicar\marchan aqui\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\System.Web.Optimization.xml
+E:\Ciclo VII\Calidad de Software\publicar\marchan aqui\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\System.Web.Razor.xml
+E:\Ciclo VII\Calidad de Software\publicar\marchan aqui\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\System.Web.WebPages.xml
+E:\Ciclo VII\Calidad de Software\publicar\marchan aqui\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\System.Web.WebPages.Deployment.xml
+E:\Ciclo VII\Calidad de Software\publicar\marchan aqui\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\System.Web.WebPages.Razor.xml
+E:\Ciclo VII\Calidad de Software\publicar\marchan aqui\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\Antlr3.Runtime.pdb
+E:\Ciclo VII\Calidad de Software\publicar\marchan aqui\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\Newtonsoft.Json.xml
+E:\Ciclo VII\Calidad de Software\publicar\marchan aqui\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\EntityFramework.xml
+E:\Ciclo VII\Calidad de Software\publicar\marchan aqui\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\EntityFramework.SqlServer.xml
+E:\Ciclo VII\Calidad de Software\publicar\marchan aqui\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\Microsoft.AspNet.Identity.Core.xml
+E:\Ciclo VII\Calidad de Software\publicar\marchan aqui\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\Microsoft.AspNet.Identity.Owin.xml
+E:\Ciclo VII\Calidad de Software\publicar\marchan aqui\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+E:\Ciclo VII\Calidad de Software\publicar\marchan aqui\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\Microsoft.Owin.xml
+E:\Ciclo VII\Calidad de Software\publicar\marchan aqui\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\Microsoft.Owin.Host.SystemWeb.xml
+E:\Ciclo VII\Calidad de Software\publicar\marchan aqui\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\Microsoft.Owin.Security.xml
+E:\Ciclo VII\Calidad de Software\publicar\marchan aqui\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\Microsoft.Owin.Security.Facebook.xml
+E:\Ciclo VII\Calidad de Software\publicar\marchan aqui\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\Microsoft.Owin.Security.Cookies.xml
+E:\Ciclo VII\Calidad de Software\publicar\marchan aqui\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\Microsoft.Owin.Security.OAuth.xml
+E:\Ciclo VII\Calidad de Software\publicar\marchan aqui\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\Microsoft.Owin.Security.Google.xml
+E:\Ciclo VII\Calidad de Software\publicar\marchan aqui\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\Microsoft.Owin.Security.Twitter.xml
+E:\Ciclo VII\Calidad de Software\publicar\marchan aqui\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+E:\Ciclo VII\Calidad de Software\publicar\marchan aqui\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\es\System.Web.Helpers.resources.dll
+E:\Ciclo VII\Calidad de Software\publicar\marchan aqui\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\es\System.Web.Mvc.resources.dll
+E:\Ciclo VII\Calidad de Software\publicar\marchan aqui\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\es\System.Web.Optimization.resources.dll
+E:\Ciclo VII\Calidad de Software\publicar\marchan aqui\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\es\System.Web.Razor.resources.dll
+E:\Ciclo VII\Calidad de Software\publicar\marchan aqui\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\es\System.Web.WebPages.resources.dll
+E:\Ciclo VII\Calidad de Software\publicar\marchan aqui\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\es\System.Web.WebPages.Deployment.resources.dll
+E:\Ciclo VII\Calidad de Software\publicar\marchan aqui\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\es\System.Web.WebPages.Razor.resources.dll
+E:\Ciclo VII\Calidad de Software\publicar\marchan aqui\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\es\EntityFramework.resources.dll
+E:\Ciclo VII\Calidad de Software\publicar\marchan aqui\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\es\EntityFramework.SqlServer.resources.dll
+E:\Ciclo VII\Calidad de Software\publicar\marchan aqui\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\es\Microsoft.AspNet.Identity.Core.resources.dll
+E:\Ciclo VII\Calidad de Software\publicar\marchan aqui\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\es\Microsoft.AspNet.Identity.Owin.resources.dll
+E:\Ciclo VII\Calidad de Software\publicar\marchan aqui\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\es\Microsoft.AspNet.Identity.EntityFramework.resources.dll
+E:\Ciclo VII\Calidad de Software\publicar\marchan aqui\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\es\Microsoft.Owin.resources.dll
+E:\Ciclo VII\Calidad de Software\publicar\marchan aqui\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\es\Microsoft.Owin.Host.SystemWeb.resources.dll
+E:\Ciclo VII\Calidad de Software\publicar\marchan aqui\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\es\Microsoft.Owin.Security.resources.dll
+E:\Ciclo VII\Calidad de Software\publicar\marchan aqui\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\es\Microsoft.Owin.Security.Facebook.resources.dll
+E:\Ciclo VII\Calidad de Software\publicar\marchan aqui\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\es\Microsoft.Owin.Security.Google.resources.dll
+E:\Ciclo VII\Calidad de Software\publicar\marchan aqui\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\es\Microsoft.Owin.Security.Twitter.resources.dll
+E:\Ciclo VII\Calidad de Software\publicar\marchan aqui\Asiri_ERP_Capas\Asiri_ERP_Capas\bin\es\Microsoft.Owin.Security.MicrosoftAccount.resources.dll
+E:\Ciclo VII\Calidad de Software\publicar\marchan aqui\Asiri_ERP_Capas\Asiri_ERP_Capas\obj\Debug\Asiri_ERP_Capas.csprojResolveAssemblyReference.cache
+E:\Ciclo VII\Calidad de Software\publicar\marchan aqui\Asiri_ERP_Capas\Asiri_ERP_Capas\obj\Debug\Asiri_ERP_Capas.dll
+E:\Ciclo VII\Calidad de Software\publicar\marchan aqui\Asiri_ERP_Capas\Asiri_ERP_Capas\obj\Debug\Asiri_ERP_Capas.pdb

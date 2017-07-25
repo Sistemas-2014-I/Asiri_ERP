@@ -1,0 +1,46 @@
+﻿@helper Estado(bool estado)
+{
+    if (!estado)
+    {
+        <ds  class="btn btn-danger btn-flat">
+            <i class="fa fa-lg fa-thumbs-o-down"></i>
+        </ds>
+    }
+    else
+    {
+        <sd type="button" class="btn btn-success btn-flat ">
+            <i class="fa fa-lg fa-thumbs-o-up"></i>
+        </sd>
+    }
+}
+@helper Eliminar(bool estado, string ruta = "", long? id = 0)
+{
+    if (estado)
+    {
+        <a data-href="@ruta/@id" class="btn btn-danger status stEnable">
+            <i class="fa fa-lg fa-trash"></i>
+        </a>
+        <p style="display:none;">0</p>
+}
+else
+{
+        <a data-href="@ruta/@id" class="btn btn-success status stDisable">
+            <i class="fa fa-lg fa-reply"></i>
+        </a>
+        <p style="display:none;">1</p>
+
+
+}
+}
+
+@helper NombrePersona(string tipoPersoneria = "", string nombrePersona = "", string nombreRepresentante = "")
+{
+if (tipoPersoneria == "N")
+{
+        <p>@nombrePersona</p>
+}
+else
+{
+        <p>@nombreRepresentante</p>
+}
+}

@@ -1,0 +1,92 @@
+E:\Ciclo VII\Calidad de Software\mas pagos 2\mas pagos\Asiri_ERP_Capas\Persistence\obj\Release\Persistence.csprojResolveAssemblyReference.cache
+E:\Ciclo VII\Calidad de Software\mas pagos 2\mas pagos\Asiri_ERP_Capas\Persistence\obj\Release\Persistence.Migrations.NuevosCampos.resources
+E:\Ciclo VII\Calidad de Software\mas pagos 2\mas pagos\Asiri_ERP_Capas\Persistence\obj\Release\Persistence.csproj.GenerateResource.Cache
+E:\Ciclo VII\Calidad de Software\mas pagos 2\mas pagos\Asiri_ERP_Capas\Persistence\bin\Release\NLog.config
+E:\Ciclo VII\Calidad de Software\mas pagos 2\mas pagos\Asiri_ERP_Capas\Persistence\bin\Release\Persistence.dll.config
+E:\Ciclo VII\Calidad de Software\mas pagos 2\mas pagos\Asiri_ERP_Capas\Persistence\bin\Release\Persistence.dll
+E:\Ciclo VII\Calidad de Software\mas pagos 2\mas pagos\Asiri_ERP_Capas\Persistence\bin\Release\Persistence.pdb
+E:\Ciclo VII\Calidad de Software\mas pagos 2\mas pagos\Asiri_ERP_Capas\Persistence\bin\Release\Common.dll
+E:\Ciclo VII\Calidad de Software\mas pagos 2\mas pagos\Asiri_ERP_Capas\Persistence\bin\Release\EntityFramework.dll
+E:\Ciclo VII\Calidad de Software\mas pagos 2\mas pagos\Asiri_ERP_Capas\Persistence\bin\Release\EntityFramework.SqlServer.dll
+E:\Ciclo VII\Calidad de Software\mas pagos 2\mas pagos\Asiri_ERP_Capas\Persistence\bin\Release\Microsoft.AspNet.Identity.Core.dll
+E:\Ciclo VII\Calidad de Software\mas pagos 2\mas pagos\Asiri_ERP_Capas\Persistence\bin\Release\Microsoft.AspNet.Identity.EntityFramework.dll
+E:\Ciclo VII\Calidad de Software\mas pagos 2\mas pagos\Asiri_ERP_Capas\Persistence\bin\Release\Model.dll
+E:\Ciclo VII\Calidad de Software\mas pagos 2\mas pagos\Asiri_ERP_Capas\Persistence\bin\Release\NLog.dll
+E:\Ciclo VII\Calidad de Software\mas pagos 2\mas pagos\Asiri_ERP_Capas\Persistence\bin\Release\System.Web.Mvc.dll
+E:\Ciclo VII\Calidad de Software\mas pagos 2\mas pagos\Asiri_ERP_Capas\Persistence\bin\Release\CrystalDecisions.CrystalReports.Engine.dll
+E:\Ciclo VII\Calidad de Software\mas pagos 2\mas pagos\Asiri_ERP_Capas\Persistence\bin\Release\CrystalDecisions.Shared.dll
+E:\Ciclo VII\Calidad de Software\mas pagos 2\mas pagos\Asiri_ERP_Capas\Persistence\bin\Release\Microsoft.Web.Infrastructure.dll
+E:\Ciclo VII\Calidad de Software\mas pagos 2\mas pagos\Asiri_ERP_Capas\Persistence\bin\Release\CrystalDecisions.ReportAppServer.DataDefModel.dll
+E:\Ciclo VII\Calidad de Software\mas pagos 2\mas pagos\Asiri_ERP_Capas\Persistence\bin\Release\CrystalDecisions.ReportAppServer.ClientDoc.dll
+E:\Ciclo VII\Calidad de Software\mas pagos 2\mas pagos\Asiri_ERP_Capas\Persistence\bin\Release\CrystalDecisions.ReportAppServer.ReportDefModel.dll
+E:\Ciclo VII\Calidad de Software\mas pagos 2\mas pagos\Asiri_ERP_Capas\Persistence\bin\Release\CrystalDecisions.ReportAppServer.Controllers.dll
+E:\Ciclo VII\Calidad de Software\mas pagos 2\mas pagos\Asiri_ERP_Capas\Persistence\bin\Release\CrystalDecisions.ReportAppServer.CommLayer.dll
+E:\Ciclo VII\Calidad de Software\mas pagos 2\mas pagos\Asiri_ERP_Capas\Persistence\bin\Release\CrystalDecisions.ReportAppServer.DataSetConversion.dll
+E:\Ciclo VII\Calidad de Software\mas pagos 2\mas pagos\Asiri_ERP_Capas\Persistence\bin\Release\CrystalDecisions.ReportAppServer.Prompting.dll
+E:\Ciclo VII\Calidad de Software\mas pagos 2\mas pagos\Asiri_ERP_Capas\Persistence\bin\Release\CrystalDecisions.ReportAppServer.XmlSerialize.dll
+E:\Ciclo VII\Calidad de Software\mas pagos 2\mas pagos\Asiri_ERP_Capas\Persistence\bin\Release\CrystalDecisions.ReportAppServer.CubeDefModel.dll
+E:\Ciclo VII\Calidad de Software\mas pagos 2\mas pagos\Asiri_ERP_Capas\Persistence\bin\Release\CrystalDecisions.ReportAppServer.CommonObjectModel.dll
+E:\Ciclo VII\Calidad de Software\mas pagos 2\mas pagos\Asiri_ERP_Capas\Persistence\bin\Release\CrystalDecisions.ReportAppServer.ObjectFactory.dll
+E:\Ciclo VII\Calidad de Software\mas pagos 2\mas pagos\Asiri_ERP_Capas\Persistence\bin\Release\CrystalDecisions.ReportAppServer.CommonControls.dll
+E:\Ciclo VII\Calidad de Software\mas pagos 2\mas pagos\Asiri_ERP_Capas\Persistence\bin\Release\stdole.dll
+E:\Ciclo VII\Calidad de Software\mas pagos 2\mas pagos\Asiri_ERP_Capas\Persistence\bin\Release\Common.pdb
+E:\Ciclo VII\Calidad de Software\mas pagos 2\mas pagos\Asiri_ERP_Capas\Persistence\bin\Release\Model.pdb
+E:\Ciclo VII\Calidad de Software\mas pagos 2\mas pagos\Asiri_ERP_Capas\Persistence\bin\Release\EntityFramework.xml
+E:\Ciclo VII\Calidad de Software\mas pagos 2\mas pagos\Asiri_ERP_Capas\Persistence\bin\Release\EntityFramework.SqlServer.xml
+E:\Ciclo VII\Calidad de Software\mas pagos 2\mas pagos\Asiri_ERP_Capas\Persistence\bin\Release\Microsoft.AspNet.Identity.Core.xml
+E:\Ciclo VII\Calidad de Software\mas pagos 2\mas pagos\Asiri_ERP_Capas\Persistence\bin\Release\Microsoft.AspNet.Identity.EntityFramework.xml
+E:\Ciclo VII\Calidad de Software\mas pagos 2\mas pagos\Asiri_ERP_Capas\Persistence\bin\Release\NLog.xml
+E:\Ciclo VII\Calidad de Software\mas pagos 2\mas pagos\Asiri_ERP_Capas\Persistence\bin\Release\System.Web.Mvc.xml
+E:\Ciclo VII\Calidad de Software\mas pagos 2\mas pagos\Asiri_ERP_Capas\Persistence\bin\Release\Microsoft.Web.Infrastructure.xml
+E:\Ciclo VII\Calidad de Software\mas pagos 2\mas pagos\Asiri_ERP_Capas\Persistence\bin\Release\es\Microsoft.AspNet.Identity.Core.resources.dll
+E:\Ciclo VII\Calidad de Software\mas pagos 2\mas pagos\Asiri_ERP_Capas\Persistence\bin\Release\es\Microsoft.AspNet.Identity.EntityFramework.resources.dll
+E:\Ciclo VII\Calidad de Software\mas pagos 2\mas pagos\Asiri_ERP_Capas\Persistence\bin\Release\es\System.Web.Mvc.resources.dll
+E:\Ciclo VII\Calidad de Software\mas pagos 2\mas pagos\Asiri_ERP_Capas\Persistence\obj\Release\Persistence.dll
+E:\Ciclo VII\Calidad de Software\mas pagos 2\mas pagos\Asiri_ERP_Capas\Persistence\obj\Release\Persistence.pdb
+E:\Ciclo VII\Calidad de Software\publicar\marchan aqui\Asiri_ERP_Capas\Persistence\bin\Release\NLog.config
+E:\Ciclo VII\Calidad de Software\publicar\marchan aqui\Asiri_ERP_Capas\Persistence\bin\Release\Persistence.dll.config
+E:\Ciclo VII\Calidad de Software\publicar\marchan aqui\Asiri_ERP_Capas\Persistence\bin\Release\Persistence.dll
+E:\Ciclo VII\Calidad de Software\publicar\marchan aqui\Asiri_ERP_Capas\Persistence\bin\Release\Persistence.pdb
+E:\Ciclo VII\Calidad de Software\publicar\marchan aqui\Asiri_ERP_Capas\Persistence\bin\Release\Common.dll
+E:\Ciclo VII\Calidad de Software\publicar\marchan aqui\Asiri_ERP_Capas\Persistence\bin\Release\EntityFramework.dll
+E:\Ciclo VII\Calidad de Software\publicar\marchan aqui\Asiri_ERP_Capas\Persistence\bin\Release\EntityFramework.SqlServer.dll
+E:\Ciclo VII\Calidad de Software\publicar\marchan aqui\Asiri_ERP_Capas\Persistence\bin\Release\Microsoft.AspNet.Identity.Core.dll
+E:\Ciclo VII\Calidad de Software\publicar\marchan aqui\Asiri_ERP_Capas\Persistence\bin\Release\Microsoft.AspNet.Identity.EntityFramework.dll
+E:\Ciclo VII\Calidad de Software\publicar\marchan aqui\Asiri_ERP_Capas\Persistence\bin\Release\Model.dll
+E:\Ciclo VII\Calidad de Software\publicar\marchan aqui\Asiri_ERP_Capas\Persistence\bin\Release\NLog.dll
+E:\Ciclo VII\Calidad de Software\publicar\marchan aqui\Asiri_ERP_Capas\Persistence\bin\Release\Newtonsoft.Json.dll
+E:\Ciclo VII\Calidad de Software\publicar\marchan aqui\Asiri_ERP_Capas\Persistence\bin\Release\System.Web.Mvc.dll
+E:\Ciclo VII\Calidad de Software\publicar\marchan aqui\Asiri_ERP_Capas\Persistence\bin\Release\CrystalDecisions.CrystalReports.Engine.dll
+E:\Ciclo VII\Calidad de Software\publicar\marchan aqui\Asiri_ERP_Capas\Persistence\bin\Release\CrystalDecisions.Shared.dll
+E:\Ciclo VII\Calidad de Software\publicar\marchan aqui\Asiri_ERP_Capas\Persistence\bin\Release\Microsoft.Web.Infrastructure.dll
+E:\Ciclo VII\Calidad de Software\publicar\marchan aqui\Asiri_ERP_Capas\Persistence\bin\Release\CrystalDecisions.ReportAppServer.DataDefModel.dll
+E:\Ciclo VII\Calidad de Software\publicar\marchan aqui\Asiri_ERP_Capas\Persistence\bin\Release\CrystalDecisions.ReportAppServer.ClientDoc.dll
+E:\Ciclo VII\Calidad de Software\publicar\marchan aqui\Asiri_ERP_Capas\Persistence\bin\Release\CrystalDecisions.ReportAppServer.ReportDefModel.dll
+E:\Ciclo VII\Calidad de Software\publicar\marchan aqui\Asiri_ERP_Capas\Persistence\bin\Release\CrystalDecisions.ReportAppServer.Controllers.dll
+E:\Ciclo VII\Calidad de Software\publicar\marchan aqui\Asiri_ERP_Capas\Persistence\bin\Release\CrystalDecisions.ReportAppServer.CommLayer.dll
+E:\Ciclo VII\Calidad de Software\publicar\marchan aqui\Asiri_ERP_Capas\Persistence\bin\Release\CrystalDecisions.ReportAppServer.DataSetConversion.dll
+E:\Ciclo VII\Calidad de Software\publicar\marchan aqui\Asiri_ERP_Capas\Persistence\bin\Release\CrystalDecisions.ReportAppServer.Prompting.dll
+E:\Ciclo VII\Calidad de Software\publicar\marchan aqui\Asiri_ERP_Capas\Persistence\bin\Release\CrystalDecisions.ReportAppServer.XmlSerialize.dll
+E:\Ciclo VII\Calidad de Software\publicar\marchan aqui\Asiri_ERP_Capas\Persistence\bin\Release\CrystalDecisions.ReportAppServer.CubeDefModel.dll
+E:\Ciclo VII\Calidad de Software\publicar\marchan aqui\Asiri_ERP_Capas\Persistence\bin\Release\CrystalDecisions.ReportAppServer.CommonObjectModel.dll
+E:\Ciclo VII\Calidad de Software\publicar\marchan aqui\Asiri_ERP_Capas\Persistence\bin\Release\CrystalDecisions.ReportAppServer.ObjectFactory.dll
+E:\Ciclo VII\Calidad de Software\publicar\marchan aqui\Asiri_ERP_Capas\Persistence\bin\Release\CrystalDecisions.ReportAppServer.CommonControls.dll
+E:\Ciclo VII\Calidad de Software\publicar\marchan aqui\Asiri_ERP_Capas\Persistence\bin\Release\stdole.dll
+E:\Ciclo VII\Calidad de Software\publicar\marchan aqui\Asiri_ERP_Capas\Persistence\bin\Release\Common.pdb
+E:\Ciclo VII\Calidad de Software\publicar\marchan aqui\Asiri_ERP_Capas\Persistence\bin\Release\Model.pdb
+E:\Ciclo VII\Calidad de Software\publicar\marchan aqui\Asiri_ERP_Capas\Persistence\bin\Release\EntityFramework.xml
+E:\Ciclo VII\Calidad de Software\publicar\marchan aqui\Asiri_ERP_Capas\Persistence\bin\Release\EntityFramework.SqlServer.xml
+E:\Ciclo VII\Calidad de Software\publicar\marchan aqui\Asiri_ERP_Capas\Persistence\bin\Release\Microsoft.AspNet.Identity.Core.xml
+E:\Ciclo VII\Calidad de Software\publicar\marchan aqui\Asiri_ERP_Capas\Persistence\bin\Release\Microsoft.AspNet.Identity.EntityFramework.xml
+E:\Ciclo VII\Calidad de Software\publicar\marchan aqui\Asiri_ERP_Capas\Persistence\bin\Release\NLog.xml
+E:\Ciclo VII\Calidad de Software\publicar\marchan aqui\Asiri_ERP_Capas\Persistence\bin\Release\Newtonsoft.Json.xml
+E:\Ciclo VII\Calidad de Software\publicar\marchan aqui\Asiri_ERP_Capas\Persistence\bin\Release\System.Web.Mvc.xml
+E:\Ciclo VII\Calidad de Software\publicar\marchan aqui\Asiri_ERP_Capas\Persistence\bin\Release\Microsoft.Web.Infrastructure.xml
+E:\Ciclo VII\Calidad de Software\publicar\marchan aqui\Asiri_ERP_Capas\Persistence\bin\Release\es\Microsoft.AspNet.Identity.Core.resources.dll
+E:\Ciclo VII\Calidad de Software\publicar\marchan aqui\Asiri_ERP_Capas\Persistence\bin\Release\es\Microsoft.AspNet.Identity.EntityFramework.resources.dll
+E:\Ciclo VII\Calidad de Software\publicar\marchan aqui\Asiri_ERP_Capas\Persistence\bin\Release\es\System.Web.Mvc.resources.dll
+E:\Ciclo VII\Calidad de Software\publicar\marchan aqui\Asiri_ERP_Capas\Persistence\obj\Release\Persistence.csprojResolveAssemblyReference.cache
+E:\Ciclo VII\Calidad de Software\publicar\marchan aqui\Asiri_ERP_Capas\Persistence\obj\Release\Persistence.Migrations.NuevosCampos.resources
+E:\Ciclo VII\Calidad de Software\publicar\marchan aqui\Asiri_ERP_Capas\Persistence\obj\Release\Persistence.csproj.GenerateResource.Cache
+E:\Ciclo VII\Calidad de Software\publicar\marchan aqui\Asiri_ERP_Capas\Persistence\obj\Release\Persistence.dll
+E:\Ciclo VII\Calidad de Software\publicar\marchan aqui\Asiri_ERP_Capas\Persistence\obj\Release\Persistence.pdb

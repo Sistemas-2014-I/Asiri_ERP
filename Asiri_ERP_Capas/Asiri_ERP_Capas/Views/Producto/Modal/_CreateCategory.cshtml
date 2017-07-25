@@ -1,0 +1,98 @@
+﻿@model Common.PROt01_categoria
+<!--Diseño modal-->
+
+<div class="modal fade" tabindex="-1" role="dialog" id="Quick">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true"></span></button>
+                <h4 class="modal-title">Agregar Categoria</h4>
+            </div>
+            <form id="formCategory">
+                <div class="modal-body">
+                    <div class="card-body">
+                        <div class="col-md-12">
+                            <div class="form-group">
+                                @Html.DisplayNameFor(x => x.nombreCategoria)
+                                @Html.EditorFor(model => model.nombreCategoria, new { htmlAttributes = new { @class = "form-control", placeholder = "Ingresar nombre de la categoría" } })
+                                @Html.ValidationMessageFor(x => x.nombreCategoria, "", new { @class = "text-danger" })
+                            </div>
+                            <div class="form-group">
+                                @Html.DisplayNameFor(x => x.descCategoria)
+                                @Html.TextAreaFor(model => model.descCategoria, new { @class = "form-control" })
+                                @Html.ValidationMessageFor(x => x.descCategoria, "", new { @class = "text-danger" })
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <div class="from-group">
+                        <button type="button" class="btn btn-primary icon-btn" id="btnCreate">
+                            <i class="fa fa-fw fa-lg fa-check">
+                            </i>Crear Categoría
+                        </button>
+                        <a id="btnCancel" class="btn btn-default icon-btn">
+                            <i class="fa fa-fw fa-lg fa-times-circle"></i>Cancel
+                        </a>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div><!-- /.modal-content -->
+</div>
+<!-- /.modal-dialog -->
+
+    <script type="text/javascript">
+    $(function () {
+        // Mostrar Modal
+        $('#Quick').modal('show');
+
+        // Validaciones
+        function createCategory()
+        {
+            var nom= $('#nombreCategoria').val();
+            var desc = $('#descCategoria').val();
+            $.ajax({
+                type: 'POST',
+                url: '@Url.Action("QuickCreate")',
+                data: {nom:nom,desc:desc},
+                datatype: 'JSON',
+                success: function (model) {
+                    // Agregar el la nueva categoria al select
+
+                    var id = model.idCategoria;
+                    if (id !== 0) {
+                        var nombre = model.nombreCategoria;
+                        var newOption = '<option value="' + id + '">' + nombre + '</option>';
+                        $("select[id='idCategoria']").append(newOption);
+                        $('#Quick').modal('hide');
+                    }
+
+                    // Seleccionar por defecto el nuevo añadido
+                    $("#idCategoria").val(id).trigger("change");
+                }
+            });
+        }
+
+        $('#btnCreate').click(function () {
+            if (!$("#formCategory").valid()) {
+                $(".error").addClass("text-danger");
+            }
+            else {
+                createCategory();
+            }
+        });
+        $('#formCategory').validate({
+            rules: {
+                nombreCategoria: "required"
+            },
+            messages: {
+                nombreCategoria: "El campo nombre de categoría es obligatorio"
+            }
+        });
+        $('#btnCancel').click(function () {
+            // Oculta el modal
+            $('#Quick').modal('hide');
+        });
+    });
+</script>

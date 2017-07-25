@@ -1,0 +1,2360 @@
+﻿@model Mvc_Entity.CLlt03_atencion
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Create</title>
+    <script src="~/Scripts/plugins/select2.min.js"></script>
+
+
+    <style>
+        .borde1 {
+            border: 1px #000 solid;
+            text-align: center;
+        }
+
+        .borde {
+            border: 1px #000fff solid;
+        }
+
+        .borde2 {
+            border: 1px #295ba7 solid;
+            text-align: center;
+        }
+
+        .action {
+            float: right;
+        }
+    </style>
+    <script type="text/javascript">
+        (function ($) {
+
+            'use strict';
+
+            $(document).on('show.bs.tab', '.nav-tabs-responsive [data-toggle="tab"]', function (e) {
+                var $target = $(e.target);
+                var $tabs = $target.closest('.nav-tabs-responsive');
+                var $current = $target.closest('li');
+                var $parent = $current.closest('li.dropdown');
+                $current = $parent.length > 0 ? $parent : $current;
+                var $next = $current.next();
+                var $prev = $current.prev();
+                var updateDropdownMenu = function ($el, position) {
+                    $el
+                      .find('.dropdown-menu')
+                      .removeClass('pull-xs-left pull-xs-center pull-xs-right')
+                      .addClass('pull-xs-' + position);
+                };
+
+                $tabs.find('>li').removeClass('next prev');
+                $prev.addClass('prev');
+                $next.addClass('next');
+
+                updateDropdownMenu($prev, 'left');
+                updateDropdownMenu($current, 'center');
+                updateDropdownMenu($next, 'right');
+            });
+
+        })(jQuery);
+
+
+        $(document).ready(function () {
+
+            $("#select").change(function () {
+                $("#Mostrara").empty();
+
+                $.ajax({
+                    type: 'POST',
+                    url: '@Url.Action("getServicioProducto")',
+                    dataType: 'json',
+                    data: { id: $("#select").val(), idCita: $("#idCita").val() },
+                    success: function (ServicioProducto) {
+
+                        $.each(ServicioProducto, function (i, ServicioProducto) {
+
+                            $("#Mostrara").append('<option value="' + ServicioProducto.Value + '">' +
+                            ServicioProducto.Text + '</option>');
+
+
+                        });
+
+                    },
+                    error: function () {
+                        
+                        $.notify({ message: 'Error' }, { type: 'danger', allow_dismiss: false });
+                    }
+                });
+            });
+
+
+
+            $('#tableAtenciones').dataTable({
+                order: [[0, "desc"]],
+                language: {
+                    processing: "En curso...",
+                    search: "Buscar:",
+                    lengthMenu: "Visualizar _MENU_ registros",
+                    info: "_START_ de _END_ registros de un total de _TOTAL_ registros",
+                    infoEmpty: "0 registros encontrados",
+                    infoFiltered: "(_MAX_ registros filtrados en total)",
+                    infoPostFix: "",
+                    loadingRecords: "Cargando registros...",
+                    zeroRecords: "No hay registros",
+                    emptyTable: "Vacío",
+                    paginate: {
+                        first: "Primero",
+                        previous: "Previo  ",
+                        next: "  Siguiente",
+                        last: "Último"
+                    },
+                    aria: {
+                        sortAscending: ": Habilitado para ordenar la columna en orden ascendente",
+                        sortDescending: ": Habilitado para ordenar la columna en orden descendente"
+                    }
+                }
+            });
+
+
+            $("#idCie10").select2({
+                ajax: {
+                url: '@Url.Action("getCie10")',
+                dataType: 'json',
+                type: 'POST',
+                data: function (params) {
+                    return {
+                        palabra: params.term, // search term
+                    };
+                },
+                processResults: function (data) {
+
+                    var arr = []
+                    $.each(data, function (index, value) {
+
+                        arr.push({
+                            id: value.Value,
+                            text: value.Text
+                        })
+                    })
+                    return {
+                        results: arr
+                    }
+                },
+                cache: true
+            },
+            escapeMarkup: function (markup) { return markup; },
+            minimumInputLength: 1,
+            language: {
+
+                noResults: function () {
+
+                    return "No hay resultado";
+                },
+                searching: function () {
+
+                    return "Buscando..";
+                },
+                inputTooShort: function () {
+
+                    return "Por favor inserta 1 o más caracteres";
+                }
+            }
+            });
+
+
+            $("#form-atencion").on("submit", function () {
+                $("#aten").attr("disabled", true);
+                $('body').loading({
+                    zIndex: 9999999999999999,
+                    message: "Cargando...   "
+                }, 'start');
+                var form = $(this);
+                var Atencion = Datos();
+
+                if (form.validate()) {
+                    form.ajaxSubmit({
+                        datatype: 'JSON',
+                        type: 'post',
+                        data: {
+                            'cLlt03_atencion': Atencion
+                        },
+                        url: form.attr('action'),
+                        success: function (r) {
+                            if (r.respuesta) {
+                                window.location.href = r.redirect;
+                            }
+                            else {
+                                $('body').loading('stop');
+                                $("#diagnostico-tratamiento-validacion").text(r.error).show();
+                                $("#aten").attr("disabled", false);
+                            }
+                        },
+                        error: function (jqXHR, textStatus, errorThrown) {
+                            
+                            $.notify({ message: errorThrown }, { type: 'info', allow_dismiss: false });
+                            $('body').loading('stop');
+                            $("#aten").attr("disabled", false);
+                        }
+                    });
+
+                }
+
+                return false;
+
+            });
+
+            $('#tableExamenFisico, #tableEstudioCompl').dataTable({
+                ordering: false,
+                language: {
+                    processing: "En curso...",
+                    search: "Buscar:",
+                    lengthMenu: "Visualizar _MENU_ registros",
+                    info: "_START_ de _END_ registros de un total de _TOTAL_ registros",
+                    infoEmpty: "0 registros encontrados",
+                    infoFiltered: "(_MAX_ registros filtrados en total)",
+                    infoPostFix: "",
+                    loadingRecords: "Cargando registros...",
+                    zeroRecords: "No hay registros",
+                    emptyTable: "Vacío",
+                    paginate: {
+                        first: "Primero",
+                        previous: "Previo  ",
+                        next: "  Siguiente",
+                        last: "Último"
+                    },
+                    aria: {
+                        sortAscending: ": Habilitado para ordenar la columna en orden ascendente",
+                        sortDescending: ": Habilitado para ordenar la columna en orden descendente"
+                    }
+                }
+            });
+            $('#tableEvolucion').dataTable({
+                ordering: false,
+                language: {
+                    processing: "En curso...",
+                    search: "Buscar:",
+                    lengthMenu: "Visualizar _MENU_ registros",
+                    info: "_START_ de _END_ registros de un total de _TOTAL_ registros",
+                    infoEmpty: "0 registros encontrados",
+                    infoFiltered: "(_MAX_ registros filtrados en total)",
+                    infoPostFix: "",
+                    loadingRecords: "Cargando registros...",
+                    zeroRecords: "No hay registros",
+                    emptyTable: "Vacío",
+                    paginate: {
+                        first: "Primero",
+                        previous: "Previo  ",
+                        next: "  Siguiente",
+                        last: "Último"
+                    },
+                    aria: {
+                        sortAscending: ": Habilitado para ordenar la columna en orden ascendente",
+                        sortDescending: ": Habilitado para ordenar la columna en orden descendente"
+                    }
+                },
+                "columnDefs": [
+                                    {
+                                        "targets": [1],
+                                        "visible": false,
+                                        "searchable": false
+                                    }
+                ]
+            });
+
+            $('#tableDiagnostico').dataTable({
+                ordering: false,
+                language: {
+                    processing: "En curso...",
+                    search: "Buscar:",
+                    lengthMenu: "Visualizar _MENU_ registros",
+                    info: "_START_ de _END_ registros de un total de _TOTAL_ registros",
+                    infoEmpty: "0 registros encontrados",
+                    infoFiltered: "(_MAX_ registros filtrados en total)",
+                    infoPostFix: "",
+                    loadingRecords: "Cargando registros...",
+                    zeroRecords: "No hay registros",
+                    emptyTable: "Vacío",
+                    paginate: {
+                        first: "Primero",
+                        previous: "Previo  ",
+                        next: "  Siguiente",
+                        last: "Último"
+                    },
+                    aria: {
+                        sortAscending: ": Habilitado para ordenar la columna en orden ascendente",
+                        sortDescending: ": Habilitado para ordenar la columna en orden descendente"
+                    }
+                },
+                "columnDefs": [
+                                    {
+                                        "targets": [0],
+                                        "visible": false,
+                                        "searchable": false
+                                    }
+                ]
+            });
+
+        });
+
+        function AbrirArchivo()
+        {
+            var estudioCompl = $("#descEstudioCompl").val();
+            if (estudioCompl != "" && estudioCompl.length <= 2500) {
+                $("#datosArchivoEstudioCompl-validacion").text("Debe insertar al menos una imagen").hide();
+                $("#datosEstudioCompl-validacion").hide();
+                $("#myModalEC").modal("show");
+                var numArchivo = 0;
+                for (var i = 0; i >= 0; i++) {
+                    var t = $("div[id='im" + [i + 1] + "']").length;
+                    if (t == 0) {
+                        t = i;
+                        numArchivo = t;
+                        break;
+                    }
+
+                }
+
+                var ECdata = $("#tableEstudioCompl").dataTable().fnGetData();
+                if (numArchivo == 0) {
+                    $("#im" + numArchivo).hide();
+                    var div = document.createElement('div');
+                    div.id = "im" + [numArchivo + 1];
+                    div.innerHTML = "<input id='" + [numArchivo + 1] + "' type='file' name='files" + [numArchivo + 1] + "'/>";
+
+                    document.getElementById("archivos").appendChild(div);
+                    $('input[name="files' + [numArchivo + 1] + '"]').fileuploader({
+                        extensions: ['jpg', 'jpeg', 'png', 'gif', 'bmp'],
+                        changeInput: ' ',
+                        theme: 'thumbnails',
+                        enableApi: true,
+                        listInput: true,
+
+                        addMore: true,
+                        thumbnails: {
+                            box: '<div class="fileuploader-items">' +
+                                      '<ul class="fileuploader-items-list">' +
+                                          '<li class="fileuploader-thumbnails-input"><div class="fileuploader-thumbnails-input-inner">+</div></li>' +
+                                      '</ul>' +
+                                  '</div>',
+                            item: '<li class="fileuploader-item">' +
+                                       '<div class="fileuploader-item-inner">' +
+                                           '<div class="thumbnail-holder" id="im" >${image}</div>' +
+                                           '<div class="actions-holder">' +
+                                               '<a id="el" class="fileuploader-action fileuploader-action-remove" title="Remove"><i class="remove"></i></a>' +
+                                           '</div>' +
+                                           '<div class="progress-holder">${progressBar}</div>' +
+                                       '</div>' +
+                                   '</li>',
+                            item2: '<li class="fileuploader-item">' +
+                                       '<div class="fileuploader-item-inner">' +
+                                           '<div class="thumbnail-holder">${image}</div>' +
+                                           '<div class="actions-holder">' +
+                                               '<a class="fileuploader-action fileuploader-action-remove" title="Remove"><i class="remove"></i></a>' +
+                                           '</div>' +
+                                       '</div>' +
+                                   '</li>',
+                            startImageRenderer: true,
+                            canvasImage: false,
+                            _selectors: {
+                                list: '.fileuploader-items-list',
+                                item: '.fileuploader-item',
+                                start: '.fileuploader-action-start',
+                                retry: '.fileuploader-action-retry',
+                                remove: '.fileuploader-action-remove'
+                            },
+                            onItemShow: function (item, listEl) {
+                                var plusInput = listEl.find('.fileuploader-thumbnails-input');
+
+                                plusInput.insertAfter(item.html);
+
+
+                                if (item.format == 'image') {
+                                    item.html.find('.fileuploader-item-icon').hide();
+
+                                }
+                            },
+                            onImageLoaded: function (itemEl, listEl, parentEl, newInputEl, inputEl) {
+                                var plusInput = listEl.find('.fileuploader-action.fileuploader-action-remove');
+                                var api = $.fileuploader.getInstance(inputEl.get(0));
+
+                            },
+                            removeConfirmation: false
+                        },
+                        afterRender: function (listEl, parentEl, newInputEl, inputEl) {
+                            var plusInput = listEl.find('.fileuploader-thumbnails-input'),
+                                api = $.fileuploader.getInstance(inputEl.get(0));
+
+                            plusInput.on('click', function () {
+                                api.open();
+
+                            });
+
+                        }
+
+
+                    });
+
+
+                }
+                if (numArchivo == ECdata.length && numArchivo != 0 && ECdata.length != 0) {
+                    $("#im" + numArchivo).hide();
+                    var div = document.createElement('div');
+                    div.id = "im" + [numArchivo + 1];
+                    div.innerHTML = "<input id='" + [numArchivo + 1] + "' type='file' name='files" + [numArchivo + 1] + "'/>";
+                    document.getElementById("archivos").appendChild(div);
+                    $('input[name="files' + [numArchivo + 1] + '"]').fileuploader({
+                        extensions: ['jpg', 'jpeg', 'png', 'gif', 'bmp'],
+                        changeInput: ' ',
+                        theme: 'thumbnails',
+                        enableApi: true,
+                        listInput: true,
+
+                        addMore: true,
+                        thumbnails: {
+                            box: '<div class="fileuploader-items">' +
+                                      '<ul class="fileuploader-items-list">' +
+                                          '<li class="fileuploader-thumbnails-input"><div class="fileuploader-thumbnails-input-inner">+</div></li>' +
+                                      '</ul>' +
+                                  '</div>',
+                            item: '<li class="fileuploader-item">' +
+                                       '<div class="fileuploader-item-inner">' +
+                                           '<div class="thumbnail-holder" id="im" >${image}</div>' +
+                                           '<div class="actions-holder">' +
+                                               '<a  id="el"class="fileuploader-action fileuploader-action-remove" title="Remove"><i class="remove"></i></a>' +
+                                           '</div>' +
+                                           '<div class="progress-holder">${progressBar}</div>' +
+                                       '</div>' +
+                                   '</li>',
+                            item2: '<li class="fileuploader-item">' +
+                                       '<div class="fileuploader-item-inner">' +
+                                           '<div class="thumbnail-holder">${image}</div>' +
+                                           '<div class="actions-holder">' +
+                                               '<a class="fileuploader-action fileuploader-action-remove" title="Remove"><i class="remove"></i></a>' +
+                                           '</div>' +
+                                       '</div>' +
+                                   '</li>',
+                            startImageRenderer: true,
+                            canvasImage: false,
+                            _selectors: {
+                                list: '.fileuploader-items-list',
+                                item: '.fileuploader-item',
+                                start: '.fileuploader-action-start',
+                                retry: '.fileuploader-action-retry',
+                                remove: '.fileuploader-action-remove'
+                            },
+                            onItemShow: function (item, listEl) {
+                                var plusInput = listEl.find('.fileuploader-thumbnails-input');
+
+                                plusInput.insertAfter(item.html);
+
+
+                                if (item.format == 'image') {
+                                    item.html.find('.fileuploader-item-icon').hide();
+
+                                }
+                            },
+                            onImageLoaded: function (itemEl, listEl, parentEl, newInputEl, inputEl) {
+                                var plusInput = listEl.find('.fileuploader-action.fileuploader-action-remove');
+                                var api = $.fileuploader.getInstance(inputEl.get(0));
+
+                            },
+                            removeConfirmation: false
+                        },
+                        afterRender: function (listEl, parentEl, newInputEl, inputEl) {
+                            var plusInput = listEl.find('.fileuploader-thumbnails-input'),
+                                api = $.fileuploader.getInstance(inputEl.get(0));
+
+                            plusInput.on('click', function () {
+                                api.open();
+
+                            });
+
+                        }
+
+
+                    });
+                }
+            }
+            else {
+                $("#datosEstudioCompl-validacion").text("Debe insertar una descripción del estudio complementario").show();
+            }
+        }
+
+        function AbrirTratamiento()
+        {
+
+            var diagnostico = $("#descDiagnostico").val();
+            var tratamiento = $("#descTratamiento").val();
+            if (diagnostico != "" && tratamiento != "") {
+                $("#datosTratamientodtl-validacion").text("Debe insertar datos al detalle del tratamiento").hide();
+                $("#diagnosticoModal-validacion").hide();
+                $("#myModal").modal("show");
+                var numTabla = 0;
+                for (var i = 0; i >= 0; i++) {
+                    var t = $("#tableTratamiento" + [i + 1]).length;
+                    if (t == 0) {
+                        t = i;
+                        numTabla = t;
+                        break;
+                    }
+
+                }
+                var tdata = $("#tableTratamiento" + numTabla).dataTable().fnGetData();
+                var ddata = $("#tableDiagnostico").dataTable().fnGetData();
+                if (numTabla == 0) {
+
+                    $("#" + numTabla).hide();
+                    var div = document.createElement('div');
+                    div.id = [numTabla + 1];
+                    div.innerHTML = "<table style='width: 100%;' id=tableTratamiento" + [numTabla + 1] + " class='table table-responsive table-striped table-bordered'> <thead style='color:#ffffff;background:#0094ff;'><tr><th>Indicacion de Servicio</th><th>ID Producto</th><th>Producto</th><th>ID Servicio</th><th>Servicio</th><th>Servicio/Producto</th><th>Eliminar</th></tr></thead><tbody></tbody></table>";
+
+
+                    document.getElementById("tratamiento").appendChild(div);
+                    $('#tableTratamiento' + [numTabla + 1]).dataTable({
+                        ordering: false,
+                        language: {
+                            processing: "En curso...",
+                            search: "Buscar:",
+                            lengthMenu: "Visualizar _MENU_ registros",
+                            info: "_START_ de _END_ registros de un total de _TOTAL_ registros",
+                            infoEmpty: "0 registros encontrados",
+                            infoFiltered: "(_MAX_ registros filtrados en total)",
+                            infoPostFix: "",
+                            loadingRecords: "Cargando registros...",
+                            zeroRecords: "No hay registros",
+                            emptyTable: "Vacío",
+                            paginate: {
+                                first: "Primero",
+                                previous: "Previo  ",
+                                next: "  Siguiente",
+                                last: "Último"
+                            },
+                            aria: {
+                                sortAscending: ": Habilitado para ordenar la columna en orden ascendente",
+                                sortDescending: ": Habilitado para ordenar la columna en orden descendente"
+                            }
+
+                        },
+                        "columnDefs": [
+                                            {
+                                                "targets": [1],
+                                                "visible": false,
+                                                "searchable": false
+                                            },
+                                            {
+                                                "targets": [2],
+                                                "visible": false
+                                            },
+                                            {
+                                                "targets": [3],
+                                                "visible": false
+                                            },
+                                            {
+                                                "targets": [4],
+                                                "visible": false
+                                            }
+                        ]
+                    });
+                }
+                if (numTabla == ddata.length && numTabla != 0 && ddata.length != 0) {
+
+                    $("#" + numTabla).hide();
+                    var div = document.createElement('div');
+                    div.id = [numTabla + 1];
+                    div.innerHTML = "<table style='width: 100%;' id=tableTratamiento" + [numTabla + 1] + " class='table table-responsive table-striped table-bordered'> <thead style='color:#ffffff;background:#0094ff;'><tr><th>Indicacion de Servicio</th><th>ID Producto</th><th>Producto</th><th>ID Servicio</th><th>Servicio</th><th>Servicio/Producto</th><th>Eliminar</th></tr></thead><tbody></tbody></table>";
+                    document.getElementById("tratamiento").appendChild(div);
+                    $('#tableTratamiento' + [numTabla + 1]).dataTable({
+                        ordering: false,
+                        language: {
+                            processing: "En curso...",
+                            search: "Buscar:",
+                            lengthMenu: "Visualizar _MENU_ registros",
+                            info: "_START_ de _END_ registros de un total de _TOTAL_ registros",
+                            infoEmpty: "0 registros encontrados",
+                            infoFiltered: "(_MAX_ registros filtrados en total)",
+                            infoPostFix: "",
+                            loadingRecords: "Cargando registros...",
+                            zeroRecords: "No hay registros",
+                            emptyTable: "Vacío",
+                            paginate: {
+                                first: "Primero",
+                                previous: "Previo  ",
+                                next: "  Siguiente",
+                                last: "Último"
+                            },
+                            aria: {
+                                sortAscending: ": Habilitado para ordenar la columna en orden ascendente",
+                                sortDescending: ": Habilitado para ordenar la columna en orden descendente"
+                            }
+                        },
+                        "columnDefs": [
+                                            {
+                                                "targets": [1],
+                                                "visible": false,
+                                                "searchable": false
+                                            },
+                                            {
+                                                "targets": [2],
+                                                "visible": false
+                                            },
+                                            {
+                                                "targets": [3],
+                                                "visible": false
+                                            },
+                                            {
+                                                "targets": [4],
+                                                "visible": false
+                                            }
+                        ]
+                    });
+                }
+            }
+            else
+            {
+                if (diagnostico == "")
+                {
+                    $("#diagnosticoModal-validacion").text("Debe insertar un diagnostico").show();
+                }
+                if (tratamiento == "")
+                {
+                    $("#diagnosticoModal-validacion").text("Debe insertar un tratamiento").show();
+                }
+                if(diagnostico == "" && tratamiento == "")
+                {
+                    $("#diagnosticoModal-validacion").text("Debe insertar un diagnostico y un tratamiento").show();
+                }
+            }
+        }
+
+
+        function AgregarTratamiento() {
+            var numTabla = 0;
+
+            for (var i = 0; i >= 0; i++) {
+                var t = $("#tableTratamiento" + [i + 1]).length;
+                if (t == 0) {
+                    t = i;
+                    numTabla = t;
+                    break;
+                }
+            }
+            var comboSe = document.getElementById("Select");
+
+
+
+            if ($("#select").val() == 0) {
+                
+                $.notify({ message: 'Debe seleccionar un Servicio/Producto' }, { type: 'danger', allow_dismiss: false });
+            }
+            else {
+                var comboPS = document.getElementById("Mostrara");
+                var indicePS = comboPS.selectedIndex;
+                var nombrePS = comboPS.options[comboPS.selectedIndex].text;
+                var numTablaTrat = $("#tableTratamiento" + numTabla).dataTable().fnGetData();
+                var idS = "";
+                var idP = "";
+                var nombreS = "";
+                var nombreP = "";
+                var validos = false;
+                if (numTablaTrat.length != 0) {
+                    for (var i = 0; i < numTablaTrat.length; i++) {
+                        if (nombrePS == numTablaTrat[i][5]) {
+                            $.notify({ message: 'ya existe un Producto/Servicio llamado "' + nombrePS + '"' }, { type: 'danger', allow_dismiss: false });
+                            validos = true;
+                            break;
+                        }
+
+                    }
+                    if (validos == false) {
+
+                        numTablaTrat = $("#tableTratamiento" + numTabla).dataTable().fnGetData();
+                        if ($("#select").val() == 1) {
+                            idS = $("#Mostrara").val();
+                            nombreS = nombrePS;
+                        }
+                        if ($("#select").val() == 2) {
+                            idP = $("#Mostrara").val();
+                            nombreP = nombrePS;
+                        }
+                        $("#tableTratamiento" + numTabla).dataTable().fnAddData([$("#indicacionServicio").val(),
+                                                                      idP,
+                                                                      nombreP,
+                                                                     idS,
+                                                                      nombreS,
+                                                                      nombrePS,
+                        "<button class='btn btn-danger' id='eliminarTratamientoDtl' alt=" + [numTablaTrat.length + 1] + "><i class='fa fa-lg fa-trash'></i></button>"]);
+
+                    }
+
+                }
+                else {
+                    if ($("#select").val() == 1) {
+                        idS = $("#Mostrara").val();
+                        nombreS = nombrePS;
+                    }
+                    if ($("#select").val() == 2) {
+                        idP = $("#Mostrara").val();
+                        nombreP = nombrePS;
+                    }
+                    $("#tableTratamiento" + numTabla).dataTable().fnAddData([$("#indicacionServicio").val(),
+                                                                  idP,
+                                                                  nombreP,
+                                                                 idS,
+                                                                  nombreS,
+                                                                  nombrePS,
+                    "<button class='btn btn-danger' id='eliminarTratamientoDtl' alt=" + [numTablaTrat.length + 1] + "><i class='fa fa-lg fa-trash'></i></button>"]);
+                }
+
+
+            }
+
+
+            $("#indicacionServicio").val("");
+
+
+
+        }
+
+
+        //Agregar Tabla Diagnostico y Tratamiento
+        function AgregarDiagnosticoTratamiento()
+        {
+            var numTabla = 0;
+
+            for (var i = 0; i >= 0; i++) {
+                var t = $("#tableTratamiento" + [i + 1]).length;
+                if (t == 0) {
+                    t = i;
+                    numTabla = t;
+                    break;
+                }
+
+            }
+            var tablaDetalle = $("#tableTratamiento" + numTabla).dataTable().fnGetData();
+            if (tablaDetalle.length != 0) {
+
+                var comboCie10 = document.getElementById("idCie10");
+                var nombreCi10 = "";
+                if (comboCie10.value != "")
+                {
+                    var indice = comboCie10.selectedIndex;
+                    nombreCi10 = comboCie10.options[comboCie10.selectedIndex].text;
+                }
+                
+                
+
+                var numTablaTrat = $("#tableTratamiento" + numTabla).dataTable().fnGetData();
+                var numTablaDiag = $("#tableDiagnostico").dataTable().fnGetData();
+                var eliminar = document.getElementById("eliminar");
+                $("#tableDiagnostico").dataTable().fnAddData([$("#idCie10").val(),
+                                                          nombreCi10,
+                                                          $("#descDiagnostico").val(),
+                                                          $("#descTratamiento").val(),
+                "<a class='btn btn-info' onclick='ModalTratamientoDetalle($(this))' id='detalleTablaTratamiento' alt=" + [numTablaDiag.length + 1] + " ><i class='fa fa fa-search-plus'></i> </a> &nbsp" +
+                "<button class='btn btn-danger' id='eliminar' alt=" + [numTablaDiag.length + 1] + "><i class='fa fa-lg fa-trash'></i></button>"]);
+
+
+                comboCie10.selectedIndex = 0;
+                $("#descDiagnostico").val("");
+                $("#descTratamiento").val("");
+                $("#myModal").modal("hide");
+
+            }
+            else
+            {
+                $("#datosTratamientodtl-validacion").text("Debe insertar datos al detalle del tratamiento").show();
+            }
+        }
+
+        //Agregar Evolucion
+        function AgregarEvolucion() {
+            var evolucion = $("#descEvolucion").val();
+            if (evolucion != "" && evolucion.length < 2500) {
+                $("#datosEvolucion-validacion").hide();
+                var numTablaEvolucion = $("#tableEvolucion").dataTable().fnGetData();
+                var condicion = $("input[name='optionsRadios']:checked").val();
+                var numCondicion = $("input[name='optionsRadios']:checked").attr("id");
+
+                $("#tableEvolucion").dataTable().fnAddData([
+                                                          $("#descEvolucion").val(),
+                                                          numCondicion,
+                                                          condicion,
+                                                          "<button class='btn btn-danger' id='eliminarEvolucion' alt=" + [numTablaEvolucion.length + 1] + "><i class='fa fa-lg fa-trash'></i></button>"
+                                                          ]);
+
+
+                $("#descEvolucion").val("");
+            }
+            else {
+                $("#datosEvolucion-validacion").text("Debe insertar correctamente una descripción de la evolución").show();
+            }
+
+        }
+
+        //Agregar Estudio Complementario
+
+        function AgregarEstudioCompl() {
+
+            var numArchivo = 0;
+            for (var i = 0; i >= 0; i++) {
+                var t = $("div[id='im" + [i + 1] + "']").length;
+                if (t == 0) {
+                    t = i;
+                    numArchivo = t;
+                    break;
+                }
+            }
+
+            var imagenesEC = $("div[id='im" + numArchivo + "']").find("img").length;
+
+            if (imagenesEC != 0) {
+                var numTablaEstudioCompl = $("#tableEstudioCompl").dataTable().fnGetData();
+                $("#tableEstudioCompl").dataTable().fnAddData([
+                                                          $("#descEstudioCompl").val(),
+                                                          "<a class='btn btn-info' onclick='ModalDetalle($(this))'  id='detalleEstudioCompl' alt=" + [numTablaEstudioCompl.length + 1] + " ><i class='fa fa fa-search-plus'></i> </a>&nbsp" +
+                                                          "<button class='btn btn-danger' id='eliminarEstudioCompl' alt=" + [numTablaEstudioCompl.length + 1] + "><i class='fa fa-lg fa-trash'></i></button>"
+                                                          ]);
+
+
+                $("#descEstudioCompl").val("");
+                $("#myModalEC").modal("hide");
+            }
+            else {
+                $("#datosArchivoEstudioCompl-validacion").text("Debe insertar al menos una imagen").show();
+            }
+
+        }
+
+        //Agregar Examen Fisico
+
+        function AgregarExamenFisico() {
+            var examenFisico = $("#descExamenFisico").val();
+
+            if (examenFisico != "" && examenFisico.length <= 2500) {
+                var numTablaExamenFisico = $("#tableExamenFisico").dataTable().fnGetData();
+                $("#datosExamenFisico-validacion").hide();
+                $("#tableExamenFisico").dataTable().fnAddData([
+                                                          $("#descExamenFisico").val(),
+                                                          "<button class='btn btn-danger' id='eliminarExamenFisico' alt=" + [numTablaExamenFisico.length + 1] + "><i class='fa fa-lg fa-trash'></i></button>"
+                                                          ]);
+
+
+                $("#descExamenFisico").val("");
+            }
+            else {
+                $("#datosExamenFisico-validacion").text("Debe insertar correctamente una descripcion del examen físico").show();
+            }
+        }
+
+
+
+
+
+
+        //Eliminar Tratamiento Detalle
+        $(document).on("click", "#eliminarTratamientoDtl", function (event) {
+
+            var alt = $(this).attr("alt");
+            var tabletdtl = $(this).parents('table').attr('id');
+            $("#" + tabletdtl).dataTable().fnDeleteRow(alt - 1);
+
+
+            var tablaTratamiento = $("#" + tabletdtl).dataTable().fnGetData();
+            var count = tablaTratamiento.length + 1;
+
+            for (var i = 1; i > 0; i++) {
+                if (i == alt) {
+                    for (var j = alt; j <= count; j++) {
+                        if (alt != count) {
+                            $("#" + tabletdtl).find("button[alt = " + j + "]").attr("alt", [j - 1]);
+                        }
+                        else {
+
+                            break;
+
+                        }
+                    }
+
+                    
+                    $.notify({ message: 'se eliminó Correctamente'}, { type: 'info', allow_dismiss: false });
+                    break;
+
+                }
+                else {
+                    $("#" + tabletdtl).find("button[alt = " + i + "]").attr("alt", i);
+                }
+
+            }
+
+        });
+
+
+        //Eliminar Diagnostico-Tratamiento
+
+        $(document).on("click", "#eliminar", function (event) {
+            var alt = $(this).attr("alt");
+            $("#tableDiagnostico").dataTable().fnDeleteRow(alt - 1);
+            $("div[id = " + alt+ "]").remove();
+
+
+            var tablaDiagnostico = $("#tableDiagnostico").dataTable().fnGetData();
+            var count = tablaDiagnostico.length + 1;
+
+            for (var i = 1; i > 0; i++) {
+                if (i == alt) {
+                    for (var j = alt; j <= count; j++) {
+                        if (alt != count) {
+                            $("#tableDiagnostico").find("button[alt = " + j + "]").attr("alt", [j - 1]);
+
+                            $("div[id = " + j + "]").attr("id", [j - 1]);
+
+                            $("table[id = tableTratamiento" + j + "]").attr("id", "tableTratamiento" + [j - 1]);
+                        }
+                        else
+                        {
+
+                            break;
+
+                        }
+                    }
+
+                    
+                    $.notify({ message: 'se eliminó Correctamente' }, { type: 'info', allow_dismiss: false });
+                    break;
+
+                }
+                else
+                {
+                    $("#tableDiagnostico").find("button[alt = " + i + "]").attr("alt", i);
+                    $("div[id = " + i + "]").attr("id", i);
+                    $("table[id = tableTratamiento" + i + "]").attr("id", "tableTratamiento" + i);
+                }
+
+            }
+
+            $("div[id = " + [count + 1] + "]").attr("id", count);
+            $("table[id = tableTratamiento" + [count + 1] + "]").attr("id", "tableTratamiento" + count);
+        });
+
+
+        //Eliminar Evolucion
+        $(document).on("click", "#eliminarEvolucion", function (event) {
+            var alt = $(this).attr("alt");
+            $("#tableEvolucion" ).dataTable().fnDeleteRow(alt - 1);
+
+            var tablaEvolucion = $("#tableEvolucion").dataTable().fnGetData();
+            var count = tablaEvolucion.length + 1;
+
+            for (var i = 1; i > 0; i++) {
+                if (i == alt) {
+                    for (var j = alt; j <= count; j++) {
+                        if (alt != count) {
+                            $("#tableEvolucion").find("button[alt = " + j + "]").attr("alt", [j - 1]);
+                        }
+                        else {
+
+                            break;
+
+                        }
+                    }
+
+                    
+                    $.notify({ message: 'se eliminó Correctamente' }, { type: 'info', allow_dismiss: false });
+                    break;
+
+                }
+                else {
+                    $("#tableEvolucion").find("button[alt = " + i + "]").attr("alt", i);
+                }
+
+            }
+
+        });
+
+
+        //Eliminar Examen Fisico
+        $(document).on("click", "#eliminarExamenFisico", function (event) {
+            var alt = $(this).attr("alt");
+            $("#tableExamenFisico").dataTable().fnDeleteRow(alt - 1);
+
+            var tablaEvolucion = $("#tableExamenFisico").dataTable().fnGetData();
+            var count = tablaEvolucion.length + 1;
+
+            for (var i = 1; i > 0; i++) {
+                if (i == alt) {
+                    for (var j = alt; j <= count; j++) {
+                        if (alt != count) {
+                            $("#tableExamenFisico").find("button[alt = " + j + "]").attr("alt", [j - 1]);
+                        }
+                        else {
+
+                            break;
+
+                        }
+                    }
+
+                    
+                    $.notify({ message: 'se eliminó Correctamente' }, { type: 'info', allow_dismiss: false });
+                    break;
+
+                }
+                else {
+                    $("#tableExamenFisico").find("button[alt = " + i + "]").attr("alt", i);
+                }
+
+            }
+
+        });
+
+        //Eliminar Estudio Complementario
+
+        $(document).on("click", "#eliminarEstudioCompl", function (event) {
+            var alt = $(this).attr("alt");
+            $("#tableEstudioCompl").dataTable().fnDeleteRow(alt - 1);
+            $("div[id = 'im" + alt + "']").remove();
+
+
+            var tablaEstudioCompl = $("#tableEstudioCompl").dataTable().fnGetData();
+            var count = tablaEstudioCompl.length + 1;
+
+            for (var i = 1; i > 0; i++) {
+                if (i == alt) {
+                    for (var j = alt; j <= count; j++) {
+                        if (alt != count) {
+                            $("#tableEstudioCompl").find("button[alt = " + j + "]").attr("alt", [j - 1]);
+                            $("#tableEstudioCompl").find("a[alt = " + j + "]").attr("alt", [j - 1]);
+                            $("div[id = 'im" + j + "']").find("input[type=file]").attr("id", [j - 1]);
+                            $("div[id = 'im" + j + "']").find("input[type=file]").attr("name", "files" + [j - 1]);
+                            $("div[id = 'im" + j + "']").attr("id", "im" + [j - 1]);
+
+
+
+                        }
+                        else {
+
+                            break;
+
+                        }
+                    }
+
+                    
+                    $.notify({ message: 'se eliminó Correctamente' }, { type: 'info', allow_dismiss: false });
+                    break;
+
+                }
+                else {
+                    $("#tableEstudioCompl").find("button[alt = " + i + "]").attr("alt", i);
+                    $("#tableEstudioCompl").find("a[alt = " + i + "]").attr("alt", i);
+                    $("div[id = 'im" + i + "']").find("input[type=file]").attr("id", i);
+                    $("div[id = 'im" + i + "']").find("input[type=file]").attr("name", "files" + i);
+                    $("div[id = 'im" + i + "']").attr("id", "im" + i);
+
+
+                }
+
+            }
+            $("div[id = 'im" + [count + 1] + "']").find("input[type=file]").attr("id", count);
+            $("div[id = 'im" + [count + 1] + "']").find("input[type=file]").attr("name", "files" + count);
+            $("div[id = 'im" + [count + 1] + "']").attr("id", "im" + count);
+
+
+        });
+
+        //Modal Detalle Estudio Complementario
+        function ModalDetalle(alt) {
+
+            $("#myModalDEC").modal("show");
+
+            var numArchivo = $(alt).attr("alt");
+            var countArchivo = $("#imagenes").children("div").length;
+
+            $("#imagenes").children("div").remove();
+
+
+
+            $("#archivos").find("#im" + numArchivo).clone().appendTo("#imagenes");
+            $("#imagenes").find("div[id='im" + numArchivo+"']").attr("id", "imdtl" + numArchivo);
+
+
+                    $("#imagenes").find("div[id='imdtl"+numArchivo+"']").find('input[name="files' + numArchivo + '"]').fileuploader({
+                    extensions: ['jpg', 'jpeg', 'png', 'gif', 'bmp'],
+                    changeInput: ' ',
+                    theme: 'thumbnails',
+                    enableApi: true,
+                    thumbnails: {
+                        afterRender: function (listEl, parentEl, newInputEl, inputEl) {
+                            var plusInput = listEl.find('.fileuploader-thumbnails-input'),
+                                api = $.fileuploader.getInstance(inputEl.get(0));
+
+                            plusInput.on('click', function () {
+                                api.disable('.fileuploader-thumbnails-input');
+
+                            });
+
+                        },
+                        onRemove: function (item, listEl, parentEl, newInputEl, inputEl) {
+                            // callback will go here
+
+                            return false;
+                        },
+                        removeConfirmation: false
+                    }
+
+
+                    });
+                    $("#imagenes").find("a").remove();
+
+                    $("div[id='imdtl" + numArchivo + "']").show();
+        }
+
+
+
+        //Modal Detalle del tratamiento
+        function ModalTratamientoDetalle(parametro) {
+            $("#myModalDT").modal("show");
+
+            var numTablaTratamiento = $(parametro).attr("alt");
+            $("#tratamientosDetalle").children("div").remove();
+            var tbanterior = $("#tratamiento").find("#tableTratamiento" + numTablaTratamiento).dataTable().fnGetData();
+            
+            var div = document.createElement('div');
+            div.id = 1;
+            div.innerHTML = "<table style='width: 100%;' id='tbdtl' class='table table-responsive table-striped table-bordered'> <thead style='color:#ffffff;background:#0094ff;'><tr><th>Indicacion de Servicio</th><th>ID Producto</th><th>Producto</th><th>ID Servicio</th><th>Servicio</th><th>Servicio/Producto</th></tr></thead><tbody></tbody></table>";
+            
+            document.getElementById("tratamientosDetalle").appendChild(div);
+            $('#tbdtl').dataTable({
+                ordering: false,
+                language: {
+                    processing: "En curso...",
+                    search: "Buscar:",
+                    lengthMenu: "Visualizar _MENU_ registros",
+                    info: "_START_ de _END_ registros de un total de _TOTAL_ registros",
+                    infoEmpty: "0 registros encontrados",
+                    infoFiltered: "(_MAX_ registros filtrados en total)",
+                    infoPostFix: "",
+                    loadingRecords: "Cargando registros...",
+                    zeroRecords: "No hay registros",
+                    emptyTable: "Vacío",
+                    paginate: {
+                        first: "Primero",
+                        previous: "Previo  ",
+                        next: "  Siguiente",
+                        last: "Último"
+                    },
+                    aria: {
+                        sortAscending: ": Habilitado para ordenar la columna en orden ascendente",
+                        sortDescending: ": Habilitado para ordenar la columna en orden descendente"
+                    }
+                },
+                "columnDefs": [
+                                    {
+                                        "targets": [1],
+                                        "visible": false,
+                                        "searchable": false
+                                    },
+                                    
+                                    {
+                                        "targets": [2],
+                                        "visible": false,
+                                        "searchable": false
+                                    },
+                                    {
+                                        "targets": [3],
+                                        "visible": false,
+                                        "searchable": false
+                                    },
+                                    
+                                    {
+                                        "targets": [4],
+                                        "visible": false,
+                                        "searchable": false
+                                    }
+                ]
+            });
+            for (var i = 0; i < tbanterior.length; i++) {
+
+                $("#tbdtl").dataTable().fnAddData([tbanterior[i][0],
+                                                          tbanterior[i][1],
+                                                          tbanterior[i][2],
+                                                          tbanterior[i][3],
+                                                          tbanterior[i][4],
+                                                          tbanterior[i][5]
+                                                          ]);
+
+            }
+
+            //$("#tratamiento").find("#" + numTablaTratamiento).clone().appendTo("#tratamientosDetalle");
+            //$("#tratamientosDetalle").find("div[id='" + numTablaTratamiento + "']").attr("id", "tdtl" + numTablaTratamiento);
+            //$("#tratamientosDetalle").find("table[id='tableTratamiento" + numTablaTratamiento + "']").attr("id", "tbdtl" + numTablaTratamiento);
+
+            //$("div[id='tdtl" + numTablaTratamiento + "']").show();
+
+
+        }
+
+
+        //ENVIAR ATENCION A CONTROLLER
+        function Datos() {
+
+            var Atencion = { "codAtencion": "", "idCita": "", "oListEvolucion": [], "oListDiagnostico": [], "oAnamnesis": { "descAnamnesis": "" }, "oListEstudioCompl": [], "oFuncionVital": { "sistole": "", "diastole": "", "pulsasion": "", "ritmoRespiratorio": "", "temperatura": "", "altura": "", "peso": "", "imc": "" }, "oListExamenFisico": [] };
+            var Evolucion = { "descEvolucion": "", "idAtencion":"" };
+            var Diagnostico = { "idCie10": "", "descDiagnostico": "", "oListTratamiento": [] };
+            var Tratamiento = { "descTratamiento": "", "oListTratamientoDtl": [] };
+            var TratamientoDtl = { "indicacionServicio": "", "idProducto": "", "idServicio": "" };
+            var EstudioCompl = { "descEstudioCompl": "", "oListArchivoEstudioCompl": [] };
+            var ArchivoEstudioCompl = { "pathArchivo": "" };
+
+            var ExamenFisico = { "descExamenFisico": "" };
+
+            //Atencion
+            Atencion.codAtencion = $("#codAtencion").val();
+            Atencion.idCita = $("#idCita").val();
+
+            //Anamnesis
+            Atencion.oAnamnesis.descAnamnesis = $("#descAnamnesis").val();
+
+            //Diagnostico
+            var tablaDiagnostico = $("#tableDiagnostico").dataTable().fnGetData();
+
+            for (var i = 0; i < tablaDiagnostico.length; i++) {
+
+                Diagnostico.idCie10 = tablaDiagnostico[i][0];
+                Diagnostico.descDiagnostico = tablaDiagnostico[i][2];
+                Tratamiento.descTratamiento = tablaDiagnostico[i][3];
+                var tablaTratamiento = $("#tableTratamiento" + [i + 1]).dataTable().fnGetData();
+                for (var j = 0; j < tablaTratamiento.length; j++) {
+
+                    TratamientoDtl.indicacionServicio = tablaTratamiento[j][0];
+                    TratamientoDtl.idProducto = tablaTratamiento[j][1];
+                    TratamientoDtl.idServicio = tablaTratamiento[j][3];
+                    Tratamiento.oListTratamientoDtl.push(TratamientoDtl);
+                    TratamientoDtl = { "indicacionServicio": "", "idProducto": "", "idServicio": "" };
+
+                }
+                Diagnostico.oListTratamiento.push(Tratamiento);
+                Tratamiento = { "descTratamiento": "", "oListTratamientoDtl": [] };
+                Atencion.oListDiagnostico.push(Diagnostico);
+                Diagnostico = { "idCie10": "", "descDiagnostico": "", "oListTratamiento": [] };
+            }
+
+            //Tratamiento
+            var tablaTratamiento = $("#tableTratamiento").dataTable().fnGetData();
+
+            for (var i = 0; i < tablaTratamiento.length; i++) {
+
+                Tratamiento.descTratamiento = tablaTratamiento[i][0];
+                Atencion.oListTratamiento.push(Tratamiento);
+                Tratamiento = { "descTratamiento": "" };
+            }
+
+
+            //Evolucion
+            var tablaEvolucion = $("#tableEvolucion").dataTable().fnGetData();
+
+            for (var i = 0; i < tablaEvolucion.length; i++) {
+
+                Evolucion.descEvolucion = tablaEvolucion[i][0];
+                Evolucion.idAtencion = tablaEvolucion[i][1];
+                Atencion.oListEvolucion.push(Evolucion);
+                Evolucion = { "descEvolucion": "", "idAtencion": "" };
+            }
+
+            //Estudio Complementario
+
+            var tablaEstudioCompl = $("#tableEstudioCompl").dataTable().fnGetData();
+            var imgCount = 0;
+
+            for (var i = 0; i >= 0; i++) {
+                var t = $("div").find("img[id='" + [i + 1] + "']").length;
+
+                if (t == 0) {
+                    t = i;
+                    imgCount = t;
+
+                    break;
+                }
+
+            }
+            for (var i = 0; i < tablaEstudioCompl.length; i++) {
+                EstudioCompl.descEstudioCompl = tablaEstudioCompl[i][0];
+                var countImg = $("div[id='im" + [i + 1] + "']").find("img").length;
+
+                for (var j = 0; j < countImg; j++) {
+
+                    ArchivoEstudioCompl.pathArchivo = Base64.encode($("div[id='im" + [i + 1] + "'").find('img[id=' + [j + 1] + ']').attr('src'));
+                    
+                    EstudioCompl.oListArchivoEstudioCompl.push(ArchivoEstudioCompl);
+                    ArchivoEstudioCompl = { "pathArchivo": "" };
+
+                }
+                Atencion.oListEstudioCompl.push(EstudioCompl);
+                EstudioCompl = { "descEstudioCompl": "", "oListArchivoEstudioCompl": [] };
+            }
+
+            //Funcion Vital
+            Atencion.oFuncionVital.sistole = $("#sistole").val();
+            Atencion.oFuncionVital.diastole = $("#diastole").val();
+            Atencion.oFuncionVital.pulsasion = $("#pulsacion").val();
+            Atencion.oFuncionVital.ritmoRespiratorio = $("#ritmoRespiratorio").val();
+            Atencion.oFuncionVital.temperatura = $("#temperatura").val();
+            Atencion.oFuncionVital.altura = $("#altura").val();
+            Atencion.oFuncionVital.peso = $("#peso").val();
+            Atencion.oFuncionVital.imc = $("#imc").val();
+
+            //Examen Fisico
+            var tablaExamenFisico = $("#tableExamenFisico").dataTable().fnGetData();
+
+            for (var i = 0; i < tablaExamenFisico.length; i++) {
+
+                ExamenFisico.descExamenFisico = tablaExamenFisico[i][0];
+                Atencion.oListExamenFisico.push(ExamenFisico);
+                ExamenFisico = { "descExamenFisico": "" };
+            }
+
+
+
+
+            //$.ajax(
+            //{
+            //    url: '/CLlt03_atencion/CreateAtencion',
+            //    data: {
+            //        __RequestVerificationToken: gettoken(),
+            //        cLlt03_atencion: Atencion
+
+            //    },
+            //    type: 'POST',
+            //    contentType: 'application/x-www-form-urlencoded; charset=utf-8',
+            //    dataType: 'json',
+            //    success: function (result) {
+            //        if (result.Success == "1") {
+            //            window.location.href = "/CLlt03_atencion/Index";
+            //        }
+            //        else {
+            //            alert(result.ex);
+            //        }
+            //    }
+            //});
+            return Atencion;
+        }
+
+
+        //Convertir String a Byte
+        String.prototype.toBin = function () {
+            function binario(x, posi) {
+                if (posi > 0) return binario(parseInt(x / 2), posi - 1) + (x % 2).toString();
+                else return (x % 2);
+            }
+            cadena = "";
+            for (i = 0, total = this.length; i < total; i++)
+                cadena += binario(this.charCodeAt(i), 7);
+            return cadena;
+        }
+
+
+
+
+
+        //Obtener Token
+        function gettoken() {
+            var token = '@Html.AntiForgeryToken()';
+            token = $(token).val();
+            return token;
+        }
+
+        //Convertidor a Base64
+        var Base64 = {
+            // private property
+            _keyStr: "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/=",
+
+            // public method for encoding
+            encode: function (input) {
+                var output = "";
+                var chr1, chr2, chr3, enc1, enc2, enc3, enc4;
+                var i = 0;
+
+                input = Base64._utf8_encode(input);
+
+                while (i < input.length) {
+
+                    chr1 = input.charCodeAt(i++);
+                    chr2 = input.charCodeAt(i++);
+                    chr3 = input.charCodeAt(i++);
+
+                    enc1 = chr1 >> 2;
+                    enc2 = ((chr1 & 3) << 4) | (chr2 >> 4);
+                    enc3 = ((chr2 & 15) << 2) | (chr3 >> 6);
+                    enc4 = chr3 & 63;
+
+                    if (isNaN(chr2)) {
+                        enc3 = enc4 = 64;
+                    } else if (isNaN(chr3)) {
+                        enc4 = 64;
+                    }
+
+                    output = output +
+                    Base64._keyStr.charAt(enc1) + Base64._keyStr.charAt(enc2) +
+                    Base64._keyStr.charAt(enc3) + Base64._keyStr.charAt(enc4);
+
+                }
+
+                return output;
+            },
+
+            // public method for decoding
+            decode: function (input) {
+                var output = "";
+                var chr1, chr2, chr3;
+                var enc1, enc2, enc3, enc4;
+                var i = 0;
+
+                input = input.replace(/[^A-Za-z0-9\+\/\=]/g, "");
+
+                while (i < input.length) {
+
+                    enc1 = Base64._keyStr.indexOf(input.charAt(i++));
+                    enc2 = Base64._keyStr.indexOf(input.charAt(i++));
+                    enc3 = Base64._keyStr.indexOf(input.charAt(i++));
+                    enc4 = Base64._keyStr.indexOf(input.charAt(i++));
+
+                    chr1 = (enc1 << 2) | (enc2 >> 4);
+                    chr2 = ((enc2 & 15) << 4) | (enc3 >> 2);
+                    chr3 = ((enc3 & 3) << 6) | enc4;
+
+                    output = output + String.fromCharCode(chr1);
+
+                    if (enc3 != 64) {
+                        output = output + String.fromCharCode(chr2);
+                    }
+                    if (enc4 != 64) {
+                        output = output + String.fromCharCode(chr3);
+                    }
+
+                }
+
+                output = Base64._utf8_decode(output);
+
+                return output;
+
+            },
+
+            // private method for UTF-8 encoding
+            _utf8_encode: function (string) {
+                string = string.replace(/\r\n/g, "\n");
+                var utftext = "";
+
+                for (var n = 0; n < string.length; n++) {
+
+                    var c = string.charCodeAt(n);
+
+                    if (c < 128) {
+                        utftext += String.fromCharCode(c);
+                    }
+                    else if ((c > 127) && (c < 2048)) {
+                        utftext += String.fromCharCode((c >> 6) | 192);
+                        utftext += String.fromCharCode((c & 63) | 128);
+                    }
+                    else {
+                        utftext += String.fromCharCode((c >> 12) | 224);
+                        utftext += String.fromCharCode(((c >> 6) & 63) | 128);
+                        utftext += String.fromCharCode((c & 63) | 128);
+                    }
+
+                }
+
+                return utftext;
+            },
+
+            // private method for UTF-8 decoding
+            _utf8_decode: function (utftext) {
+                var string = "";
+                var i = 0;
+                var c = c1 = c2 = 0;
+
+                while (i < utftext.length) {
+
+                    c = utftext.charCodeAt(i);
+
+                    if (c < 128) {
+                        string += String.fromCharCode(c);
+                        i++;
+                    }
+                    else if ((c > 191) && (c < 224)) {
+                        c2 = utftext.charCodeAt(i + 1);
+                        string += String.fromCharCode(((c & 31) << 6) | (c2 & 63));
+                        i += 2;
+                    }
+                    else {
+                        c2 = utftext.charCodeAt(i + 1);
+                        c3 = utftext.charCodeAt(i + 2);
+                        string += String.fromCharCode(((c & 15) << 12) | ((c2 & 63) << 6) | (c3 & 63));
+                        i += 3;
+                    }
+
+                }
+                return string;
+            }
+        }
+
+
+
+        $(document).on("click", "a.fileuploader-action.fileuploader-action-remove", function (event) {
+            var imagesCount = $("img").length;
+            var id = $(this).parent("div").siblings("div#im").find("img").attr("id");
+            for (var i = 1; i > 0; i++) {
+                if (i == id) {
+                    for (var j = id; j <= imagesCount; j++) {
+                        if (id != imagesCount) {
+                            $("img[id = " + j + "]").attr("id", [j - 1]);
+                        }
+                        else {
+
+                            break;
+
+                        }
+                    }
+                    break;
+
+                }
+                else {
+                    $("img[id = " + i + "]").attr("id", i);
+                }
+
+            }
+
+
+        });
+
+        function dale()
+        {
+
+
+
+
+
+        }
+    </script>
+       
+</head>
+<body class="sidebar-mini fixed">
+
+
+
+    <!--********************************TITULO*******************************-->
+
+    <div class="page-title">
+        <div>
+            <h1><i class="fa fa-user"></i>Atención</h1>
+            <p>Atención ...!</p>
+        </div>
+        <div>
+            <ul class="breadcrumb">
+                <li><i class="fa fa-home fa-lg"></i></li>
+                <li><a href="index.html">Index</a></li>
+                <li>Atención</li>
+            </ul>
+        </div>
+    </div>
+    <!--********************************FIN TITULO*******************************-->
+    <!--***************************AQUÍ VA EL CODIGO******************************-->
+
+
+    <div class="row">
+        <!--CODIGO MODIFICAR-->
+        <div class="col-lg-12">
+            <div class="card col-lg-12">
+                <!--*********************************************AQUÍ MODIFICAR CARD***************************-->
+                <!--*********************************************CARD***************************-->
+                <!--****CITA****-->
+                <h3 class="card-title"></h3>
+
+                <div class="" id="tabs">
+                    <div class="wrapper">
+                        <div class="container">
+                            <div class="bs-example bs-example-tabs" role="tabpanel" data-example-id="togglable-tabs">
+                                <ul id="myTab" class="nav nav-tabs nav-tabs-responsive" role="tablist">
+                                    <li role="presentation" class="active">
+                                        <a href="#tab1" id="home-tab" role="tab" data-toggle="tab" aria-controls="home" aria-expanded="true">
+                                            <span class="text">Inf. Atención</span>
+                                        </a>
+                                    </li>
+                                    <li role="presentation">
+                                        <a href="#tab3" role="tab" id="samsa-tab" data-toggle="tab" aria-controls="samsa">
+                                            <span class="text">Inf. Función Vital</span>
+                                        </a>
+                                    </li>
+                                    <li role="presentation">
+                                        <a href="#tab4" role="tab" id="samsa-tab" data-toggle="tab" aria-controls="samsa">
+                                            <span class="text">Inf. Evolución</span>
+                                        </a>
+                                    </li>
+                                    <li role="presentation">
+                                        <a href="#tab5" role="tab" id="samsa-tab" data-toggle="tab" aria-controls="samsa">
+                                            <span class="text">Inf. Examen Físico</span>
+                                        </a>
+                                    </li>
+                                    <li role="presentation">
+                                        <a href="#tab6" role="tab" id="samsa-tab" data-toggle="tab" aria-controls="samsa">
+                                            <span class="text">Inf. Estudio Complementario</span>
+                                        </a>
+                                    </li>
+                                    <li role="presentation">
+                                        <a href="#tab7" role="tab" id="samsa-tab" data-toggle="tab" aria-controls="samsa">
+                                            <span class="text">Historial Medico</span>
+                                        </a>
+                                    </li>
+
+                                </ul>
+                                <form id="form-atencion" name="atencion" method="post" action="/Atencion/CreateAtencion">
+                                    <div id="myTabContent" class="tab-content">
+                                        <!--INFOBASICA-->
+                                        <div role="tabpanel" class="tab-pane fade in active" id="tab1" aria-labelledby="home-tab">
+                                            <div class="row">
+                                                <div class="col-lg-10">
+                                                    <div class="card">
+
+
+                                                        <h3>Inf. Básica</h3>
+                                                        <!--ASUNTO-->
+                                                        <div class="form-group">
+                                                            <div class="col-md-5">
+                                                                <label class="control-label">Código Atención</label>
+                                                                @Html.EditorFor(model => model.codAtencion, new { htmlAttributes = new { @class = "form-control", @disabled = "disabled", @rows = "4" } })
+                                                                @Html.ValidationMessageFor(model => model.codAtencion, "", new { @class = "text-danger" })
+                                                            </div>
+                                                        </div>
+                                                        <!--PACIENTE-->
+                                                        <div class="form-group">
+                                                            <label class="control-label">Paciente</label>
+                                                            <div class="row">
+                                                                <div class="col-md-5">
+                                                                    @Html.Editor("paciente", new { htmlAttributes = new { @class = "form-control", @disabled = "disabled" } })
+                                                                </div>
+
+                                                            </div>
+                                                        </div>
+                                                        <div class="form-group">
+                                                            <div class="col-md-5">
+                                                                <label class="control-label">Número de Documento</label>
+                                                                @Html.Editor("numDocumento", new { htmlAttributes = new { @class = "form-control", @disabled = "disabled" } })
+                                                            </div>
+                                                        </div>
+                                                        <div class="form-group">
+                                                            <label class="control-label">Número de Historia</label>
+                                                            <div class="row">
+                                                                <div class="col-md-5">
+                                                                    @Html.Editor("numHistoria", new { htmlAttributes = new { @class = "form-control", @disabled = "disabled" } })
+                                                                </div>
+
+                                                            </div>
+                                                        </div>
+                                                        @* DATOS PARA CONTROLLER *@
+                                                        <div class="form-group">
+                                                            <div class="col-md-10">
+                                                                @Html.HiddenFor(model => model.idUsuario)
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="form-group">
+
+                                                            <div class="col-md-10">
+                                                                @Html.HiddenFor(model => model.idCita)
+                                                            </div>
+                                                        </div>
+
+                                                        </br>
+                                                        </br>
+                                                        </br>
+                                                        </br>
+                                                        <!--Anamnesis-->
+                                                        <!--MEDICODETURNO-->
+
+
+
+
+
+
+
+                                                    </div>
+
+
+                                                </div>
+                                                <div class="col-md-10">
+                                                    <div class="card col-md-12">
+                                                        <h3 class="card-title">Inf. Anamnesis</h3>
+                                                        <div class="card-body">
+                                                            <div class="form-group">
+                                                                <div class="col-md-12">
+                                                                    <label class="control-label">Descripción</label>
+                                                                    @Html.TextAreaFor(model => model.oAnamnesis.descAnamnesis, new { @class = "form-control", @rows = 5, @id = "descAnamnesis", @style = "resize:none" })
+                                                                    @Html.ValidationMessageFor(model => model.oAnamnesis.descAnamnesis, "", new { @class = "text-danger" })
+                                                                </div>
+                                                            </div>
+                                                        </div>
+
+                                                    </div>
+
+
+                                                </div>
+                                                <div class="col-md-10">
+                                                    <div class="card col-md-12">
+                                                        <div class="panel-body">
+
+
+                                                            <div class="card col-md-12">
+                                                                <h3 class="card-title">Inf. Diagnostico </h3>
+                                                                <div style="text-align:center;"> @Html.ValidationMessage("diagnosticoModal", "", new { @class = "text-danger", id = "diagnosticoModal-validacion" })</div>
+                                                                <div class="card-body">
+
+
+                                                                    <div class="form-group col-md-12">
+                                                                        <label class="control-label col-md-12">CIE10</label>
+                                                                        <div class="col-md-12">
+                                                                            @Html.DropDownList("idCie10", null, htmlAttributes: new { @class = "form-control" })
+                                                                        </div>
+                                                                    </div>
+
+                                                                    <div class="form-group col-md-6">
+                                                                        <label class="control-label col-md-3">Diagnóstico</label>
+                                                                        <div class="col-md-12">
+                                                                            @Html.TextAreaFor(model => model.oDiagnostico.descDiagnostico, new { @class = "form-control", @rows = "7", @style = "resize:none", @id = "descDiagnostico" })
+                                                                            @Html.ValidationMessageFor(model => model.oDiagnostico.descDiagnostico, "", new { @class = "text-danger" })
+
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="col-md-6">
+                                                                        <label>Tratamiento</label>
+                                                                        @Html.TextAreaFor(model => model.oTratamiento.descTratamiento, new { @class = "form-control", @id = "descTratamiento", @rows = "7", @style = "resize:none" })
+                                                                        @Html.ValidationMessageFor(model => model.oTratamiento.descTratamiento, "", new { @class = "text-danger" })
+                                                                    </div>
+                                                                    <div>
+                                                                        <div class="col-md-12" style="text-align:center">
+
+                                                                            <button id="AgregarTrat" type="button" class="btn btn-success " data-target="#myModal" onclick="AbrirTratamiento()">
+                                                                                <i>
+                                                                                    Agregar Tratamiento
+                                                                                </i>
+                                                                            </button>
+
+
+                                                                        </div>
+                                                                    </div>
+
+                                                                </div>
+                                                            </div>
+
+
+                                                            <div style="text-align:center;">
+
+                                                            </div>
+                                                            <div class="modal fade" id="myModal" role="dialog">
+                                                                <div class="modal-dialog modal-lg">
+
+                                                                    <!-- Modal content-->
+                                                                    <div class="modal-content">
+                                                                        <div class="modal-header">
+                                                                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                                                            <h4 class="modal-title">Tratamiento</h4>
+                                                                        </div>
+                                                                        <div class="modal-body">
+                                                                            <div class="card col-md-12">
+                                                                                <div class="card-content">
+
+
+                                                                                    <div class="form-group col-md-5">
+                                                                                        <label class="control-label col-md-2">Indicacion</label>
+                                                                                        <div class="col-md-12">
+                                                                                            @Html.EditorFor(model => model.oTratamientoDtl.indicacionServicio, new { htmlAttributes = new { @class = "form-control", @id = "indicacionServicio" } })
+                                                                                            @Html.ValidationMessageFor(model => model.oTratamientoDtl.indicacionServicio, "", new { @class = "text-danger" })
+                                                                                        </div>
+                                                                                    </div>
+
+                                                                                    <div class="col-md-5">
+                                                                                        <label>Servicio\Producto</label>
+                                                                                        <div class="control-label">
+                                                                                            <select id="select" class="form-control">
+                                                                                                <option value="0"> Seleccionar </option>
+                                                                                                <option value="1">Servicio</option>
+                                                                                                <option value="2">Producto</option>
+                                                                                            </select>
+                                                                                        </div>
+                                                                                    </div>
+
+                                                                                    <div class="form-group col-md-10"><select id="Mostrara" class="form-control"></select></div>
+
+                                                                                    <STYLE>
+                                                                                        .invisible {
+                                                                                            display: none;
+                                                                                        }
+                                                                                    </STYLE>
+                                                                                    <div class="invisible">
+                                                                                        <label>Servicio</label>
+                                                                                        @Html.DropDownList("idServicio", null, htmlAttributes: new { @class = "form-control" })
+
+                                                                                    </div>
+                                                                                    <div class="invisible">
+                                                                                        <label>Producto</label>
+                                                                                        @Html.DropDownList("idProducto", null, htmlAttributes: new { @class = "form-control" })
+                                                                                    </div>
+                                                                                    &nbsp;&nbsp;&nbsp;
+
+                                                                                    &nbsp;&nbsp;&nbsp;
+
+                                                                                    &nbsp;&nbsp;&nbsp;
+                                                                                    &nbsp;&nbsp;&nbsp;
+                                                                                    &nbsp;&nbsp;&nbsp;
+                                                                                    &nbsp;&nbsp;&nbsp;
+                                                                                    &nbsp;&nbsp;&nbsp;
+                                                                                    &nbsp;&nbsp;&nbsp;
+                                                                                    &nbsp;&nbsp;&nbsp;
+                                                                                    &nbsp;&nbsp;&nbsp;
+                                                                                    &nbsp;&nbsp;&nbsp;
+                                                                                    &nbsp;&nbsp;&nbsp;
+                                                                                    &nbsp;&nbsp;&nbsp;
+                                                                                    <div style="text-align: center">
+                                                                                        <button type="button" class="btn btn-success" onclick="AgregarTratamiento()">Agregar </button>
+                                                                                    </div>
+
+
+
+
+
+
+                                                                                    <div class="card col-md-12">
+                                                                                        <div id="tratamiento" class="col-md-12">
+
+
+                                                                                        </div>
+                                                                                    </div>
+
+
+
+                                                                                </div>
+
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="modal-footer">
+                                                                            <div style="text-align:left;">@Html.ValidationMessage("datosTratamientodtl", "", new { @class = "text-danger", id = "datosTratamientodtl-validacion" })</div>
+                                                                            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>&nbsp;&nbsp;&nbsp;
+                                                                            <button type="button" class="btn btn-primary" onclick="AgregarDiagnosticoTratamiento()">Agregar Tratamiento </button>
+
+                                                                        </div>
+                                                                    </div>
+
+                                                                </div>
+                                                            </div>
+
+                                                            <div class="card col-md-12">
+                                                                <div class="col-md-12">
+                                                                    <table id="tableDiagnostico" class="table table-responsive table-striped table-bordered">
+                                                                        <thead style="color:#ffffff;background:#0094ff;">
+                                                                            <tr>
+                                                                                <th>ID Cie10</th>
+                                                                                <th>Cie10</th>
+                                                                                <th>Diagnostico</th>
+                                                                                <th>Tratamiento</th>
+                                                                                <th>Acciones</th>
+                                                                            </tr>
+                                                                        </thead>
+                                                                        <tbody>
+                                                                            @if (Model != null)
+                                                                            {
+                                                                                foreach (var item in Model.oListDiagnostico)
+                                                                                {
+                                                                                    <tr>
+                                                                                        <td>@Html.DisplayTextFor(i => item.idCie10) </td>
+                                                                                        <td>@Html.DisplayTextFor(i => item.descDiagnostico)</td>
+                                                                                    </tr>
+                                                                                }
+                                                                            }
+                                                                        </tbody>
+                                                                    </table>
+
+                                                                    <!-- Modal Tratamiento Detalle-->
+                                                                    <div class="modal fade" id="myModalDT" role="dialog">
+                                                                        <div class="modal-dialog modal-lg">
+
+                                                                            <!-- Modal content-->
+                                                                            <div class="modal-content">
+                                                                                <div class="modal-header">
+                                                                                    <button type="button" data-target="#myModalDT" class="close" data-dismiss="modal">&times;</button>
+                                                                                    <h4 class="modal-title">Archivos De Estudios Complementarios</h4>
+                                                                                </div>
+                                                                                <div class="modal-body">
+                                                                                    <div class="card col-md-12">
+                                                                                        <div class="card-content">
+                                                                                            <div id="tratamientosDetalle">
+
+                                                                                            </div>
+
+
+                                                                                        </div>
+
+                                                                                    </div>
+                                                                                </div>
+                                                                                <div class="modal-footer">
+
+                                                                                </div>
+                                                                            </div>
+
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+
+
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!--INFATENCIONL-->
+                                        <div role="tabpanel" class="tab-pane fade" id="tab2" aria-labelledby="profile-tab">
+                                            <div class="row">
+                                                <div class="col-lg-10">
+                                                    <div class="card">
+
+                                                        <!--FECHAREGISTRO-->
+                                                        <div class="form-group">
+                                                            <label class="control-label">Fecha de Registro</label>
+                                                            <div class="row">
+                                                                <div class="col-md-10">
+                                                                    <input class="form-control" type="datetime-local" value="2011-08-19T13:45:00" id="example-datetime-local-input" disabled>
+                                                                </div>
+                                                                <div class="col-md-2" style="text-align: right;">
+                                                                    <a class="btn btn-success icon-btn" href="create.html">
+                                                                        <i class="fa fa-fw fa-lg fa-search">
+                                                                        </i>
+                                                                    </a>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <!--MEDICODETURNO-->
+                                                        <div class="form-group">
+                                                            <label class="control-label">Médico de turno</label>
+                                                            <div class="row">
+                                                                <div class="col-md-10">
+                                                                    <select class="form-control" id="select" disabled>
+                                                                        <option value="">-- Seleccionar --</option>
+                                                                        <option value="1" selected>Dr. Pedro Lorenzo Cardenas</option>
+                                                                        <option value="3">Dr. Jose Anibal León </option>
+                                                                    </select>
+                                                                </div>
+                                                                <div class="col-md-2" style="text-align: right;">
+                                                                    <a class="btn btn-success icon-btn" href="create.html">
+                                                                        <i class="fa fa-fw fa-lg fa-search">
+                                                                        </i>
+                                                                    </a>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <!--NOTA-->
+                                                        <div class="form-group">
+                                                            <label class="control-label">Nota</label>
+                                                            <textarea class="form-control" rows="4" placeholder="Ingresar nota" disabled></textarea>
+                                                        </div>
+
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <!--INFUNCIONVITAL-->
+                                        <div role="tabpanel" class="tab-pane fade" id="tab3" aria-labelledby="dropdown1-tab">
+                                            <div class="row">
+                                                <div class="col-lg-10">
+                                                    <div class="card-content">
+
+                                                        <!--SISTOLE-->
+                                                        <div class="form-group col-md-3">
+                                                            <label class="control-label">Sistole</label>
+                                                            @Html.EditorFor(model => model.oFuncionVital.sistole, new { htmlAttributes = new { @class = "form-control", @id = "sistole" } })
+                                                        </div>
+                                                        <!--DiASTOLE-->
+                                                        <div class="form-group col-md-3">
+                                                            <label class="control-label">Diastole</label>
+                                                            @Html.EditorFor(model => model.oFuncionVital.diastole, new { htmlAttributes = new { @class = "form-control", @id = "diastole" } })
+                                                        </div>
+                                                        <!--PULSACIÓN-->
+                                                        <div class="form-group col-md-3">
+                                                            <label class="control-label">Pulsación</label>
+                                                            @Html.EditorFor(model => model.oFuncionVital.pulsacion, new { htmlAttributes = new { @class = "form-control", @id = "pulsacion" } })
+                                                        </div>
+                                                        <!--RITMORESPIRATORIO-->
+                                                        <div class="form-group col-md-3">
+                                                            <label class="control-label">Ritmo Respiratorio</label>
+                                                            @Html.EditorFor(model => model.oFuncionVital.ritmoRespiratorio, new { htmlAttributes = new { @class = "form-control", @id = "ritmoRespiratorio" } })
+                                                        </div>
+                                                        <!--TEMPERATURA-->
+                                                        <div class="form-group col-md-3">
+                                                            <label class="control-label">Temperatura</label>
+                                                            @Html.EditorFor(model => model.oFuncionVital.temperatura, new { htmlAttributes = new { @class = "form-control", @id = "temperatura" } })
+                                                        </div>
+                                                        <!--ALTURA-->
+                                                        <div class="form-group col-md-3">
+                                                            <label class="control-label">Atura</label>
+                                                            @Html.EditorFor(model => model.oFuncionVital.altura, new { htmlAttributes = new { @class = "form-control", @id = "altura" } })
+                                                        </div>
+                                                        <!--PESO-->
+                                                        <div class="form-group col-md-3">
+                                                            <label class="control-label">Peso</label>
+                                                            @Html.EditorFor(model => model.oFuncionVital.peso, new { htmlAttributes = new { @class = "form-control", @id = "peso" } })
+                                                        </div>
+                                                        <!--IMC-->
+                                                        <div class="form-group col-md-3">
+                                                            <label class="control-label">IMC</label>
+                                                            @Html.EditorFor(model => model.oFuncionVital.imc, new { htmlAttributes = new { @class = "form-control", @id = "imc" } })
+                                                        </div>
+                                                        <!--FECHAREGISTRO-->
+
+
+
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <!--EVOLUCION-->
+                                        <div role="tabpanel" class="tab-pane fade" id="tab4" aria-labelledby="dropdown1-tab">
+                                            <div class="row">
+                                                <div class="col-lg-10">
+                                                    <div class="card">
+
+                                                        <!--DESCRIPCCION-->
+                                                        <div class="form-group">
+                                                            <label class="control-label">Descripción</label>
+                                                            @Html.TextAreaFor(model => model.oEvolucion.descEvolucion, new { @class = "form-control", @rows = "6", @style = "resize:none", @id = "descEvolucion" })
+                                                            @Html.ValidationMessageFor(model => model.oEvolucion.descEvolucion, "", new { @class = "text-danger" })
+
+                                                        </div>
+                                                        <div class="form-group" style="">
+                                                            <label class="control-label col-lg-12">Estado</label>
+                                                            <div class="row">
+                                                                <div class="col-md-10">
+                                                                    <div class="animated-radio-button">
+                                                                        <!--PESIMO-->
+                                                                        <label>
+                                                                            <input id="1" type="radio" name="optionsRadios" value="Pésimo"><span class="label-text">Pésimo</span>
+                                                                        </label>
+                                                                        <label for="" style="width: 30px;"></label>
+                                                                        <!--MALO-->
+                                                                        <label>
+                                                                            <input id="2" type="radio" name="optionsRadios" value="Malo"><span class="label-text">Malo</span>
+                                                                        </label>
+                                                                        <label for="" style="width: 30px;"></label>
+                                                                        <!--REGULAR-->
+                                                                        <label>
+                                                                            <input id="3" type="radio" name="optionsRadios" value="Regular" checked="checked"><span class="label-text">Regular</span>
+                                                                        </label>
+                                                                        <label for="" style="width: 30px;"></label>
+                                                                        <!--BUENO-->
+                                                                        <label>
+                                                                            <input id="4" type="radio" name="optionsRadios" value="Bueno"><span class="label-text">Bueno</span>
+                                                                        </label>
+                                                                        <label for="" style="width: 30px;"></label>
+                                                                        <!--EXCELENTE-->
+                                                                        <label>
+                                                                            <input id="5" type="radio" name="optionsRadios" value="Excelente"><span class="label-text">Excelente</span>
+                                                                        </label>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div style="text-align:right">
+                                                            <input type="button" class="btn btn-success" value="Agregar Evolucion" onclick="AgregarEvolucion()" />
+                                                        </div>
+                                                        @Html.ValidationMessage("datosEvolucion", "", new { @class = "text-danger", id = "datosEvolucion-validacion" })
+
+                                                        </br>
+                                                        </br>
+                                                        </br>
+
+                                                        <table id="tableEvolucion" style="width:100%" class="table table-responsive table-striped table-bordered">
+                                                            <thead style="color:#ffffff;background:#0094ff;">
+                                                                <tr>
+                                                                    <th>Evolucion</th>
+                                                                    <th></th>
+                                                                    <th>Condicion</th>
+                                                                    <th>Eliminar</th>
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody>
+                                                                @if (Model != null)
+                                                                {
+                                                                    foreach (var item in Model.oListEvolucion)
+                                                                    {
+                                                                        <tr>
+                                                                            <td>@Html.DisplayTextFor(i => item.descEvolucion)</td>
+                                                                        </tr>
+                                                                    }
+                                                                }
+                                                            </tbody>
+                                                        </table>
+
+
+
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <!--EXAMENFISICO-->
+                                        <div role="tabpanel" class="tab-pane fade" id="tab5" aria-labelledby="dropdown1-tab">
+                                            <div class="row">
+                                                <div class="col-lg-10">
+                                                    <div class="card">
+
+                                                        <!--DESCRIPCCION-->
+                                                        <div class="form-group">
+                                                            <label class="control-label">Descripción</label>
+
+                                                            @Html.TextAreaFor(model => model.oExamenFisico.descExamenFisico, new { @class = "form-control", @rows = "6", @style = "resize:none", @id = "descExamenFisico" })
+                                                            @Html.ValidationMessageFor(model => model.oExamenFisico.descExamenFisico, "", new { @class = "text-danger" })
+                                                        </div>
+                                                        <div style="text-align:right">
+                                                            <input type="button" class="btn btn-success" value="Agregar Examen Fisico" onclick="AgregarExamenFisico()" />
+                                                        </div>
+                                                        @Html.ValidationMessage("datosExamenFisico", "", new { @class = "text-danger", id = "datosExamenFisico-validacion" })
+                                                        </br>
+                                                        </br>
+                                                        </br>
+                                                        <table id="tableExamenFisico" class="table table-responsive table-striped table-bordered">
+                                                            <thead style="color:#ffffff;background:#0094ff;">
+                                                                <tr>
+                                                                    <th>Examen Fisico</th>
+                                                                    <th>Eliminar</th>
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody>
+                                                                @if (Model != null)
+                                                                {
+                                                                    foreach (var item in Model.oListExamenFisico)
+                                                                    {
+                                                                        <tr>
+                                                                            <td>@Html.DisplayTextFor(i => item.descExamenFisico)</td>
+                                                                        </tr>
+                                                                    }
+                                                                }
+                                                            </tbody>
+                                                        </table>
+
+
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+
+                                        <!--Estudio Complementario-->
+                                        <div role="tabpanel" class="tab-pane fade" id="tab6" aria-labelledby="dropdown1-tab">
+                                            <div class="row">
+                                                <div class="col-lg-10">
+                                                    <div class="card">
+
+                                                        <!--Desc EstudioComplementario-->
+                                                        <div class="form-group">
+                                                            <label class="control-label">Descripción</label>
+                                                            @Html.TextAreaFor(model => model.oExamenFisico.descExamenFisico, new { @class = "form-control", @rows = "6", @style = "resize:none", @id = "descEstudioCompl" })
+                                                            @Html.ValidationMessageFor(model => model.oExamenFisico.descExamenFisico, "", new { @class = "text-danger" })
+                                                        </div>
+                                                        <!--Abrir Modal Estudio Complementario-->
+                                                        <div class="col-md-12">
+                                                            <div style="text-align:right">
+                                                                <button id="AgregarEC" type="button" onclick="AbrirArchivo()" class="btn btn-success " data-target="#myModalEC">
+                                                                    <i class="fa fa-fw fa-lg fa-plus">
+                                                                    </i>
+                                                                </button>
+                                                            </div>
+
+                                                        </div>
+
+                                                        @Html.ValidationMessage("datosEstudioCompl", "", new { @class = "text-danger", id = "datosEstudioCompl-validacion" })
+                                                        </br>
+                                                        </br>
+                                                        </br>
+
+
+
+
+                                                        <table id="tableEstudioCompl" class="table table-responsive table-striped table-bordered">
+                                                            <thead style="color:#ffffff;background:#0094ff;">
+                                                                <tr>
+                                                                    <th>Estudio Complementario</th>
+                                                                    <th>Eliminar</th>
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody>
+                                                                @if (Model != null)
+                                                                {
+                                                                    foreach (var item in Model.oListEstudioCompl)
+                                                                    {
+                                                                        <tr>
+                                                                            <td>@Html.DisplayTextFor(i => item.descEstudioCompl)</td>
+                                                                        </tr>
+                                                                    }
+                                                                }
+                                                            </tbody>
+                                                        </table>
+
+
+
+
+
+                                                        <!-- Modal Estudio Complementario-->
+                                                        <div class="modal fade" id="myModalEC" role="dialog">
+                                                            <div class="modal-dialog modal-lg">
+
+                                                                <!-- Modal content-->
+                                                                <div class="modal-content">
+                                                                    <div class="modal-header">
+                                                                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                                                        <h4 class="modal-title">Archivos De Estudios Complementarios</h4>
+                                                                    </div>
+                                                                    <div class="modal-body">
+                                                                        <div class="card col-md-12">
+                                                                            <div class="card-content">
+                                                                                <div id="archivos">
+
+                                                                                </div>
+
+
+                                                                            </div>
+
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="modal-footer">
+                                                                        @Html.ValidationMessage("datosArchivoEstudioCompl", "", new { @class = "text-danger", id = "datosArchivoEstudioCompl-validacion" })
+                                                                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>&nbsp;&nbsp;&nbsp;
+                                                                        <button type="button" class="btn btn-primary" id="archivosEC" onclick="AgregarEstudioCompl()">Agregar Archivos </button>
+
+                                                                    </div>
+                                                                </div>
+
+                                                            </div>
+                                                        </div>
+
+
+                                                        <!-- Modal Detalle Estudio Complementario-->
+                                                        <div class="modal fade" id="myModalDEC" role="dialog">
+                                                            <div class="modal-dialog modal-lg">
+
+                                                                <!-- Modal content-->
+                                                                <div class="modal-content">
+                                                                    <div class="modal-header">
+                                                                        <button type="button" data-target="#myModalDEC" class="close" data-dismiss="modal">&times;</button>
+                                                                        <h4 class="modal-title">Archivos De Estudios Complementarios</h4>
+                                                                    </div>
+                                                                    <div class="modal-body">
+                                                                        <div class="card col-md-12">
+                                                                            <div class="card-content">
+                                                                                <div id="imagenes">
+
+                                                                                </div>
+
+
+                                                                            </div>
+
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="modal-footer">
+
+                                                                    </div>
+                                                                </div>
+
+                                                            </div>
+                                                        </div>
+
+
+
+
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div role="tabpanel" class="tab-pane fade" id="tab7" aria-labelledby="dropdown1-tab">
+                                            <div class="row">
+                                                <div class="col-lg-10">
+                                                    <div class="card-content">
+
+                                                        <table id="tableAtenciones" style="width:100%" class="table">
+                                                            <thead>
+                                                                <tr>
+                                                                    <th>
+                                                                        Fecha
+                                                                    </th>
+                                                                    <th>Acciones</th>
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody>
+
+                                                                @foreach (var item in Model.oListAtencion)
+                                                                {
+                                                                    <tr>
+                                                                        <td>
+                                                                            @Html.DisplayFor(modelItem => item.fecRegistro)
+                                                                        </td>
+                                                                        <td>
+                                                                            <a data-toggle="Quick" id="ramon" value="Ver Atencion" href="/Atencion/obtenerAtencion/@item.idAtencion">Ver Atencion</a>
+                                                                            @*@Html.ActionLink("Ver Atencion", "obtenerAtencion", new { id = item.idAtencion });*@
+                                                                        </td>
+                                                                    </tr>
+                                                                }
+                                                            </tbody>
+                                                        </table>
+
+                                                    </div>
+</div>
+                                                </div>
+                                            </div>
+
+
+
+
+
+                                                    <!--INFOARCHIVOCOMPL1-->
+                                                    <!--INFOARCHIVOCOMPL2-->
+
+
+
+                                                    <div class="card" style="text-align: center;">
+                                                        <div class="card-body">
+
+                                                            <div class="row">
+                                                                <div class="col-lg-10">
+                                                                    <input type="submit" id="aten" value="Create" class="btn btn-default" />
+
+                                                                    <div style="text-align:center;"> @Html.ValidationMessage("diagnostico-tratamiento", "", new { @class = "text-danger", id = "diagnostico-tratamiento-validacion" })</div>
+                                                                </div>
+                                                            </div>
+
+                                                        </div>
+                                                    </div>
+                                        </div>
+</form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+    <!--***FINCITA***-->
+    <!-- **********STARTCONFIRMATION********** -->
+    <!-- **********ENDCONFIRMATION********** -->
+    <!--*******************************************FIN***********************************-->
+    <!--FIN DE MODIFICAR-->
+    <!-- Javascripts-->
+
+
+
+
+</body>
+</html>

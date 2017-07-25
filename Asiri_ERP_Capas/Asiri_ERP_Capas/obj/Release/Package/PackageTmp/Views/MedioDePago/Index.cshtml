@@ -1,0 +1,251 @@
+﻿@model IEnumerable<Common.MSTt01_medioDePago>
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- CSS-->
+    <link rel="stylesheet" type="text/css" href="~/Content/css/main.css">
+    <title>Clinica MagicDent</title>
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries-->
+    <!--if lt IE 9
+    script(src='https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js')
+    script(src='https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js')
+    -->
+    <style>
+        .borde1 {
+            border: 1px #000 solid;
+            text-align: center;
+        }
+
+        .borde {
+            border: 1px #000fff solid;
+        }
+
+        .borde2 {
+            border: 1px #295ba7 solid;
+            text-align: center;
+        }
+
+        .action {
+            float: right;
+        }
+    </style>
+</head>
+<body class="sidebar-mini fixed">
+    <!--********************************TITULO*******************************-->
+    <div class="page-title">
+        <div>
+            <h1><i class="fa fa-edit"></i> Mantenimiento de Medio De Pago</h1>
+            <p>Lista de Medios De Pago ...!</p>
+        </div>
+        <div>
+            <ul class="breadcrumb">
+                <li><i class="fa fa-home fa-lg"></i></li>
+                <li>Maestro</li>
+                <li><a href="#">Lista Medios De Pago</a></li>
+            </ul>
+        </div>
+    </div>
+    <!--********************************FIN TITULO*******************************-->
+    <!--AQUÍ VA EL CODIGO-->
+    <div class="row">
+        <div class="col-md-12">
+            <!--CODIGO MODIFICAR-->
+            <div class="card">
+                <!--*********************************************AQUÍ MODIFICAR CARD***************************-->
+                <!--*********************************************CARD***************************-->
+                <!--CONTAINER TITLE-->
+                <div class="container" id="MantenimientoEmpleado">
+                    <!--NOMBRE DE MANTENIMIENTO-->
+                    <h3 style="display:inline-block;" class="header-title"><i class="glyphicon glyphicon-cog"></i></h3>
+                </div>
+                <!--ACTIONS-->
+                <div class="card-title-w-btn ">
+                    <!--NEW PATIENT-->
+                    <div class="bs-component">
+                        <div>
+                            <a class="btn btn-info icon-btn" href="@Url.Action("Create")">
+                                <i class="fa fa-fw fa-lg fa-user-plus"></i>Nuevo Medio De Pago
+                            </a>
+                        </div>
+                    </div>
+                    <!--EXPORT-->
+                    <div class="btn-group">
+                        <a class="btn btn-primary dropdown-toggle" href="#" data-toggle="dropdown"><i class="fa fa-fw fa-lg fa-cloud-download"></i>Exportar <span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">PDF</a></li>
+                            <li><a href="#">Excel</a></li>
+                            <li><a href="#">Otro</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <hr>
+
+                <!--***************TABLE*************-->
+                <div class="card-body table-responsive">
+                    <table class="table table-hover table-bordered " id="sampleTable">
+                        <thead style="color:#ffffff;background:#0094ff;">
+                            <tr>
+                                <th class="col-md-1">
+                                    @Html.DisplayNameFor(model => model.SNTt05_tipoMedioDePago.descTipoMedioDePago)
+                                </th>
+                                <th>
+                                    @Html.DisplayNameFor(model => model.desMedioDePago)
+                                </th>
+                                <th>
+                                    @Html.DisplayNameFor(model => model.abrvMedioDePago)
+                                </th>
+                                <th>
+                                    @Html.DisplayNameFor(model => model.activo)
+                                </th>
+                                <th>
+                                    @Html.Label("Acciones")
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach (var item in Model)
+                            {
+                                <tr>
+                                    <td class="col-md-1">
+                                        @Html.DisplayFor(modelItem => item.SNTt05_tipoMedioDePago.descTipoMedioDePago)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.desMedioDePago)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.abrvMedioDePago)
+                                    </td>
+                                    <td>
+                                        @if (item.activo == true)
+                                        {
+                                            <div class="col-md-12" style="text-align: center;">
+                                                <a class="btn btn-success btn-flat"><i class="fa fa-lg fa-thumbs-o-up"></i></a>
+                                            </div>
+                                        }
+                                        else
+                                        {
+                                            <div class="col-md-12" style="text-align: center;">
+                                                <a class="btn btn-danger btn-flat"><i class="fa fa-lg fa-thumbs-o-down"></i></a>
+                                            </div>
+                                        }
+                                    </td>
+                                    <td>
+                                        <div class="col-md-12" style="text-align: center;">
+                                            <div class="col-md-4" style="text-align: center;">
+                                                <a data-id="@item.idMedioDePago" data-tipo="@item.SNTt05_tipoMedioDePago.descTipoMedioDePago" data-desc="@item.desMedioDePago" data-abrv="@item.abrvMedioDePago" data-activo="@item.activo" data-registro="@item.fecRegistro" data-userid="@item.idUsuario" class="detalleMedioDePago btn btn-success btn-flat"><i class="fa fa-search-plus"></i></a>
+                                            </div>
+                                            <div class="col-md-4" style="text-align: center;">
+                                                <a class="btn btn-warning btn-flat" href="@Url.Action("Edit", new { id=item.idMedioDePago })"><i class="fa fa-lg fa-edit"></i></a>
+                                            </div>
+                                            <div class="col-md-4" style="text-align: center;">
+                                                <a class="btn btn-danger btn-flat" href="@Url.Action("Delete", new { id = item.idMedioDePago })"><i class="fa fa-lg fa-trash"></i></a>
+                                            </div>
+                                        </div>
+                                    </td>
+                                </tr>
+                            }
+                        </tbody>
+                    </table>
+
+                    <!-- Modal Detalle Modal-->
+                    <div class="modal fade" id="detalleModal" role="dialog">
+                        <div class="modal-dialog modal-lg">
+
+                            <!-- Modal content-->
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <button type="button" data-target="#detalleModal" class="close" data-dismiss="modal">&times;</button>
+                                    <h3 class="modal-title"></h3>
+                                </div>
+                                <div class="modal-body">
+                                    <div class="card col-md-12" style="justify-content:center">
+                                        <div class="card-content">
+                                            <div id="medioPago">
+                                                <div class="row col-md-12">
+                                                    <h4 class="col-md-6">Tipo Medio de Pago:</h4>
+                                                    <h4 class="col-md-6" id="tipoModal"></h4>
+                                                </div>
+                                                <div class="row col-md-12">
+                                                    <h4 class="col-md-6">Descripcion:</h4>
+                                                    <h4 class="col-md-6" id="descModal"></h4>
+                                                </div>
+                                                <div class="row col-md-12">
+                                                    <h4 class="col-md-6">Abreviatura:</h4>
+                                                    <h4 class="col-md-6" id="abrvModal"></h4>
+                                                </div>
+                                                <div class="row col-md-12">
+                                                    <h4 class="col-md-6">Activo:</h4>
+                                                    <h4 class="col-md-6" id="activoModal"></h4>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="modal-footer">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!--******************TABLE***********-->
+                <!--*******************************************FIN***********************************-->
+            </div>
+        </div>
+        <!--FIN DE MODIFICAR-->
+    </div>
+
+
+    <script type="text/javascript">
+    //$('#sampleTable').DataTable();
+
+        $(document).ready(function () {
+            $('#sampleTable').dataTable({
+
+                language: {
+                    processing: "En curso...",
+                    search: "Buscar:",
+                    lengthMenu: "Visualizar _MENU_ registros",
+                    info: "_START_ de _END_ registros de un total de _TOTAL_ registros",
+                    infoEmpty: "0 registros encontrados",
+                    infoFiltered: "(_MAX_ registros filtrados en total)",
+                    infoPostFix: "",
+                    loadingRecords: "Cargando registros...",
+                    zeroRecords: "No hay registros",
+                    emptyTable: "Vacío",
+                    paginate: {
+                        first: "Primero",
+                        previous: "Previo  ",
+                        next: "  Siguiente",
+                        last: "Último"
+                    },
+                    aria: {
+                        sortAscending: ": Habilitado para ordenar la columna en orden ascendente",
+                        sortDescending: ": Habilitado para ordenar la columna en orden descendente"
+                    }
+                }
+            });
+
+            $(".detalleMedioDePago").on("click", function () {
+                var id = $(this).attr("data-id");
+                var des = $(this).attr("data-desc");
+                var estado = $(this).attr("data-activo");
+                var abrv = $(this).attr("data-abrv");
+                var tipo = $(this).attr("data-tipo");
+
+                $(".modal-title").text("Código del Tipo de Medio de Pago " + id);
+                $("#descModal").text(des);
+                $("#activoModal").text(estado);
+                $("#tipoModal").text(tipo);
+                $("#abrvModal").text(abrv);
+                $("#detalleModal").modal("show");
+            });
+        });
+    </script>
+</body>
+</html>
+

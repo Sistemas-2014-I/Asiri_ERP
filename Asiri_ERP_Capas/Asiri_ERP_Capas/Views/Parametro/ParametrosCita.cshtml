@@ -1,0 +1,130 @@
+﻿    @model Common.SISt01_parametro
+
+@{
+    ViewBag.Title = "ParametrosCita";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<div class="row">
+    <div class="col-md-12">
+        <div class="card">
+            <div class="" id="tabs">
+                <div class="wrapper">
+                    <div class="container">
+                        <div class="bs-example bs-example-tabs" role="tabpanel" data-example-id="togglable-tabs">
+                            <ul id="myTab" class="nav nav-tabs nav-tabs-responsive" role="tablist">
+                                <li role="presentation" class="active">
+                                    <a href="#tab1" id="home-tab" role="tab" data-toggle="tab" aria-controls="home" aria-expanded="true">
+                                        <span class="text">Parametros para cita</span>
+                                    </a>
+                                </li>
+
+                            </ul>
+
+                            <div id="myTabContent" class="tab-content col-md-10">
+                                <!--INFOBASICA-->
+                                <div role="tabpanel" class="tab-pane fade in active" id="tab1" aria-labelledby="home-tab">
+
+                                    <div class="col-md-6">
+                                        <form id="form-citaxDia" name="citaxDia" method="post" action="/Parametro/CitaxDia">
+                                            @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+                                            <div class="col-md-12">
+                                                <div class="col-md-12">
+                                                    <h3>Número máximo de citas por dia</h3>
+                                                </div>
+                                                <div class="col-md-12">
+                                                    <label>
+                                                        Valor Actual de N° máximo de citas por día:   @Html.Display("valorActualCita")
+                                                    </label>
+
+
+
+
+
+                                                </div>
+                                                <div class="form-group">
+                                                    <div class="col-md-12">
+                                                        @Html.EditorFor(model => model.valorNumerico, new { htmlAttributes = new { @class = "form-control col-md-4", @placeholder = "Ingrese nuevo valor" } })
+                                                        @Html.ValidationMessageFor(model => model.valorNumerico, "", new { @class = "text-danger", @id = "valorNumerico" })
+                                                    </div>
+                                                </div>
+                                                <div class="form-group">
+                                                    <div class="col-md-12" style="padding-top:10px;">
+                                                        <input type="submit" value="Actualizar" class="btn btn-default" />
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <form id="form-reprogramacionxCita" name="reprogramacionxCita" method="post" action="/Parametro/ReprogramacionxCita">
+                                            @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+                                            <div class="col-md-12">
+                                                <div class="col-md-12">
+                                                    <h3>Número máximo de reprogramaciones por cita</h3>
+                                                </div>
+                                                <div class="col-md-12">
+                                                    <label>
+                                                        Valor Actual de N° de reprogramaciones por cita:   @Html.Display("valorActualReprogramacion")
+                                                    </label>
+
+
+
+                                                    <div class="form-group">
+                                                        <div class="col-md-12">
+                                                            @Html.EditorFor(model => model.valorNumerico, new { htmlAttributes = new { @class = "form-control col-md-4", @placeholder = "Ingrese nuevo valor" } })
+                                                            @Html.ValidationMessageFor(model => model.valorNumerico, "", new { @class = "text-danger" })
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="form-group">
+
+                                                        <div class="col-md-12" style="padding-top:10px;">
+                                                            <input type="submit" value="Actualizar" class="btn btn-default" />
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <form id="form-horafinLaboral" name="horafinLaboral" method="post" action="/Parametro/HorafinLaboral">
+                                            @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+                                            <div class="col-md-12">
+                                                <div class="col-md-12">
+                                                    <h3>Hora final del dia laboral</h3>
+
+
+                                                    <label>
+                                                        Hora final actual del día:   @Html.Display("horaActualxDia")
+                                                    </label>
+                                                </div>
+
+                                                <div class="form-group">
+                                                    <div class="col-md-12">
+                                                        @Html.EditorFor(model => model.valorDeTexto, new { htmlAttributes = new { @class = "form-control col-md-4", @placeholder = "Ingrese nuevo valor" } })
+                                                        @Html.ValidationMessageFor(model => model.valorDeTexto, "", new { @class = "text-danger" })
+                                                    </div>
+                                                </div>
+
+                                                <div class="form-group">
+
+                                                    <div class="col-md-12" style="padding-top:10px;">
+                                                        <input type="submit" value="Actualizar" class="btn btn-default" />
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                                
+                            </div>
+
+
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

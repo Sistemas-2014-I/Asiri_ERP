@@ -1,0 +1,15 @@
+﻿
+@{
+    ViewBag.Title = "ReporteComprobante";
+}
+
+<h2>ReporteComprobante</h2>
+@using (Html.BeginForm("RepComprobante", "Reportes"))
+{
+    <h2>Reporte Comprobante</h2>
+    <label>N° Comprobante: </label>
+    <input type="text" id="txtDato" name="txtDato" class="dtp" />
+    <br />
+    <input type="submit" value="Reporte" onclick="return validar();" />
+}
+

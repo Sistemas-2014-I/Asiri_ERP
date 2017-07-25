@@ -1,0 +1,356 @@
+﻿@model Common.View.ViewModel.ComprobanteVM
+@using Common.Helper
+@using Newtonsoft.Json
+
+@{
+    ViewBag.Title = "Crear";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    var descMedioDePagoRapido = ViewBag.descMedioDePagoRapido;
+    var idMedioDePagoRapido = ViewBag.idMedioDePagoRapido;
+    var hola = ViewBag.hola;
+}
+
+<style>
+    .form-control {
+        padding: 6px 10px;
+    }
+
+    div.padd {
+        margin-left: 15px;
+        margin-right: 15px;
+    }
+
+.in-90 {
+    max-width: 90%;
+}
+</style>
+<div class="page-title">
+    <div>
+        <h1><i class="fa fa-file-text"></i> Crear nuevo comprobante</h1>
+        <p>Genere sus facturas, boletas y demás...</p>
+    </div>
+    <div>
+        <ul class="breadcrumb">
+            <li><a href="@Url.Action("Index","Home")"><i class="fa fa-home fa-lg"></i></a></li>
+            <li><a href="@Url.Action("Index")">Lista de comprobantes</a></li>
+            <li>Crear Comprobante</li>
+        </ul>
+    </div>
+</div>
+
+<div class="row">
+    <div class="card">
+        <div class="card-body">
+            @using (Html.BeginForm("Create", "Comprobante", FormMethod.Post, new { id = "form-create-comp" }))
+            {
+                @Html.AntiForgeryToken()
+
+       <!--FORMULARIO-->
+                <div class="form-horizontal">
+
+                    @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+
+                    <ul class="nav nav-tabs" role="tablist">
+                        <li role="presentation" class="active">
+                            <a href="#comp-main" aria-controls="tab-comp-main" role="tab" data-toggle="tab">Principal</a>
+                        </li>
+                        <li role="presentation">
+                            <a href="#comp-extra" aria-controls="tab-comp-extra" role="tab" data-toggle="tab">Extra</a>
+                        </li>
+                    </ul>
+                    <div class="tab-content">
+                        <div id="comp-main" role="tabpanel" class="tab-pane fade in active">
+
+
+                            <br />
+                            <div class="col-md-8">
+
+                                <div class="col-md-4 np">
+                                    <p class="subt">DATOS DEL CLIENTE</p>
+                                    <dl>
+                                        <dt>Apellidos y nombres: </dt>
+                                        @if (Model.tipoPersoneria == ValuesSystem.PersonaNatural)
+                                        {
+                                            <dd>
+                                                @Model.GetNombrePaciente()
+                                            </dd>
+                                        }
+                                        else if (Model.tipoPersoneria == ValuesSystem.PersonaJuridica)
+                                        {
+                                            <dd>@Model.nombreRepresentante</dd>
+                                        }
+                                        else
+                                        {
+                                            <dd>Tipo de personería incorrecto - ERRORx001</dd>
+                                        }
+                                        <dt>@Model.tipoDoc:</dt>
+                                        <dd>@Model.numDoc</dd>
+
+                                        <dt>Razón Social:</dt>
+                                        <dd>@(Model.razonSocial ?? "NINGUNO")</dd>
+
+                                    </dl>
+                                </div>
+
+                                <div class="col-md-4 np">
+                                    <p class="subt">CITA COD: @Model.codCita</p>
+                                    <dl>
+                                        <dt>Doctor:</dt>
+                                        <dd>
+                                            @Model.GetNombreDoctor()
+                                        </dd>
+                                        <dt>Fecha y hora:</dt>
+                                        <dd>@Model.fecHoraInicioCita</dd>
+                                        <dt>Consultorio - Piso:</dt>
+                                        <dd>@Model.consultorio - @Model.piso</dd>
+
+
+                                    </dl>
+                                </div>
+
+                                <div class="col-md-4 np">
+                                    <p class="subt">COMPROBANTE Y SURCURSAL</p>
+                                    <label class="control-label">Tipo Comprobante: </label>
+
+                                    @Html.DropDownListFor(model => model.idTipoComprobante, (SelectList)ViewBag.idTipoComprobante, htmlAttributes: new { @class = "form-control" })
+                                    @Html.ValidationMessageFor(model => model.idTipoComprobante, "", new { @class = "text-danger" })
+
+
+                                    <label class="control-label">Sucursal: </label>
+                                    @Html.DropDownListFor(model => model.idSucursal, (SelectList)ViewBag.idSucursal, htmlAttributes: new { @class = "form-control" })
+                                    @Html.ValidationMessageFor(model => model.idSucursal, "", new { @class = "text-danger" })
+                                </div>
+
+                                <div class="col-md-12 np">
+                                    <p class="subt">SERVICIOS PRESTADOS</p>
+                                    <div class="table-responsive">
+                                        <table class="table table-condensed table-bordered table-hover">
+                                            <thead>
+                                                <tr>
+                                                    <th class="bg-primary">Cantidad</th>
+                                                    <th class="bg-primary">Servicio</th>
+                                                    <th class="bg-primary">Precio</th>
+                                                    <th class="bg-primary">Importe</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                @foreach (var item in Model.ComprobanteDtl)
+                                                {
+                                                    <tr>
+                                                        <td class="text-right">@item.cantidad.RoundOut(2)</td>
+                                                        <td>@item.nombreServicio</td>
+                                                        <td class="text-right">@Model.simboloMoneda @item.precio.RoundOut(2)</td>
+                                                        <td class="text-right">@Model.simboloMoneda @((item.cantidad * item.precio).RoundOut(2))</td>
+                                                    </tr>
+                                                }
+                                            </tbody>
+
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+
+
+
+                            <div class="col-md-4" style="padding-left:15px;">
+                                <p class="subt">MONTOS  EN @Model.nombreMoneda</p>
+
+                                <label class="control-label">Subtotal:</label>
+                                <div class="input-group">
+                                    <span class="input-group-addon addon-transparent">@Model.simboloMoneda</span>
+                                    <input id="mtoSubtotal" class="form-control font-md text-right" name="mtoSubtotal" type="number" value="@Model.mtoSubTotal.RoundOut(2)" />
+                                </div>
+
+                                <label class="control-label">@Model.abrvImpto (@Model.porcentajeImpto.RemoveTrailingZeros() %):</label>
+                                <div class="input-group">
+                                    <span class="input-group-addon addon-transparent">@Model.simboloMoneda</span>
+                                    <input id="mtoImpto" name="mtoImpto" class="form-control font-md text-right" type="number" value="@Model.mtoImpto.RoundOut(2)" />
+                                </div>
+                                <label class="control-label">Descuento:</label>
+                                <div class="input-group">
+                                    <span class="input-group-addon addon-transparent">@Model.simboloMoneda</span>
+                                    @Html.EditorFor(model => model.mtoDescuento, new { htmlAttributes = new { @class = "form-control font-md text-right", placeholder = "Monto", Value = "" } })
+
+
+                                    <span class="input-group-addon addon-transparent">%</span>
+                                    @Html.EditorFor(model => model.porcentajeDescuento, new { htmlAttributes = new { @class = "form-control font-md text-right", placeholder = "Porcentaje", Value = "" } })
+                                </div>
+                                <span id="valMtoDescuento" class="error text-danger hidden"></span>
+                                <span id="valPorcentajeDescuento" class="error text-danger hidden"></span>
+
+                                <label class="control-label">Total:</label>
+                                <div class="input-group " style="padding-bottom:10px;">
+                                    <span class="input-group-addon addon-transparent">@Model.simboloMoneda</span>
+                                    <input id="mtoTotal" name="mtoTotal" type="number" class="form-control font-lg text-right" style="background:#eefaff;" value="@Model.mtoTotal.RoundOut(2)" />
+
+                                </div>
+                                <p id="div-val-create"><span id="val-create" class="text-danger"></span></p>
+                            </div>
+
+                        </div>
+                        <div id="comp-extra" role="tabpanel" class="tab-pane fade">
+                            <br />
+                            <div class="row" style="margin-left:7%">
+                                <div class="col-md-12">
+                                    <div class="form-group col-md-6 padd">
+                                        <label class="control-label">Info. 01:</label>
+                                        @Html.EditorFor(model => model.info01, new { htmlAttributes = new { @class = "form-control in-90" } })
+                                        @Html.ValidationMessageFor(model => model.info01, "", new { @class = "text-danger" })
+                                    </div>
+                                    <div class="form-group col-md-6 padd">
+                                        <label class="control-label">Fecha 01:</label>
+                                        @Html.EditorFor(model => model.fecha01, new { htmlAttributes = new { @class = "form-control in-90", @readonly = "readonly" } })
+                                        @Html.ValidationMessageFor(model => model.fecha01, "", new { @class = "text-danger" })
+                                    </div>
+
+                                    <div class="form-group col-md-6 padd">
+                                        <label class="control-label">Info. 02:</label>
+
+                                        @Html.EditorFor(model => model.info02, new { htmlAttributes = new { @class = "form-control in-90" } })
+                                        @Html.ValidationMessageFor(model => model.info02, "", new { @class = "text-danger" })
+
+                                    </div>
+                                    <div class="form-group col-md-6 padd">
+                                        <label class="control-label">Fecha 02:</label>
+
+                                        @Html.EditorFor(model => model.fecha02, new { htmlAttributes = new { @class = "form-control in-90", @readonly = "readonly" } })
+                                        @Html.ValidationMessageFor(model => model.fecha02, "", new { @class = "text-danger" })
+                                    </div>
+
+                                    <div class="form-group col-md-6 padd">
+                                        <label class="control-label">Info. 03:</label>
+
+                                        @Html.EditorFor(model => model.info03, new { htmlAttributes = new { @class = "form-control in-90" } })
+                                        @Html.ValidationMessageFor(model => model.info03, "", new { @class = "text-danger" })
+
+                                    </div>
+                                    <div class="form-group col-md-6 padd">
+                                        <label class="control-label">Fecha 03:</label>
+
+                                        @Html.EditorFor(model => model.fecha03, new { htmlAttributes = new { @class = "form-control in-90", @readonly = "readonly" } })
+                                        @Html.ValidationMessageFor(model => model.fecha03, "", new { @class = "text-danger" })
+
+                                    </div>
+                                    <div class="form-group col-md-12 padd">
+                                        <label for="obsvComrpobante" class="control-label">Observación:</label>
+
+                                        @Html.TextAreaFor(model => model.obsvComprobanteEmitido, new { @class = "form-control", @style = "resize:none;max-width:92%;" })
+                                        @Html.ValidationMessageFor(model => model.obsvComprobanteEmitido, "", new { @class = "text-danger" })
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-group text-right">
+                        <div class="col-md-offset-2 col-md-10">
+                            <a id="btn-forma-pago" class="btn btn-primary"><i class="fa fa-lg  fa-arrow-right"></i> Siguiente</a>
+
+                            @*<input id="btn-forma-pago" type="button" value="Create" class="btn btn-default" @*data-toggle="modal" data-target="#modal-forma-pago"/>*@
+                        </div>
+                    </div>
+                </div>
+    <!-- HIDDEN -->
+                <input id="value-simbolo-moneda" type="hidden" value="@Model.simboloMoneda" />
+                <input id="value-nombre-moneda" type="hidden" value="@Model.nombreMoneda" />
+
+    <!-- MODALES -->
+                <div id="modal-forma-pago" class="modal fade" tabindex="-1" role="dialog" data-backdrop="static">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                <h3 class="modal-title text-center">¿Cómo desea realizar su pago?</h3>
+                            </div>
+                            <div id="modal-body-forma-pago" class="modal-body text-center">
+                                <span id="content-medio-de-pago-rapido"></span>
+                                <button id="btn-otra-forma-pago" type="button" class="btn btn-danger btn-lg" data-toggle="modal" data-target="#modal-medioDePagoDtl"><i class="fa fa-credit-card"></i>Otra forma</button>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="modal-medioDePagoDtl" class="modal modal-wide fade" tabindex="-1" role="dialog" data-backdrop="static">
+                    <div class="modal-dialog modal-lg">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                <h4 class="modal-title">Escoga la forma en que desea pagar</h4>
+                            </div>
+                            <div id="modal-body-medioDePagoDtl" class="modal-body">
+                            </div>
+                            <div class="modal-footer">
+                                <button type="submit" id="btn-insertar-comp" value="Grabar" class="btn btn-primary"><i class="fa fa-save"></i> Grabar</button>
+                                <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            }
+        </div>
+    </div>
+</div>
+
+@section Styles{
+
+    <link href="~/Content/DatePicker/bootstrap-datepicker3.standalone.min.css" rel="stylesheet" />
+    <link href="~/Content/DatePicker/bootstrap-datepicker.min.css" rel="stylesheet" />
+    <link href="~/Content/DatePicker/bootstrap-datepicker.standalone.min.css" rel="stylesheet" />
+    <link href="~/Content/DatePicker/bootstrap-datepicker3.min.css" rel="stylesheet" />
+}
+@section Scripts {
+    <script src="~/Scripts/Calendar/bootstrap-datepicker.min.js"></script>
+    <script src="~/Scripts/locale/bootstrap-datepicker.es.min.js" charset="utf-8"></script>
+    @Scripts.Render("~/bundles/jqueryval")
+    <script src="~/Scripts/js-cookie.js"></script>
+    <script src="~/Scripts/jquery.alphanum.js"></script>
+    @*<script src="~/Scripts/bootstrap-datetimepicker.min.js"></script>*@
+
+
+    <script src="~/Scripts/comprobantejs/comprobante.create.js"></script>
+    <script>
+        $(document).ready(function () {
+
+            //$("#fecha01").datepicker();
+            //$("#fecha02")
+            //$("#fecha03")
+
+            $("#mtoSubtotal").prop("disabled", true);
+            $("#mtoImpto").prop("disabled", true);
+            $("#mtoTotal").prop("disabled", true);
+
+            $('#fecha01,#fecha02,#fecha03').datepicker({
+                //placement: 'right',
+                //align: 'right',
+                enableOnReadonly : true,
+                format: "yyyy-mm-dd",
+                startDate: "@DateTime.Now.Date",
+                language: 'es',
+                daysOfWeekHighlighted: "0",
+                autoclose: true
+            });
+
+            iniCreateComp(
+           @Model.idCita,
+           @Model.idMoneda,
+           @Model.idImpto,
+           @Html.Raw(JsonConvert.SerializeObject(Model.ComprobanteDtl)),
+           @Model.mtoTotal.RoundOut(2),
+           @Model.mtoSubTotal.RoundOut(2),
+           @Model.mtoImpto.RoundOut(2),
+           @Model.porcentajeImpto,
+           @(descMedioDePagoRapido==null?Html.Raw("''"):Html.Raw("'"+descMedioDePagoRapido+"'")),
+           @(idMedioDePagoRapido==null?0:idMedioDePagoRapido),
+           @ValuesSystem.MaxIntAmount,
+           "@Url.Action("Create")",
+           "@Url.Action("Index")",
+           "@Url.Action("_MedioDePagoDtl")"
+
+                       );
+        });
+    </script>
+}

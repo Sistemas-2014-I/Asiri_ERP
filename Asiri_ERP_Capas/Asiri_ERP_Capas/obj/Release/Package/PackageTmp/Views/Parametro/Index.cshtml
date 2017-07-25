@@ -1,0 +1,163 @@
+﻿
+@{
+    ViewBag.Title = "Configuraciones del sistema";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@section styles{
+
+    <link href="~/Content/jquery-confirm.min.css" rel="stylesheet" />
+    <link href="~/Content/preload.css" rel="stylesheet" />
+}
+
+
+<div class="page-title">
+    <div>
+        <h1><i class="fa fa-edit"></i>Configuraciones del sistema</h1>
+        <p>Configurar parámetros del sistema...!</p>
+    </div>
+    <ul class="breadcrumb">
+        <li><i class="fa fa-home fa-lg"></i></li>
+        <li>
+            <a href="@Url.Action("Index")">
+                Productos
+            </a>
+        </li>
+    </ul>
+</div>
+
+@using (Html.BeginForm())
+{
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="card">
+                <h3 class="card-title"></h3>
+                <div class="card-body">
+                    @Html.AntiForgeryToken()
+                    @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+                    <div class="cold-lg-12">
+                        <div class="form-group">
+                            <div class="card-body">
+                                <h5>Moneda</h5>
+                                <div class="clearfix"></div>
+                                <div class="col-sm-12 col-md-8 col-lg-6">
+                                    @Html.DropDownList("idMoneda", null, new { @class = "form-control" })
+                                    <button id="btnMoneda" name="btnMoneda" class="btn btn-success icon-btn" type="button">
+                                        <i class="fa fa-fw fa-lg fa-repeat">
+                                        </i>Actualizar
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="clearfix"></div>
+                        <div class="form-group">
+                            <div class="card-body">
+                                <h5>Impuesto</h5>
+                                <div class="clearfix"></div>
+                                <div class="col-sm-12 col-md-8 col-lg-6">
+                                    @Html.DropDownList("idImpuesto", null, new { @class = "form-control" })
+                                </div>
+                                <div class="col-sm-12 col-md-8 col-lg-6">
+                                    <input class="form-control text-box single-line" data-val="true" data-val-length="El campo Nombre no puede tener más de 70 caracteres" data-val-length-max="70" data-val-required="Debe ingresar un nombre" id="porcImp" name="porcImp" placeholder="Ingrese el nuevo valor" type="text" value="">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="clearfix"></div>
+                                <button id="btnImpuesto" name="btnImpuesto" class="btn btn-success icon-btn" type="button">
+                                    <i class="fa fa-fw fa-lg fa-repeat">
+                                    </i>Actualizar
+                                </button>
+                        @*<div class="form-group">
+                            <div class="card-body">
+                                <h5>Medio de pago</h5>
+                                <div class="clearfix"></div>
+                                <div class="col-sm-12 col-md-8 col-lg-6">
+                                    @Html.DropDownList("idMedioDePago", null, new { @class = "form-control" })
+                                </div>
+                            </div>
+                        </div>*@
+
+                        <div class="clearfix"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+}
+<div>
+
+    @*<!-- Nav tabs -->
+    <ul class="nav nav-tabs" role="tablist">
+        <li role="presentation" class="active"><a href="#home" aria-controls="home" role="tab" data-toggle="tab">Pago</a></li>
+    </ul>
+
+    <!-- Tab panes -->
+    <div class="tab-content">
+        <div role="tabpanel" class="tab-pane active" id="home">
+            <div class="row">
+
+
+            </div>
+
+
+        </div>
+    </div>*@
+
+</div>
+
+@section scripts{
+
+    <script src="~/Scripts/Plugins/select2.min.js"></script>
+    <script type="text/javascript">
+        $('#idMoneda').select2();
+        $('#idImpuesto').select2();
+        $('#idMedio').select2();
+    </script>
+    @Scripts.Render("~/bundles/jqueryval")
+    <script src="~/Scripts/jquery-confirm.min.js"></script>
+    <script src="~/Scripts/confirm.status.js"></script>
+    <script src="~/Scripts/Sistema/moneda.js"></script>
+    <script>
+        $("#btnImpuesto").click(function() {
+            $.confirm({
+                title: "Impuesto",
+                content: "¿Está seguro que desea modificar el valor del impuesto?",
+                autoClose: "cancel|10000",
+                buttons: {
+                    confirm: {
+                        text: "Confirmar",
+                        action: Impuesto
+                    },
+                    cancel: {
+                        text: "Cancelar",
+                        action: function() {
+                            $.alert("Cancelado!");
+                        }
+                    }
+                }
+            });
+        });
+
+        function Impuesto() {
+            var idImp = $("#idImpuesto option:selected").val();
+            var porcImp = $("#porcImp").val();
+            $.ajax({
+                type: "POST",
+                url: "Parametro/Impuesto",
+                data: { id: idImp, porcImp: porcImp},
+                dataType: "json",
+                success: successFunc,
+                error: errorFunc
+            });
+        }
+
+        function successFunc() {
+            $.alert('¡Configuración Impuesto exitoso!');
+        }
+
+        function errorFunc(e) {
+            alert(`error${e.message}`);
+        }
+    </script>
+
+}

@@ -1,0 +1,155 @@
+﻿@model Mvc_Entity.CLlt05_cita
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>CLlt05_cita</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.codCita)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.codCita)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.fecCita)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.fecCita)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.fecRegistro)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.fecRegistro)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.fecModificacion)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.fecModificacion)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.horaInicio)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.horaInicio)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.duracionEstimada)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.duracionEstimada)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.numReprogramacion)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.numReprogramacion)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.esOnline)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.esOnline)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.esCerrado)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.esCerrado)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.idCitaPadre)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.idCitaPadre)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.obsvCita)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.obsvCita)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.mtoTotal)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.mtoTotal)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.idUsuario)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.idUsuario)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.idUsuarioModificar)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.idUsuarioModificar)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CLlt09_estadoCita.codCita)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CLlt09_estadoCita.codCita)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.RHUt01_empleado.codEmpleado)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.RHUt01_empleado.codEmpleado)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.RHUt07_paciente.codPaciente)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.RHUt07_paciente.codPaciente)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.idCita }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

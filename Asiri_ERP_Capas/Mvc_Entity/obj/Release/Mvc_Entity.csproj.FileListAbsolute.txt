@@ -1,0 +1,24 @@
+E:\Ciclo VII\Calidad de Software\mas pagos 2\mas pagos\Asiri_ERP_Capas\Mvc_Entity\bin\Release\Mvc_Entity.dll.config
+E:\Ciclo VII\Calidad de Software\mas pagos 2\mas pagos\Asiri_ERP_Capas\Mvc_Entity\bin\Release\Mvc_Entity.dll
+E:\Ciclo VII\Calidad de Software\mas pagos 2\mas pagos\Asiri_ERP_Capas\Mvc_Entity\bin\Release\Mvc_Entity.pdb
+E:\Ciclo VII\Calidad de Software\mas pagos 2\mas pagos\Asiri_ERP_Capas\Mvc_Entity\bin\Release\EntityFramework.dll
+E:\Ciclo VII\Calidad de Software\mas pagos 2\mas pagos\Asiri_ERP_Capas\Mvc_Entity\bin\Release\EntityFramework.SqlServer.dll
+E:\Ciclo VII\Calidad de Software\mas pagos 2\mas pagos\Asiri_ERP_Capas\Mvc_Entity\bin\Release\EntityFramework.xml
+E:\Ciclo VII\Calidad de Software\mas pagos 2\mas pagos\Asiri_ERP_Capas\Mvc_Entity\bin\Release\EntityFramework.SqlServer.xml
+E:\Ciclo VII\Calidad de Software\mas pagos 2\mas pagos\Asiri_ERP_Capas\Mvc_Entity\bin\Release\es\EntityFramework.resources.dll
+E:\Ciclo VII\Calidad de Software\mas pagos 2\mas pagos\Asiri_ERP_Capas\Mvc_Entity\bin\Release\es\EntityFramework.SqlServer.resources.dll
+E:\Ciclo VII\Calidad de Software\mas pagos 2\mas pagos\Asiri_ERP_Capas\Mvc_Entity\obj\Release\Mvc_Entity.dll
+E:\Ciclo VII\Calidad de Software\mas pagos 2\mas pagos\Asiri_ERP_Capas\Mvc_Entity\obj\Release\Mvc_Entity.pdb
+E:\Ciclo VII\Calidad de Software\mas pagos 2\mas pagos\Asiri_ERP_Capas\Mvc_Entity\obj\Release\Mvc_Entity.csprojResolveAssemblyReference.cache
+E:\Ciclo VII\Calidad de Software\publicar\marchan aqui\Asiri_ERP_Capas\Mvc_Entity\bin\Release\Mvc_Entity.dll.config
+E:\Ciclo VII\Calidad de Software\publicar\marchan aqui\Asiri_ERP_Capas\Mvc_Entity\bin\Release\Mvc_Entity.dll
+E:\Ciclo VII\Calidad de Software\publicar\marchan aqui\Asiri_ERP_Capas\Mvc_Entity\bin\Release\Mvc_Entity.pdb
+E:\Ciclo VII\Calidad de Software\publicar\marchan aqui\Asiri_ERP_Capas\Mvc_Entity\bin\Release\EntityFramework.dll
+E:\Ciclo VII\Calidad de Software\publicar\marchan aqui\Asiri_ERP_Capas\Mvc_Entity\bin\Release\EntityFramework.SqlServer.dll
+E:\Ciclo VII\Calidad de Software\publicar\marchan aqui\Asiri_ERP_Capas\Mvc_Entity\bin\Release\EntityFramework.xml
+E:\Ciclo VII\Calidad de Software\publicar\marchan aqui\Asiri_ERP_Capas\Mvc_Entity\bin\Release\EntityFramework.SqlServer.xml
+E:\Ciclo VII\Calidad de Software\publicar\marchan aqui\Asiri_ERP_Capas\Mvc_Entity\bin\Release\es\EntityFramework.resources.dll
+E:\Ciclo VII\Calidad de Software\publicar\marchan aqui\Asiri_ERP_Capas\Mvc_Entity\bin\Release\es\EntityFramework.SqlServer.resources.dll
+E:\Ciclo VII\Calidad de Software\publicar\marchan aqui\Asiri_ERP_Capas\Mvc_Entity\obj\Release\Mvc_Entity.csprojResolveAssemblyReference.cache
+E:\Ciclo VII\Calidad de Software\publicar\marchan aqui\Asiri_ERP_Capas\Mvc_Entity\obj\Release\Mvc_Entity.dll
+E:\Ciclo VII\Calidad de Software\publicar\marchan aqui\Asiri_ERP_Capas\Mvc_Entity\obj\Release\Mvc_Entity.pdb

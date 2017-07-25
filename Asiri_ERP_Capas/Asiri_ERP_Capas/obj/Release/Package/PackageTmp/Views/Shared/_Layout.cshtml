@@ -1,0 +1,261 @@
+﻿@using Microsoft.AspNet.Identity
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - Asiri</title>
+
+    <script src="~/Scripts/jquery-2.1.4.min.js"></script>
+
+    <link href="~/Content/css/main.css" rel="stylesheet" />
+    <link href="~/Content/css/tabs.css" rel="stylesheet" />
+    <link href="~/Content/css/jquery.fileuploader.css" media="all" rel="stylesheet" />
+    <link href="~/Content/css/jquery.fileuploader-theme-thumbnails.css" media="all" rel="stylesheet" />
+    <link href="~/Content/css/jquery.loading.css" rel="stylesheet" />
+
+    <script src="~/Scripts/plugins/bootstrap-notify.js"></script>
+    <script src="~/Scripts/plugins/bootstrap-notify.min.js"></script>
+
+    @* ATENCION *@
+    <script src="~/Scripts/bootstrap-datetimepicker.min.js"></script>
+
+    <script src="~/Scripts/jquery.loading.js"></script>
+    <script type="text/javascript" src="~/Scripts/plugins/jquery.dataTables.min.js"></script>
+    <script type="text/javascript" src="~/Scripts/plugins/dataTables.bootstrap.min.js"></script>
+
+    <link href="~/Content/css/tabs.css" rel="stylesheet" />
+    <script src="~/Scripts/jquery.validate.min.js"></script>
+    <script src="~/Scripts/jquery.validate.unobtrusive.min.js"></script>
+    <script src="~/Scripts/jquery.fileuploader.js"></script>
+    <script src="~/Scripts/jquery.fileuploader.min.js" type="text/javascript"></script>
+    <script src="~/Scripts/jquery.form.min.js"></script>
+
+
+    <link href="~/Content/css/jquery.flexdatalist.css" rel="stylesheet" />
+    <script src="~/Scripts/jquery.flexdatalist.js"></script>
+    <link href="~/Content/css/tokenize2.css" rel="stylesheet" />
+    <script src="~/Scripts/tokenize2.js"></script>
+
+    @* CITA *@
+    <link href="~/Content/jquery-clockpicker.css" rel="stylesheet" />
+    <link href="~/Content/jquery-clockpicker.min.css" rel="stylesheet" />
+    <link href="~/Content/DatePicker/bootstrap-datepicker3.standalone.min.css" rel="stylesheet" />
+    <link href="~/Content/DatePicker/bootstrap-datepicker.min.css" rel="stylesheet" />
+    <link href="~/Content/DatePicker/bootstrap-datepicker.standalone.min.css" rel="stylesheet" />
+    <link href="~/Content/DatePicker/bootstrap-datepicker3.min.css" rel="stylesheet" />
+
+
+
+    <script src="~/Scripts/jquery-clockpicker.js" charset="UTF-8"></script>
+    <script src="~/Scripts/jquery-clockpicker.min.js" charset="UTF-8"></script>
+    @*<script src="~/Scripts/bootstrap-datepicker.min.js" charset="UTF-8"></script>*@
+    @*<script src="~/Scripts/locale/bootstrap-datepicker.es.min.js" charset="UTF-8"></script>*@
+    @* FIN CITA *@
+    <script src="~/Scripts/locale/es.js"></script>
+    <script src="~/Scripts/lib/moment.min.js"></script>
+    <script src="~/Scripts/fullcalendar.js"></script>
+    <link href="~/Content/fullcalendar.css" rel="stylesheet" />
+    @*Vista Horario*@
+
+
+    @*@Styles.Render("~/Content/css")*@
+    @Styles.Render("~/Content/confirm")
+    <style>
+        .modal-header {
+            background: #6809e2;
+            color: white;
+            font-weight: bold;
+            font-style: italic;
+        }
+
+        .table-striped > tbody > tr:nth-child(odd) > td,
+        .table-striped > tbody > tr:nth-child(odd) > th {
+            /*background-color: #e9ddf7;*/
+        }
+        /*DCC6E0*/
+        .bg-primary {
+            background: #DCC6E0;
+            color: #404040;
+        }
+
+        .subt {
+            font-weight: bold;
+            font-style: italic;
+            color: #6809e2;
+            /*text-decoration:underline;*/
+        }
+
+        .np {
+            padding: 0;
+        }
+
+        .font-lg {
+            font-size: 1.5em;
+        }
+
+        .font-md {
+            font-size: 1.3em;
+        }
+
+        .addon-transparent {
+            background: none;
+            color: cornflowerblue;
+            font-weight: bold;
+            font-size: 1.1em;
+        }
+
+        .input-group-addon {
+            border-left-width: 0;
+            border-right-width: 0;
+        }
+
+            .input-group-addon:first-child {
+                border-left-width: 1px;
+            }
+
+            .input-group-addon:last-child {
+                border-right-width: 1px;
+            }
+
+        /*.modal-title {
+                font-weight: 900;
+                color: #16a085;
+            }*/
+
+        .btn-eye {
+            background: #404040 !important;
+            color: white;
+        }
+
+        .modal.modal-wide .modal-dialog {
+            width: 90%;
+        }
+
+        @@media (min-width: 768px) {
+            input.btn.btn-sm, button.btn.btn-sm, a.btn.btn-sm {
+                padding: 8px 8px;
+                font-size: 13px;
+                line-height: 1.428571429;
+                border-radius: 3px;
+            }
+        }
+
+        @@media screen and (min-width: 768px) {
+            div.modal-dialog {
+                left: auto;
+                padding-top: 3px;
+            }
+        }
+    </style>
+    @*@Scripts.Render("~/bundles/modernizr")*@
+    @RenderSection("styles", false)
+
+    @*Styles.Render("~/Content/css")*@
+    @Scripts.Render("~/bundles/modernizr")
+
+</head>
+<body class="sidebar-mini fixed">
+    <div class="wrapper">
+        <!-- Navbar-->
+        <header class="main-header hidden-print">
+            <a class="logo" href="#" style="font-family:'Segoe UI';">Asiri ERP</a>
+            <nav class="navbar navbar-static-top">
+                <!-- Sidebar toggle button--><a class="sidebar-toggle" href="#" data-toggle="offcanvas"></a>
+                <!-- Navbar Right Menu-->
+                <div class="navbar-custom-menu">
+                    <ul class="top-nav">
+                        <!--Notification Menu-->
+                        @*<li class="dropdown notification-menu">
+                                <a class="dropdown-toggle" href="#" data-toggle="dropdown" aria-expanded="false"><i class="fa fa-bell-o fa-lg"></i></a>
+                                <ul class="dropdown-menu">
+                                    <li class="not-head">You have 4 new notifications.</li>
+                                    <li>
+                                        <a class="media" href="javascript:;">
+                                            <span class="media-left media-icon"><span class="fa-stack fa-lg"><i class="fa fa-circle fa-stack-2x text-primary"></i><i class="fa fa-envelope fa-stack-1x fa-inverse"></i></span></span>
+                                            <div class="media-body"><span class="block">Lisa sent you a mail</span><span class="text-muted block">2min ago</span></div>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a class="media" href="javascript:;">
+                                            <span class="media-left media-icon"><span class="fa-stack fa-lg"><i class="fa fa-circle fa-stack-2x text-danger"></i><i class="fa fa-hdd-o fa-stack-1x fa-inverse"></i></span></span>
+                                            <div class="media-body"><span class="block">Server Not Working</span><span class="text-muted block">2min ago</span></div>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a class="media" href="javascript:;">
+                                            <span class="media-left media-icon"><span class="fa-stack fa-lg"><i class="fa fa-circle fa-stack-2x text-success"></i><i class="fa fa-money fa-stack-1x fa-inverse"></i></span></span>
+                                            <div class="media-body"><span class="block">Transaction xyz complete</span><span class="text-muted block">2min ago</span></div>
+                                        </a>
+                                    </li>
+                                    <li class="not-footer"><a href="#">See all notifications.</a></li>
+                                </ul>
+                            </li>*@
+                        <!-- User Menu-->
+                        <li class="dropdown">
+                            <a id="icono" class="dropdown-toggle" href="#" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><i class="fa fa-user fa-lg"></i></a>
+                            <ul class="dropdown-menu settings-menu">
+                                @Html.Partial("_LoginPartial")
+                                @*<li><a href="page-user.html"><i class="fa fa-cog fa-lg"></i> Settings</a></li>
+                                    <li><a href="page-user.html"><i class="fa fa-user fa-lg"></i> Profile</a></li>
+                                    <li><a href="page-login.html"><i class="fa fa-sign-out fa-lg"></i> Logout</a></li>*@
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </header>
+        <!-- Side-Nav-->
+        <aside class="main-sidebar hidden-print">
+            <section class="sidebar">
+                <div class="user-panel">
+                    <div class="pull-left image"><img class="img-circle" src="@Url.Action("ObtenerImagenUser","Empleado",new {Id = User.Identity.GetUserId()})" alt="User Image"></div>
+                    <div class="pull-left info">
+                        <span class="username username-hide-on-mobile"> @User.Identity.GetUserName() </span>
+                        @*<p class="designation">Frontend Developer</p>*@
+                    </div>
+                </div>
+                <!-- Sidebar Menu-->
+                <ul class="sidebar-menu">
+                    <li class="active"><a href="@Url.Action("Index","Home")"><i class="fa fa-dashboard"></i><span>Inicio</span></a></li>
+
+                    @{Html.RenderAction("LoadMenu", "Home"); }
+                    }
+
+                </ul>
+            </section>
+        </aside>
+        <div class="content-wrapper">
+
+            @RenderBody()
+            <hr />
+            <footer style="text-align:center">
+                <p>&copy; @DateTime.Now.Year - My ASP.NET Application SYSTEMS ENGINEER CICLO: VII</p>
+            </footer>
+
+        </div>
+    </div>
+
+
+
+    @*Scripts.Render("~/bundles/jquery")*@
+    @*Scripts.Render("~/bundles/bootstrap")*@
+
+    @*@Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")*@
+    <script src="~/Scripts/essential-plugins.js"></script>
+    <script src="~/Scripts/bootstrap.min.js"></script>
+    <script src="~/Scripts/plugins/pace.min.js"></script>
+    <script src="~/Scripts/main.js"></script>
+
+
+    @RenderSection("scripts", required: false)
+
+
+
+
+
+
+</body>
+</html>
